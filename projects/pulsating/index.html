@@ -17,9 +17,7 @@
         var wireframe = false,
             material;
         // var flatten_modifier = 100;
-        var phone = 45, tabletPortrait, size = 95, desktop = tabletLandscape = 69.15, bigDesktop = 82;;
-        // var desktop = tabletLandscape = 69.15;
-        // var bigDesktop = 82;
+        var phone = 55, tabletPortrait, size = 95, desktop = tabletLandscape = 76, bigDesktop = 82;;
 
         var createIndexedSphereGeometry = function(width, length) {
             var geom = new THREE.BufferGeometry();
@@ -176,18 +174,18 @@
 
             // prompt(sphere.position.y);
             if (window.innerWidth < 599) {
-                var phone = 45;
                 mesh.scale.set(phone, phone, phone);
             }
             if (window.innerWidth > 600) {
-                var tabletPortrait = (window.innerWidth / 13);
+                tabletPortrait = (55 + (window.innerWidth - 600) * .07);
                 mesh.scale.set(tabletPortrait, tabletPortrait, tabletPortrait);
+                // prompt(tabletPortrait);
             }
             if (window.innerWidth > 900) {
                 mesh.scale.set(tabletLandscape, tabletLandscape, tabletLandscape);
             }
             if (window.innerWidth > 1200) {
-                desktop += 0.02141667;
+                tabletPortrait = (76 + (window.innerWidth - 1200) * .1);
                 mesh.scale.set(desktop, desktop, desktop);
             }
             if (window.innerWidth > 1800) {
