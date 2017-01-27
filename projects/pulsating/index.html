@@ -6,21 +6,47 @@
     <title>Pulsating</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
         * {
-          margin:0;
-          padding:0;
+            margin: 0;
+            padding: 0;
         }
-
         body {
-          width:100%;
-          height:100%;
-          overflow:hidden;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .text {
+            margin-top: 40%;
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 55px;
+        }
+        h6 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 22;
+        }
+        canvas {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            z-index:-1;
         }
     </style>
 </head>
 
 <body>
     <div id="ball"></div>
+    <div class = "text">
+        <h2>JACOB FRANK</h2>
+        <h6>Developer and Designer</h6>
+    </div>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js'></script>
 
@@ -29,7 +55,10 @@
         var wireframe = false,
             material;
         // var flatten_modifier = 100;
-        var phone = 55, tabletPortrait, size = 95, desktop = tabletLandscape = 76, bigDesktop = 82;;
+        var phone = 35,
+            tabletPortrait, size = 95,
+            desktop = tabletLandscape = 76,
+            bigDesktop = 82, bigDesktopBlue = bigDesktop/2;
 
         var createIndexedSphereGeometry = function(width, length) {
             var geom = new THREE.BufferGeometry();
@@ -117,6 +146,7 @@
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         }
+
         function rotateObject(object, degreeX = 0, degreeY = 0, degreeZ = 0) {
 
             degreeX = (degreeX * Math.PI) / 180;
@@ -147,8 +177,20 @@
                 opacity: 0.5,
                 wireframe: wireframe
             });
+            material1 = new THREE.MeshStandardMaterial({
+                color: 0xFFFFFF,
+                emissive: 0x46D8E2,
+                metalness: 1.0,
+                transparent: true,
+                opacity: 0.5,
+                wireframe: wireframe
+            });
             sphere = new THREE.Mesh(geometry, material);
+            sphere1 = new THREE.Mesh(geometry, material1);
+
             mesh.add(sphere);
+            mesh.add(sphere1);
+
             scene.add(mesh);
             animate();
         }
@@ -176,7 +218,6 @@
                 pos[i + 1] = base_pos[i + 1] * (1 + scale);
                 pos[i + 2] = base_pos[i + 2] * (1 + scale);
             }
-
             geometry.attributes.position.needsUpdate = true;
             geometry.computeVertexNormals();
         }
@@ -184,7 +225,8 @@
         var animate = function() {
             time++;
 
-            // prompt(sphere.position.y);
+
+
             if (window.innerWidth < 599) {
                 mesh.scale.set(phone, phone, phone);
             }
@@ -197,12 +239,17 @@
                 mesh.scale.set(tabletLandscape, tabletLandscape, tabletLandscape);
             }
             if (window.innerWidth > 1200) {
-                tabletPortrait = (76 + (window.innerWidth - 1200) * .1);
+                desktop = (76 + (window.innerWidth - 1200) * .1);
                 mesh.scale.set(desktop, desktop, desktop);
             }
             if (window.innerWidth > 1800) {
                 mesh.scale.set(bigDesktop, bigDesktop, bigDesktop);
+
             }
+            sphere1.position.x = -1;
+            sphere1.position.y = -6;
+            sphere1.position.z = -3.5;
+
             scene.requestFrame = requestAnimationFrame(animate);
 
             modifyGeometry();
