@@ -23,6 +23,7 @@
             height: 100%;
             overflow: hidden;
         }
+
         .text {
             height: 98vh;
             display: flex;
@@ -97,11 +98,6 @@
     </div>
     <div id="ball"></div>
     <script>
-        $('#fullpage').fullpage({anchors: ['page1', 'page2'],
-            // sectionsColor: ['yellow', 'orange'],
-        });
-        $.fn.fullpage.setScrollingSpeed(1200);
-
         var scene, renderer, camera, mesh, geometry, lights = [];
         var wireframe = false,
             material;
@@ -113,7 +109,16 @@
         var phone = 55,
             tabletPortrait, size = 95,
             desktop = tabletLandscape = 76,
-            bigDesktop = 82;
+            bigDesktop = 106;
+
+        var colorStart = new THREE.Color("rgb(229, 52, 85)");
+        var colorEnd = new THREE.Color("rgb(221, 221, 221)");
+        var counter = 0;
+        var downCounter = 0;
+        var slideMoveUp = 0;
+        var slideMoveDown = 0;
+        var slideSpeed = 1200;
+        var transSpeed = 35;
 
         var createIndexedSphereGeometry = function(width, length) {
             var geom = new THREE.BufferGeometry();
@@ -122,6 +127,9 @@
             var uvs = [];
             var width1 = width + 1;
             var length1 = length + 1;
+
+
+
             for (var i = 0; i < width1; i++) {
                 for (var j = 0; j < length1; j++) {
                     vertices.push(i / width, 0, j / length);
@@ -139,6 +147,27 @@
                 }
             }
 
+
+
+            $('#fullpage').fullpage({
+                anchors: ['page1', 'page2'],
+                onLeave: function(index, nextIndex, direction) {
+                    var leavingSection = $(this);
+
+                    //after leaving section 2
+                    if (index == 1 && direction == 'down') {
+                        slideMoveDown = 2;
+                        slideMoveUp = 0;
+                        counter = 0;
+                    } else if (index == 2 && direction == 'up') {
+                        slideMoveUp = 1;
+                        slideMoveDown = 0;
+                        counter = 0;
+                    }
+                }
+            });
+            $.fn.fullpage.setScrollingSpeed(slideSpeed);
+
             var positions = new Float32Array(vertices);
             var index = new Uint32Array(indices);
             var uv = new Float32Array(uvs);
@@ -148,6 +177,7 @@
             geom.setIndex(new THREE.BufferAttribute(index, 1));
 
             return geom;
+
         }
 
         var main = function(geom, radius) {
@@ -229,12 +259,9 @@
             geometry = createIndexedSphereGeometry(250, 250);
             main(geometry, 1);
 
-            var pink= new THREE.Color("rgb(229, 52, 85)");
-            var grey= new THREE.Color("rgb(221, 221, 221)");
-
             material = new THREE.MeshStandardMaterial({
                 color: 0xFFFFFF,
-                emissive: pink,
+                emissive: colorStart,
                 metalness: 1.0,
                 transparent: true,
                 opacity: 0.5,
@@ -242,7 +269,7 @@
             });
             materialGrey = new THREE.MeshStandardMaterial({
                 color: 0xFFFFFF,
-                emissive: grey,
+                emissive: colorEnd,
                 metalness: 1.0,
                 transparent: true,
                 opacity: 0.5,
@@ -297,7 +324,6 @@
                 tabletPortrait = (55 + (window.innerWidth - 600) * .07);
                 mesh.scale.set(tabletPortrait, tabletPortrait, tabletPortrait);
                 if (window.innerWidth === 601) {
-                    console.log(tabletPortrait);
                 }
                 // prompt(tabletPortrait);
             }
@@ -305,10 +331,10 @@
                 mesh.scale.set(tabletLandscape, tabletLandscape, tabletLandscape);
             }
             if (window.innerWidth > 1200) {
-                desktop = (76 + (window.innerWidth - 1200) * .155);
+                desktop = (76 + (window.innerWidth - 1200) * .10);
                 mesh.scale.set(desktop, desktop, desktop);
             }
-            if (window.innerWidth > 1800) {
+            if (window.innerWidth > 1500) {
                 mesh.scale.set(bigDesktop, bigDesktop, bigDesktop);
 
             }
@@ -325,20 +351,58 @@
 
         function getScrollPosition() {
             var elmnt = document.getElementById("homepage");
-            // var x = elmnt.scrollLeft;
             var y = elmnt.scrollTop;
-            console.log(y);
             scrollPosition = y;
         }
 
         function render() {
-            if (scrollPosition === 0) {
-                camera.position.y = 8;
-            } else {
-                camera.position.y = -0.1 * scrollPosition + 8;
+            // var materialR = sphere.material.emissive.r * 255;
+            // var materialG = sphere.material.emissive.g * 255;
+            // var materialB = sphere.material.emissive.b * 255;
+
+
+            if (slideMoveDown === 2 ) {
+                sphere.material.emissive.r += ((colorEnd.r - colorStart.r) / transSpeed);
+                sphere.material.emissive.g += ((colorEnd.g - colorStart.g) / transSpeed);
+                sphere.material.emissive.b += ((colorEnd.b - colorStart.b) / transSpeed);
             }
-            // sphere.material.emissive = shadeColor("#63C6FF", );
+
+            if (slideMoveUp === 1) {
+                sphere.material.emissive.r += ((colorStart.r - colorEnd.r) / transSpeed);
+                sphere.material.emissive.g += ((colorStart.g - colorEnd.g) / transSpeed);
+                sphere.material.emissive.b += ((colorStart.b - colorEnd.b) / transSpeed);
+            }
+
+            // if (scrollPosition === 0) {
+            //     camera.position.y = 8;
+            // } else {
+            //     camera.position.y = -0.1 * scrollPosition + 8;
+            // }
             renderer.render(scene, camera);
+            if (slideMoveDown === 2) {
+                counter++;
+            }
+            if (slideMoveUp === 1) {
+                counter++;
+            }
+
+            console.log(counter);
+            if (counter === transSpeed) {
+                counter = 0;
+                if (slideMoveUp === 1) {
+                    slideMoveUp = 0;
+                    sphere.material.emissive.r = colorStart.r;
+                    sphere.material.emissive.g = colorStart.g;
+                    sphere.material.emissive.b = colorStart.b;
+                }
+                if (slideMoveDown === 2) {
+                    slideMoveDown = 0;
+                    sphere.material.emissive.r = colorEnd.r;
+                    sphere.material.emissive.g = colorEnd.g;
+                    sphere.material.emissive.b = colorEnd.b;
+                }
+            }
+
         }
 
         init();
