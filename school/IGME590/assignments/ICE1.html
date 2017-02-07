@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>ICE #1</title>
 </head>
 
-<body>
+<body data-pinterest-extension-installed="cr2.0.5">
     <canvas id="myCanvas" width="400" height="550" style="border:1px solid #d3d3d3;"></canvas>
     <script>
         'use strict'
@@ -22,46 +23,39 @@
                 console.log(this.y)
             }
         }
-        let Rectangle = {
-            draw: function() {
-                ctx.beginPath();
-                ctx.rect(20, 20, 75, 50);
-                ctx.stroke();
-                ctx.fillStyle = "yellow";
-                ctx.fill();
-            }
-        }
-        let Circle = {
-            draw: function() {
-                ctx.beginPath();
-                ctx.arc(50, 170, 30, 0, 2 * Math.PI);
-                ctx.stroke();
-                ctx.fillStyle = "blue";
-                ctx.fill();
-            }
-        }
+        let Rectangle = Object.create(Shape);
 
-        let Square = {
-            draw: function() {
-                ctx.beginPath();
-                ctx.rect(20, 320, 50, 50);
-                ctx.stroke();
-                ctx.fillStyle = "red";
-                ctx.fill();
-            }
+        Rectangle.draw = function() {
+            ctx.beginPath();
+            ctx.rect(20, 20, 75, 50);
+            ctx.stroke();
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+        }
+        let Circle = Object.create(Shape);
+
+        Circle.draw = function() {
+            ctx.beginPath();
+            ctx.arc(50, 170, 30, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.fillStyle = "blue";
+            ctx.fill();
         }
 
+        let Square = Object.create(Rectangle);
+        Square.draw = function() {
+            ctx.beginPath();
+            ctx.rect(20, 320, 50, 50);
+            ctx.stroke();
+            ctx.fillStyle = "red";
+            ctx.fill();
+        }
 
-        Rectangle.__proto__ = Shape;
-        Circle.__proto__ = Shape;
-        Square.__proto__ = Rectangle;
+        // Rectangle.__proto__ = Shape;
+        // Circle.__proto__ = Shape;
+        // Square.__proto__ = Rectangle;
 
         Rectangle.draw();
         Circle.draw();
         Square.draw();
-
     </script>
-
-</body>
-
-</html>
