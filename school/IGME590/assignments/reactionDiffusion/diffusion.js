@@ -16,7 +16,7 @@
 
 
     // diffusion parameters
-    let t = 1,
+    let t = 2,
         dA = 1,
         dB = .5,
         feed = .055,
