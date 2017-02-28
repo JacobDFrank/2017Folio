@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js'></script>
-    <script src='https://threejs.org/examples/js/controls/TrackballControls.js'></script>
     <script src="vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
     <style>
@@ -29,10 +28,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            color: #333;
         }
 
         h2 {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Myriad Pro', sans-serif;
             font-size: 55px;
         }
 
@@ -98,50 +98,53 @@
     </div>
     <div id="ball"></div>
     <script>
-        var scene, renderer, camera, mesh, geometry, lights = [];
-        var wireframe = false,
+        let scene, cancel;
+        var renderer;
+        let camera, mesh, geometry, lights = [];
+        let wireframe = false,
             material;
-        var mouseX = mouseY = 20;
-        var windowHalfX = window.innerWidth / 2;
-        var windowHalfY = window.innerHeight / 2;
-        // var flatten_modifier = 100;
-        var scrollPosition = 0;
-        var phone = 55,
+        let mouseX = mouseY = 20;
+        let windowHalfX = window.innerWidth / 2;
+        let windowHalfY = window.innerHeight / 2;
+        // let flatten_modifier = 100;
+        let scrollPosition = 0;
+        let phone = 55,
             tabletPortrait, size = 95,
             desktop = tabletLandscape = 76,
             bigDesktop = 106;
 
-        var colorStart = new THREE.Color("rgb(229, 52, 85)");
-        var colorEnd = new THREE.Color("rgb(221, 221, 221)");
-        var counter = 0;
-        var downCounter = 0;
-        var slideMoveUp = 0;
-        var slideMoveDown = 0;
-        var slideSpeed = 1200;
-        var transSpeed = 35;
+        // let colorStart = new THREE.Color("rgb(248, 248, 248)");
+        let colorStart = new THREE.Color("rgb(240, 99, 125)");
+        let colorEnd = new THREE.Color("rgb(221, 221, 221)");
+        let counter = 0;
+        let downCounter = 0;
+        let slideMoveUp = 0;
+        let slideMoveDown = 0;
+        let slideSpeed = 1200;
+        let transSpeed = 35;
 
-        var createIndexedSphereGeometry = function(width, length) {
-            var geom = new THREE.BufferGeometry();
-            var vertices = [];
-            var indices = [];
-            var uvs = [];
-            var width1 = width + 1;
-            var length1 = length + 1;
+        let createIndexedSphereGeometry = function(width, length) {
+            let geom = new THREE.BufferGeometry();
+            let vertices = [];
+            let indices = [];
+            let uvs = [];
+            let width1 = width + 1;
+            let length1 = length + 1;
 
+            scene.background = new THREE.Color(0xf8f8f8);
 
-
-            for (var i = 0; i < width1; i++) {
-                for (var j = 0; j < length1; j++) {
+            for (let i = 0; i < width1; i++) {
+                for (let j = 0; j < length1; j++) {
                     vertices.push(i / width, 0, j / length);
                     uvs.push(i / width, j / length);
                 }
             }
-            for (var i = 0; i < width; i++) {
-                for (var j = 0; j < length; j++) {
-                    var a = i * length1 + j;
-                    var b = i * length1 + j + 1;
-                    var c = (i + 1) * length1 + j;
-                    var d = (i + 1) * length1 + j + 1;
+            for (let i = 0; i < width; i++) {
+                for (let j = 0; j < length; j++) {
+                    let a = i * length1 + j;
+                    let b = i * length1 + j + 1;
+                    let c = (i + 1) * length1 + j;
+                    let d = (i + 1) * length1 + j + 1;
                     indices.push(a, c, b);
                     indices.push(b, c, d);
                 }
@@ -152,7 +155,7 @@
             $('#fullpage').fullpage({
                 anchors: ['page1', 'page2'],
                 onLeave: function(index, nextIndex, direction) {
-                    var leavingSection = $(this);
+                    let leavingSection = $(this);
 
                     //after leaving section 2
                     if (index == 1 && direction == 'down') {
@@ -168,9 +171,9 @@
             });
             $.fn.fullpage.setScrollingSpeed(slideSpeed);
 
-            var positions = new Float32Array(vertices);
-            var index = new Uint32Array(indices);
-            var uv = new Float32Array(uvs);
+            let positions = new Float32Array(vertices);
+            let index = new Uint32Array(indices);
+            let uv = new Float32Array(uvs);
 
             geom.addAttribute('position', new THREE.BufferAttribute(positions, 3));
             geom.addAttribute('uv', new THREE.BufferAttribute(uvs, 2));
@@ -180,13 +183,13 @@
 
         }
 
-        var main = function(geom, radius) {
-            var pos = geom.attributes.position.array;
-            var uvs = geom.attributes.uv.array;
+        let main = function(geom, radius) {
+            let pos = geom.attributes.position.array;
+            let uvs = geom.attributes.uv.array;
 
-            var pi = Math.PI;
+            let pi = Math.PI;
 
-            for (var i = 0, u = 0, v = 1; i < pos.length; i += 3, u += 2, v += 2) {
+            for (let i = 0, u = 0, v = 1; i < pos.length; i += 3, u += 2, v += 2) {
                 pos[i] = radius * Math.sin(uvs[u] * pi) * Math.cos(uvs[v] * 2 * pi);
                 pos[i + 1] = radius * Math.sin(uvs[u] * pi) * Math.sin(uvs[v] * 2 * pi);
                 pos[i + 2] = radius * Math.cos(uvs[u] * pi);
@@ -210,7 +213,7 @@
             document.getElementById("ball").appendChild(renderer.domElement);
 
             // My Light
-            lights[0] = new THREE.PointLight(0xacc2df, .2, 0);
+            lights[0] = new THREE.PointLight(0xf8f8f8, .2, 0);
             lights[0].position.set(0, 400, 400);
 
             scene.add(lights[0]);
@@ -227,6 +230,9 @@
         function onWindowResize() {
             windowHalfX = window.innerWidth / 2;
             windowHalfY = window.innerHeight / 2;
+            if (window.innerWidth <= 1020) {
+                cancelAnimationFrame( cancel );
+            }
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
@@ -249,9 +255,9 @@
 
         }
 
-        var init = function() {
+        let init = function() {
             initScene();
-            var sizeX = sizeY = sizeZ = size;
+            let sizeX = sizeY = sizeZ = size;
             mesh = new THREE.Object3D();
             mesh.scale.set(sizeX, sizeY, sizeZ);
             rotateObject(mesh, -106, -45, -180);
@@ -287,17 +293,17 @@
 
         window.onmousemove = function(e) {}
 
-        var time = 0;
-        var modifyGeometry = function() {
-            var pos = geometry.attributes.position.array;
-            var base_pos = geometry.attributes.base_position.array;
-            var uvs = geometry.attributes.uv.array;
+        let time = 0;
+        let modifyGeometry = function() {
+            let pos = geometry.attributes.position.array;
+            let base_pos = geometry.attributes.base_position.array;
+            let uvs = geometry.attributes.uv.array;
 
-            for (var i = 0, j = 0; i < pos.length; i += 6, j += 4) {
-                var scale = 0.01 * Math.cos(uvs[j] * 7 + time * 0.01);
+            for (let i = 0, j = 0; i < pos.length; i += 6, j += 4) {
+                let scale = 0.01 * Math.cos(uvs[j] * 7 + time * 0.01);
                 scale += 0.05 * Math.cos(uvs[j + 1] * 9 + time * 0.05);
 
-                for (var k = 4; k < 6; k += 10) {
+                for (let k = 4; k < 6; k += 10) {
                     scale += (0.05 * k) * Math.cos(uvs[j] * 9 * k + (k + time * 0.05));
                     scale += (0.0 * k) * Math.cos(uvs[j + 1] * 7 * k + (k + time * 0.05));
                 }
@@ -312,10 +318,9 @@
             geometry.computeVertexNormals();
         }
 
-        var animate = function() {
-            time++;
-
-
+        let animate = function() {
+            time = time + .5;
+            // time++;
 
             if (window.innerWidth < 599) {
                 mesh.scale.set(phone, phone, phone);
@@ -323,9 +328,7 @@
             if (window.innerWidth > 600) {
                 tabletPortrait = (55 + (window.innerWidth - 600) * .07);
                 mesh.scale.set(tabletPortrait, tabletPortrait, tabletPortrait);
-                if (window.innerWidth === 601) {
-                }
-                // prompt(tabletPortrait);
+                if (window.innerWidth === 601) {}
             }
             if (window.innerWidth > 900) {
                 mesh.scale.set(tabletLandscape, tabletLandscape, tabletLandscape);
@@ -338,11 +341,9 @@
                 mesh.scale.set(bigDesktop, bigDesktop, bigDesktop);
 
             }
-            // sphere1.position.x = 3;
-            // sphere1.position.y = -6;
-            // sphere1.position.z = 3.5;
 
-            scene.requestFrame = requestAnimationFrame(animate);
+            // scene.requestFrame = requestAnimationFrame(animate);
+            cancel = requestAnimationFrame(animate);
 
             modifyGeometry();
 
@@ -350,18 +351,18 @@
         }
 
         function getScrollPosition() {
-            var elmnt = document.getElementById("homepage");
-            var y = elmnt.scrollTop;
+            let elmnt = document.getElementById("homepage");
+            let y = elmnt.scrollTop;
             scrollPosition = y;
         }
 
         function render() {
-            // var materialR = sphere.material.emissive.r * 255;
-            // var materialG = sphere.material.emissive.g * 255;
-            // var materialB = sphere.material.emissive.b * 255;
+            // let materialR = sphere.material.emissive.r * 255;
+            // let materialG = sphere.material.emissive.g * 255;
+            // let materialB = sphere.material.emissive.b * 255;
 
 
-            if (slideMoveDown === 2 ) {
+            if (slideMoveDown === 2) {
                 sphere.material.emissive.r += ((colorEnd.r - colorStart.r) / transSpeed);
                 sphere.material.emissive.g += ((colorEnd.g - colorStart.g) / transSpeed);
                 sphere.material.emissive.b += ((colorEnd.b - colorStart.b) / transSpeed);
@@ -386,7 +387,6 @@
                 counter++;
             }
 
-            console.log(counter);
             if (counter === transSpeed) {
                 counter = 0;
                 if (slideMoveUp === 1) {
