@@ -38,7 +38,7 @@ canvas {
 
 .ballGif{
     /*display: none;*/
-    margin-top: 18vh;
+    margin-top: 15vh;
 }
 .ballGif--img {
     /*width: calc(100% - 5vw);*/
@@ -47,7 +47,7 @@ canvas {
 }
 .progress {
     margin-top: 40vh;
-    margin-left: 20vw;
+    /*margin-left: 20vw;*/
     position: fixed;
 }
 

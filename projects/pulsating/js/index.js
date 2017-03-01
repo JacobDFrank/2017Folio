@@ -134,8 +134,10 @@ initScene = function() {
 }
 window.addEventListener('resize', onWindowResize, false);
 
+
 window.onload = function() {
     ballPresence();
+    console.log("loaded");
 }
 
 function onWindowResize() {
