@@ -50,6 +50,64 @@ canvas {
     margin-top: 40vh;
     position: fixed;
 }
+
+.nav {
+    z-index: 1000001;
+    user-select: none;
+}
+.nav-left {
+    left: 40px;
+}
+.nav-transform {
+    z-index: 1000001;
+    position: absolute;
+    -webkit-transform: rotateZ(-90deg) translateX(-50%);
+    transform: rotateZ(-90deg) translateX(-50%);
+    -webkit-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    top: 50%;
+}
+.nav-right {
+    right: 40px;
+}
+.nav-transform-right {
+    z-index: 1000001;
+    position: absolute;
+    -webkit-transform: rotateZ(-90deg) translateX(50%);
+    transform: rotateZ(-90deg) translateX(50%);
+    -webkit-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    top: 50%;
+}
+.nav-about-wrapper, .nav-mail-wrapper, .nav-works-wrapper {
+    display: inline-block;
+    padding: 10px;
+}
+.nav-about, .nav-mail, .nav-works {
+    color: #333;
+    opacity: .5;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+.nav-about:hover, .nav-mail:hover, .nav-works:hover {
+    opacity: 1;
+}
+.nav a {
+    text-decoration: none!important;
+    color: #333;
+}
+h3 {
+    letter-spacing: 1.78px;
+    font-size: 13px;
+}
+h3, p {
+    font-family: Roboto;
+    text-rendering: geometricPrecision;
+}
 .fluid-type14-26 {
     font-size: 14px;
 }
