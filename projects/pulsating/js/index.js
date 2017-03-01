@@ -134,23 +134,35 @@ initScene = function() {
 }
 window.addEventListener('resize', onWindowResize, false);
 
+window.onload = function() {
+    ballPresence();
+}
+
 function onWindowResize() {
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
-    if (window.innerWidth <= 1020 && cancelled == false) {
-        cancelAnimationFrame(cancel);
-        cancelled = true;
-        document.getElementById("ball").style.display = 'none';
 
-    } else if (cancelled == true && window.innerWidth >= 1020) {
-        document.getElementById("ball").style.display = 'block';
-        animate();
-        cancelled = false;
-    }
+    ballPresence();
 
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function ballPresence() {
+    if (window.innerWidth <= 1020 && cancelled == false) {
+        cancelAnimationFrame(cancel);
+        cancelled = true;
+        document.getElementById("ball").style.display = 'none';
+        document.getElementById("ball--fallBack").style.display = 'block';
+        document.getElementById("homepage--background").style.backgroundColor = '#f8f8f8';
+    } else if (cancelled == true && window.innerWidth >= 1020) {
+        document.getElementById("ball").style.display = 'block';
+        document.getElementById("ball--fallBack").style.display = 'none';
+        document.getElementById("homepage--background").style.backgroundColor = '';
+        animate();
+        cancelled = false;
+    }
 }
 
 function onDocumentMouseMove(event) { //Perspective turn
@@ -265,11 +277,11 @@ let animate = function() {
     render();
 }
 
-function getScrollPosition() {
-    let elmnt = document.getElementById("homepage");
-    let y = elmnt.scrollTop;
-    scrollPosition = y;
-}
+// function getScrollPosition() {
+//     let elmnt = document.getElementById("homepage");
+//     let y = elmnt.scrollTop;
+//     scrollPosition = y;
+// }
 
 function render() {
     // let materialR = sphere.material.emissive.r * 255;

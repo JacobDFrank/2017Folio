@@ -36,16 +36,20 @@ canvas {
     height: 100%;
     z-index: -1;
 }
-.ball--fallBack {
 
+.ballGif{
+    /*display: none;*/
+    margin-top: 18vh;
 }
-
-#homepage {
-    width: 100vw;
-    height: 100vw;
-    overflow-x: auto;
+.ballGif--img {
+    /*width: calc(100% - 5vw);*/
+    margin: auto;
+    width: calc(220px + 10vw);
 }
-
+.progress {
+    margin-top: 40vh;
+    position: fixed;
+}
 .fluid-type14-26 {
     font-size: 14px;
 }
