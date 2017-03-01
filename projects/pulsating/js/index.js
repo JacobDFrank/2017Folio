@@ -138,6 +138,19 @@ window.addEventListener('resize', onWindowResize, false);
 window.onload = function() {
     ballPresence();
     console.log("loaded");
+    if (window.innerWidth <= 1020) {
+        cancelAnimationFrame(cancel);
+        cancelled = true;
+        document.getElementById("ball").style.display = 'none';
+        document.getElementById("ball--fallBack").style.display = 'block';
+        document.getElementById("homepage--background").style.backgroundColor = '#f8f8f8';
+    } else if (window.innerWidth >= 1020) {
+        document.getElementById("ball").style.display = 'block';
+        document.getElementById("ball--fallBack").style.display = 'none';
+        document.getElementById("homepage--background").style.backgroundColor = '';
+        animate();
+        cancelled = false;
+    }
 }
 
 function onWindowResize() {
