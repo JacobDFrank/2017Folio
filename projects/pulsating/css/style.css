@@ -47,6 +47,7 @@ canvas {
 }
 .progress {
     margin-top: 40vh;
+    margin-left: 20vw;
     position: fixed;
 }
 
