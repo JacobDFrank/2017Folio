@@ -1,46 +1,57 @@
 <!DOCTYPE html>
-<!--Copyright 2016, Jacob Desmarais Frank, All rights reserved.-->
-<html lang="en">
+<html>
 
 <head>
-    <title>JacobDFrank</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <meta name="description" content="Personal website for Jacob D. Frank">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="icon" type="image/png" href="images/favicon.png"> </head>
+    <meta name="description" content="Jacob Frank">
+    <title>Pulsating</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js'></script>
+    <script src="vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script src="https://use.typekit.net/oih0jze.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
+</head>
 
 <body>
-    <div class="container">
-        <div class="top-right">
-            <a target="_blank" href="https://www.facebook.com/JacobDFrank"><img class="facebook" src="images/facebook.svg" alt="Facebook"></a>
-            <a target="_blank" href="https://github.com/JacobDFrank"><img class="github" src="images/github.svg" alt="Github"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/JacobDFrank"><img class="linkedin" src="images/linkedin.svg" alt="linkedin"></a>
-            <a target="_blank" href="https://www.twitter.com/JacobDFrank"><img class="twitter" src="images/twitter.svg" alt="Twitter"></a>
-            <a target="_blank" href="https://www.instagram.com/JacobDFrank/"><img class="instagram" src="images/instagram.svg" alt="Instagram"></a>
+    <div id="fullpage" onscroll="getScrollPosition()">
+        <div class="section" id="homepage--background">
+            <div class="text">
+                <h2 class="fluid-type30-55">JACOB FRANK</h2>
+                <h6 class="fluid-type14-26">Developer &amp; Designer</h6>
+                <h6 class="fluid-type10-20">Website in Progress...</h6>
+                <div class="ballGif">
+                    <img id="ball--fallBack" class="ballGif--img" src="http://thoughtatwork.cias.rit.edu/img/puls.gif">
+                </div>
+                <div class="nav" style="visibility: inherit; opacity: 1;">
+                    <div class="nav-left nav-transform">
+                        <div class="nav-about-wrapper">
+                            <h3 class="nav-about"> <a href="http://www.jacobdfrank.com/media/Jacob_Frank_Resume.pdf"> Resume</a> </h3>
+                        </div>
+                    </div>
+                    <div class="nav-mail-wrapper nav-transform-right nav-right">
+                        <h3 class="nav-mail">  <a href="mailto:hello@jacobdfrank.com?subject=Hello Jacob"> Email</a> </h3>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- <div class="section">
+            Case Studies
+        </div> -->
     </div>
-    <div class="name">
-        <p> H<span class="Ltr-Spacing">I,</span> I'M JACOB FRANK
-            <br>A CREATIVE DEVELOPE<span class="Ltr-Spacing">R &amp;</span> DESIGNER </p>
-            <h6 style="font-size: calc(8px + 1vw);">This Site is currently being updated, something new will be here shortly.</h6>
-    </div>
-    <div class="stuff">
-        <div class="links toplink">
-            <a target="_blank" href="../media/Jacob_Frank_Resume.pdf">
-                <p class="resume">RESUME</p>
-            </a>
-        </div>
-        <div class="links toplink">
-            <a href="mailto:hi@jacobdfrank.com">
-                <p class="contact">EMAIL ME</p>
-            </a>
-        </div>
-    </div>
-    <div class="copyright"><a title='Jacob D. Frank © 2016' href="http://jacobdfrank.com/">Jacob D. Frank © 2016</a> </div>
+    <div id="ball"></div>
+    <script src='js/index.js'></script>
+
 </body>
 
 </html>
-<!--Copyright 2016, Jacob Desmarais Frank, All rights reserved.-->
