@@ -5,15 +5,15 @@
 //     console.log("THREE included",  THREE);
 // }
 
-let scene, cancel, cancelled = false;
+let scene, cancel, camera, mesh, geometry, lights = [],
+    cancelled = false;
 var renderer;
-let camera, mesh, geometry, lights = [];
+
 let wireframe = false,
     material;
 let mouseX = mouseY = 20;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
-// let flatten_modifier = 100;
 let scrollPosition = 0;
 let phone = 55,
     tabletPortrait, size = 95,
@@ -21,14 +21,35 @@ let phone = 55,
     bigDesktop = 106;
 
 // let colorStart = new THREE.Color("rgb(248, 248, 248)");
+// let colorEnd = new THREE.Color("rgb(221, 221, 221)");
+
 let colorStart = new THREE.Color("rgb(240, 99, 125)");
-let colorEnd = new THREE.Color("rgb(221, 221, 221)");
 let counter = 0;
 let downCounter = 0;
 let slideMoveUp = 0;
 let slideMoveDown = 0;
 let slideSpeed = 1200;
 let transSpeed = 35;
+
+$('#fullpage').fullpage({
+    anchors: ['page1', 'page2'],
+    onLeave: function(index, nextIndex, direction) {
+        let leavingSection = $(this);
+
+        //after leaving section 2
+        if (index == 1 && direction == 'down') {
+            slideMoveDown = 2;
+            slideMoveUp = 0;
+            counter = 0;
+        } else if (index == 2 && direction == 'up') {
+            slideMoveUp = 1;
+            slideMoveDown = 0;
+            counter = 0;
+        }
+    }
+});
+$.fn.fullpage.setScrollingSpeed(slideSpeed);
+
 
 let createIndexedSphereGeometry = function(width, length) {
     let geom = new THREE.BufferGeometry();
@@ -47,36 +68,16 @@ let createIndexedSphereGeometry = function(width, length) {
         }
     }
     for (let i = 0; i < width; i++) {
-        for (let j = 0; j < length; j++) {
-            let a = i * length1 + j;
-            let b = i * length1 + j + 1;
-            let c = (i + 1) * length1 + j;
-            let d = (i + 1) * length1 + j + 1;
-            indices.push(a, c, b);
-            indices.push(b, c, d);
-        }
+      for (let j = 0; j < length; j++) {
+        let a = i * length1 + j;
+        let b = i * length1 + j + 1;
+        let c = (i+1) * length1 + j;
+        let d = (i+1) * length1 + j + 1;
+        indices.push(a,c,b);
+        indices.push(b,c,d);
+      }
     }
 
-
-
-    // $('#fullpage').fullpage({
-    //     anchors: ['page1', 'page2'],
-    //     onLeave: function(index, nextIndex, direction) {
-    //         let leavingSection = $(this);
-    //
-    //         //after leaving section 2
-    //         if (index == 1 && direction == 'down') {
-    //             slideMoveDown = 2;
-    //             slideMoveUp = 0;
-    //             counter = 0;
-    //         } else if (index == 2 && direction == 'up') {
-    //             slideMoveUp = 1;
-    //             slideMoveDown = 0;
-    //             counter = 0;
-    //         }
-    //     }
-    // });
-    // $.fn.fullpage.setScrollingSpeed(slideSpeed);
 
     let positions = new Float32Array(vertices);
     let index = new Uint32Array(indices);
@@ -116,7 +117,7 @@ initScene = function() {
     renderer.setClearColor(0xf8f8f8, 1.0);
     renderer.autoClearColor = true;
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    document.addEventListener('mousemove', onDocumentMouseMove, false);
+    // document.addEventListener('mousemove', onDocumentMouseMove, false);
     document.getElementById("ball").appendChild(renderer.domElement);
 
     // My Light
@@ -141,21 +142,15 @@ window.onload = function() {
     if (window.innerWidth <= 1020) {
         cancelAnimationFrame(cancel);
         cancelled = true;
-        // document.getElementById("ball").style.display = 'none';
-        // document.getElementById("ball--fallBack").style.display = 'block';
-        // document.getElementById("homepage--background").style.backgroundColor = '#f8f8f8';
     } else if (window.innerWidth >= 1020) {
-        // document.getElementById("ball").style.display = 'block';
-        // document.getElementById("ball--fallBack").style.display = 'none';
-        // document.getElementById("homepage--background").style.backgroundColor = '';
         animate();
         cancelled = false;
     }
 }
 
 function onWindowResize() {
-    windowHalfX = window.innerWidth / 2;
-    windowHalfY = window.innerHeight / 2;
+    // windowHalfX = window.innerWidth / 2;
+    // windowHalfY = window.innerHeight / 2;
 
     ballPresence();
 
@@ -168,13 +163,7 @@ function ballPresence() {
     if (window.innerWidth <= 1020 && cancelled == false) {
         cancelAnimationFrame(cancel);
         cancelled = true;
-        // document.getElementById("ball").style.display = 'none';
-        // document.getElementById("ball--fallBack").style.display = 'block';
-        // document.getElementById("homepage--background").style.backgroundColor = '#f8f8f8';
     } else if (cancelled == true && window.innerWidth >= 1020) {
-        // document.getElementById("ball").style.display = 'block';
-        // document.getElementById("ball--fallBack").style.display = 'none';
-        // document.getElementById("homepage--background").style.backgroundColor = '';
         animate();
         cancelled = false;
     }
@@ -201,7 +190,7 @@ let init = function() {
     initScene();
     let sizeX = sizeY = sizeZ = size;
     mesh = new THREE.Object3D();
-    mesh.scale.set(sizeX, sizeY, sizeZ);
+    mesh.scale.set(size, size, size);
     rotateObject(mesh, -106, -45, -180);
 
     geometry = createIndexedSphereGeometry(250, 250);
@@ -210,7 +199,6 @@ let init = function() {
     material = new THREE.MeshStandardMaterial({
         color: 0xFFFFFF,
         emissive: colorStart,
-        metalness: 1.0,
         transparent: true,
         opacity: 0.5,
         wireframe: wireframe
@@ -222,7 +210,7 @@ let init = function() {
     animate();
 }
 
-window.onmousemove = function(e) {}
+// window.onmousemove = function(e) {}
 
 let time = 0;
 let modifyGeometry = function() {
@@ -231,18 +219,18 @@ let modifyGeometry = function() {
     let uvs = geometry.attributes.uv.array;
 
     for (let i = 0, j = 0; i < pos.length; i += 6, j += 4) {
-        let scale = 0.01 * Math.cos(uvs[j] * 7 * 0.01);
-        scale += 0.05 * Math.cos(uvs[j] * 9 * 0.05);
+        let scale = 0.01 * Math.cos(uvs[j]  * 0.02);
+        // scale += 0.05 * Math.cos(uvs[j] *  0.45);
 
         for (let k = 4; k < 6; k += 2) {
             scale += (0.05 * k) * Math.cos(uvs[j] * 9 * k + (k + time * 0.05));
-            scale += 0 * Math.cos(uvs[j] * 7 * k + (k * 0.05));
+            // scale += 0 * Math.cos(uvs[j] * 7 * k + (k * 0.05));
         }
 
         scale *= scale * Math.sin(time * 0.04 + uvs[j] * 4);
 
         pos[i] = base_pos[i] * (1 + scale);
-        pos[i + 1] = base_pos[i + 1] * (1 + scale);
+        // pos[i + 1] = base_pos[i + 1] * (1 + scale);
         pos[i + 2] = base_pos[i + 2] * (1 + scale);
     }
     geometry.attributes.position.needsUpdate = true;
@@ -258,25 +246,24 @@ let animate = function() {
     // console.log(time);
 
 
-    if (window.innerWidth < 599) {
-        mesh.scale.set(phone, phone, phone);
-    }
-    if (window.innerWidth > 600) {
-        tabletPortrait = (55 + (window.innerWidth - 600) * .07);
-        mesh.scale.set(tabletPortrait, tabletPortrait, tabletPortrait);
-        if (window.innerWidth === 601) {}
-    }
-    if (window.innerWidth > 900) {
-        mesh.scale.set(tabletLandscape, tabletLandscape, tabletLandscape);
-    }
-    if (window.innerWidth > 1200) {
-        desktop = (76 + (window.innerWidth - 1200) * .10);
-        mesh.scale.set(desktop, desktop, desktop);
-    }
-    if (window.innerWidth > 1500) {
-        mesh.scale.set(bigDesktop, bigDesktop, bigDesktop);
-    }
-
+    // if (window.innerWidth < 599) {
+    //     mesh.scale.set(phone, phone, phone);
+    // }
+    // if (window.innerWidth > 600) {
+    //     tabletPortrait = (55 + (window.innerWidth - 600) * .07);
+    //     mesh.scale.set(tabletPortrait, tabletPortrait, tabletPortrait);
+    //     if (window.innerWidth === 601) {}
+    // }
+    // if (window.innerWidth > 900) {
+    //     mesh.scale.set(tabletLandscape, tabletLandscape, tabletLandscape);
+    // }
+    // if (window.innerWidth > 1200) {
+    //     desktop = (76 + (window.innerWidth - 1200) * .10);
+    //     mesh.scale.set(desktop, desktop, desktop);
+    // }
+    // if (window.innerWidth > 1500) {
+    //     mesh.scale.set(bigDesktop, bigDesktop, bigDesktop);
+    // }
 
 
     // scene.requestFrame = requestAnimationFrame(animate);
@@ -287,18 +274,16 @@ let animate = function() {
     render();
 }
 
-// function getScrollPosition() {
-//     let elmnt = document.getElementById("homepage");
-//     let y = elmnt.scrollTop;
-//     scrollPosition = y;
-// }
+function getScrollPosition() {
+    let elmnt = document.getElementById("homepage");
+    let y = elmnt.scrollTop;
+    scrollPosition = y;
+}
 
 function render() {
     // let materialR = sphere.material.emissive.r * 255;
     // let materialG = sphere.material.emissive.g * 255;
     // let materialB = sphere.material.emissive.b * 255;
-
-
     // if (slideMoveDown === 2) {
     //     sphere.material.emissive.r += ((colorEnd.r - colorStart.r) / transSpeed);
     //     sphere.material.emissive.g += ((colorEnd.g - colorStart.g) / transSpeed);
@@ -310,8 +295,6 @@ function render() {
     //     sphere.material.emissive.g += ((colorStart.g - colorEnd.g) / transSpeed);
     //     sphere.material.emissive.b += ((colorStart.b - colorEnd.b) / transSpeed);
     // }
-
-    renderer.render(scene, camera);
     // if (slideMoveDown === 2) {
     //     counter++;
     // }
@@ -334,6 +317,9 @@ function render() {
     //         sphere.material.emissive.b = colorEnd.b;
     //     }
     // }
+
+    renderer.render(scene, camera);
+
 
 }
 
