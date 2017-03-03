@@ -57,7 +57,7 @@
 
     function render() {
         window.requestAnimationFrame(render);
-        fps++;
+        fps = fps + 2000;
 
         for (let x = 1; x < width - 1; x += 1) {
             for (let y = 1; y < height - 1; y += 1) {
