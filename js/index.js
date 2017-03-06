@@ -15,6 +15,7 @@ let mouseX = mouseY = 20;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 let scrollPosition = 0;
+let pi = Math.PI;
 let phone = 55,
     tabletPortrait, size = 95,
     desktop = tabletLandscape = 76,
@@ -68,14 +69,14 @@ let createIndexedSphereGeometry = function(width, length) {
         }
     }
     for (let i = 0; i < width; i++) {
-      for (let j = 0; j < length; j++) {
-        let a = i * length1 + j;
-        let b = i * length1 + j + 1;
-        let c = (i+1) * length1 + j;
-        let d = (i+1) * length1 + j + 1;
-        indices.push(a,c,b);
-        indices.push(b,c,d);
-      }
+        for (let j = 0; j < length; j++) {
+            let a = i * length1 + j;
+            let b = i * length1 + j + 1;
+            let c = (i + 1) * length1 + j;
+            let d = (i + 1) * length1 + j + 1;
+            indices.push(a, c, b);
+            indices.push(b, c, d);
+        }
     }
 
 
@@ -95,7 +96,7 @@ let main = function(geom, radius) {
     let pos = geom.attributes.position.array;
     let uvs = geom.attributes.uv.array;
 
-    let pi = Math.PI;
+
 
     for (let i = 0, u = 0, v = 1; i < pos.length; i += 3, u += 2, v += 2) {
         pos[i] = radius * Math.sin(uvs[u] * pi) * Math.cos(uvs[v] * 2 * pi);
@@ -211,18 +212,25 @@ let init = function() {
 }
 
 // window.onmousemove = function(e) {}
-
+let testCounter = false;
 let time = 0;
+
 let modifyGeometry = function() {
     let pos = geometry.attributes.position.array;
     let base_pos = geometry.attributes.base_position.array;
+
     let uvs = geometry.attributes.uv.array;
 
     for (let i = 0, j = 0; i < pos.length; i += 6, j += 4) {
-        let scale = 0.01 * Math.cos(uvs[j]  * 0.02);
+        let scale = 0.01 * Math.cos(uvs[j] * 0.02);
+        // if (testCounter = false) {
+        //     console.log("works!" + uvs[j]);
+        //     testCounter = true;
+        // }
         // scale += 0.05 * Math.cos(uvs[j] *  0.45);
 
         for (let k = 4; k < 6; k += 2) {
+
             scale += (0.05 * k) * Math.cos(uvs[j] * 9 * k + (k + time * 0.05));
             // scale += 0 * Math.cos(uvs[j] * 7 * k + (k * 0.05));
         }
