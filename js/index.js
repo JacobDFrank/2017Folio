@@ -5,12 +5,16 @@ let scene,
     renderer, container, cancelled = false,
     HEIGHT, WIDTH,
     ambientLight, hemisphereLight, shadowLight,
+    mouseX = 0, mouseY = 0,
     shape;
+    let windowHalfX = window.innerWidth / 2;
+    let windowHalfY = window.innerHeight / 2;
 
 // HANDLE SCREEN EVENTS
 function onWindowResize() {
     HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth;
+
     ballPresence();
     renderer.setSize(WIDTH, HEIGHT);
     camera.aspect = WIDTH / HEIGHT;
@@ -58,6 +62,7 @@ function createScene() {
     container.appendChild(renderer.domElement);
 
     window.addEventListener('resize', onWindowResize, false);
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 }
 
 // LIGHTS
@@ -145,12 +150,14 @@ function getScrollPosition() {
 }
 
 function onDocumentMouseMove(event) { //Perspective turn
-    mouseX = (event.clientX + windowHalfX) * .5;
-    mouseY = (event.clientY + windowHalfY) * .5;
+    mouseX = (event.clientX + windowHalfX) * .01;
+    mouseY = (event.clientY + windowHalfY) * .01;
 }
 // animate
 function animate() {
     shape.moveWaves();
+    camera.position.x += ( - mouseX - camera.position.x ) * .01;
+    camera.position.y += ( - mouseY - camera.position.y ) * .01;
     renderer.render(scene, camera);
 
     // scene.requestFrame = requestAnimationFrame(animate);
