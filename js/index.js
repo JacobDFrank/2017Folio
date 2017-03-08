@@ -1,19 +1,33 @@
-//s.codepen.io/joshbader/debug/badd93ac5c974796d5bfb092e2fd620e
-// GLOBAL letIABLES
+// const fullPage = require('./jquery.fullPage.min.js');
+
+// window.addEventListener('load', function () {
+//     let input = lSystem.init();
+// })
+
+// window.onload = function() {
+//     console.log("jquery fullPage included", fullPage);
+// }
+
+
+
 let scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
-    HEIGHT, WIDTH,
+    HEIGHT, WIDTH, windowHalfX = window.innerWidth / 2,
+    windowHalfY = window.innerHeight / 2,
     ambientLight, hemisphereLight, shadowLight,
-    mouseX = 0, mouseY = 0,
+    mouseX = windowHalfX * .01,
+    mouseY = windowHalfY * .01,
+    noise = 0.01,
     shape;
-    let windowHalfX = window.innerWidth / 2;
-    let windowHalfY = window.innerHeight / 2;
 
 // HANDLE SCREEN EVENTS
 function onWindowResize() {
     HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth;
+
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
 
     ballPresence();
     renderer.setSize(WIDTH, HEIGHT);
@@ -62,7 +76,7 @@ function createScene() {
     container.appendChild(renderer.domElement);
 
     window.addEventListener('resize', onWindowResize, false);
-    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+    document.addEventListener('mousemove', onDocumentMouseMove, false);
 }
 
 // LIGHTS
@@ -71,7 +85,7 @@ function createLights() {
     // ambientLight = new THREE.AmbientLight(0xdcde95, .5);
 
     shadowLight = new THREE.DirectionalLight(0xE53455, .9);
-    shadowLight.position.set(150, 350, 350);
+    shadowLight.position.set(450, -400, 350);
     shadowLight.castShadow = true;
 
     scene.add(hemisphereLight);
@@ -99,9 +113,9 @@ Shape = function() {
             y: v.y,
             x: v.x,
             z: v.z,
-            ang: Math.random() * Math.PI * 0.13,
+            ang: Math.random() * Math.PI * .13,
             amp: Math.random() * 4,
-            speed: 0.025 + Math.random() * 0.01
+            speed: 0.025 + Math.random() * noise
         });
     };
 
@@ -120,6 +134,7 @@ Shape.prototype.moveWaves = function() {
         v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
         v.y = vprops.y + Math.cos(vprops.ang) * vprops.amp;
         vprops.ang += vprops.speed;
+        vprops.speed = 0.025 + Math.random() * noise;
     }
 
     this.mesh.geometry.verticesNeedUpdate = true;
@@ -129,7 +144,7 @@ Shape.prototype.moveWaves = function() {
 // 3D MODEL
 function createShape() {
     shape = new Shape();
-    shape.mesh.position.y = 0;
+    // shape.mesh.position.y = 0;
     scene.add(shape.mesh);
 }
 
@@ -149,16 +164,43 @@ function getScrollPosition() {
     scrollPosition = y;
 }
 
-function onDocumentMouseMove(event) { //Perspective turn
-    mouseX = (event.clientX + windowHalfX) * .01;
-    mouseY = (event.clientY + windowHalfY) * .01;
+// Detect if left page
+function addEvent(obj, evt, fn) {
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    }
+    else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
+addEvent(window,"load",function(e) {
+    addEvent(document, "mouseout", function(e) {
+        e = e ? e : window.event;
+        let from = e.relatedTarget || e.toElement;
+        if (!from || from.nodeName == "HTML") {
+            // stop your drag event here
+            // for now we can just use an alert
+            noise = 0.01;
+        }
+    });
+});
+
+
+function onDocumentMouseMove(event) { //Reactivity
+
+    let a = windowHalfX - event.clientX;
+    let b = windowHalfY - event.clientY;
+
+    let distance = Math.sqrt( a*a + b*b );
+
+    // console.log(distance);
+    noise = 1 - distance / windowHalfX;
 }
 // animate
 function animate() {
     shape.moveWaves();
-    camera.position.x += ( - mouseX - camera.position.x ) * .01;
-    camera.position.y += ( - mouseY - camera.position.y ) * .01;
-    renderer.render(scene, camera);
+
+        renderer.render(scene, camera);
 
     // scene.requestFrame = requestAnimationFrame(animate);
     cancel = requestAnimationFrame(animate);
