@@ -146,7 +146,7 @@ h3, p {
     }
 }
 
-@media screen and (max-width: 1020px) {
+/*@media screen and (max-width: 1020px) {
     #ball {
         display: none;
     }
@@ -168,7 +168,7 @@ h3, p {
     #homepage--background {
         background-color: none;
     }
-}
+}*/
 
 @media screen and (min-width: 1440px) {
     .fluid-type14-26 {

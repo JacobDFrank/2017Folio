@@ -20,32 +20,35 @@ let scene,
     mouseX = windowHalfX * .01,
     mouseY = windowHalfY * .01,
     noise = 0.01,
+    radius = 60,
+    windowResized = false, resizeWidth,
     shape;
+    let geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 // HANDLE SCREEN EVENTS
 function onWindowResize() {
     HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth;
-
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
-
-    ballPresence();
+    resizeWidth = 500;
+    windowResized = true;
+    // ballPresence();
     renderer.setSize(WIDTH, HEIGHT);
     camera.aspect = WIDTH / HEIGHT;
     camera.updateProjectionMatrix();
 }
 window.onload = function() {
-    ballPresence();
-    console.log("loaded");
-    if (window.innerWidth <= 1020) {
-        cancelAnimationFrame(cancel);
-        cancelled = true;
-    } else if (window.innerWidth >= 1020) {
-        animate();
-        cancelled = false;
-    }
-}
+    // ballPresence();
+//     console.log("loaded");
+//     if (window.innerWidth <= 1020) {
+//         cancelAnimationFrame(cancel);
+//         cancelled = true;
+//     } else if (window.innerWidth >= 1020) {
+//         animate();
+//         cancelled = false;
+//     }
+ }
 
 // INIT THREE JS SCENE
 function createScene() {
@@ -62,9 +65,9 @@ function createScene() {
         nearPlane,
         farPlane
     );
-    scene.fog = new THREE.Fog(0xE53455, 10, 900);
+    // scene.fog = new THREE.Fog(0xE53455, 10, 900);
     camera.position.x = 0;
-    camera.position.z = 600;
+    camera.position.z = 300;
     camera.position.y = 0;
 
     renderer = new THREE.WebGLRenderer({
@@ -86,7 +89,7 @@ function createLights() {
     // ambientLight = new THREE.AmbientLight(0xdcde95, .5);
 
     shadowLight = new THREE.DirectionalLight(0xE53455, .9);
-    shadowLight.position.set(450, -400, 350);
+    shadowLight.position.set(250, -100, 800);
     shadowLight.castShadow = true;
 
     scene.add(hemisphereLight);
@@ -97,7 +100,7 @@ function createLights() {
 // Shape
 Shape = function() {
     // let geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
-    let geometry = new THREE.SphereGeometry(60, 30, 30),
+    geometry,
         material = new THREE.MeshPhongMaterial({
             color: 0xffffff,
             transparent: true,
@@ -140,6 +143,8 @@ Shape.prototype.moveWaves = function() {
 
     this.mesh.geometry.verticesNeedUpdate = true;
     shape.mesh.rotation.z += .001;
+    this.mesh.geometry.radius += radius;
+    // console.log(this.mesh.geometry.radius);
 }
 
 // 3D MODEL
@@ -200,9 +205,10 @@ function onDocumentMouseMove(event) { //Reactivity
 // animate
 function animate() {
     shape.moveWaves();
-
-        renderer.render(scene, camera);
-
+    if (windowResized == true) {
+        camera.position.z = resizeWidth;
+    }
+    renderer.render(scene, camera);
     // scene.requestFrame = requestAnimationFrame(animate);
     cancel = requestAnimationFrame(animate);
 
