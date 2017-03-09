@@ -20,9 +20,38 @@ let scene,
     mouseY = windowHalfY * .01,
     noise = 0.01,
     radius = 60,
-    windowResized = false, resizeWidth,
+    windowResized = false,
+    resizeWidth,
     shape;
-    let geometry = new THREE.SphereGeometry(radius, 40, 30);
+let geometry = new THREE.SphereGeometry(radius, 40, 30);
+
+let counter = 0;
+let downCounter = 0;
+let slideMoveUp = 0;
+let slideMoveDown = 0;
+let slideSpeed = 1200;
+let transSpeed = 35;
+
+$('#fullpage').fullpage({
+    anchors: ['page1', 'page2'],
+    onLeave: function(index, nextIndex, direction) {
+        let leavingSection = $(this);
+
+        //after leaving section 2
+        if (index == 1 && direction == 'down') {
+            slideMoveDown = 2;
+            slideMoveUp = 0;
+            counter = 0;
+        } else if (index == 2 && direction == 'up') {
+            slideMoveUp = 1;
+            slideMoveDown = 0;
+            counter = 0;
+        }
+    }
+});
+$.fn.fullpage.setScrollingSpeed(slideSpeed);
+
+
 
 // HANDLE SCREEN EVENTS
 function onWindowResize() {
@@ -30,24 +59,23 @@ function onWindowResize() {
     WIDTH = window.innerWidth;
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
-    resizeWidth = 500;
     windowResized = true;
-    // ballPresence();
+    ballPresence();
     renderer.setSize(WIDTH, HEIGHT);
     camera.aspect = WIDTH / HEIGHT;
     camera.updateProjectionMatrix();
 }
 window.onload = function() {
-    // ballPresence();
-//     console.log("loaded");
-//     if (window.innerWidth <= 1020) {
-//         cancelAnimationFrame(cancel);
-//         cancelled = true;
-//     } else if (window.innerWidth >= 1020) {
-//         animate();
-//         cancelled = false;
-//     }
- }
+    ballPresence();
+    console.log("loaded");
+    // if (window.innerWidth <= 1020) {
+    //     cancelAnimationFrame(cancel);
+    //     cancelled = true;
+    // } else if (window.innerWidth >= 1020) {
+    //     animate();
+    //     cancelled = false;
+    // }
+}
 
 // INIT THREE JS SCENE
 function createScene() {
@@ -100,13 +128,13 @@ function createLights() {
 Shape = function() {
     // let geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
     geometry,
-        material = new THREE.MeshPhongMaterial({
-            color: 0xffffff,
-            transparent: true,
-            opacity: 1,
-            shading: THREE.FlatShading,
-        }),
-        l = geometry.vertices.length;
+    material = new THREE.MeshPhongMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 1,
+        shading: THREE.FlatShading,
+    }),
+    l = geometry.vertices.length;
 
     this.waves = [];
 
@@ -118,7 +146,7 @@ Shape = function() {
             z: v.z,
             ang: Math.random() * Math.PI * .13,
             amp: Math.random() * 4,
-            speed: 0.025 + Math.random() * noise
+            speed: Math.random() * noise
         });
     };
 
@@ -154,13 +182,21 @@ function createShape() {
 }
 
 function ballPresence() {
-    if (window.innerWidth <= 1020 && cancelled == false) {
-        cancelAnimationFrame(cancel);
-        cancelled = true;
-    } else if (cancelled == true && window.innerWidth >= 1020) {
-        animate();
-        cancelled = false;
+    // if (window.innerWidth <= 1020 && cancelled == false) {
+    //     cancelAnimationFrame(cancel);
+    //     cancelled = true;
+    // } else if (cancelled == true && window.innerWidth >= 1020) {
+    //     animate();
+    //     cancelled = false;
+    // }
+    if (window.innerWidth >= 1000) {
+        resizeWidth = 500;
+    } else if (window.innerWidth <= 400) {
+        resizeWidth = 900;
+    } else if (window.innerWidth >= 400 && window.innerWidth <= 1000) {
+        resizeWidth = (900 - 400 * ((window.innerWidth - 400) / 600));
     }
+    console.log(resizeWidth);
 }
 
 function getScrollPosition() {
@@ -173,12 +209,11 @@ function getScrollPosition() {
 function addEvent(obj, evt, fn) {
     if (obj.addEventListener) {
         obj.addEventListener(evt, fn, false);
-    }
-    else if (obj.attachEvent) {
+    } else if (obj.attachEvent) {
         obj.attachEvent("on" + evt, fn);
     }
 }
-addEvent(window,"load",function(e) {
+addEvent(window, "load", function(e) {
     addEvent(document, "mouseout", function(e) {
         e = e ? e : window.event;
         let from = e.relatedTarget || e.toElement;
@@ -196,17 +231,14 @@ function onDocumentMouseMove(event) { //Reactivity
     let a = windowHalfX - event.clientX;
     let b = windowHalfY - event.clientY;
 
-    let distance = Math.sqrt( a*a + b*b );
+    let distance = Math.sqrt(a * a + b * b);
 
-    // console.log(distance);
-    noise = 1 - distance / windowHalfX;
+    noise = 1 - distance / windowHalfX - .35;
 }
 // animate
 function animate() {
     shape.moveWaves();
-    if (windowResized == true) {
-        camera.position.z = resizeWidth;
-    }
+    camera.position.z = resizeWidth;
     renderer.render(scene, camera);
     // scene.requestFrame = requestAnimationFrame(animate);
     cancel = requestAnimationFrame(animate);
