@@ -189,12 +189,16 @@ function ballPresence() {
     //     animate();
     //     cancelled = false;
     // }
+
     if (window.innerWidth >= 1000) {
         resizeWidth = 500;
     } else if (window.innerWidth <= 400) {
         resizeWidth = 900;
     } else if (window.innerWidth >= 400 && window.innerWidth <= 1000) {
         resizeWidth = (900 - 400 * ((window.innerWidth - 400) / 600));
+    }
+    if (window.innerHeight <= 480) {
+        resizeWidth = 480;
     }
     console.log(resizeWidth);
 }

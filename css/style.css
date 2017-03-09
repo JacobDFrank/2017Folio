@@ -59,7 +59,7 @@ canvas {
 }
 
 .nav-left {
-    left: 40px;
+    left: 87px;
 }
 
 .nav-transform {
@@ -74,14 +74,14 @@ canvas {
 }
 
 .nav-right {
-    right: 40px;
+    right: 87px;
 }
 
 .nav-transform-right {
     z-index: 1000001;
     position: absolute;
-    -webkit-transform: rotateZ(-90deg) translateX(50%);
-    transform: rotateZ(-90deg) translateX(50%);
+    -webkit-transform: rotateZ(90deg) translateX(50%);
+    transform: rotateZ(90deg) translateX(50%);
     -webkit-transform-origin: 100% 50%;
     -ms-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
@@ -113,7 +113,7 @@ canvas {
 
 h3 {
     letter-spacing: 1.78px;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 h3, p {
