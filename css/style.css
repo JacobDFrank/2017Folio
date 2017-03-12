@@ -29,6 +29,12 @@ body {
     font-weight: 700;
 }
 
+.proxima-nova-condensed {
+    font-family: "proxima-nova-condensed", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
 .roboto {
     font-family: 'roboto', sans-serif;
 }
