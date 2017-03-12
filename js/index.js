@@ -67,7 +67,7 @@ function onWindowResize() {
 }
 window.onload = function() {
     ballPresence();
-    console.log("loaded");
+    // console.log("loaded");
     // if (window.innerWidth <= 1020) {
     //     cancelAnimationFrame(cancel);
     //     cancelled = true;
@@ -193,14 +193,14 @@ function ballPresence() {
     if (window.innerWidth >= 1000) {
         resizeWidth = 500;
     } else if (window.innerWidth <= 400) {
-        resizeWidth = 900;
+        resizeWidth = 1200;
     } else if (window.innerWidth >= 400 && window.innerWidth <= 1000) {
-        resizeWidth = (900 - 400 * ((window.innerWidth - 400) / 600));
+        resizeWidth = (1200 - 700 * ((window.innerWidth - 400) / 600));
     }
     if (window.innerHeight <= 480) {
         resizeWidth = 480;
     }
-    console.log(resizeWidth);
+    // console.log(resizeWidth);
 }
 
 function getScrollPosition() {
