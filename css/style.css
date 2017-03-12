@@ -23,6 +23,12 @@ body {
     font-weight: 700;
 }
 
+.myriad-pro {
+    font-family: "myriad-pro", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
 .proxima-nova-sc-osf-condensed {
     font-family: "proxima-nova-sc-osf-condensed", sans-serif;
     font-style: normal;
