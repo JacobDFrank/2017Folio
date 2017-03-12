@@ -13,14 +13,35 @@
     <script src="vendors/jquery.easings.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-    <script src="https://use.typekit.net/oih0jze.js"></script>
     <script>
-        try {
-            Typekit.load({
-                async: true
-            });
-
-        } catch (e) {}
+        (function(d) {
+            var config = {
+                    kitId: 'oih0jze',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
     </script>
 </head>
 
@@ -32,7 +53,7 @@
             </div>
         </div>
         <div class="nav__mail-wrapper nav--transformRight nav--right">
-            <p class="fluid-type14-26 roboto nav__mail">  <a href="mailto:hello@jacobdfrank.com?subject=Hello Jacob"> Email</a> </p>
+            <p class="fluid-type14-26 roboto nav__mail"> <a href="mailto:hello@jacobdfrank.com?subject=Hello Jacob"> Email</a> </p>
         </div>
     </div>
     <div id="fullpage" onscroll="getScrollPosition()">
