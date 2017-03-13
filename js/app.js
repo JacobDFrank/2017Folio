@@ -192,11 +192,11 @@ function ballPresence() {
     // }
 
     if (window.innerWidth >= 1000) {
-        resizeWidth = 500;
+        resizeWidth = 700;
     } else if (window.innerWidth <= 400) {
         resizeWidth = 1200;
     } else if (window.innerWidth >= 400 && window.innerWidth <= 1000) {
-        resizeWidth = (1200 - 700 * ((window.innerWidth - 400) / 600));
+        resizeWidth = (1200 - 500 * ((window.innerWidth - 400) / 600));
     }
     if (window.innerHeight <= 480) {
         resizeWidth = 480;
