@@ -113,9 +113,9 @@ function createScene() {
 // LIGHTS
 function createLights() {
     // hemisphereLight = new THREE.HemisphereLight(0xbd8f49,0x000000, .8);
-    // ambientLight = new THREE.AmbientLight(0xdcde95, .5);
+    ambientLight = new THREE.AmbientLight(0xE53455, .1);
 
-    shadowLight = new THREE.DirectionalLight(0xE53455, .9);
+    shadowLight = new THREE.DirectionalLight(0xE53455, .95);
     shadowLight.position.set(250, -100, 800);
     shadowLight.castShadow = true;
 
@@ -181,6 +181,10 @@ function createShape() {
     scene.add(shape.mesh);
 }
 
+function changeResizeWidth(newWidth) {
+    resizeWidth = newWidth;
+}
+
 function ballPresence() {
     // if (window.innerWidth <= 1020 && cancelled == false) {
     //     cancelAnimationFrame(cancel);
@@ -191,7 +195,7 @@ function ballPresence() {
     // }
 
     if (window.innerWidth >= 1000) {
-        resizeWidth = 700;
+        resizeWidth = 800;
     } else if (window.innerWidth <= 400) {
         resizeWidth = 1200;
     } else if (window.innerWidth >= 400 && window.innerWidth <= 1000) {
