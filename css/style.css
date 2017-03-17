@@ -108,11 +108,15 @@ canvas {
     transition: opacity .3s;
 }
 
+.link a {
+    color: #333 !important;
+}
+
 .link__decoration {
     text-decoration: none!important;
 }
 
-.link:hover {
+.link:hover, .bottom__link__line:hover {
     opacity: 1;
 }
 
@@ -163,7 +167,7 @@ h3, p {
     left: 50%;
     display: block;
     text-align: center;
-    background-color: #828282;
+    background-color: #333;
     position: absolute;
     -webkit-transform-origin: 50% 0;
     -ms-transform-origin: 50% 0;
