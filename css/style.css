@@ -94,12 +94,12 @@ canvas {
     top: 48%;
 }
 
-.nav__about-wrapper, .nav__mail-wrapper, .nav__works-wrapper {
+.nav__wrapper {
     display: inline-block;
     padding: 10px;
 }
 
-.nav__about, .nav__mail, .nav__works, .bottom__link {
+.link {
     color: #333;
     opacity: .5;
     white-space: nowrap;
@@ -108,7 +108,11 @@ canvas {
     transition: opacity .3s;
 }
 
-.nav__about:hover, .nav__mail:hover, .nav__works:hover, .bottom__link:hover {
+.link__decoration {
+    text-decoration: none!important;
+}
+
+.link:hover {
     opacity: 1;
 }
 
