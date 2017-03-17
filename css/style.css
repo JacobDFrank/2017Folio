@@ -137,12 +137,13 @@ h3, p {
     align-items: center;
 }
 
-#arrowdown {
+
+.bottom__link__line {
     position: absolute;
-    bottom: -30px;
+    bottom: -28px;
     right: 0;
     width: 44px;
-    height: 115px;
+    height: calc(65px + 4vh);
     left: 50%;
     -webkit-transform: translateX(-50%) scaleX(.5) scaleY(.5);
     -ms-transform: translateX(-50%) scaleX(.5) scaleY(.5);
@@ -153,17 +154,18 @@ h3, p {
     display: block;
 }
 
-#arrowdown #arrowdown-trail {
-    height: 125px;
+
+.bottom__link__line .arrowdown-trail {
+    height: 115px;
     width: 2px;
     text-align: center;
-    background-color: blue;
+    background-color: #828282;
     position: absolute;
     -webkit-transform-origin: 50% 0;
     -ms-transform-origin: 50% 0;
     transform-origin: 50% 0;
-    margin-left: 22px;
     top: 0;
+    cursor: pointer;
     transform: matrix(1, 0, 0, 1, 0, 0);
     /*transform: matrix(1, 0, 0, 1, 0, 0);*/
 }
@@ -178,6 +180,12 @@ h3, p {
 
 .fluid-type30-60 {
     font-size: 29.6px;
+}
+
+@media screen and (min-height: 500px) {
+    .homepage__name {
+        margin-top: -30px;
+    }
 }
 
 @media screen and (min-width: 320px) {

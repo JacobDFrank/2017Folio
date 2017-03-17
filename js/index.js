@@ -202,7 +202,7 @@ function ballPresence() {
         resizeWidth = (1200 - 500 * ((window.innerWidth - 400) / 600));
     }
     if (window.innerHeight <= 480) {
-        resizeWidth = 480;
+        resizeWidth = 600;
     }
     // console.log(resizeWidth);
 }
