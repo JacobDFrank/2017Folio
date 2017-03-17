@@ -182,7 +182,7 @@ h3, p {
     font-size: 29.6px;
 }
 
-@media screen and (min-height: 500px) {
+@media screen and (max-height: 500px) {
     .homepage__name {
         margin-top: -30px;
     }
