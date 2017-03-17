@@ -53,6 +53,8 @@ $.fn.fullpage.setScrollingSpeed(slideSpeed);
 
 // HANDLE SCREEN EVENTS
 function onWindowResize() {
+    HEIGHT = window.innerHeight;
+    WIDTH = window.innerWidth;
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
     windowResized = true;
@@ -97,8 +99,6 @@ function createScene() {
         alpha: true,
         antialias: true
     });
-    HEIGHT = window.innerHeight;
-    WIDTH = window.innerWidth;
     renderer.setSize(WIDTH, HEIGHT);
     renderer.shadowMap.enabled = true;
     container = document.getElementById('ball');
@@ -200,7 +200,7 @@ function ballPresence() {
         resizeWidth = (1200 - 500 * ((window.innerWidth - 400) / 600));
     }
     if (window.innerHeight <= 480) {
-        resizeWidth = 600;
+        resizeWidth = 550;
     }
     // console.log(resizeWidth);
 }
@@ -247,8 +247,6 @@ function animate() {
     camera.position.z = resizeWidth;
     renderer.render(scene, camera);
     console.log(WIDTH);
-    // HEIGHT = window.innerHeight;
-    // WIDTH = window.innerWidth;
 
     // scene.requestFrame = requestAnimationFrame(animate);
     cancel = requestAnimationFrame(animate);
