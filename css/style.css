@@ -36,12 +36,7 @@ canvas {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: -1;
-}
-
-canvas {
     width: 100vw !important;
 }
 
@@ -104,7 +99,7 @@ canvas {
     padding: 10px;
 }
 
-.nav__about, .nav__mail, .nav__works {
+.nav__about, .nav__mail, .nav__works, .bottom__link {
     color: #333;
     opacity: .5;
     white-space: nowrap;
@@ -113,7 +108,7 @@ canvas {
     transition: opacity .3s;
 }
 
-.nav__about:hover, .nav__mail:hover, .nav__works:hover {
+.nav__about:hover, .nav__mail:hover, .nav__works:hover, .bottom__link:hover {
     opacity: 1;
 }
 
@@ -142,7 +137,7 @@ h3, p {
 }
 
 
-.bottom__link__line {
+.bottom__link__line__container {
     position: absolute;
     bottom: -28px;
     right: 0;
@@ -152,16 +147,17 @@ h3, p {
     -webkit-transform: translateX(-50%) scaleX(.5) scaleY(.5);
     -ms-transform: translateX(-50%) scaleX(.5) scaleY(.5);
     transform: translateX(-50%) scaleX(.5) scaleY(.5);
-    cursor: pointer;
     z-index: 99999;
     /*display: none; turn on when you move down on the page*/
     display: block;
 }
 
 
-.bottom__link__line .arrowdown-trail {
+.bottom__link__line {
     height: 115px;
-    width: 2px;
+    width: 3px;
+    left: 50%;
+    display: block;
     text-align: center;
     background-color: #828282;
     position: absolute;
@@ -169,7 +165,6 @@ h3, p {
     -ms-transform-origin: 50% 0;
     transform-origin: 50% 0;
     top: 0;
-    cursor: pointer;
     transform: matrix(1, 0, 0, 1, 0, 0);
     /*transform: matrix(1, 0, 0, 1, 0, 0);*/
 }
