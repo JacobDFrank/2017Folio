@@ -22,7 +22,7 @@ let phone = 55,
     bigDesktop = 106;
 
 // let colorStart = new THREE.Color("rgb(248, 248, 248)");
-// let colorEnd = new THREE.Color("rgb(221, 221, 221)");
+let colorEnd = new THREE.Color("rgb(221, 221, 221)");
 
 let colorStart = new THREE.Color("rgb(240, 99, 125)");
 let counter = 0;
@@ -42,10 +42,12 @@ $('#fullpage').fullpage({
             slideMoveDown = 2;
             slideMoveUp = 0;
             counter = 0;
+            console.log("Slide 2222")
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
             slideMoveDown = 0;
             counter = 0;
+            console.log("Slide 1111")
         }
     }
 });
@@ -288,42 +290,40 @@ function getScrollPosition() {
 }
 
 function render() {
-    // let materialR = sphere.material.emissive.r * 255;
-    // let materialG = sphere.material.emissive.g * 255;
-    // let materialB = sphere.material.emissive.b * 255;
-    // if (slideMoveDown === 2) {
-    //     sphere.material.emissive.r += ((colorEnd.r - colorStart.r) / transSpeed);
-    //     sphere.material.emissive.g += ((colorEnd.g - colorStart.g) / transSpeed);
-    //     sphere.material.emissive.b += ((colorEnd.b - colorStart.b) / transSpeed);
-    // }
-    //
-    // if (slideMoveUp === 1) {
-    //     sphere.material.emissive.r += ((colorStart.r - colorEnd.r) / transSpeed);
-    //     sphere.material.emissive.g += ((colorStart.g - colorEnd.g) / transSpeed);
-    //     sphere.material.emissive.b += ((colorStart.b - colorEnd.b) / transSpeed);
-    // }
-    // if (slideMoveDown === 2) {
-    //     counter++;
-    // }
-    // if (slideMoveUp === 1) {
-    //     counter++;
-    // }
-    //
-    // if (counter === transSpeed) {
-    //     counter = 0;
-    //     if (slideMoveUp === 1) {
-    //         slideMoveUp = 0;
-    //         sphere.material.emissive.r = colorStart.r;
-    //         sphere.material.emissive.g = colorStart.g;
-    //         sphere.material.emissive.b = colorStart.b;
-    //     }
-    //     if (slideMoveDown === 2) {
-    //         slideMoveDown = 0;
-    //         sphere.material.emissive.r = colorEnd.r;
-    //         sphere.material.emissive.g = colorEnd.g;
-    //         sphere.material.emissive.b = colorEnd.b;
-    //     }
-    // }
+    let materialR = sphere.material.emissive.r * 255;
+    let materialG = sphere.material.emissive.g * 255;
+    let materialB = sphere.material.emissive.b * 255;
+
+    if (slideMoveDown === 2) {
+        console.log("Slide 2")
+    }
+
+    if (slideMoveUp === 1) {
+        console.log("Slide 1")
+    }
+
+    if (slideMoveDown === 2) {
+        counter++;
+    }
+    if (slideMoveUp === 1) {
+        counter++;
+    }
+
+    if (counter === transSpeed) {
+        counter = 0;
+        if (slideMoveUp === 1) {
+            slideMoveUp = 0;
+            sphere.material.emissive.r = colorStart.r;
+            sphere.material.emissive.g = colorStart.g;
+            sphere.material.emissive.b = colorStart.b;
+        }
+        if (slideMoveDown === 2) {
+            slideMoveDown = 0;
+            sphere.material.emissive.r = colorEnd.r;
+            sphere.material.emissive.g = colorEnd.g;
+            sphere.material.emissive.b = colorEnd.b;
+        }
+    }
 
     renderer.render(scene, camera);
 
