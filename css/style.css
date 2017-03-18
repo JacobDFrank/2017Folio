@@ -132,12 +132,8 @@ canvas {
     font-size: 20px;
 }
 
-h3, p {
-    text-rendering: geometricPrecision;
-}
-
 .bottom__link {
-    margin-top: -40px;
+    margin-top: -80px;
 }
 
 .bottom__link__name {
@@ -201,10 +197,10 @@ h3, p {
 
 @media screen and (min-width: 320px) {
     .fluid-type14-20 {
-        font-size: calc( 14px + (20 - 14) * ( (100vw - 320px) / ( 1440 - 320)));
+        font-size: calc( 14px + 6 * ( (100vw - 320px) / 1120));
     }
     .fluid-type30-60 {
-        font-size: calc( 29.6px + (60 - 29.6) * ( (100vw - 320px) / ( 1440 - 320)));
+        font-size: calc( 29.6px + 30.4 * ( (100vw - 320px) / 1120));
     }
 }
 
