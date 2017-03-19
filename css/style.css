@@ -145,8 +145,8 @@ canvas {
 }
 .bottom--reappear {
     opacity: 1;
-    -webkit-transition: opacity 2.3s;
-    transition: opacity 2.3s;
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s;
 }
 .bottom__link__name {
     display: flex;
@@ -203,6 +203,12 @@ canvas {
 .fluid-type30-60 {
     font-size: 29.6px;
 }
+.fluid-type24-44 {
+    font-size: 24px;
+}
+.fluid-type12-16 {
+    font-size: 12px;
+}
 
 @media screen and (max-height: 500px) {
     .homepage__name {
@@ -217,6 +223,12 @@ canvas {
     .fluid-type30-60 {
         font-size: calc( 29.6px + 30.4 * ( (100vw - 320px) / 1120));
     }
+    .fluid-type24-44 {
+        font-size: calc( 24px + 20 * ( (100vw - 320px) / 1120));
+    }
+    .fluid-type12-16 {
+        font-size: calc( 12px + 4 * ( (100vw - 320px) / 1120));
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -225,5 +237,11 @@ canvas {
     }
     .fluid-type30-60 {
         font-size: 60px;
+    }
+    .fluid-type24-44 {
+        font-size: 44px;
+    }
+    .fluid-type12-16 {
+        font-size: 16px;
     }
 }

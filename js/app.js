@@ -34,6 +34,8 @@ $('#fullpage').fullpage({
         if (direction == 'up' || direction == 'down') {
             jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
         }
         //after leaving section 2
         if (index == 1 && direction == 'down') {
@@ -294,6 +296,8 @@ function animate() {
         }
         jQuery('.bottom__link__line').addClass('bottom--reappear').removeClass('bottom--disappear');
         jQuery('.bottom__link__name__color').addClass('bottom--reappear').removeClass('bottom--disappear');
+        jQuery('.projects__name').addClass('bottom--reappear').removeClass('bottom--disappear');
+        jQuery('.projects__subhead').addClass('bottom--reappear').removeClass('bottom--disappear');
     }
 
 
