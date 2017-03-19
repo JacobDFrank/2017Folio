@@ -25,6 +25,8 @@ let scene,
     shape;
 let geometry = new THREE.SphereGeometry(radius, 40, 30);
 
+let recordingYLocation, recordingSize;
+
 let counter = 0;
 let downCounter = 0;
 let slideMoveUp = 0;
@@ -84,7 +86,8 @@ window.onload = function() {
     //     cancelled = false;
     // }
 }
-
+recordingYLocation = 46;
+recordingSize = 145;
 // INIT THREE JS SCENE
 function createScene() {
     HEIGHT = window.innerHeight;
@@ -100,6 +103,7 @@ function createScene() {
         nearPlane,
         farPlane
     );
+
     scene.fog = new THREE.Fog(0xE53455, 1, 2500);
     camera.position.x = 0;
     camera.position.z = 300;
@@ -202,7 +206,8 @@ function ballPresence() {
     // }
 
     if (window.innerWidth >= 1000) {
-        resizeWidth = 800;
+        resizeWidth = 700;
+        // resizeWidth = recordingSize;
     } else if (window.innerWidth <= 400) {
         resizeWidth = 1200;
     } else if (window.innerWidth >= 400 && window.innerWidth <= 1000) {
