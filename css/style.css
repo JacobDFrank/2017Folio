@@ -109,10 +109,12 @@ canvas {
     transition: opacity .3s;
 }
 
-
-/*.link a {
-    color: #333 !important;
-}*/
+.pageUp__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
 
 .link__decoration {
     text-decoration: none!important;
@@ -136,7 +138,16 @@ canvas {
     margin-top: -3vh;
     cursor: default;
 }
-
+.bottom--disappear {
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+}
+.bottom--reappear {
+    opacity: 1;
+    -webkit-transition: opacity 2.3s;
+    transition: opacity 2.3s;
+}
 .bottom__link__name {
     display: flex;
     flex-direction: column;

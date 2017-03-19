@@ -11,7 +11,7 @@ let scene,
     windowResized = false,
     resizeWidth,
     shape;
-let slide2Position = -8,
+let slide2Position = -5,
     finalBallSize = 0
 let geometry = new THREE.SphereGeometry(radius, 40, 30);
 
@@ -30,7 +30,10 @@ $('#fullpage').fullpage({
     onLeave: function(index, nextIndex, direction) {
         let leavingSection = $(this);
 
-
+        if (direction == 'up' || direction == 'down') {
+            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
+        }
         //after leaving section 2
         if (index == 1 && direction == 'down') {
             slideMoveDown = 2;
@@ -43,6 +46,7 @@ $('#fullpage').fullpage({
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
             slideMoveDown = 0;
+            document.getElementById("ball").style.display = '';
             counter = 0;
             animate();
             cancelled = false;
@@ -113,6 +117,12 @@ function createScene() {
     window.addEventListener('resize', onWindowResize, false);
     document.addEventListener('mousemove', onDocumentMouseMove, false);
 }
+
+$(".pageUp__link").click(function() {
+    console.log("link worked");
+    window.location = $(this).find("a").attr("href");
+    return false;
+});
 
 // LIGHTS
 function createLights() {
@@ -242,8 +252,8 @@ function onDocumentMouseMove(event) { //Reactivity
     let aMax = windowHalfX;
     let bMax = windowHalfY;
     let distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
-    let noiseLimiter = .5;
-    let finalNoise = (1 - distance / distanceMax) * noiseLimiter;//Subtracting 1 to reverse the noise value
+    let noiseLimiter = .3;
+    let finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
     // console.log(finalNoise);
     noise = finalNoise;
 }
@@ -267,8 +277,7 @@ function animate() {
         camera.position.z = resizeWidth + finalBallSize;
     }
 
-    if (counter === transSpeed) {
-
+    if (counter === transSpeed + 5) {
         if (slideMoveUp === 1) {
             slideMoveUp = 3;
             // finalBallSize = 0;
@@ -278,8 +287,12 @@ function animate() {
             cancelAnimationFrame(cancel);
             cancelled = true;
             console.log("cancelled");
+            document.getElementById("ball").style.display = 'none';
+
             // finalBallSize = 0;
         }
+        jQuery('.bottom__link__line').addClass('bottom--reappear').removeClass('bottom--disappear');
+        jQuery('.bottom__link__name__color').addClass('bottom--reappear').removeClass('bottom--disappear');
     }
 
 
