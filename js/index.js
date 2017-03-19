@@ -11,7 +11,8 @@ let scene,
     windowResized = false,
     resizeWidth,
     shape;
-let slide2Position = 0, finalBallSize = 0
+let slide2Position = -8,
+    finalBallSize = 0
 let geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 let recordingYLocation, recordingSize;
@@ -21,37 +22,34 @@ let downCounter = 0;
 let slideMoveUp = 0;
 let slideMoveDown = 0;
 let slideSpeed = 1200;
-let transSpeed = 35;
+let transSpeed = 55;
 
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2'],
+    easing: 'easeInOutQuad',
     onLeave: function(index, nextIndex, direction) {
         let leavingSection = $(this);
 
-        slide2Position = -5;
+
         //after leaving section 2
         if (index == 1 && direction == 'down') {
             slideMoveDown = 2;
             slideMoveUp = 0;
             counter = 0;
-
-            // document.getElementById("ball").style.display = 'none';
-            document.getElementById("ball").style.opacity = '0.3';
+            document.getElementById("ball").style.opacity = '0.0';
             document.getElementById("ball").style.transitionProperty = 'opacity';
-
-            document.getElementById("ball").style.transitionDuration = ".5s";
-            document.getElementById("ball").style.transitionTimingFunction = "linear";
+            document.getElementById("ball").style.transitionDuration = "1s";
+            document.getElementById("ball").style.transitionTimingFunction = "ease-out";
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
             slideMoveDown = 0;
             counter = 0;
             animate();
             cancelled = false;
-            // document.getElementById("ball").style.display = 'block';
             document.getElementById("ball").style.opacity = '1';
             document.getElementById("ball").style.transitionProperty = "opacity";
-            document.getElementById("ball").style.transitionDuration = ".5s";
-            document.getElementById("ball").style.transitionTimingFunction = "linear";
+            document.getElementById("ball").style.transitionDuration = "2s";
+            document.getElementById("ball").style.transitionTimingFunction = "ease-in";
         }
     }
 });
@@ -171,8 +169,7 @@ Shape.prototype.moveWaves = function() {
         v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
         v.y = vprops.y + Math.cos(vprops.ang) * vprops.amp;
         vprops.ang += vprops.speed;
-        vprops.speed = Math.random() * noise;
-
+        vprops.speed = 0.03 + Math.random() * noise;
     }
 
     this.mesh.geometry.verticesNeedUpdate = true;
@@ -211,6 +208,7 @@ function ballPresence() {
         resizeWidth = 1100 - window.innerHeight;
     }
 }
+
 function getScrollPosition() {
     let elmnt = document.getElementById("homepage");
     let y = elmnt.scrollTop;
@@ -235,28 +233,29 @@ addEvent(window, "load", function(e) {
         }
     });
 });
+
 function onDocumentMouseMove(event) { //Reactivity
 
     let a = windowHalfX - event.clientX;
     let b = windowHalfY - event.clientY;
     let distance = Math.abs(Math.sqrt(a * a + b * b));
-    // console.log(distance);
-    // noise = 1 + distance / windowHalfX - .35;
-    // console.log(noise);
+    let aMax = windowHalfX;
+    let bMax = windowHalfY;
+    let distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
+    let noiseLimiter = .5;
+    let finalNoise = (1 - distance / distanceMax) * noiseLimiter;//Subtracting 1 to reverse the noise value
+    // console.log(finalNoise);
+    noise = finalNoise;
 }
 // animate
 function animate() {
     shape.moveWaves();
-    // console.log(camera.position.z);
-    if(slideMoveDown === 0 && slideMoveUp === 0) {
+    if (slideMoveDown === 0 && slideMoveUp === 0) {
         camera.position.z = resizeWidth;
     }
     if (slideMoveDown === 2) {
         counter++;
         finalBallSize -= slide2Position;
-        // console.log(finalBallSize);
-
-
         camera.position.z = resizeWidth + finalBallSize;
 
     }
@@ -264,9 +263,6 @@ function animate() {
     if (slideMoveUp === 1) {
         counter++;
         finalBallSize += slide2Position;
-        // console.log(finalBallSize);
-        console.log(camera.position.z);
-        // console.log("doubleCheck");
 
         camera.position.z = resizeWidth + finalBallSize;
     }
@@ -279,6 +275,9 @@ function animate() {
         }
         if (slideMoveDown === 2) {
             slideMoveDown = 3;
+            cancelAnimationFrame(cancel);
+            cancelled = true;
+            console.log("cancelled");
             // finalBallSize = 0;
         }
     }

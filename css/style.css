@@ -134,6 +134,7 @@ canvas {
 
 .bottom__link {
     margin-top: -3vh;
+    cursor: default;
 }
 
 .bottom__link__name {
@@ -146,6 +147,7 @@ canvas {
     color: #E53455;
     background-color: #f8f8f8;
     z-index: 100000;
+    cursor: pointer;
 }
 
 .bottom__link__line__container {
@@ -160,6 +162,7 @@ canvas {
     z-index: 99999;
     /*display: none; turn on when you move down on the page*/
     display: block;
+    cursor: pointer;
 }
 
 .bottom__link__line {
