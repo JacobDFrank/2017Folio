@@ -1,15 +1,3 @@
-// const fullPage = require('./jquery.fullPage.min.js');
-
-// window.addEventListener('load', function () {
-//     let input = lSystem.init();
-// })
-
-// window.onload = function() {
-//     console.log("jquery fullPage included", fullPage);
-// }
-
-
-
 let scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
@@ -23,6 +11,7 @@ let scene,
     windowResized = false,
     resizeWidth,
     shape;
+let slide2Position = 0, finalBallSize = 0
 let geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 let recordingYLocation, recordingSize;
@@ -39,25 +28,30 @@ $('#fullpage').fullpage({
     onLeave: function(index, nextIndex, direction) {
         let leavingSection = $(this);
 
+        slide2Position = -5;
         //after leaving section 2
         if (index == 1 && direction == 'down') {
             slideMoveDown = 2;
             slideMoveUp = 0;
             counter = 0;
-            cancelAnimationFrame(cancel);
-            cancelled = true;
-            // console.log("Slide 2222")
+
             // document.getElementById("ball").style.display = 'none';
-            document.getElementById("ball").style.opacity = '.5';
+            document.getElementById("ball").style.opacity = '0.3';
+            document.getElementById("ball").style.transitionProperty = 'opacity';
+
+            document.getElementById("ball").style.transitionDuration = ".5s";
+            document.getElementById("ball").style.transitionTimingFunction = "linear";
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
             slideMoveDown = 0;
             counter = 0;
             animate();
             cancelled = false;
-            // console.log("Slide 1111")
             // document.getElementById("ball").style.display = 'block';
             document.getElementById("ball").style.opacity = '1';
+            document.getElementById("ball").style.transitionProperty = "opacity";
+            document.getElementById("ball").style.transitionDuration = ".5s";
+            document.getElementById("ball").style.transitionTimingFunction = "linear";
         }
     }
 });
@@ -106,7 +100,7 @@ function createScene() {
 
     scene.fog = new THREE.Fog(0xE53455, 1, 2500);
     camera.position.x = 0;
-    camera.position.z = 300;
+    camera.position.z = 1000;
     camera.position.y = 0;
 
     renderer = new THREE.WebGLRenderer({
@@ -177,7 +171,8 @@ Shape.prototype.moveWaves = function() {
         v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
         v.y = vprops.y + Math.cos(vprops.ang) * vprops.amp;
         vprops.ang += vprops.speed;
-        vprops.speed = 0.025 + Math.random() * noise;
+        vprops.speed = Math.random() * noise;
+
     }
 
     this.mesh.geometry.verticesNeedUpdate = true;
@@ -204,7 +199,6 @@ function ballPresence() {
     //     animate();
     //     cancelled = false;
     // }
-
     if (window.innerWidth >= 1000) {
         resizeWidth = 700;
         // resizeWidth = recordingSize;
@@ -216,15 +210,12 @@ function ballPresence() {
     if (window.innerHeight <= 480) {
         resizeWidth = 1100 - window.innerHeight;
     }
-    // console.log(resizeWidth);
 }
-
 function getScrollPosition() {
     let elmnt = document.getElementById("homepage");
     let y = elmnt.scrollTop;
     scrollPosition = y;
 }
-
 // Detect if left page
 function addEvent(obj, evt, fn) {
     if (obj.addEventListener) {
@@ -244,61 +235,53 @@ addEvent(window, "load", function(e) {
         }
     });
 });
-
-
 function onDocumentMouseMove(event) { //Reactivity
 
     let a = windowHalfX - event.clientX;
     let b = windowHalfY - event.clientY;
-
-    let distance = Math.sqrt(a * a + b * b);
-
-    noise = 1 - distance / windowHalfX - .35;
+    let distance = Math.abs(Math.sqrt(a * a + b * b));
+    // console.log(distance);
+    // noise = 1 + distance / windowHalfX - .35;
+    // console.log(noise);
 }
 // animate
 function animate() {
     shape.moveWaves();
-    camera.position.z = resizeWidth;
-
-    console.log(slideMoveDown);
-    // console.log(slideMoveUp);
-
+    // console.log(camera.position.z);
+    if(slideMoveDown === 0 && slideMoveUp === 0) {
+        camera.position.z = resizeWidth;
+    }
     if (slideMoveDown === 2) {
-        console.log("Slide 2")
         counter++;
+        finalBallSize -= slide2Position;
+        // console.log(finalBallSize);
+
+
+        camera.position.z = resizeWidth + finalBallSize;
+
     }
 
     if (slideMoveUp === 1) {
-        console.log("Slide 1")
         counter++;
-    }
-    if (counter === transSpeed) {
-        counter = 0;
-        if (slideMoveUp === 1) {
-            slideMoveUp = 0;
-            // sphere.material.emissive.r = colorStart.r;
-            // sphere.material.emissive.g = colorStart.g;
-            // sphere.material.emissive.b = colorStart.b;
-        }
-        if (slideMoveDown === 2) {
-            slideMoveDown = 0;
-            console.log("Slide 2")
-            // sphere.material.emissive.r = colorEnd.r;
-            // sphere.material.emissive.g = colorEnd.g;
-            // sphere.material.emissive.b = colorEnd.b;
-        }
+        finalBallSize += slide2Position;
+        // console.log(finalBallSize);
+        console.log(camera.position.z);
+        // console.log("doubleCheck");
+
+        camera.position.z = resizeWidth + finalBallSize;
     }
 
-    // if (counter === transSpeed) {
-    //     counter = 0;
-    //     if (slideMoveUp === 1) {
-    //         slideMoveUp = 0;
-    //         console.log("Slide 1111")
-    //     }
-    //     if (slideMoveDown === 2) {
-    //         slideMoveDown = 0;
-    //         console.log("Slide 2222")
-    //     }
+    if (counter === transSpeed) {
+
+        if (slideMoveUp === 1) {
+            slideMoveUp = 3;
+            // finalBallSize = 0;
+        }
+        if (slideMoveDown === 2) {
+            slideMoveDown = 3;
+            // finalBallSize = 0;
+        }
+    }
 
 
     renderer.render(scene, camera);
