@@ -142,8 +142,10 @@ canvas {
     align-items: center;
 }
 
-.bottom__link__name a {
+.bottom__link__name__color {
     color: #E53455;
+    background-color: #f8f8f8;
+    z-index: 100000;
 }
 
 .bottom__link__line__container {
@@ -191,7 +193,7 @@ canvas {
 
 @media screen and (max-height: 500px) {
     .homepage__name {
-        margin-top: -30px;
+        margin-top: -20px;
     }
 }
 
