@@ -133,7 +133,7 @@ canvas {
 }
 
 .bottom__link {
-    margin-top: -4vh;
+    margin-top: -8vh;
 }
 
 .bottom__link__name {
@@ -152,7 +152,6 @@ canvas {
     position: absolute;
     bottom: -28px;
     right: 0;
-    width: 44px;
     height: calc(65px + 4vh);
     left: 50%;
     -webkit-transform: translateX(-50%) scaleX(.5) scaleY(.5);
