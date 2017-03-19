@@ -133,7 +133,8 @@ canvas {
 }
 
 .bottom__link {
-    margin-top: -8vh;
+    margin-top: -4vh;
+    top: 44px;
 }
 
 .bottom__link__name {
