@@ -133,8 +133,7 @@ canvas {
 }
 
 .bottom__link {
-    margin-top: -4vh;
-    top: 44px;
+    margin-top: -3vh;
 }
 
 .bottom__link__name {
@@ -151,7 +150,7 @@ canvas {
 
 .bottom__link__line__container {
     position: absolute;
-    bottom: -28px;
+    bottom: -27px;
     right: 0;
     height: calc(65px + 4vh);
     left: 50%;
@@ -164,7 +163,7 @@ canvas {
 }
 
 .bottom__link__line {
-    height: 115px;
+    height: 10vh;
     width: 3px;
     left: 50%;
     display: block;
