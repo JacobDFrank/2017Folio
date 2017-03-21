@@ -66,7 +66,79 @@
             return floor(r * float(C) + 1e-10) / float(C);
         }
 
-        
+        int cellState(vec2 delta) {
+            //return int((float(C) * texture2D(tPrev, vec2(mod(vUv.x + delta.x * 3.0, 1.0), mod(vUv.y + delta.y, 1.0))).r) + 0.5);
+            return int((float(C) * texture2D(tPrev, vec2(mod(vUv.x + delta.x, 1.0), mod(vUv.y + delta.y, 1.0))).r) + 0.5);
+        }
+
+        bool match(int mid, vec2 delta) {
+            if (mid == cellState(delta))
+                return true;
+
+            return false;
+        }
+
+        int sumNM(int mid, vec2 d) {
+            // Moore neighborhood (8近傍)
+
+            int sum = 0;
+            for (int x = -R; x <= R; ++x) {
+                for (int y = -R; y <= R; ++y) {
+                    if (x == 0 && y == 0)
+                        continue;
+
+                    if (match(mid, vec2(tan(float(x)) * d.x, cos(float(y)) * d.y))) // R3/T8/C6
+                    // if (match(mid, vec2(sqrt(float(x)) * d.x, sqrt(float(y)) * d.y)))
+                    // if (match(mid, vec2(atan(float(x)) * d.x, sqrt(float(y)) * d.y))) // R3/T10/C6
+                    // if (match(mid, vec2(asin(float(x)) * d.x, (float(y)) * d.y))) // R3/T7/C6
+                    //if (match(mid, vec2(exp(float(x)) * d.x, acos(float(y)) * d.y))) // R5/T14/C5
+                    // if (match(mid, vec2((float(x)) * d.x, (float(y)) * d.y)))
+                        sum += 1;
+                }
+            }
+            return sum;
+        }
+
+        float calc() {
+            // 1ピクセルの距離
+            vec2 d = (1.0) / resolution;
+
+            int cell = cellState(vec2(0.0, 0.0));
+
+            // セルの次の状態を求める
+            int mid = cell - 1;
+            if (mid < 0) mid = C - 1;
+
+            // 次の状態を持つ近傍の数を数える
+            int sum = 0;
+
+            sum = sumNM(mid, d);
+
+            // セルの次の状態を決定する
+            if (T <= sum)
+                cell = mid;
+
+            return float(cell) / float(C);
+        }
+
+        //
+        // main
+        //
+        void main() {
+            float r = 0.0;
+            if (time < 1.0) {
+                vec2 p = normalizedPosition();
+                r = initialize(p);
+            } else {
+                r = calc();
+            }
+
+            gl_FragColor = vec4(
+                r,
+                mod(r * 2.88, 1.0),
+                mod(r * 10.57, 1.0),
+                1.0);
+        }
     </script>
 
     <script src='./app.js'></script>
