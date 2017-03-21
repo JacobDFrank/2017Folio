@@ -22,7 +22,7 @@ let downCounter = 0;
 let slideMoveUp = 0;
 let slideMoveDown = 0;
 let slideSpeed = 1200;
-let transSpeed = 55;
+let transSpeed = 25;
 
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2'],
@@ -43,7 +43,7 @@ $('#fullpage').fullpage({
             counter = 0;
             document.getElementById("ball").style.opacity = '0.0';
             document.getElementById("ball").style.transitionProperty = 'opacity';
-            document.getElementById("ball").style.transitionDuration = "1s";
+            document.getElementById("ball").style.transitionDuration = ".5s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-out";
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
@@ -54,7 +54,7 @@ $('#fullpage').fullpage({
             cancelled = false;
             document.getElementById("ball").style.opacity = '1';
             document.getElementById("ball").style.transitionProperty = "opacity";
-            document.getElementById("ball").style.transitionDuration = "2s";
+            document.getElementById("ball").style.transitionDuration = "1s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-in";
         }
     }
