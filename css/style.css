@@ -143,14 +143,14 @@ canvas {
 
 .bottom--disappear {
     opacity: 0;
-    -webkit-transition: opacity .05s;
-    transition: opacity .05s;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
 }
 
 .bottom--reappear {
     opacity: 1;
-    -webkit-transition: opacity 2s;
-    transition: opacity 2s;
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s;
 }
 
 .bottom__link__name {

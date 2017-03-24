@@ -21,7 +21,6 @@ var slide2Position = -5,
 var geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 var recordingYLocation, recordingSize;
-
 var counter = 0;
 var downCounter = 0;
 var slideMoveUp = 0;
@@ -44,7 +43,7 @@ $('#fullpage').fullpage({
 
             document.getElementById("ball").style.opacity = '0.0';
             document.getElementById("ball").style.transitionProperty = 'opacity';
-            document.getElementById("ball").style.transitionDuration = ".5s";
+            document.getElementById("ball").style.transitionDuration = "1s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-out";
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
@@ -56,7 +55,7 @@ $('#fullpage').fullpage({
 
             document.getElementById("ball").style.opacity = '1';
             document.getElementById("ball").style.transitionProperty = "opacity";
-            document.getElementById("ball").style.transitionDuration = "1s";
+            document.getElementById("ball").style.transitionDuration = "2s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-in";
         }
         if (direction == 'up' || direction == 'down') {
