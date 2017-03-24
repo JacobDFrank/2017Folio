@@ -21,7 +21,6 @@ var geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 var recordingYLocation, recordingSize;
 
-
 let counter = 0;
 let downCounter = 0;
 let slideMoveUp = 0;
