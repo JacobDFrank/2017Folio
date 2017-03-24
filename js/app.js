@@ -21,28 +21,13 @@ var slide2Position = -5,
 var geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 
-<<<<<<< Updated upstream
 
-=======
-<<<<<<< HEAD
-var counter = 0;
-var downCounter = 0;
-var slideMoveUp = 0;
-var slideMoveDown = 0;
-var slideSpeed = 1200;
-var transSpeed = 25;
-=======
->>>>>>> Stashed changes
 let counter = 0;
 let downCounter = 0;
 let slideMoveUp = 0;
 let slideMoveDown = 0;
 let slideSpeed = 1200;
 let transSpeed = 55;
-<<<<<<< Updated upstream
-=======
->>>>>>> parent of c9a0cfe... Sped it up
->>>>>>> Stashed changes
 
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2'],
