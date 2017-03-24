@@ -1,8 +1,4 @@
-// cd /Users/jacobfrank/GitHub/JacobDFrank.github.io/js
-// browserify index.js -o app.js
-// watchify index.js -v -o app.js
-
-var scene,
+let scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
     HEIGHT, WIDTH, windowHalfX = window.innerWidth / 2,
@@ -15,35 +11,39 @@ var scene,
     windowResized = false,
     resizeWidth,
     shape;
-var slide2Position = -5,
+let slide2Position = -5,
     finalBallSize = 0
-var geometry = new THREE.SphereGeometry(radius, 40, 30);
+let geometry = new THREE.SphereGeometry(radius, 40, 30);
 
-var recordingYLocation, recordingSize;
+let recordingYLocation, recordingSize;
 
 let counter = 0;
 let downCounter = 0;
 let slideMoveUp = 0;
 let slideMoveDown = 0;
 let slideSpeed = 1200;
-let transSpeed = 55;
+let transSpeed = 25;
 
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2'],
     easing: 'easeInOutQuad',
     onLeave: function(index, nextIndex, direction) {
-        var leavingSection = $(this);
+        let leavingSection = $(this);
 
-
+        if (direction == 'up' || direction == 'down') {
+            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
+        }
         //after leaving section 2
         if (index == 1 && direction == 'down') {
             slideMoveDown = 2;
             slideMoveUp = 0;
             counter = 0;
-
             document.getElementById("ball").style.opacity = '0.0';
             document.getElementById("ball").style.transitionProperty = 'opacity';
-            document.getElementById("ball").style.transitionDuration = "1s";
+            document.getElementById("ball").style.transitionDuration = ".5s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-out";
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
@@ -52,22 +52,10 @@ $('#fullpage').fullpage({
             counter = 0;
             animate();
             cancelled = false;
-
             document.getElementById("ball").style.opacity = '1';
             document.getElementById("ball").style.transitionProperty = "opacity";
-            document.getElementById("ball").style.transitionDuration = "2s";
+            document.getElementById("ball").style.transitionDuration = "1s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-in";
-        }
-        if (direction == 'up' || direction == 'down') {
-            jQuery('body').addClass('pageUp__link ').removeClass('display--none');
-            $('.fluid-type30-60').addClass('fluid-type24-44 ').removeClass('fluid-type30-60');
-            $('.fluid-type14-20').addClass('fluid-type12-16').removeClass('fluid-type14-20');
-            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
-            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
-
-            jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
-            jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
-
         }
     }
 });
@@ -154,7 +142,7 @@ function createLights() {
 
 // Shape
 Shape = function() {
-    // var geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
+    // let geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
     geometry,
     material = new THREE.MeshPhongMaterial({
         color: 0xffffff,
@@ -166,8 +154,8 @@ Shape = function() {
 
     this.waves = [];
 
-    for (var i = 0; i < l; i++) {
-        var v = geometry.vertices[i];
+    for (let i = 0; i < l; i++) {
+        let v = geometry.vertices[i];
         this.waves.push({
             y: v.y,
             x: v.x,
@@ -183,11 +171,11 @@ Shape = function() {
 }
 
 Shape.prototype.moveWaves = function() {
-    var verts = this.mesh.geometry.vertices;
-    var verticeLength = verts.length;
+    let verts = this.mesh.geometry.vertices;
+    let verticeLength = verts.length;
 
-    for (var i = 0; i < verticeLength; i++) {
-        var v = verts[i],
+    for (let i = 0; i < verticeLength; i++) {
+        let v = verts[i],
             vprops = this.waves[i];
 
         v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
@@ -234,8 +222,8 @@ function ballPresence() {
 }
 
 function getScrollPosition() {
-    var elmnt = document.getElementById("homepage");
-    var y = elmnt.scrollTop;
+    let elmnt = document.getElementById("homepage");
+    let y = elmnt.scrollTop;
     scrollPosition = y;
 }
 // Detect if left page
@@ -249,7 +237,7 @@ function addEvent(obj, evt, fn) {
 addEvent(window, "load", function(e) {
     addEvent(document, "mouseout", function(e) {
         e = e ? e : window.event;
-        var from = e.relatedTarget || e.toElement;
+        let from = e.relatedTarget || e.toElement;
         if (!from || from.nodeName == "HTML") {
             // stop your drag event here
             // for now we can just use an alert
@@ -260,14 +248,14 @@ addEvent(window, "load", function(e) {
 
 function onDocumentMouseMove(event) { //Reactivity
 
-    var a = windowHalfX - event.clientX;
-    var b = windowHalfY - event.clientY;
-    var distance = Math.abs(Math.sqrt(a * a + b * b));
-    var aMax = windowHalfX;
-    var bMax = windowHalfY;
-    var distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
-    var noiseLimiter = .3;
-    var finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
+    let a = windowHalfX - event.clientX;
+    let b = windowHalfY - event.clientY;
+    let distance = Math.abs(Math.sqrt(a * a + b * b));
+    let aMax = windowHalfX;
+    let bMax = windowHalfY;
+    let distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
+    let noiseLimiter = .3;
+    let finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
     // console.log(finalNoise);
     noise = finalNoise;
 }
@@ -323,7 +311,6 @@ function init(event) {
     createLights();
     createShape();
     animate();
-    cancelAnimationFrame(cancel);
 }
 
 window.addEventListener('load', init, false);
