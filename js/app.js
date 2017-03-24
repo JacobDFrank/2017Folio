@@ -324,6 +324,7 @@ function init(event) {
     createLights();
     createShape();
     animate();
+    cancelAnimationFrame(cancel);
 }
 
 window.addEventListener('load', init, false);
