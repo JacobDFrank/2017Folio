@@ -21,6 +21,7 @@ var slide2Position = -5,
 var geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 
+
 let counter = 0;
 let downCounter = 0;
 let slideMoveUp = 0;
