@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-let scene,
+var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
     HEIGHT, WIDTH, windowHalfX = window.innerWidth / 2,
@@ -12,25 +12,27 @@ let scene,
     windowResized = false,
     resizeWidth,
     shape;
-let slide2Position = -5,
-    finalBallSize = 0
-let geometry = new THREE.SphereGeometry(radius, 40, 30);
+var slide2Position = -5,
+    finalBallSize = 0;
+var geometry = new THREE.SphereGeometry(radius, 40, 30);
 
-let recordingYLocation, recordingSize;
+var recordingYLocation, recordingSize;
 
-let counter = 0;
-let downCounter = 0;
-let slideMoveUp = 0;
-let slideMoveDown = 0;
-let slideSpeed = 1200;
-let transSpeed = 25;
+var counter = 0,
+    downCounter = 0;
+var slideMoveUp = 0,
+    slideMoveDown = 0;
+var slideSpeed = 1200,
+    transSpeed = 25;
+var slide, slideNumber, slideBelow;
+var slideAmount = $('.section').length
+var notLastSlide = true;
 
 $('#fullpage').fullpage({
-    anchors: ['page1', 'page2'],
+    anchors: ['page1', 'page2', 'page3', 'page4'],
     easing: 'easeInOutQuad',
     onLeave: function(index, nextIndex, direction) {
-        let leavingSection = $(this);
-
+        var leavingSection = $(this);
         if (direction == 'up' || direction == 'down') {
             jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
@@ -42,10 +44,12 @@ $('#fullpage').fullpage({
             slideMoveDown = 2;
             slideMoveUp = 0;
             counter = 0;
+
             document.getElementById("ball").style.opacity = '0.0';
             document.getElementById("ball").style.transitionProperty = 'opacity';
             document.getElementById("ball").style.transitionDuration = ".5s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-out";
+
         } else if (index == 2 && direction == 'up') {
             slideMoveUp = 1;
             slideMoveDown = 0;
@@ -58,9 +62,41 @@ $('#fullpage').fullpage({
             document.getElementById("ball").style.transitionDuration = "1s";
             document.getElementById("ball").style.transitionTimingFunction = "ease-in";
         }
-    }
+        if (nextIndex != slideAmount) {
+            // slide = window.location.hash;
+            // slideNumber = parseInt(slide.substr(slide.length -1)) + 1;
+            console.log("slide" + nextIndex);
+            notLastSlide = true;
+            slideBelow = nextIndex + 1;
+            document.getElementById('bottom__Link--Change').href = "#page" + slideBelow.toString();
+        } else {
+            document.getElementById('bottom__Link--Change').innerHTML = "You seem cool, we should talk...";
+            document.getElementById('bottom__Link--Change').href = "#page2";
+        }
+
+
+    },
+    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+		var loadedSlide = $(this);
+
+        console.log("slideLoadWorks");
+
+		//first slide of the second section
+		if(slideIndex == 1){
+			alert("First slide loaded");
+		}
+
+		//second slide of the second section (supposing #secondSlide is the
+		//anchor for the second slide
+		if(index == 2 && slideIndex == 'secondSlide'){
+			alert("Second slide loaded");
+		}
+	}
+
 });
 $.fn.fullpage.setScrollingSpeed(slideSpeed);
+
+
 
 // HANDLE SCREEN EVENTS
 function onWindowResize() {
@@ -143,7 +179,7 @@ function createLights() {
 
 // Shape
 Shape = function() {
-    // let geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
+    // var geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
     geometry,
     material = new THREE.MeshPhongMaterial({
         color: 0xffffff,
@@ -155,8 +191,8 @@ Shape = function() {
 
     this.waves = [];
 
-    for (let i = 0; i < l; i++) {
-        let v = geometry.vertices[i];
+    for (var i = 0; i < l; i++) {
+        var v = geometry.vertices[i];
         this.waves.push({
             y: v.y,
             x: v.x,
@@ -172,11 +208,11 @@ Shape = function() {
 }
 
 Shape.prototype.moveWaves = function() {
-    let verts = this.mesh.geometry.vertices;
-    let verticeLength = verts.length;
+    var verts = this.mesh.geometry.vertices;
+    var verticeLength = verts.length;
 
-    for (let i = 0; i < verticeLength; i++) {
-        let v = verts[i],
+    for (var i = 0; i < verticeLength; i++) {
+        var v = verts[i],
             vprops = this.waves[i];
 
         v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
@@ -223,8 +259,8 @@ function ballPresence() {
 }
 
 function getScrollPosition() {
-    let elmnt = document.getElementById("homepage");
-    let y = elmnt.scrollTop;
+    var elmnt = document.getElementById("homepage");
+    var y = elmnt.scrollTop;
     scrollPosition = y;
 }
 // Detect if left page
@@ -238,7 +274,7 @@ function addEvent(obj, evt, fn) {
 addEvent(window, "load", function(e) {
     addEvent(document, "mouseout", function(e) {
         e = e ? e : window.event;
-        let from = e.relatedTarget || e.toElement;
+        var from = e.relatedTarget || e.toElement;
         if (!from || from.nodeName == "HTML") {
             // stop your drag event here
             // for now we can just use an alert
@@ -249,14 +285,14 @@ addEvent(window, "load", function(e) {
 
 function onDocumentMouseMove(event) { //Reactivity
 
-    let a = windowHalfX - event.clientX;
-    let b = windowHalfY - event.clientY;
-    let distance = Math.abs(Math.sqrt(a * a + b * b));
-    let aMax = windowHalfX;
-    let bMax = windowHalfY;
-    let distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
-    let noiseLimiter = .3;
-    let finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
+    var a = windowHalfX - event.clientX;
+    var b = windowHalfY - event.clientY;
+    var distance = Math.abs(Math.sqrt(a * a + b * b));
+    var aMax = windowHalfX;
+    var bMax = windowHalfY;
+    var distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
+    var noiseLimiter = .3;
+    var finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
     // console.log(finalNoise);
     noise = finalNoise;
 }
@@ -270,34 +306,34 @@ function animate() {
         counter++;
         finalBallSize -= slide2Position;
         camera.position.z = resizeWidth + finalBallSize;
-
     }
 
     if (slideMoveUp === 1) {
         counter++;
         finalBallSize += slide2Position;
-
         camera.position.z = resizeWidth + finalBallSize;
     }
 
     if (counter === transSpeed + 5) {
         if (slideMoveUp === 1) {
             slideMoveUp = 3;
+            document.getElementById('bottom__Link--Change').innerHTML = "Work";
+            document.getElementById('bottom__Link--Change').href = "#page2";
             // finalBallSize = 0;
         }
         if (slideMoveDown === 2) {
             slideMoveDown = 3;
             cancelAnimationFrame(cancel);
             cancelled = true;
-            console.log("cancelled");
             document.getElementById("ball").style.display = 'none';
-
+            document.getElementById('bottom__Link--Change').href = "#page3";
             // finalBallSize = 0;
         }
-        jQuery('.bottom__link__line').addClass('bottom--reappear').removeClass('bottom--disappear');
-        jQuery('.bottom__link__name__color').addClass('bottom--reappear').removeClass('bottom--disappear');
-        jQuery('.projects__name').addClass('bottom--reappear').removeClass('bottom--disappear');
-        jQuery('.projects__subhead').addClass('bottom--reappear').removeClass('bottom--disappear');
+        // if (notLastSlide) {
+
+        // }
+        // jQuery('.projects__name').addClass('bottom--reappear').removeClass('bottom--disappear');
+        // jQuery('.projects__subhead').addClass('bottom--reappear').removeClass('bottom--disappear');
     }
 
 
@@ -309,8 +345,9 @@ function animate() {
 // INIT
 function init(event) {
     createScene();
-    createLights();
+
     createShape();
+    createLights();
     animate();
 }
 
