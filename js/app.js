@@ -18,10 +18,8 @@ var geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 var recordingYLocation, recordingSize;
 
-var counter = 0,
-    downCounter = 0;
-var slideMoveUp = 0,
-    slideMoveDown = 0;
+var counter = downCounter = 0;
+var slideMoveUp = slideMoveDown = 0;
 var slideSpeed = 1200,
     transSpeed = 35;
 var slide, slideNumber, slideBelow;
@@ -141,14 +139,6 @@ function onWindowResize() {
 }
 window.onload = function() {
     ballPresence();
-    // console.log("loaded");
-    // if (window.innerWidth <= 1020) {
-    //     cancelAnimationFrame(cancel);
-    //     cancelled = true;
-    // } else if (window.innerWidth >= 1020) {
-    //     animate();
-    //     cancelled = false;
-    // }
 }
 recordingYLocation = 46;
 recordingSize = 145;
@@ -258,7 +248,6 @@ Shape.prototype.moveWaves = function() {
 // 3D MODEL
 function createShape() {
     shape = new Shape();
-    // shape.mesh.position.y = 0;
     scene.add(shape.mesh);
 }
 
@@ -267,13 +256,6 @@ function changeResizeWidth(newWidth) {
 }
 
 function ballPresence() {
-    // if (window.innerWidth <= 1020 && cancelled == false) {
-    //     cancelAnimationFrame(cancel);
-    //     cancelled = true;
-    // } else if (cancelled == true && window.innerWidth >= 1020) {
-    //     animate();
-    //     cancelled = false;
-    // }
     if (window.innerWidth >= 1000) {
         resizeWidth = 700;
         // resizeWidth = recordingSize;
@@ -322,7 +304,6 @@ function onDocumentMouseMove(event) { //Reactivity
     var distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
     var noiseLimiter = .3;
     var finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
-    // console.log(finalNoise);
     noise = finalNoise;
 }
 // animate
@@ -355,16 +336,10 @@ function animate() {
             document.getElementById("ball").style.display = 'none';
             // finalBallSize = 0;
         }
-        // if (notLastSlide) {
-
-        // }
-        // jQuery('.projects__name').addClass('bottom--reappear').removeClass('bottom--disappear');
-        // jQuery('.projects__subhead').addClass('bottom--reappear').removeClass('bottom--disappear');
     }
 
 
     renderer.render(scene, camera);
-    // scene.requestFrame = requestAnimationFrame(animate);
     cancel = requestAnimationFrame(animate);
 }
 

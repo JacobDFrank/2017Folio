@@ -1,4 +1,4 @@
-    * {
+* {
     margin: 0;
     padding: 0;
 }
@@ -217,6 +217,9 @@ canvas {
 .fluid-type12-16 {
     font-size: 12px;
 }
+.fluid-type24-100 {
+    font-size: 24px;
+}
 
 @media screen and (max-height: 500px) {
     .homepage__name {
@@ -237,6 +240,9 @@ canvas {
     .fluid-type12-16 {
         font-size: calc( 12px + 4 * ( (100vw - 320px) / 1120));
     }
+    .fluid-type80-100 {
+        font-size: calc( 24px + 76 * ( (100vw - 320px) / 1120));
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -252,3 +258,7 @@ canvas {
     .fluid-type12-16 {
         font-size: 16px;
     }
+    .fluid-type24-100 {
+        font-size: 100px;
+    }
+}
