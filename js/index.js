@@ -22,28 +22,30 @@ var counter = 0,
 var slideMoveUp = 0,
     slideMoveDown = 0;
 var slideSpeed = 1200,
-    transSpeed = 25;
+    transSpeed = 35;
 var slide, slideNumber, slideBelow;
 var slideAmount = $('.section').length
 var notLastSlide = true;
+var bottomGone = false,
+    topGone = false;
 
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4'],
     easing: 'easeInOutQuad',
     onLeave: function(index, nextIndex, direction) {
         var leavingSection = $(this);
-        if (direction == 'up' || direction == 'down') {
-            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
-            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
-            jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
-            jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
-        }
         //after leaving section 2
         if (index == 1 && direction == 'down') {
             slideMoveDown = 2;
             slideMoveUp = 0;
             counter = 0;
-
+            bottomGone = topGone = true;
+            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
+            window.setTimeout(nextProjectBottomName, 500);
+            window.setTimeout(topProjectName, 500);
             document.getElementById("ball").style.opacity = '0.0';
             document.getElementById("ball").style.transitionProperty = 'opacity';
             document.getElementById("ball").style.transitionDuration = ".5s";
@@ -56,6 +58,12 @@ $('#fullpage').fullpage({
             counter = 0;
             animate();
             cancelled = false;
+            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
+            window.setTimeout(topHomeName, 500);
+            bottomGone = topGone = true;
             document.getElementById("ball").style.opacity = '1';
             document.getElementById("ball").style.transitionProperty = "opacity";
             document.getElementById("ball").style.transitionDuration = "1s";
@@ -69,34 +77,55 @@ $('#fullpage').fullpage({
             slideBelow = nextIndex + 1;
             document.getElementById('bottom__Link--Change').href = "#page" + slideBelow.toString();
         } else {
-            document.getElementById('bottom__Link--Change').innerHTML = "You seem cool, we should talk...";
-            document.getElementById('bottom__Link--Change').href = "#page2";
+            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
+            window.setTimeout(finalBottomName, 500);
+            bottomGone = true;
+        }
+        if (index == slideAmount) {
+            jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
+            jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
+            window.setTimeout(nextProjectBottomName, 500);
+            bottomGone = true;
         }
 
-
     },
-    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-		var loadedSlide = $(this);
-
-        console.log("slideLoadWorks");
-
-		//first slide of the second section
-		if(slideIndex == 1){
-			alert("First slide loaded");
-		}
-
-		//second slide of the second section (supposing #secondSlide is the
-		//anchor for the second slide
-		if(index == 2 && slideIndex == 'secondSlide'){
-			alert("Second slide loaded");
-		}
-	}
+    afterLoad: function(anchorLink, index) {
+        var loadedSection = $(this);
+        if (bottomGone) {
+            jQuery('.bottom__link__line').addClass('bottom--reappear').removeClass('bottom--disappear');
+            jQuery('.bottom__link__name__color').addClass('bottom--reappear').removeClass('bottom--disappear');
+            bottomGone = false;
+        }
+        if (topGone) {
+            jQuery('.projects__name').addClass('bottom--reappear').removeClass('bottom--disappear');
+            jQuery('.projects__subhead').addClass('bottom--reappear').removeClass('bottom--disappear');
+            topGone = false;
+        }
+    }
 
 });
 $.fn.fullpage.setScrollingSpeed(slideSpeed);
 
+function topHomeName() {
+    jQuery('.projects__name').addClass('fluid-type30-60').removeClass('fluid-type24-44');
+    jQuery('.projects__subhead').addClass('fluid-type14-20').removeClass('fluid-type12-16');
+}
 
+function topProjectName() {
+    jQuery('.projects__name').addClass('fluid-type24-44').removeClass('fluid-type30-60');
+    jQuery('.projects__subhead').addClass('fluid-type12-16').removeClass('fluid-type14-20');
+}
 
+function nextProjectBottomName() {
+    document.getElementById('bottom__Link--Change').innerHTML = "Next Project";
+    document.getElementById('bottom__Link--Change').href = "#page3";
+}
+
+function finalBottomName() {
+    document.getElementById('bottom__Link--Change').innerHTML = "You seem cool, we should talk...";
+    document.getElementById('bottom__Link--Change').href = "mailto:hello@jacobdfrank.com?subject=HelloJacob";
+}
 // HANDLE SCREEN EVENTS
 function onWindowResize() {
     HEIGHT = window.innerHeight;
@@ -306,14 +335,12 @@ function animate() {
         finalBallSize -= slide2Position;
         camera.position.z = resizeWidth + finalBallSize;
     }
-
     if (slideMoveUp === 1) {
         counter++;
         finalBallSize += slide2Position;
         camera.position.z = resizeWidth + finalBallSize;
     }
-
-    if (counter === transSpeed + 5) {
+    if (counter === transSpeed + 50) {
         if (slideMoveUp === 1) {
             slideMoveUp = 3;
             document.getElementById('bottom__Link--Change').innerHTML = "Work";
@@ -325,7 +352,6 @@ function animate() {
             cancelAnimationFrame(cancel);
             cancelled = true;
             document.getElementById("ball").style.display = 'none';
-            document.getElementById('bottom__Link--Change').href = "#page3";
             // finalBallSize = 0;
         }
         // if (notLastSlide) {

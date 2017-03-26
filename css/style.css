@@ -1,4 +1,4 @@
-* {
+    * {
     margin: 0;
     padding: 0;
 }
@@ -141,16 +141,19 @@ canvas {
     height: calc(55px + 4vh);
     width: 100%;
 }
+
 .bottom--disappear {
     opacity: 0;
-    -webkit-transition: opacity .5s;
-    transition: opacity .5s;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
 }
+
 .bottom--reappear {
     opacity: 1;
-    -webkit-transition: opacity 2s;
-    transition: opacity 2s;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
 }
+
 .bottom__link__name {
     display: flex;
     flex-direction: column;
@@ -206,9 +209,11 @@ canvas {
 .fluid-type30-60 {
     font-size: 29.6px;
 }
+
 .fluid-type24-44 {
     font-size: 24px;
 }
+
 .fluid-type12-16 {
     font-size: 12px;
 }
