@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 500px;
+    /*min-height: 500px;*/
     justify-content: center;
-    margin-bottom: 25vh;
+    margin-bottom: 29vh;
     /*height: 41.308594vh;*/
 }
 

@@ -18,15 +18,13 @@ var geometry = new THREE.SphereGeometry(radius, 40, 30);
 
 var recordingYLocation, recordingSize;
 
-var counter = downCounter = 0;
-var slideMoveUp = slideMoveDown = 0;
+var counter = downCounter = slideMoveUp = slideMoveDown = 0;
 var slideSpeed = 1200,
     transSpeed = 35;
 var slide, slideNumber, slideBelow;
 var slideAmount = $('.section').length
 var notLastSlide = true;
-var bottomGone = false,
-    topGone = false;
+var bottomGone = topGone = false;
 var timeoutSpeed = 300;
 
 $('#fullpage').fullpage({
@@ -365,7 +363,6 @@ function animate() {
 // INIT
 function init(event) {
     createScene();
-
     createShape();
     createLights();
     animate();
