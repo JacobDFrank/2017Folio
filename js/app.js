@@ -34,6 +34,9 @@ $('#fullpage').fullpage({
     onLeave: function(index, nextIndex, direction) {
         var leavingSection = $(this);
         //after leaving section 2
+        if (direction == 'up' || direction == 'down') {
+            jQuery('.project__cover').addClass('bottom--disappear').removeClass('bottom--reappear');
+        }
         if (index == 1 && direction == 'down') {
             slideMoveDown = 2;
             slideMoveUp = 0;
@@ -87,7 +90,6 @@ $('#fullpage').fullpage({
             window.setTimeout(nextProjectBottomName, 500);
             bottomGone = true;
         }
-
     },
     afterLoad: function(anchorLink, index) {
         var loadedSection = $(this);
@@ -101,10 +103,19 @@ $('#fullpage').fullpage({
             jQuery('.projects__subhead').addClass('bottom--reappear').removeClass('bottom--disappear');
             topGone = false;
         }
+        window.setTimeout(projectCoverAppear, 3000);
     }
 
 });
 $.fn.fullpage.setScrollingSpeed(slideSpeed);
+
+function projectCoverAppear() {
+    jQuery('.project__cover').addClass('bottom--reappear').removeClass('bottom--disappear');
+}
+
+function projectCoverDisappear() {
+    jQuery('.project__cover').addClass('bottom--reappear').removeClass('bottom--disappear');
+}
 
 function topHomeName() {
     jQuery('.projects__name').addClass('fluid-type30-60').removeClass('fluid-type24-44');
