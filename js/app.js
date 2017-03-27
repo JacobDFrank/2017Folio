@@ -27,6 +27,7 @@ var slideAmount = $('.section').length
 var notLastSlide = true;
 var bottomGone = false,
     topGone = false;
+var timeoutSpeed = 300;
 
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4'],
@@ -46,8 +47,8 @@ $('#fullpage').fullpage({
             jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
-            window.setTimeout(nextProjectBottomName, 500);
-            window.setTimeout(topProjectName, 500);
+            window.setTimeout(nextProjectBottomName, timeoutSpeed);
+            window.setTimeout(topProjectName, timeoutSpeed);
             document.getElementById("ball").style.opacity = '0.0';
             document.getElementById("ball").style.transitionProperty = 'opacity';
             document.getElementById("ball").style.transitionDuration = ".5s";
@@ -64,7 +65,7 @@ $('#fullpage').fullpage({
             jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.projects__name').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.projects__subhead').addClass('bottom--disappear').removeClass('bottom--reappear');
-            window.setTimeout(topHomeName, 500);
+            window.setTimeout(topHomeName, timeoutSpeed);
             bottomGone = topGone = true;
             document.getElementById("ball").style.opacity = '1';
             document.getElementById("ball").style.transitionProperty = "opacity";
@@ -81,13 +82,13 @@ $('#fullpage').fullpage({
         } else {
             jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
-            window.setTimeout(finalBottomName, 500);
+            window.setTimeout(finalBottomName, timeoutSpeed);
             bottomGone = true;
         }
         if (index == slideAmount) {
             jQuery('.bottom__link__name__color').addClass('bottom--disappear').removeClass('bottom--reappear');
             jQuery('.bottom__link__line').addClass('bottom--disappear').removeClass('bottom--reappear');
-            window.setTimeout(nextProjectBottomName, 500);
+            window.setTimeout(nextProjectBottomName, timeoutSpeed);
             bottomGone = true;
         }
     },
@@ -103,7 +104,14 @@ $('#fullpage').fullpage({
             jQuery('.projects__subhead').addClass('bottom--reappear').removeClass('bottom--disappear');
             topGone = false;
         }
-        window.setTimeout(projectCoverAppear, 3000);
+        if (index == slideAmount) {
+            document.getElementById("bottom__link__lastLine").style.display = 'none';
+            // console.log("line works");
+        }
+        if (index != slideAmount) {
+            document.getElementById("bottom__link__lastLine").style.display = 'block';
+        }
+        window.setTimeout(projectCoverAppear, 1000);
     }
 
 });
