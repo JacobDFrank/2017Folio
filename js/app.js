@@ -1,4 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+// cd /Users/jacobfrank/GitHub/JacobDFrank.github.io/js
+// browserify index.js -o app.js watchify index.js -v -o app.js
+
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
@@ -26,9 +29,8 @@ var slideAmount = $('.section').length
 var notLastSlide = true;
 var bottomGone = topGone = false;
 var timeoutSpeed = 300;
-
 $('#fullpage').fullpage({
-    anchors: ['page1', 'page2', 'page3', 'page4'],
+    anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
     easing: 'easeInOutQuad',
     onLeave: function(index, nextIndex, direction) {
         var leavingSection = $(this);
@@ -153,9 +155,22 @@ function onWindowResize() {
     renderer.setSize(WIDTH, HEIGHT);
     camera.aspect = WIDTH / HEIGHT;
     camera.updateProjectionMatrix();
+    var coverImage = document.getElementsByClassName("project__cover__image");
+    if (camera.aspect >= 1.8) {
+        jQuery('.project__cover__image').addClass('project__cover__image--vh').removeClass('project__cover__image--vw');
+    }
+    else {
+        jQuery('.project__cover__image').addClass('project__cover__image--vw').removeClass('project__cover__image--vh');
+    }
 }
 window.onload = function() {
     ballPresence();
+    if (window.innerWidth / window.innerHeight >= 2) {
+        jQuery('.project__cover__image').addClass('project__cover__image--vh').removeClass('project__cover__image--vw');
+    }
+    else {
+        jQuery('.project__cover__image').addClass('project__cover__image--vw').removeClass('project__cover__image--vh');
+    }
 }
 recordingYLocation = 46;
 recordingSize = 145;
@@ -325,6 +340,8 @@ function onDocumentMouseMove(event) { //Reactivity
 }
 // animate
 function animate() {
+
+
     shape.moveWaves();
     if (slideMoveDown === 0 && slideMoveUp === 0) {
         camera.position.z = resizeWidth;

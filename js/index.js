@@ -1,3 +1,6 @@
+// cd /Users/jacobfrank/GitHub/JacobDFrank.github.io/js
+// browserify index.js -o app.js watchify index.js -v -o app.js
+
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
@@ -25,9 +28,8 @@ var slideAmount = $('.section').length
 var notLastSlide = true;
 var bottomGone = topGone = false;
 var timeoutSpeed = 300;
-
 $('#fullpage').fullpage({
-    anchors: ['page1', 'page2', 'page3', 'page4'],
+    anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
     easing: 'easeInOutQuad',
     onLeave: function(index, nextIndex, direction) {
         var leavingSection = $(this);
@@ -152,9 +154,22 @@ function onWindowResize() {
     renderer.setSize(WIDTH, HEIGHT);
     camera.aspect = WIDTH / HEIGHT;
     camera.updateProjectionMatrix();
+    var coverImage = document.getElementsByClassName("project__cover__image");
+    if (camera.aspect >= 1.8) {
+        jQuery('.project__cover__image').addClass('project__cover__image--vh').removeClass('project__cover__image--vw');
+    }
+    else {
+        jQuery('.project__cover__image').addClass('project__cover__image--vw').removeClass('project__cover__image--vh');
+    }
 }
 window.onload = function() {
     ballPresence();
+    if (window.innerWidth / window.innerHeight >= 2) {
+        jQuery('.project__cover__image').addClass('project__cover__image--vh').removeClass('project__cover__image--vw');
+    }
+    else {
+        jQuery('.project__cover__image').addClass('project__cover__image--vw').removeClass('project__cover__image--vh');
+    }
 }
 recordingYLocation = 46;
 recordingSize = 145;
@@ -324,6 +339,8 @@ function onDocumentMouseMove(event) { //Reactivity
 }
 // animate
 function animate() {
+
+
     shape.moveWaves();
     if (slideMoveDown === 0 && slideMoveUp === 0) {
         camera.position.z = resizeWidth;

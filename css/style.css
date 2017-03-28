@@ -11,7 +11,6 @@ body {
 }
 
 #fullpage {
-    z-index: -2147483648;
 }
 
 .homepage__text {
@@ -26,8 +25,12 @@ a {
     text-decoration: inherit;
 }
 
-.hompage__name {
+.homepage__name {
     margin-top: -.4vw;
+}
+
+.homepage__text--rise {
+    z-index: 1;
 }
 
 .myriad-pro-condensed {
@@ -123,7 +126,7 @@ canvas {
     cursor: pointer;
 }
 
-.link__decoration {
+.nolink__decoration {
     text-decoration: none!important;
 }
 
@@ -143,7 +146,6 @@ canvas {
 
 .bottom__link {
     cursor: default;
-    z-index: 1000000;
     position: absolute;
     bottom: 0px;
     height: calc(55px + 4vh);

@@ -21,7 +21,7 @@
     <meta property="og:site_name" content="http://jacob">
     <meta property="og:url" content="http://stevenmengin.com">
 
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
 
     <meta itemprop="name" content="Digital designer in London">
@@ -34,6 +34,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/polyfill.object-fit.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js'></script>
     <script src="vendors/jquery.easings.min.js"></script>
@@ -73,22 +74,22 @@
 
 <body>
     <div class="homepage__text">
-        <p class="fluid-type30-60 myriad-pro-condensed homepage__name projects__name"><a href="index.html">JACOB FRANK</a></p>
-        <p class="fluid-type14-20 roboto projects__subhead"><a href="index.html">Developer &amp; Designer</a></p>
-        <p class="fluid-type10-20 roboto inProgress"><a href="index.html">Website will be done soon</a></p>
+        <p class="fluid-type30-60 myriad-pro-condensed homepage__name projects__name homepage__text--rise"><a href="index.html">JACOB FRANK</a></p>
+        <p class="fluid-type14-20 roboto projects__subhead homepage__text--rise"><a href="index.html">Developer &amp; Designer</a></p>
+        <p class="fluid-type10-20 roboto inProgress homepage__text--rise"><a href="index.html">Website will be done soon</a></p>
     </div>
     <div class="bottom__link link">
-        <p class="fluid-type14-20 roboto bottom__link__name"> <a class="link__decoration bottom__link__name__color" id="bottom__Link--Change" href="#page2">Work</a></p>
+        <p class="fluid-type14-20 roboto bottom__link__name"> <a class="nolink__decoration bottom__link__name__color" id="bottom__Link--Change" href="#page2">Work</a></p>
         <div class="bottom__link__line__container" id="bottom__link__lastLine">
             <div class="bottom__link__line"></div>
         </div>
     </div>
     <div class="nav">
         <div class="nav__wrapper nav--left nav--transform">
-            <p class="fluid-type14-20 roboto link"> <a class="link__decoration" href="http://www.jacobdfrank.com/media/Jacob_Frank_Resume.pdf" target="_blank"> Resume</a> </p>
+            <p class="fluid-type14-20 roboto link"> <a class="nolink__decoration" href="http://www.jacobdfrank.com/media/Jacob_Frank_Resume.pdf" target="_blank"> Resume</a> </p>
         </div>
         <div class="nav__wrapper nav--transformRight nav--right">
-            <p class="fluid-type14-20 roboto link"> <a class="link__decoration" href="mailto:hello@jacobdfrank.com?subject=HelloJacob"> Email</a> </p>
+            <p class="fluid-type14-20 roboto link"> <a class="nolink__decoration" href="mailto:hello@jacobdfrank.com?subject=HelloJacob"> Email</a> </p>
         </div>
     </div>
     <div id="ball"></div>
@@ -101,7 +102,7 @@
             <div class="project__cover">
                 <img src="img/tawProjectCoverCropped.jpeg" class="project__cover__image">
                 <div class="project__cover__content">
-                    <h1 class="project__cover__content__title fluid-type80-100 myriad-pro-condensed">Thought at Work</h1>
+                    <h1 class="project__cover__content__title fluid-type80-100 myriad-pro-condensed"> <a class="nonolink__decoration" href="#page4" target="_blank"> Thought at Work</a></h1>
                     <h4 class="fluid-type14-20 roboto">- Front-End, Project Management</h4>
                 </div>
             </div>
@@ -135,6 +136,14 @@
         </div>
     </div>
     <script src='js/app.js'></script>
+    <script src='js/polyfill.object-fit.min.js'></script>
+    <script>
+        objectFit.polyfill({
+            selector: 'img', // this can be any CSS selector
+            fittype: 'cover', // either contain, cover, fill or none
+            disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+        });
+    </script>
 
     <!-- <script src='js/index.js'></script> -->
 
