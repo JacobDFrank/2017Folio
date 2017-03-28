@@ -29,7 +29,7 @@ a {
     margin-top: -.4vw;
 }
 
-.homepage__text--rise {
+.index--rise1 {
     z-index: 1;
 }
 
@@ -137,6 +137,7 @@ canvas {
 .nav a {
     text-decoration: none!important;
     color: #333;
+    cursor: pointer;
 }
 
 .nav__links {
