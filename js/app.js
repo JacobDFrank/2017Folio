@@ -212,10 +212,12 @@ function createScene() {
     document.addEventListener('mousemove', onDocumentMouseMove, false);
 }
 
-$(".pageUp__link").click(function() {
-    console.log("link worked");
-    window.location = $(this).find("a").attr("href");
-    return false;
+$(document).ready(function() {
+    $('a').on('click touchend', function(e) {
+        var el = $(this);
+        var link = el.attr('href');
+        window.location = link;
+    });
 });
 
 // LIGHTS

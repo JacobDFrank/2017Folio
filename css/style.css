@@ -165,7 +165,7 @@ canvas {
     transition: opacity .3s;
 }
 
-.bottom__link__name {
+.center__link__name {
     display: flex;
     flex-direction: column;
     align-items: center;
