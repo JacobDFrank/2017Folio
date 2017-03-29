@@ -164,7 +164,7 @@ $('#fullpage').fullpage({
 
         function finalBottomName() {
             document.getElementById('bottom__Link--Change').innerHTML = "You seem cool, we should talk...";
-            document.getElementById('bottom__Link--Change').href = "mailto:hello@jacobdfrank.com?subject=HelloJacob";
+            document.getElementById('bottom__Link--Change').href = "mailto:hello@jacobdfrank.com?subject=Jacob, let’s talk";
         }
         // HANDLE SCREEN EVENTS
         function onWindowResize() {
