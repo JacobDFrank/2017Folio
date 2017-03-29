@@ -14,8 +14,7 @@ section {
     position: absolute;
 }
 
-#fullpage {
-}
+#fullpage {}
 
 .homepage__text {
     display: flex;
@@ -47,10 +46,12 @@ a {
     font-family: 'roboto', sans-serif;
     font-weight: 400;
 }
+
 .roboto--medium {
     font-family: 'roboto', sans-serif;
     font-weight: 500;
 }
+
 .roboto--bold {
     font-family: 'roboto', sans-serif;
     font-weight: 700;
@@ -241,6 +242,7 @@ canvas {
 .fluid-type12-16 {
     font-size: 12px;
 }
+
 .fluid-type24-100 {
     font-size: 24px;
 }
@@ -284,6 +286,12 @@ canvas {
     }
     .fluid-type24-100 {
         font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        width: 100% !important;
     }
 }
 
@@ -336,49 +344,48 @@ canvas {
 }
 
 .offset-1 {
-  margin-left: 8.333333%;
+    margin-left: 8.333333%;
 }
 
 .offset-2 {
-  margin-left: 16.666667%;
+    margin-left: 16.666667%;
 }
 
 .offset-3 {
-  margin-left: 25%;
+    margin-left: 25%;
 }
 
 .offset-4 {
-  margin-left: 33.333333%;
+    margin-left: 33.333333%;
 }
 
 .offset-5 {
-  margin-left: 41.666667%;
+    margin-left: 41.666667%;
 }
 
 .offset-6 {
-  margin-left: 50%;
+    margin-left: 50%;
 }
 
 .offset-7 {
-  margin-left: 58.333333%;
+    margin-left: 58.333333%;
 }
 
 .offset-8 {
-  margin-left: 66.666667%;
+    margin-left: 66.666667%;
 }
 
 .offset-9 {
-  margin-left: 75%;
+    margin-left: 75%;
 }
 
 .offset-10 {
-  margin-left: 83.333333%;
+    margin-left: 83.333333%;
 }
 
 .offset-11 {
-  margin-left: 91.666667%;
+    margin-left: 91.666667%;
 }
-
 
 .column {
     display: block;
