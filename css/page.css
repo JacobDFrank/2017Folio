@@ -31,4 +31,8 @@
     top: 30vh;
     z-index: 20000000000000 !important;
     cursor: pointer;
+    /* top: 21vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

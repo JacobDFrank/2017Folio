@@ -266,7 +266,7 @@ canvas {
     .fluid-type12-16 {
         font-size: calc( 12px + 4 * ( (100vw - 320px) / 1120));
     }
-    .fluid-type80-100 {
+    .fluid-type24-100 {
         font-size: calc( 24px + 76 * ( (100vw - 320px) / 1120));
     }
 }

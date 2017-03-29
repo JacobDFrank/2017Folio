@@ -34,15 +34,6 @@
     margin-bottom: 0vw;
 }
 
-@media screen and (max-width: 992px) {
-    .case__description__hr--pushDown {
-        margin-bottom: 0vw;
-    }
-    .case__info__hr--pushDown {
-        margin-bottom: 3.194444vw;
-    }
-}
-
 .case__info {
     text-align: left;
     background: #F8F8F8;
@@ -57,6 +48,7 @@
 
 .casestudy__row {
     margin-bottom: 6.25vw;
+    zoom: 1;s
 }
 
 .casestudy__emptyBlock {
@@ -167,7 +159,9 @@
     border-radius: 3px;
     margin-left: 2.5vw;
     margin-top: -70px;
-    max-height: 570px;
+    max-height: 500px;
+    top: 260px;
+    left: 22.3vw;
 }
 
 .case__cover__content {
@@ -175,6 +169,8 @@
     margin-left: -22vw;
     z-index: 20000000000000 !important;
     margin-top: -155px;
+    top: 260px;
+    left: 22.3vw;
 }
 
 .case__cover {
@@ -185,4 +181,22 @@
     height: 41.666667vw;
     max-height: 490px;
     margin-top: 235px;
+}
+
+@media screen and (max-width: 992px) {
+    .case__description__hr--pushDown {
+        margin-bottom: 0vw;
+    }
+    .case__info__hr--pushDown {
+        margin-bottom: 3.194444vw;
+    }
+    .case__info p.first {
+        padding-right: 0em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .case__cover__content {
+        margin-left: -32vw;
+    }
 }
