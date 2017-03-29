@@ -1,7 +1,78 @@
+.bottom__link__line--case {
+    height: 12vh;
+    width: 3px;
+    left: 50%;
+    display: block;
+    text-align: center;
+    background-color: #333;
+    position: absolute;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    top: 0;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    /*transform: matrix(1, 0, 0, 1, 0, 0);*/
+}
+
+.link__name__color {
+    color: #E53455;
+    background-color: #f8f8f8;
+    z-index: 100000;
+    cursor: pointer;
+}
+
+.case__info {
+    text-align: left;
+    background: #F8F8F8;
+    color: #333;
+}
+
+.case__info__container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width .3s;
+    display: flex;
+    justify-content: center;
+}
+
+.case__info__row {
+    width: 64vw;
+}
+
+.case__info__case__info__row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 58vw;
+}
+
+.case__info__row:after, .case__info__row:before {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.case__info__row:after {
+    clear: both;
+}
+
+.case__info p.first {
+    padding-right: 5em;
+}
+
+.case__info a {
+    text-decoration: underline;
+    transition: .6s cubic-bezier(.165, .84, .44, 1);
+}
+
 .top__link {
     cursor: default;
     position: fixed;
-    top: -20px;
+    top: -30px;
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
@@ -22,8 +93,9 @@
     z-index: 99999;
     cursor: pointer;
 }
+
 .top__link__line {
-    height: calc(55px + 4vh);
+    height: calc(65px + 4vh);
     width: 3px;
     left: 50%;
     display: block;
@@ -35,4 +107,33 @@
     top: 0;
     cursor: pointer;
     transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.case__cover__image {
+    position: fixed;
+    width: 55.416667vw;
+    object-fit: cover;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 2.5vw;
+    margin-top: -70px;
+    max-height: 570px;
+}
+
+.case__cover__content {
+    color: #333;
+    margin-left: -22vw;
+    z-index: 20000000000000 !important;
+    cursor: pointer;
+    margin-top: -155px;
+}
+
+.case__cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 41.666667vw;
+    max-height: 490px;
+    margin-top: 235px;
 }

@@ -38,6 +38,13 @@
     <link rel="stylesheet" href="css/polyfill.object-fit.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js'></script>
+    <script src="vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <!-- <script type="text/javascript" src="js/VirtualScroll.js"></script> -->
+    <script type="text/javascript" src="js/jquery.fullpage.extensions.min.js"></script>
+
     <script>
         (function(d) {
             var config = {
@@ -72,26 +79,148 @@
 
 <body>
     <div class="top__link link index--rise1">
-        <p class="fluid-type14-20 roboto top__link__name center__link__name"> <a class="nolink__decoration bottom__link__name__color" id="bottom__Link--Change" href="#page2">Back</a></p>
-        <div class="top__link__line__container" id="bottom__link__lastLine">
+        <p class="fluid-type14-20 roboto--regular top__link__name center__link__name"> <a class="nolink__decoration link__name__color" href="#page2">Back</a></p>
+        <div class="top__link__line__container">
             <div class="top__link__line"></div>
         </div>
     </div>
     <div class="nav">
         <div class="nav__wrapper nav--left nav--transform">
-            <p class="fluid-type14-20 roboto link"> <a class="nolink__decoration" href="http://www.jacobdfrank.com/media/Jacob_Frank_Resume.pdf" target="_blank"> Resume</a> </p>
+            <p class="fluid-type14-20 roboto--regular link"> <a class="nolink__decoration" href="http://www.jacobdfrank.com/media/Jacob_Frank_Resume.pdf" target="_blank"> Resume</a> </p>
         </div>
         <div class="nav__wrapper nav--transformRight nav--right">
-            <p class="fluid-type14-20 roboto link"> <a class="nolink__decoration" href="mailto:hello@jacobdfrank.com?subject=HelloJacob"> Email</a> </p>
+            <p class="fluid-type14-20 roboto--regular link"> <a class="nolink__decoration" href="mailto:hello@jacobdfrank.com?subject=HelloJacob"> Email</a> </p>
         </div>
     </div>
     <div class="bottom__link link index--rise1">
-        <p class="fluid-type14-20 roboto center__link__name"> <a class="nolink__decoration bottom__link__name__color" id="bottom__Link--Change" href="#page2">Work</a></p>
-        <div class="bottom__link__line__container" id="bottom__link__lastLine">
-            <div class="bottom__link__line"></div>
+        <p class="fluid-type14-20 roboto--regular center__link__name"> <a class="nolink__decoration link__name__color" href="#page3">Next Project</a></p>
+        <div class="bottom__link__line__container">
+            <div class="bottom__link__line--case"></div>
         </div>
     </div>
+    <div id="fullpage" onscroll="getScrollPosition()">
+        <div class="section">
+            <div class="case__cover">
+                <img src="img/tawProjectCoverCropped.jpeg" class="case__cover__image">
+                <div class="case__cover__content">
+                    <h1 class="project__cover__content__title fluid-type80-100 myriad-pro-condensed"> <a class="nonolink__decoration" href="#page4" target="_blank"> Thought at Work</a></h1>
+                    <h4 class="fluid-type14-20 roboto--medium">- Front-End, Project Management</h4>
+                </div>
+            </div>
+            <div class="case__info">
+                <div class="case__info__container">
+                    <div class="case__info__row">
+                        <div class="column col-12">
+                            <h2 class="roboto--bold fluid-type14-20">The Project</h2>
+                        </div>
+                        <div class="column col-10">
+                            <p class="first roboto--regular fluid-type14-20">
+                                Completed the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.
+                            </p>
+                        </div>
+                        <div class="column col-2">
+                            <p class="roboto--regular fluid-type14-20">October 2016 </p>
+                            <p class="roboto--regular fluid-type14-20"><a href="thoughtatwork.cias.rit.edu" class="no-route" target="_blank">Visit Website</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case__info">
+                <div class="case__info__container">
+                    <div class="case__info__row">
+                        <div class="column col-12">
+                            <h2 class="roboto--bold fluid-type14-20">The Project</h2>
+                        </div>
+                        <div class="column col-10">
+                            <p class="first roboto--regular fluid-type14-20">
+                                Completed the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.
+                            </p>
+                        </div>
+                        <div class="column col-2">
+                            <p class="roboto--regular fluid-type14-20">October 2016 </p>
+                            <p class="roboto--regular fluid-type14-20"><a href="thoughtatwork.cias.rit.edu" class="no-route" target="_blank">Visit Website</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case__info">
+                <div class="case__info__container">
+                    <div class="case__info__row">
+                        <div class="column col-12">
+                            <h2 class="roboto--bold fluid-type14-20">The Project</h2>
+                        </div>
+                        <div class="column col-10">
+                            <p class="first roboto--regular fluid-type14-20">
+                                Completed the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.
+                            </p>
+                        </div>
+                        <div class="column col-2">
+                            <p class="roboto--regular fluid-type14-20">October 2016 </p>
+                            <p class="roboto--regular fluid-type14-20"><a href="thoughtatwork.cias.rit.edu" class="no-route" target="_blank">Visit Website</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case__info">
+                <div class="case__info__container">
+                    <div class="case__info__row">
+                        <div class="column col-12">
+                            <h2 class="roboto--bold fluid-type14-20">The Project</h2>
+                        </div>
+                        <div class="column col-10">
+                            <p class="first roboto--regular fluid-type14-20">
+                                Completed the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.
+                            </p>
+                        </div>
+                        <div class="column col-2">
+                            <p class="roboto--regular fluid-type14-20">October 2016 </p>
+                            <p class="roboto--regular fluid-type14-20"><a href="thoughtatwork.cias.rit.edu" class="no-route" target="_blank">Visit Website</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case__info">
+                <div class="case__info__container">
+                    <div class="case__info__row">
+                        <div class="column col-12">
+                            <h2 class="roboto--bold fluid-type14-20">The Project</h2>
+                        </div>
+                        <div class="column col-10">
+                            <p class="first roboto--regular fluid-type14-20">
+                                Completed the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.
+                            </p>
+                        </div>
+                        <div class="column col-2">
+                            <p class="roboto--regular fluid-type14-20">October 2016 </p>
+                            <p class="roboto--regular fluid-type14-20"><a href="thoughtatwork.cias.rit.edu" class="no-route" target="_blank">Visit Website</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case__info">
+                <div class="case__info__container">
+                    <div class="case__info__row">
+                        <div class="column col-12">
+                            <h2 class="roboto--bold fluid-type14-20">The Project</h2>
+                        </div>
+                        <div class="column col-10">
+                            <p class="first roboto--regular fluid-type14-20">
+                                Completed the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.
+                            </p>
+                        </div>
+                        <div class="column col-2">
+                            <p class="roboto--regular fluid-type14-20">October 2016 </p>
+                            <p class="roboto--regular fluid-type14-20"><a href="thoughtatwork.cias.rit.edu" class="no-route" target="_blank">Visit Website</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+
+
+
+    </div>
 
     <script src='js/app.js'></script>
     <script src='js/polyfill.object-fit.min.js'></script>
@@ -102,6 +231,7 @@
             disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
         });
     </script>
+    <!-- <script type="text/javascript" src="js/smoothScroll.js"></script> -->
 
     <!-- <script src='js/index.js'></script> -->
 
