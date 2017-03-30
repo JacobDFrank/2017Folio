@@ -1,0 +1,33 @@
+.link__name__color__about {
+    color: #f8f8f8;
+}
+.top__link__line__about {
+    background-color: #f8f8f8;
+}
+.nav__about a {
+    color: #f8f8f8;
+}
+.body__about {
+    background: #E53455 !important;
+}
+.case__info__about {
+    background: #E53455;
+    color: #f8f8f8;
+}
+.bottom__link__line--case__about {
+    background-color: #f8f8f8;
+}
+.case__cover__image__about {
+    border-radius: 3px;
+    width: 60vw;
+    max-width: 600px;
+}
+.case__cover__content__about {
+    color: #f8f8f8;
+    margin-left: -22vw;
+    z-index: 20000000000000 !important;
+    margin-top: -125px;
+    top: 260px;
+    left: 22.3vw;
+    width: 60vw;
+}

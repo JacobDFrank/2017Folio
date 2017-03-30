@@ -247,6 +247,10 @@ canvas {
     font-size: 24px;
 }
 
+.fluid-type24-44 {
+    font-size: 24px;
+}
+
 @media screen and (max-height: 500px) {
     .homepage__name {
         margin-top: -20px;
@@ -269,6 +273,9 @@ canvas {
     .fluid-type24-100 {
         font-size: calc( 24px + 76 * ( (100vw - 320px) / 1120));
     }
+    .fluid-type24-44 {
+        font-size: calc( 24px + 20 * ( (100vw - 320px) / 1120))
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -286,6 +293,9 @@ canvas {
     }
     .fluid-type24-100 {
         font-size: 100px;
+    }
+    .fluid-type24-44 {
+        font-size: 44px
     }
 }
 
