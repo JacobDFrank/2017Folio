@@ -175,6 +175,15 @@
     left: 22.3vw;
 }
 
+.case__cover__content--seo {
+    color: #333;
+    margin-left: -42vw;
+    z-index: 20000000000000 !important;
+    margin-top: -155px;
+    top: 260px;
+    left: 42.3vw;
+}
+
 .case__cover {
     display: flex;
     flex-direction: column;
