@@ -44,6 +44,8 @@
 .casestudy__image {
     width: 63vw;
     border-radius: 3px;
+    max-height: 600px;
+    object-fit: cover;
 }
 
 .casestudy__row {
