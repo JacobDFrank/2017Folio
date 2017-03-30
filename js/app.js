@@ -128,8 +128,8 @@ $('#fullpage').fullpage({
         if (index != slideAmount) {
             document.getElementById("bottom__link__lastLine").style.display = 'block';
             document.getElementById('bottom__Link--Change').href = "#page" + (index + 1).toString();
+            console.log("page loaded");
         }
-        console.log("page loaded");
         window.setTimeout(projectCoverAppear, 00);
     }
 
@@ -158,7 +158,7 @@ function nextProjectBottomName() {
     try {
         var changeBottomLink = document.getElementById('bottom__Link--Change');
         changeBottomLink.innerHTML = "Next Project";
-        changeBottomLink.href = "#page3";
+        // changeBottomLink.href = "#page3";
         if (changeBottomLink == null) throw "on case study page";
     } catch (err) {
         console.log(err);
