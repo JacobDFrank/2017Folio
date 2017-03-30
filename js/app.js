@@ -127,8 +127,8 @@ $('#fullpage').fullpage({
         }
         if (index != slideAmount) {
             document.getElementById("bottom__link__lastLine").style.display = 'block';
+            document.getElementById('bottom__Link--Change').href = "#page" + (index + 1).toString();
         }
-        // document.getElementById('bottom__Link--Change').href = "#page" + (index + 1).toString();
         console.log("page loaded");
         window.setTimeout(projectCoverAppear, 00);
     }
