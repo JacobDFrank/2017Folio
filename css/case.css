@@ -42,15 +42,28 @@
 }
 
 .casestudy__image {
+    border-radius: 3px;
+    max-height: 600px;
+    max-width: 100%;
+}
+.casestudy__image--warp {
     width: 63vw;
     border-radius: 3px;
     max-height: 600px;
     object-fit: cover;
 }
-
-.casestudy__row {
+.casestudy__row--image {
     margin-bottom: 6.25vw;
-    zoom: 1;s
+    zoom: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.casestudy__row--text {
+    margin-bottom: 6.25vw;
+    zoom: 1;
 }
 
 .casestudy__emptyBlock {
@@ -210,4 +223,7 @@
     .case__cover__content {
         margin-left: -32vw;
     }
+}
+.cp_embed_wrapper {
+    width: 64vw;
 }
