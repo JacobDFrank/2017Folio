@@ -128,6 +128,7 @@ $('#fullpage').fullpage({
         if (index != slideAmount) {
             document.getElementById("bottom__link__lastLine").style.display = 'block';
         }
+        console.log("page loaded");
         window.setTimeout(projectCoverAppear, 00);
     }
 
