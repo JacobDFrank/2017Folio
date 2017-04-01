@@ -287,9 +287,10 @@ Shape = function() {
 }
 
 Shape.prototype.moveWaves = function() {
+    // mving the vertices
     var verts = this.mesh.geometry.vertices;
     var verticeLength = verts.length;
-
+    // movin in waves...
     for (var i = 0; i < verticeLength; i++) {
         var v = verts[i],
             vprops = this.waves[i];
@@ -297,11 +298,12 @@ Shape.prototype.moveWaves = function() {
         v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
         v.y = vprops.y + Math.cos(vprops.ang) * vprops.amp;
         vprops.ang += vprops.speed;
-        vprops.speed = 0.03 + Math.random() * noise;
+        vprops.speed = 0.03 + Math.random() * noise; //speed of movement determined by noise
+        //noise determined by mouse
     }
 
     this.mesh.geometry.verticesNeedUpdate = true;
-    shape.mesh.rotation.z += .001;
+    shape.mesh.rotation.z += .001; //slight rotation for look
     this.mesh.geometry.radius += radius;
 }
 
