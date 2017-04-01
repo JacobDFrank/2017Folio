@@ -1,33 +1,77 @@
+.case__info__about {
+    background: #E53455;
+}
+
+.case__info__container__about {
+    width: 38vw;
+    margin-left: 18.1vw;
+}
+
+.case__info__row__about {
+    margin-top: 30px;
+}
+
+.homepage__text--about {
+    color: #f8f8f8;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    margin-top: 46px;
+}
+
+.case__cover__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 195px;
+    margin-top: 195px;
+}
+
 .link__name__color__about {
     color: #f8f8f8;
 }
+
 .top__link__line__about {
     background-color: #f8f8f8;
 }
+
 .nav__about a {
     color: #f8f8f8;
 }
+
 .body__about {
     background: #E53455 !important;
 }
+
 .case__info__about {
     background: #E53455;
     color: #f8f8f8;
 }
+
 .bottom__link__line--case__about {
     background-color: #f8f8f8;
 }
+
 .case__cover__image__about {
     border-radius: 3px;
     width: 60vw;
-    max-width: 600px;
+    max-width: 720px;
+    opacity: .5;
+    margin-left: 50px;
+    left: 50px;
 }
+
 .case__cover__content__about {
     color: #f8f8f8;
-    margin-left: -22vw;
-    z-index: 20000000000000 !important;
-    margin-top: -125px;
-    top: 260px;
-    left: 22.3vw;
+    z-index: 1;
+    margin-top: -237px;
+    top: -237px;
+    margin-left: -3.5vw;
+    left: -3.5vw;
     width: 60vw;
+}
+.case__cover__content__about h1 {
+    line-height: 1.15em;
 }
