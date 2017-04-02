@@ -1,3 +1,19 @@
+.case__row--image__about {
+
+}
+.casestudy__image__about {
+    max-height: 600px;
+    position: fixed;
+    margin-top: 3vw;
+    margin-left: 43vw;
+    border-radius: 3px;
+    width: 30.5vw;
+    max-width: 180px;
+    max-width: 460px;
+    opacity: .5;
+    left: 50px;
+}
+
 .case__info__about {
     background: #E53455;
 }
@@ -5,6 +21,7 @@
 .case__info__container__about {
     width: 38vw;
     margin-left: 18.1vw;
+    z-index: 1;
 }
 
 .case__info__row__about {
@@ -66,8 +83,8 @@
 .case__cover__content__about {
     color: #f8f8f8;
     z-index: 1;
-    margin-top: -237px;
-    top: -237px;
+    margin-top: -16.4vw;
+    top: -16.4vw;
     margin-left: -3.5vw;
     left: -3.5vw;
     width: 60vw;
