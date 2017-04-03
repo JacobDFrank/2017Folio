@@ -2,6 +2,19 @@
     transition: width .3s;
 }
 
+html {
+    background-color: #E23758;
+}
+
+body {
+    opacity: 1;
+    transition: 1.0s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
 .link__about {
     color: #f8f8f8;
 }
