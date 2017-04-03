@@ -43,7 +43,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js'></script>
     <script src="vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullpage.extensions.min.js"></script>
+    <script type="text/javascript" src="js/imgix.min.js"></script>
     <!-- <script type="text/javascript" src="js/VirtualScroll.js"></script> -->
     <script type="text/javascript" src="js/jquery.fullpage.extensions.min.js"></script>
     <script>
@@ -94,6 +95,9 @@
 </head>
 
 <body>
+    <script>
+        document.body.className += ' fade-out';
+    </script>
     <div class="top__link link index--rise1">
         <p class="fluid-type14-20 roboto--regular top__link__name center__link__name"> <a class="nolink__decoration link__name__color" href="../#page4">Back</a></p>
         <div class="top__link__line__container">
@@ -118,7 +122,7 @@
         <div class="section">
             <div class="case__cover">
                 <img src="img/hawkesProjectCoverCropped.jpeg" class="case__cover__image">
-                <div class="case__cover__content">
+                <div class="case__cover__content case__cover__content--hawkes">
                     <h1 class="project__cover__content__title fluid-type24-100 myriad-pro-condensed"> Hawkes Media Group</h1>
                     <h4 class="fluid-type14-20 roboto--medium">- Front-End, UX, UI</h4>
                 </div>
@@ -145,7 +149,7 @@
             <div class="case__info">
                 <div class="casestudy__container">
                     <div class="casestudy__row--image">
-                        <img src="https://taw.imgix.net/taw2016Site/newHMGSite.png?w=1&h=1" class="casestudy__image">
+                        <img ix-src="https://taw.imgix.net/taw2016Site/newHMGSite.png?fit=crop&amp;crop=faces" class="casestudy__image" sizes="(min-width: 768px) 500px, 100vw" alt="Thought at Work 2016 site">
                     </div>
                     <div class="casestudy__row--text column col-12">
                         <h2 class="roboto--bold fluid-type14-20">Understanding the Brand</h2>
@@ -159,8 +163,8 @@
                     <div class="casestudy__row--text column col-12">
                         <h2 class="roboto--bold fluid-type14-20">Assessing the Problem</h2>
                         <p class="roboto--regular fluid-type14-20">
-                            Compared to their old, busy-looking site, the client wanted to showcase their work in a much simpler, direct and focused way. The first thing I did was gain an understanding
-                            of what a digital media company needs on a site and who they wanted to attract to the site.
+                            Compared to their old, busy-looking site, the client wanted to showcase their work in a much simpler, direct and focused way. The first thing I did was gain an understanding of what a digital media company needs on a site and who they wanted to attract
+                            to the site.
                         </p>
                     </div>
                     <div class="casestudy__row--image column col-12">

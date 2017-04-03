@@ -1,3 +1,16 @@
+html {
+    background-color: #F8F8F8;
+}
+
+body {
+    opacity: 1;
+    transition: 1.0s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
 .bottom__link__line--case {
     height: 12vh;
     width: 3px;
@@ -186,6 +199,10 @@
     margin-top: -155px;
     top: 260px;
     left: 22.3vw;
+}
+
+.case__cover__content--hawkes {
+    margin-left: -12vw;
 }
 
 .case__cover__content--seo {

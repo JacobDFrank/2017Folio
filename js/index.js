@@ -121,13 +121,20 @@ $('#fullpage').fullpage({
             topGone = false;
         }
         if (index == slideAmount) {
-            document.getElementById("bottom__link__lastLine").style.display = 'none';
+            try {
+                document.getElementById("bottom__link__lastLine").style.display = 'none';
+            } catch (err) {
+                console.log("bottom Link Not On Home");
+            }
             // console.log("line works");
         }
         if (index != slideAmount) {
-            document.getElementById("bottom__link__lastLine").style.display = 'block';
-            document.getElementById('bottom__Link--Change').href = "#page" + (index + 1).toString();
-            console.log("page loaded");
+            try {
+                document.getElementById("bottom__link__lastLine").style.display = 'block';
+                document.getElementById('bottom__Link--Change').href = "#page" + (index + 1).toString();
+            } catch (err) {
+                console.log("bottom Link Not On Home");
+            }
         }
         window.setTimeout(projectCoverAppear, 00);
     }
@@ -193,6 +200,7 @@ window.onload = function() {
     } else {
         jQuery('.project__cover__image').addClass('project__cover__image--vw').removeClass('project__cover__image--vh');
     }
+    console.log("pageLoaded");
 }
 recordingYLocation = 46;
 recordingSize = 145;
@@ -234,14 +242,6 @@ function createScene() {
     document.addEventListener('mousemove', onDocumentMouseMove, false);
 }
 
-// $(document).ready(function() {
-//     $('a').on('click touchend', function(e) {
-//         var el = $(this);
-//         var link = el.attr('href');
-//         window.location = link;
-//     });
-// });
-
 // LIGHTS
 function createLights() {
     // hemisphereLight = new THREE.HemisphereLight(0xbd8f49,0x000000, .8);
@@ -251,7 +251,7 @@ function createLights() {
     shadowLight.position.set(250, -100, 800);
     shadowLight.castShadow = true;
 
-    scene.add(hemisphereLight);
+    // scene.add(hemisphereLight);
     scene.add(shadowLight);
     scene.add(ambientLight);
 }
@@ -407,11 +407,15 @@ function animate() {
     cancel = requestAnimationFrame(animate);
 }
 
+$(function() {
+    $('body').removeClass('fade-out');
+});
 
 // INIT
 function init(event) {
     createScene();
     createShape();
+    // setTimeout(function(){createLights();},2000);
     createLights();
     animate();
 }
