@@ -3,10 +3,23 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     notify = require('gulp-notify'),
     babel = require('gulp-babel'),
-    browserify = require('gulp-browserify')
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer')
 
 gulp.task('default', function() {
-    gulp.src('./js/**.js')
+
+    var b = browserify({
+        entries: './js/index.js'
+    })
+
+    // bundle all our file into one file
+    // conerts it to a node.js stream
+    b.bundle()
+        // convert node.js stream to vinyl stream
+        .pipe( source('app.js'))
+        // convert from chunked stream to buffered stream
+        .pipe( buffer())
         .pipe(babel({
             presets: ['es2015']
         }))
