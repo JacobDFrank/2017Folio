@@ -1,6 +1,5 @@
 // cd /Users/jacobfrank/GitHub/JacobDFrank.github.io/js
-// browserify index.js -o app.js watchify index.js -v -o app.js
-
+// gulp watch
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
@@ -13,8 +12,7 @@ var scene,
     radius = 60,
     windowResized = false,
     resizeWidth,
-    shape;
-var slide2Position = -5,
+    shape, slide2Position = -5,
     finalBallSize = 0;
 var geometry = new THREE.SphereGeometry(radius, 40, 30);
 var material, vertLength;
@@ -28,7 +26,7 @@ counter = downCounter = slideMoveUp = slideMoveDown = 0;
 var slideSpeed = 1200,
     transSpeed = 35;
 var slide, slideNumber, slideBelow;
-var slideAmount = $('.section').length
+var slideAmount = $('.section').length;
 var notLastSlide = true;
 bottomGone = false;
 var timeoutSpeed = 300;
@@ -93,8 +91,6 @@ $('#fullpage').fullpage({
             document.getElementById("ball").style.transitionTimingFunction = "ease-in";
         }
         if (nextIndex != slideAmount) {
-            // slide = window.location.hash;
-            // slideNumber = parseInt(slide.substr(slide.length -1)) + 1;
             console.log("slide" + nextIndex);
             notLastSlide = true;
             slideBelow = nextIndex + 1;
@@ -142,15 +138,10 @@ $('#fullpage').fullpage({
         }
         window.setTimeout(projectCoverAppear, 0);
     }
-
 });
 $.fn.fullpage.setScrollingSpeed(slideSpeed);
 
 function projectCoverAppear() {
-    jQuery('.project__cover').addClass('bottom--reappear').removeClass('bottom--disappear');
-}
-
-function projectCoverDisappear() {
     jQuery('.project__cover').addClass('bottom--reappear').removeClass('bottom--disappear');
 }
 
@@ -250,7 +241,6 @@ function createScene() {
 function createLights() {
     // hemisphereLight = new THREE.HemisphereLight(0xbd8f49,0x000000, .8);
     ambientLight = new THREE.AmbientLight(0xE53455, .1);
-
     shadowLight = new THREE.DirectionalLight(0xE53455, .95);
     shadowLight.position.set(250, -100, 800);
     shadowLight.castShadow = true;
@@ -260,7 +250,6 @@ function createLights() {
     scene.add(ambientLight);
 }
 
-// Shape
 var Shape = function() {
     // var geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
     geometry,
@@ -405,8 +394,6 @@ function animate() {
             // finalBallSize = 0;
         }
     }
-
-
     renderer.render(scene, camera);
     cancel = requestAnimationFrame(animate);
 }
@@ -415,11 +402,9 @@ $(function() {
     $('body').removeClass('fade-out');
 });
 
-// INIT
 function init(event) {
     createScene();
     createShape();
-    // setTimeout(function(){createLights();},2000);
     createLights();
     animate();
 }
