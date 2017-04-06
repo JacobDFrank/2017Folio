@@ -137,7 +137,7 @@ $('#fullpage').fullpage({
                 console.log("bottom Link Not On Home");
             }
         }
-        window.setTimeout(projectCoverAppear, 00);
+        window.setTimeout(projectCoverAppear, 0);
     }
 
 });

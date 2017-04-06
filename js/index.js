@@ -9,7 +9,7 @@ var scene,
     ambientLight, hemisphereLight, shadowLight,
     mouseX = windowHalfX * .01,
     mouseY = windowHalfY * .01,
-    noise = 0.01,
+    noise = 0.011,
     radius = 60,
     windowResized = false,
     resizeWidth,
@@ -17,16 +17,20 @@ var scene,
 var slide2Position = -5,
     finalBallSize = 0;
 var geometry = new THREE.SphereGeometry(radius, 40, 30);
+var material, vertLength;
+
+var cancel;
 
 var recordingYLocation, recordingSize;
 
-var counter = downCounter = slideMoveUp = slideMoveDown = 0;
+var counter, downCounter, slideMoveUp, slideMoveDown, bottomGone, topGone;
+counter = downCounter = slideMoveUp = slideMoveDown = 0;
 var slideSpeed = 1200,
     transSpeed = 35;
 var slide, slideNumber, slideBelow;
 var slideAmount = $('.section').length
 var notLastSlide = true;
-var bottomGone = topGone = false;
+bottomGone = false;
 var timeoutSpeed = 300;
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
@@ -136,7 +140,7 @@ $('#fullpage').fullpage({
                 console.log("bottom Link Not On Home");
             }
         }
-        window.setTimeout(projectCoverAppear, 00);
+        window.setTimeout(projectCoverAppear, 0);
     }
 
 });
@@ -257,7 +261,7 @@ function createLights() {
 }
 
 // Shape
-Shape = function() {
+var Shape = function() {
     // var geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
     geometry,
     material = new THREE.MeshPhongMaterial({
@@ -266,11 +270,11 @@ Shape = function() {
         opacity: 1,
         shading: THREE.FlatShading,
     }),
-    l = geometry.vertices.length;
+    vertLength = geometry.vertices.length;
 
     this.waves = [];
 
-    for (var i = 0; i < l; i++) {
+    for (var i = 0; i < vertLength; i++) {
         var v = geometry.vertices[i];
         this.waves.push({
             y: v.y,
