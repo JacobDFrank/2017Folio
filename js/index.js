@@ -1,6 +1,6 @@
 // cd /Users/jacobfrank/GitHub/JacobDFrank.github.io/js
 // gulp watch
-var scene,
+let scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
     renderer, container, cancelled = false,
     HEIGHT, WIDTH, windowHalfX = window.innerWidth / 2,
@@ -14,22 +14,22 @@ var scene,
     resizeWidth,
     shape, slide2Position = -5,
     finalBallSize = 0;
-var geometry = new THREE.SphereGeometry(radius, 40, 30);
-var material, vertLength;
+let geometry = new THREE.SphereGeometry(radius, 40, 30);
+let material, vertLength;
 
-var cancel;
+let cancel;
 
-var recordingYLocation, recordingSize;
+let recordingYLocation, recordingSize;
 
-var counter, downCounter, slideMoveUp, slideMoveDown, bottomGone, topGone;
+let counter, downCounter, slideMoveUp, slideMoveDown, bottomGone, topGone;
 counter = downCounter = slideMoveUp = slideMoveDown = 0;
-var slideSpeed = 1200,
+let slideSpeed = 1200,
     transSpeed = 35;
-var slide, slideNumber, slideBelow;
-var slideAmount = $('.section').length;
-var notLastSlide = true;
+let slide, slideNumber, slideBelow;
+let slideAmount = $('.section').length;
+let notLastSlide = true;
 bottomGone = false;
-var timeoutSpeed = 300;
+let timeoutSpeed = 300;
 $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
     easing: 'easeInOutQuad',
@@ -39,7 +39,7 @@ $('#fullpage').fullpage({
     // scrollOverflowOptions: null,
     scrollOverflowResetKey: 'amFjb2JkZnJhbmsuY29tXzY4dmMyTnliMnhzVDNabGNtWnNiM2RTWlhObGRBPT12OVc=',
     onLeave: function(index, nextIndex, direction) {
-        var leavingSection = $(this);
+        let leavingSection = $(this);
         //after leaving section 2
         if (Math.abs(index - nextIndex) > 1) {
             $.fn.fullpage.setScrollingSpeed(0);
@@ -62,7 +62,7 @@ $('#fullpage').fullpage({
             window.setTimeout(nextProjectBottomName, timeoutSpeed);
             window.setTimeout(topProjectName, timeoutSpeed);
             try {
-                var ball = document.getElementById("ball");
+                let ball = document.getElementById("ball");
                 if (ball == null) throw "ball not there";
                 document.getElementById("ball").style.opacity = '0.0';
                 document.getElementById("ball").style.transitionProperty = 'opacity';
@@ -109,7 +109,7 @@ $('#fullpage').fullpage({
         }
     },
     afterLoad: function(anchorLink, index) {
-        var loadedSection = $(this);
+        let loadedSection = $(this);
         if (bottomGone) {
             jQuery('.bottom__link__line').addClass('bottom--reappear').removeClass('bottom--disappear');
             jQuery('.bottom__link__name__color').addClass('bottom--reappear').removeClass('bottom--disappear');
@@ -157,7 +157,7 @@ function topProjectName() {
 
 function nextProjectBottomName() {
     try {
-        var changeBottomLink = document.getElementById('bottom__Link--Change');
+        let changeBottomLink = document.getElementById('bottom__Link--Change');
         changeBottomLink.innerHTML = "Next Project";
         // changeBottomLink.href = "#page3";
         if (changeBottomLink == null) throw "on case study page";
@@ -181,7 +181,7 @@ function onWindowResize() {
     renderer.setSize(WIDTH, HEIGHT);
     camera.aspect = WIDTH / HEIGHT;
     camera.updateProjectionMatrix();
-    var coverImage = document.getElementsByClassName("project__cover__image");
+    let coverImage = document.getElementsByClassName("project__cover__image");
     if (camera.aspect >= 1.8) {
         jQuery('.project__cover__image').addClass('project__cover__image--vh').removeClass('project__cover__image--vw');
     } else {
@@ -250,8 +250,8 @@ function createLights() {
     scene.add(ambientLight);
 }
 
-var Shape = function() {
-    // var geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
+let Shape = function() {
+    // let geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
     geometry,
     material = new THREE.MeshPhongMaterial({
         color: 0xffffff,
@@ -263,8 +263,8 @@ var Shape = function() {
 
     this.waves = [];
 
-    for (var i = 0; i < vertLength; i++) {
-        var v = geometry.vertices[i];
+    for (let i = 0; i < vertLength; i++) {
+        let v = geometry.vertices[i];
         this.waves.push({
             y: v.y,
             x: v.x,
@@ -281,11 +281,11 @@ var Shape = function() {
 
 Shape.prototype.moveWaves = function() {
     // mving the vertices
-    var verts = this.mesh.geometry.vertices;
-    var verticeLength = verts.length;
+    let verts = this.mesh.geometry.vertices;
+    let verticeLength = verts.length;
     // movin in waves...
-    for (var i = 0; i < verticeLength; i++) {
-        var v = verts[i],
+    for (let i = 0; i < verticeLength; i++) {
+        let v = verts[i],
             vprops = this.waves[i];
 
         v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
@@ -325,8 +325,8 @@ function ballPresence() {
 }
 
 function getScrollPosition() {
-    var elmnt = document.getElementById("homepage");
-    var y = elmnt.scrollTop;
+    let elmnt = document.getElementById("homepage");
+    let y = elmnt.scrollTop;
     scrollPosition = y;
 }
 // Detect if left page
@@ -340,14 +340,14 @@ function addEvent(obj, evt, fn) {
 
 function onDocumentMouseMove(event) { //Reactivity
 
-    var a = windowHalfX - event.clientX;
-    var b = windowHalfY - event.clientY;
-    var distance = Math.abs(Math.sqrt(a * a + b * b));
-    var aMax = windowHalfX;
-    var bMax = windowHalfY;
-    var distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
-    var noiseLimiter = .3;
-    var finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
+    let a = windowHalfX - event.clientX;
+    let b = windowHalfY - event.clientY;
+    let distance = Math.abs(Math.sqrt(a * a + b * b));
+    let aMax = windowHalfX;
+    let bMax = windowHalfY;
+    let distanceMax = Math.abs(Math.sqrt(aMax * aMax + bMax * bMax));
+    let noiseLimiter = .3;
+    let finalNoise = (1 - distance / distanceMax) * noiseLimiter; //Subtracting 1 to reverse the noise value
     noise = finalNoise;
 }
 // animate
