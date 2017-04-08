@@ -38,7 +38,7 @@ $('#fullpage').fullpage({
     scrollOverflowReset: true,
     // scrollOverflowOptions: null,
     scrollOverflowResetKey: 'amFjb2JkZnJhbmsuY29tXzY4dmMyTnliMnhzVDNabGNtWnNiM2RTWlhObGRBPT12OVc=',
-    onLeave: function(index, nextIndex, direction) {
+    onLeave: (index, nextIndex, direction) => {
         let leavingSection = $(this);
         //after leaving section 2
         if (Math.abs(index - nextIndex) > 1) {
