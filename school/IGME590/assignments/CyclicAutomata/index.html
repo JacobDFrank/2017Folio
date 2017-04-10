@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang='en'>
 <!-- cd /Users/jacobfrank/GitHub/JacobDFrank.github.io/school/IGME590/assignments/CyclicAutomata -->
-<!-- browserify index.js -o app.js -->
-<!-- watchify index.js -v -o app.js -->
+<!-- gulp watch -->
 
 <head>
     <style>
@@ -20,130 +19,18 @@
             z-index: -1;
         }
     </style>
-
-</head>
-
-<body>
-    <canvas id="myCanvas"></canvas>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-
-
-    <script type="x-shader/x-vertex" id="vertexShader">
-
-        varying vec2 vUv;
-
-        void main() {
-            vUv = uv;
-            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-            gl_Position = projectionMatrix * mvPosition;
-        } // needed for a GLSL Vertex shader
-
+    <script src='dat.gui.min.js'></script>
+    <script>
+        $(function() {
+            $("#includedContent").load("shaders.html");
+        });
     </script>
+    
+</head>
 
-    <script  type="x-shader/x-fragment" id="fragmentShader">
-        int mid;
-        float r;
-        uniform float time;
-        uniform vec2 resolution;
-        uniform sampler2D tPrev;
-        int sum;
-
-        varying vec2 vUv;
-
-        vec2 normalizedPosition() {
-            return 2.0 * vUv + -1.0; //normalizes the position of the vector
-        }
-
-        float rand(vec2 co){
-            return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
-        } //sample random creator for fragmentShaders
-
-        const int R = 3; // Range: in the vicinity of Range
-        const int T = 7; // Threshold: Number of neighbors with state required for state transition
-        const int C = 6; // Colors: Number of Colors states (0..C-1)
-        const bool N = false; // Neighborhood Types near the Neighborhood. Moore (NM) if false, Von Neumann (NN) if true
-
-        float initialize(vec2 p) {
-
-            // Random start
-            r = rand(gl_FragCoord.xy + vec2(4.0, 1.0));  //mapping the different spots on the screen
-            return floor(r * float(C) + 1e-10) / float(C);
-        }
-
-        int cellState(vec2 delta) {
-            return int((float(C) * texture2D(tPrev, vec2(mod(vUv.x + delta.x, 1.0), mod(vUv.y + delta.y, 1.0))).r) + 0.5);
-        }
-        // cell state matched and removed
-        bool match(int mid, vec2 delta) {
-            if (mid == cellState(delta))return true;
-            return false;
-        }
-
-        int sumNM(int mid, vec2 d) {
-            // Moore neighborhood
-            // neighborhood exam!
-            sum = 0;
-            for (int x = -R; x <= R; ++x) {
-                for (int y = -R; y <= R; ++y) {
-                    if (x == 0 && y == 0)
-                        break; //maybe should be continue, idk
-                        // Gotta figure out a way to implement these, these are the ones that look good
-                    // if (match(mid, vec2(tan(float(x)) * d.x, cos(float(y)) * d.y))) // R3/T8/C6 //rain
-                    if (match(mid, vec2(sqrt(float(x)) * d.x, sqrt(float(y)) * d.y))) //diagnol moths
-                    // if (match(mid, vec2(atan(float(x)) * d.x, sqrt(float(y)) * d.y))) // R3/T10/C6 //moths
-                    // if (match(mid, vec2(asin(float(x)) * d.x, (float(y)) * d.y))) // R3/T7/C6 //paint rows
-                    // if (match(mid, vec2(exp(float(x)) * d.x, acos(float(y)) * d.y))) // R5/T14/C5 //paint columns
-                    // if (match(mid, vec2(exp(float(x)) * d.x, atan(float(y)) * d.y))) // R5/T14/C5 //up down rain
-                    // if (match(mid, vec2((float(x)) * d.x, (float(y)) * d.y))) //simliar to the regular automata?
-                    sum += 1;
-                }
-            }
-            return sum;
-        }
-
-        float calc() {
-            // Distance of 1 pixel
-            vec2 d = (1.0) / resolution;
-
-            int cell = cellState(vec2(0.0, 0.0));
-
-            // find next state of cell
-            mid = cell - 1;
-            if (mid < 0) mid = C - 1;
-
-            // Count the number of neighbors with the next state
-            int sum = 0;
-
-            sum = sumNM(mid, d);
-
-            // Determine the next state of the cell
-            if (T <= sum)cell = mid;
-
-            return float(cell) / float(C);
-        }
-
-        void main() {
-            float r = 0.0;
-            // starts after initializing it all, problem...
-            // gonna hve to fix, it needs to wait to begin
-            // maybe i can call it once outside? hmm
-            if (time < .1) {
-                vec2 p = normalizedPosition();
-                r = initialize(p);
-            } else {
-                r = calc();
-            }
-            // does color obviously
-            gl_FragColor = vec4(
-                r,
-                mod(r * 2.88, 1.0),
-                mod(r * 10.5, 1.0),
-                5);
-        }
-    </script>
-
-    <script src='./app.js'></script>
+<body id="includedContent">
 
 </body>
 
