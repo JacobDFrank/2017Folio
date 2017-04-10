@@ -25,12 +25,16 @@ var gui = new dat.GUI();
 
 var controller = gui.add(params, 'shaderVariation', {
     'Default': 'fragmentShaderDefault',
-    'Paint': 'fragmentShaderPaint'
+    'Paint': 'fragmentShaderPaint',
+    'Rain': 'fragmentShaderRain',
+    'Rows': 'fragmentShaderRows',
+    'Moths': 'fragmentShaderMoths',
+    'Diagonal': 'fragmentShaderDiagMoths',
+    'DownRain': 'fragmentShaderDownRain',
 });
 
 controller.onChange(function(value) {
-    console.log(params.shaderVariation);
-    fragShaderString = document.getElementById(params.shaderVariation).textContent;
+    material.fragmentShader = document.getElementById(params.shaderVariation).textContent;
     material.needsUpdate = true;
 });
 
