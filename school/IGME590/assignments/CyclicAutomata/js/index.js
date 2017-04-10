@@ -5,12 +5,12 @@ var height = window.innerHeight;
 
 var scene, camera, fieldOfView, aspectRatio, nearPlane, farPlane;
 var rt1, rt2; // render targets
-var uniforms1, renderer, fragShaderString;
+var uniforms1, renderer;
 
 var clock;
 var clockSpeed = 1.0;
 
-var shaderVariation = 'fragmentShaderDefault';
+// var shaderVariation = 'fragmentShaderDefault';
 
 var mesh, material;
 
@@ -18,10 +18,21 @@ var params = {
     shaderVariation: 'fragmentShaderDefault'
 };
 
+var fragShaderString = document.getElementById(params.shaderVariation).textContent;
+
+
 var gui = new dat.GUI();
 
-var controller = gui.add( params, 'shaderVariation', { 'Default': 'fragmentShaderDefault', 'Paint': 'fragmentShaderPaint' } );
+var controller = gui.add(params, 'shaderVariation', {
+    'Default': 'fragmentShaderDefault',
+    'Paint': 'fragmentShaderPaint'
+});
 
+controller.onChange(function(value) {
+    console.log(params.shaderVariation);
+    fragShaderString = document.getElementById(params.shaderVariation).textContent;
+    material.needsUpdate = true;
+});
 
 
 clock = new THREE.Clock();
@@ -42,26 +53,13 @@ function setupScreen() {
         }
     };
 
-    fragShaderString = document.getElementById(params.shaderVariation).textContent
-
     scene = new THREE.Scene();
 
     camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 1, 3);
-    // aspectRatio =  width / height;
-    // fieldOfView = 100;
-    // farPlane = 1000;/
-    // camera = new THREE.PerspectiveCamera(
-    //     fieldOfView,
-    //     aspectRatio,
-    //     nearPlane,
-    //     farPlane
-    // );
+
     camera.position.z = 1;
 
     var geometry = new THREE.PlaneGeometry(2, 2, 1);
-    // var geometry = new THREE.SphereGeometry( 5, 32, 32 );
-    // var geometry = new THREE.RingBufferGeometry( 1, 5, 32 );
-
     // Two render targets prepared for feedback effect
     // rt1 & rt2
     rt1 = new THREE.WebGLRenderTarget(width, height, {
@@ -79,11 +77,6 @@ function setupScreen() {
         fragmentShader: fragShaderString
     });
     mesh = (new THREE.Mesh(geometry, material));
-
-    controller.onChange(function(value) {
-      material.needsUpdate = true;
-      console.log("change went through");
-    });
 
     scene.add(mesh);
 }
