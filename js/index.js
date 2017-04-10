@@ -14,7 +14,7 @@ let scene,
     resizeWidth,
     shape, slide2Position = -5,
     finalBallSize = 0;
-let geometry = new THREE.SphereGeometry(radius, 40, 30);
+let geometry = new THREE.SphereGeometry(radius, 32, 32, 0, Math.PI * 2, 6.3, Math.PI);
 let material, vertLength;
 
 let cancel;
@@ -251,7 +251,6 @@ function createLights() {
 }
 
 let Shape = function() {
-    // let geometry = new THREE.SphereGeometry(60, 30, 30, 0, 6.3, 0, 6.3),
     geometry,
     material = new THREE.MeshPhongMaterial({
         color: 0xffffff,
@@ -261,17 +260,17 @@ let Shape = function() {
     }),
     vertLength = geometry.vertices.length;
 
-    this.waves = [];
+    // repeat
+    this.ripples = [];
 
     for (let i = 0; i < vertLength; i++) {
         let v = geometry.vertices[i];
-        this.waves.push({
+        this.ripples.push({
             y: v.y,
             x: v.x,
-            z: v.z,
-            ang: Math.random() * Math.PI * .13,
-            amp: Math.random() * 4,
-            speed: Math.random() * noise
+            speed: Math.random() * noise,
+            ang: Math.random() * Math.PI * .8, //randomize the angle
+            muv: Math.random() * 3 //randomize the movement
         });
     };
 
@@ -279,24 +278,26 @@ let Shape = function() {
     this.mesh.receiveShadow = true;
 }
 
-Shape.prototype.moveWaves = function() {
+Shape.prototype.moveRipples = function() {
     // mving the vertices
     let verts = this.mesh.geometry.vertices;
     let verticeLength = verts.length;
-    // movin in waves...
+    let vertAtt;
+    // movin in ripples...
     for (let i = 0; i < verticeLength; i++) {
         let v = verts[i],
-            vprops = this.waves[i];
+        vertAtt = this.ripples[i];
 
-        v.x = vprops.x + Math.sin(vprops.ang) * vprops.amp;
-        v.y = vprops.y + Math.cos(vprops.ang) * vprops.amp;
-        vprops.ang += vprops.speed;
-        vprops.speed = 0.03 + Math.random() * noise; //speed of movement determined by noise
-        //noise determined by mouse
+        //three transformations for each point
+        //2d rotation matrix
+        v.x = vertAtt.x + Math.cos(vertAtt.ang) * vertAtt.muv - Math.sin(vertAtt.ang) * vertAtt.muv ;
+        v.y = vertAtt.y + Math.sin(vertAtt.ang) * vertAtt.muv + Math.cos(vertAtt.ang) * vertAtt.muv;
+        vertAtt.speed = 0.03 + Math.random() * noise; //speed(noise) of movement determined by noise
+        vertAtt.ang += vertAtt.speed; //change angle for next frame
     }
 
     this.mesh.geometry.verticesNeedUpdate = true;
-    shape.mesh.rotation.z += .001; //slight rotation for look
+    shape.mesh.rotation.z += .0001; //slight rotation for look
     this.mesh.geometry.radius += radius;
 }
 
@@ -353,8 +354,8 @@ function onDocumentMouseMove(event) { //Reactivity
 // animate
 function animate() {
 
+    shape.moveRipples();//Loop function
 
-    shape.moveWaves();
     if (slideMoveDown === 0 && slideMoveUp === 0) {
         camera.position.z = resizeWidth;
     }
