@@ -15,7 +15,7 @@ let scene,
     shape, slide2Position = -5,
     finalBallSize = 0;
 let geometry = new THREE.SphereGeometry(radius, 32, 32, 0, Math.PI * 2, 6.3, Math.PI);
-let material, vertLength;
+let material, verticeLength;
 
 let cancel;
 
@@ -273,6 +273,7 @@ let Shape = function() {
             x: v.x,
             speed: Math.random() * noise,
             ang: Math.random() * Math.PI * .8, //randomize the angle
+            muv: Math.random() * 3 //give some more randomness
         });
     };
     this.mesh = new THREE.Mesh(geometry, material);
@@ -292,8 +293,8 @@ Shape.prototype.moveRipples = function() {
 
         //three transformations for each point
         //2d rotation matrix
-        v.x = vertAtt.x + Math.cos(vertAtt.ang) *  Math.sin(vertAtt.ang);
-        v.y = vertAtt.y + Math.sin(vertAtt.ang) * Math.cos(vertAtt.ang);
+        v.x = vertAtt.x + Math.cos(vertAtt.ang) * vertAtt.muv - Math.sin(vertAtt.ang);
+        v.y = vertAtt.y + Math.sin(vertAtt.ang) * vertAtt.muv + Math.cos(vertAtt.ang);
         vertAtt.speed = 0.03 + Math.random() * noise; //speed(noise) of movement determined by noise
         vertAtt.ang += vertAtt.speed; //change angle for next frame
     }
