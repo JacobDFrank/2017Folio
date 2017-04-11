@@ -258,13 +258,16 @@ let Shape = function() {
         opacity: 1,
         shading: THREE.FlatShading,
     }),
-    vertLength = geometry.vertices.length;
+    verticeLength = geometry.vertices.length;
 
-    // repeat
+    // array for each vertex
     this.ripples = [];
 
-    for (let i = 0; i < vertLength; i++) {
+
+    for (let i = 0; i < verticeLength; i++) {
+        //get each vertex
         let v = geometry.vertices[i];
+        //store some data in vertex
         this.ripples.push({
             y: v.y,
             x: v.x,
@@ -273,7 +276,6 @@ let Shape = function() {
             muv: Math.random() * 3 //randomize the movement
         });
     };
-
     this.mesh = new THREE.Mesh(geometry, material);
     this.mesh.receiveShadow = true;
 }
@@ -341,7 +343,6 @@ function addEvent(obj, evt, fn) {
 }
 
 function onDocumentMouseMove(event) { //Reactivity
-
     let a = windowHalfX - event.clientX;
     let b = windowHalfY - event.clientY;
     let distance = Math.abs(Math.sqrt(a * a + b * b));
