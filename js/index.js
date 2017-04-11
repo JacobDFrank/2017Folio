@@ -278,6 +278,7 @@ let Shape = function() {
     this.mesh.receiveShadow = true;
 }
 
+// function called in each frame to update vertice position
 Shape.prototype.moveRipples = function() {
     // mving the vertices
     let verts = this.mesh.geometry.vertices;
