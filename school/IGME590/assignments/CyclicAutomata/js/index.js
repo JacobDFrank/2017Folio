@@ -10,34 +10,48 @@ var uniforms1, renderer;
 var clock;
 var clockSpeed = 1.0;
 
-// var shaderVariation = 'fragmentShaderDefault';
-
 var mesh, material;
 
+//dat.gui stuff
 var params = {
-    shaderVariation: 'fragmentShaderDefault'
+    shaderVariation: 'fragmentShaderDefault',
+    shaderChoice: '1'
 };
 
-var fragShaderString = document.getElementById(params.shaderVariation).textContent;
-
+// var fragShaderString = document.getElementById(params.shaderVariation).textContent;
 
 var gui = new dat.GUI();
 
-var controller = gui.add(params, 'shaderVariation', {
-    'Default': 'fragmentShaderDefault',
-    'Paint': 'fragmentShaderPaint',
-    'Rain': 'fragmentShaderRain',
-    'Rows': 'fragmentShaderRows',
-    'Moths': 'fragmentShaderMoths',
-    'Diagonal': 'fragmentShaderDiagMoths',
-    'DownRain': 'fragmentShaderDownRain',
+// var controller =
+// gui.add(params, 'shaderVariation', {
+//     'Default': 'fragmentShaderDefault',
+//     'Paint': 'fragmentShaderPaint',
+//     'Rain': 'fragmentShaderRain',
+//     'Rows': 'fragmentShaderRows',
+//     'Moths': 'fragmentShaderMoths',
+//     'Diagonal': 'fragmentShaderDiagMoths',
+//     'DownRain': 'fragmentShaderDownRain',
+// });
+
+var shaderController = gui.add(params, 'shaderChoice', {
+    'Default': '1',
+    'Col': '2',
+    'Columns': '3',
+    'Rows': '4',
+    'Moths': '5',
+    'Diagonal': '6',
+    'Upwards': '7',
 });
 
-controller.onChange(function(value) {
-    material.fragmentShader = document.getElementById(params.shaderVariation).textContent;
-    material.needsUpdate = true;
-});
+// controller.onChange(function(value) {
+//     material.fragmentShader = document.getElementById(params.shaderVariation).textContent;
+//     material.needsUpdate = true;
+// });
 
+// controller.onChange(function(value) {
+//     material.fragmentShader = document.getElementById(params.shaderVariation).textContent;
+//     material.needsUpdate = true;
+// });
 
 clock = new THREE.Clock();
 
@@ -54,6 +68,9 @@ function setupScreen() {
         },
         tPrev: {
             value: rt1
+        },
+        cellForm: {
+            value: 1
         }
     };
 
@@ -64,7 +81,8 @@ function setupScreen() {
     camera.position.z = 1;
 
     var geometry = new THREE.PlaneGeometry(2, 2, 1);
-    // Two render targets prepared for feedback effect
+
+    // Needed to render texture to screen and used for input later
     // rt1 & rt2
     rt1 = new THREE.WebGLRenderTarget(width, height, {
         minFilter: THREE.LinearFilter, //pixelates as you scale up
@@ -78,14 +96,12 @@ function setupScreen() {
     material = new THREE.ShaderMaterial({
         uniforms: uniforms1,
         vertexShader: document.getElementById('vertexShader').textContent,
-        fragmentShader: fragShaderString
+        fragmentShader: document.getElementById(params.shaderVariation).textContent
     });
     mesh = (new THREE.Mesh(geometry, material));
 
     scene.add(mesh);
 }
-
-
 
 function init() {
     setupScreen();
@@ -95,6 +111,8 @@ function init() {
 
     // sending the resolution to the canvas for render
     var canvas = renderer.domElement;
+
+    // Setting the uniform vector equal to the correct canvas height and width
     uniforms1.resolution.value.x = canvas.width;
     uniforms1.resolution.value.y = canvas.height;
 
@@ -106,17 +124,18 @@ function render() {
     renderer.render(scene, camera);
     renderer.render(scene, camera, rt1, true);
 
-    // feedback effect
+    // using it as input
     var temp = rt2;
     rt2 = rt1;
     rt1 = temp
     uniforms1.tPrev.value = rt2;
 }
-
+console.log(params.shaderChoice + 'test');
 // animate sequence
 function animate() {
     requestAnimationFrame(animate);
 
+    uniforms1.cellForm.value = params.shaderChoice;
     uniforms1.time.value += clockSpeed * clock.getDelta(); //updating the unforms
     render();
 }
