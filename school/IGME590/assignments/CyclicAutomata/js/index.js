@@ -35,12 +35,12 @@ var gui = new dat.GUI();
 
 var shaderController = gui.add(params, 'shaderChoice', {
     'Default': '1',
-    'Col': '2',
-    'Columns': '3',
-    'Rows': '4',
-    'Moths': '5',
-    'Diagonal': '6',
-    'Upwards': '7',
+    'Upwards': '2',
+    'Diag': '3',
+    'Moths': '4',
+    'Rows': '5',
+    'Columns': '6',
+    'Wind': '7',
 });
 
 // controller.onChange(function(value) {
