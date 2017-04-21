@@ -36,6 +36,7 @@ $('#fullpage').fullpage({
     slidesNavigation: true,
     scrollOverflow: true,
     scrollOverflowReset: true,
+    lazyLoading: false,
     // scrollOverflowOptions: null,
     scrollOverflowResetKey: 'amFjb2JkZnJhbmsuY29tXzY4dmMyTnliMnhzVDNabGNtWnNiM2RTWlhObGRBPT12OVc=',
     onLeave: (index, nextIndex, direction) => {
