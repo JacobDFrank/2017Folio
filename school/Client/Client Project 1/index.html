@@ -24,17 +24,11 @@ window.location = "https://www.google.com/chrome/browser/";
 <![endif]-->
 
 <script type="text/javascript">
-    var isIE10 = false;
-    /*@cc_on
-        if (/^10/.test(@_jscript_version)) {
-            isIE10 = true;
-        }
-    @*/
-    console.log(isIE10);
-    if (isIE10) {
-        window.location = "https://www.google.com/chrome/browser/";
-    // Using Internet Explorer 10
-    }
+    if (navigator.appVersion.indexOf("MSIE 10") !== -1)
+{
+    window.alert('This is IE 10');
+    window.location = "https://www.google.com/chrome/browser/";
+}
 </script>
 
 </head>
