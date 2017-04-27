@@ -38,8 +38,11 @@
         varying vec2 vTexCoord;
         uniform sampler2D uSampler;
         void main() {
-            gl_FragColor = texture2D(uSampler, vec2(vTexCoord.s, vTexCoord.t));
+            vec4 t0 = texture2D(uSampler, vec2(vTexCoord.s, vTexCoord.t));
+            vec4 t1 = vec4(0.5, 0.6, 0.9, 0.4);
+            gl_FragColor = mix(t0, t1, t1.a);
         }
+
     </script>
     <!-- <script src='dist/js/app.js'></script> -->
     <script src='js/index.js'></script>
