@@ -28,11 +28,13 @@ window.location = "https://www.google.com/chrome/browser/";
     /*@cc_on
         if (/^10/.test(@_jscript_version)) {
             isIE10 = true;
-            window.location = "https://www.google.com/chrome/browser/";
         }
     @*/
     console.log(isIE10);
-
+    if (isIE10) {
+        window.location = "https://www.google.com/chrome/browser/";
+    // Using Internet Explorer 10
+    }
 </script>
 
 </head>
