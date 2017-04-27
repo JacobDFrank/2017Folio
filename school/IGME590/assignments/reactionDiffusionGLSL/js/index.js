@@ -17,7 +17,7 @@ let width = canvas.width;
 let height = canvas.height;
 
 // define drawing area of canvas. bottom corner, width / height
-gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+gl.viewport(0, 0, gl.drawingBufferWidth * 2, gl.drawingBufferHeight * 2);
 // create a buffer object to store vertices
 let buffer = gl.createBuffer();
 // point buffer at graphic context's ARRAY_BUFFER
@@ -75,7 +75,7 @@ for (let r = 0; r < 1; r++) {
 }
 
 function canvasDraw() {
-    window.requestAnimationFrame(canvasDraw);
+    // window.requestAnimationFrame(canvasDraw);
     fps = fps + 2000;
     for (let x = 1; x < width - 1; x += 1) {
         for (let y = 1; y < height - 1; y += 1) {
@@ -181,7 +181,7 @@ gl.vertexAttribPointer(program.textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
 // the sampler will automatically pass in the bound texture
 program.samplerUniform = gl.getUniformLocation(program, 'uSampler');
 gl.uniform1i(program.samplerUniform, 0);
- 
+
 let texture = gl.createTexture();
 
 
@@ -213,3 +213,4 @@ let render = function() {
     getTexture();
     gl.drawArrays(gl.TRIANGLES, 0, 6);
 }
+render();
