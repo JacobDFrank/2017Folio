@@ -103,21 +103,52 @@ var end = {
 
 };
 
+var start = true;
+
+
+
 function go(dom) {
     modernBrowser();
+
+    var endInfo = document.createElement("div");
+    endInfo.id = "endInfo";
+    document.getElementById("content").appendChild(endInfo);
+
+    var details = document.createElement("div");
+    details.id = "details";
+    document.getElementById("endInfo").appendChild(details);
+
+    var detailsContent = document.createElement("div");
+    detailsContent.id = "detailsContent";
+    document.getElementById("details").appendChild(detailsContent);
+
+    var resultsDiv = document.createElement("div");
+    resultsDiv.id = "results";
+    document.getElementById("content").appendChild(resultsDiv);
+
+    if (start) {
+        var selStarters = document.createElement('select');
+        selStarters.id = "selectMenu"
+        selStarters.className = "q1";
+        selStarters.setAttribute('onchange', 'go(this)');
+        document.getElementById("content").appendChild(selStarters);
+        var firstSelect = document.getElementById("selectMenu");
+        console.log(starters.length);
+        for (var i = 0; i < starters.length; i++) {
+            var opt = starters[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            firstSelect.appendChild(el);
+        }
+        document.getElementById("content").appendChild(selStarters);
+
+
+
+    }
+    start = false;
+
     checkStorage();
-
-    var optionNode = document.createElement("div"); // Create a <li> node
-    optionNode.className = "options";
-    document.getElementById("content").appendChild(optionNode);
-
-    var selectMenuNode = document.createElement("div"); // Create a <li> node
-    selectMenuNode.id = "selectMenu";
-    document.getElementById("content").appendChild(selectMenuNode);
-
-
-
-
 
     if (dom == 'init') {
         var hold = data[dom];
@@ -169,9 +200,9 @@ function go(dom) {
 
 
         // appending a select to a page
-        selEle.className = 'selectmenu';
+        selEle.className = 'selectMenu';
         var select = document.getElementById('results').appendChild(selEle);
-        document.getElementById('selectMenu').appendChild(select);
+        document.getElementById('content').appendChild(select);
         //which select to tell to move?
         //last one
         var x = document.getElementsByTagName('select').length;
@@ -227,20 +258,96 @@ function go(dom) {
             results = results + ' ' + value[i].value;
         }
 
-        document.getElementById('results2').style.display = "flex";
 
-        document.getElementById('results3').style.display = "flex";
 
-        document.getElementById('styleChoices').style.display = "flex";
+        var results2 = document.createElement("div");
+        results2.id = "results2";
+        results2.setAttribute('name', 'results2');
+        document.getElementById("content").appendChild(results2);
 
-        document.getElementById('resultsChoices').style.display = "flex";
+        var results3 = document.createElement("div");
+        results3.id = "results3";
+        results3.setAttribute('name', 'results3');
+        document.getElementById("content").appendChild(results3);
 
-        document.getElementById('formTitleContainer').style.display = "flex";
+        var choices = document.createElement("div");
+        choices.id = "choices";
+        document.getElementById("endInfo").appendChild(choices);
+
+        var styleChoices = document.createElement("div");
+        styleChoices.id = "styleChoices";
+        var styleChoicesText = document.createTextNode("these are your choices");
+        document.getElementById("choices").appendChild(styleChoices);
+        document.getElementById('styleChoices').appendChild(styleChoicesText);
+
+
+
+        var resultsChoices = document.createElement("div");
+        resultsChoices.id = "resultsChoices";
+        var resultsChoicesText = document.createTextNode("these are your results");
+        document.getElementById("details").appendChild(resultsChoices);
+        document.getElementById('resultsChoices').appendChild(resultsChoicesText);
+
+
+
+        var formTitleContainer = document.createElement("div");
+        formTitleContainer.id = "formTitleContainer";
+        document.getElementById("endInfo").appendChild(formTitleContainer);
+
+        var contactH3 = document.createElement("H3");
+        var contactText = document.createTextNode("Contact Us:");
+        contactH3.appendChild(contactText);
+        document.getElementById("formTitleContainer").appendChild(contactH3);
 
         var results2 = document.getElementById('results2').appendChild(document.createTextNode(results));
         document.getElementById('choices').appendChild(results2);
 
-        document.getElementById("form2").style.display = "flex";
+
+        var form2 = document.createElement("div");
+        form2.id = "form2";
+        document.getElementById("endInfo").appendChild(form2);
+
+        var form2Form = document.createElement("form");
+        form2Form.id = "form2Form";
+        form2Form.setAttribute('method', 'post');
+        form2Form.setAttribute('action', 'mailto:jdf2114@rit.edu');
+        form2Form.setAttribute('name', 'form2');
+        form2Form.setAttribute('onsubmit', 'return ValidateForm()');
+        document.getElementById("form2").appendChild(form2Form);
+
+        var form2Label = document.createElement("label");
+        form2Label.id = "form2Label";
+        var form2LabelText = document.createTextNode("Name:");
+        form2Label.appendChild(form2LabelText);
+        var form2Input = document.createElement("input");
+        form2Input.setAttribute("type", "text");
+        form2Input.setAttribute("size", "30");
+        form2Input.setAttribute("name", "name");
+        form2Label.appendChild(form2Input);
+        document.getElementById("form2Form").appendChild(form2Label);
+
+        var form2Email = document.createElement("label");
+        form2Email.id = "form2Email";
+        var form2EmailText = document.createTextNode("Email:");
+        form2Email.appendChild(form2EmailText);
+        var form2EmailInput = document.createElement("input");
+        form2EmailInput.setAttribute("type", "text");
+        form2EmailInput.setAttribute("size", "30");
+        form2EmailInput.setAttribute("name", "email");
+        form2Email.appendChild(form2EmailInput);
+        document.getElementById("form2Form").appendChild(form2Email);
+
+        var submitButton = document.createElement("input");
+        submitButton.setAttribute("type", "submit");
+        submitButton.setAttribute("value", "Send");
+        document.getElementById("form2Form").appendChild(submitButton);
+
+        var resetButton = document.createElement("input");
+        submitButton.setAttribute("type", "reset");
+        submitButton.setAttribute("value", "Reset");
+        submitButton.setAttribute("name", "reset");
+        submitButton.setAttribute("onclick", "clearReset()");
+        document.getElementById("form2Form").appendChild(resetButton);
     }
 
 }
@@ -289,8 +396,11 @@ function modernBrowser() {
 
 
 function clearReset() {
-    document.getElementById("errorName").style.display = "none";
-    document.getElementById("errorEmail").style.display = "none";
+    var form2FormNode = document.getElementById("form2Form");
+    var errorNameNode = document.getElementById("errorName");
+    var errorEmailNode = document.getElementById("errorEmail");
+    form2FormNode.removeChild(errorNameNode);
+    form2FormNode.removeChild(errorEmailNode);
 
 }
 // slider function - DHTML
@@ -312,36 +422,60 @@ function ValidateForm() {
     var valueForm = true;
 
     if (name.value == "") {
-        document.getElementById("errorName").style.display = "flex";
+        var errorName = document.createElement("div");
+        errorName.id = "errorName";
+        var errorNameText = document.createTextNode("Not a valid name.");
+        errorName.appendChild(errorNameText);
+        document.getElementById("form2Form").appendChild(errorName);
         name.focus();
         valueForm = false;
     } else {
-        document.getElementById("errorName").style.display = "none";
+        var form2FormNode = document.getElementById("form2Form");
+        var errorNameNode = document.getElementById("errorName");
+        form2FormNode.removeChild(errorNameNode);
     }
 
     if (email.value == "") {
-        document.getElementById("errorEmail").style.display = "";
+        var errorEmail = document.createElement("div");
+        errorEmail.id = "errorEmail";
+        var errorEmailText = document.createTextNode("Not a valid email address.");
+        errorName.appendChild(errorEmailText);
+        document.getElementById("form2Form").appendChild(errorEmail);
         email.focus();
         valueForm = false;
     } else {
-        document.getElementById("errorEmail").style.display = "none";
+        var form2FormNode = document.getElementById("form2Form");
+        var errorEmailNode = document.getElementById("errorEmail");
+        form2FormNode.removeChild(errorEmail);
     }
 
     if (email.value.indexOf("@", 0) < 0) {
-        document.getElementById("errorEmail").style.display = "";
+        var errorEmail = document.createElement("div");
+        errorEmail.id = "errorEmail";
+        var errorEmailText = document.createTextNode("Not a valid email address.");
+        errorName.appendChild(errorEmailText);
+        document.getElementById("form2Form").appendChild(errorEmail);
         email.focus();
         valueForm = false;
     } else {
-        document.getElementById("errorEmail").style.display = "none";
+        var form2FormNode = document.getElementById("form2Form");
+        var errorEmailNode = document.getElementById("errorEmail");
+        form2FormNode.removeChild(errorEmail);
     }
 
 
     if (email.value.indexOf(".", 0) < 0) {
-        document.getElementById("errorEmail").style.display = "";
+        var errorEmail = document.createElement("div");
+        errorEmail.id = "errorEmail";
+        var errorEmailText = document.createTextNode("Not a valid email address.");
+        errorName.appendChild(errorEmailText);
+        document.getElementById("form2Form").appendChild(errorEmail);
         email.focus();
         valueForm = false;
     } else {
-        document.getElementById("errorEmail").style.display = "none";
+        var form2FormNode = document.getElementById("form2Form");
+        var errorEmailNode = document.getElementById("errorEmail");
+        form2FormNode.removeChild(errorEmail);
     }
     return valueForm;
 }

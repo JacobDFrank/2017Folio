@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Amiri|Open+Sans" rel="stylesheet">
 
 
-  <!--[if IE]>
+    <!--[if IE]>
 <script type="text/javascript">
 usingIE=true;
 window.location = "https://www.google.com/chrome/browser/";
@@ -24,13 +24,12 @@ window.alert('This is IE 9 or Below');
 </script>
 <![endif]-->
 
-<script type="text/javascript">
-    if (navigator.appVersion.indexOf("MSIE 10") !== -1)
-{
-    window.alert('This is IE 10');
-    window.location = "https://www.google.com/chrome/browser/";
-}
-</script>
+    <script type="text/javascript">
+        if (navigator.appVersion.indexOf("MSIE 10") !== -1) {
+            window.alert('This is IE 10');
+            window.location = "https://www.google.com/chrome/browser/";
+        }
+    </script>
 
 </head>
 
@@ -39,67 +38,6 @@ window.alert('This is IE 9 or Below');
         <div class="navigation">
             <div class="siteTitle"> Notebook Finder </div>
             <p class="description"> A world class dancer needs a partner of equal measure to perform at the highest level, and a fountain pen deserves no less in the notebook it is paired with. In this Notebook search, you'll pick the things you want most in a notebook. </p>
-        </div>
-
-        <div id="selectMenu">
-            <select class="q1" onchange="go(this)" id="selectmenu">
-                <option value="Choose a notebook form factor">Choose a notebook form factor</option>
-                <option value="Standard">Standard</option>
-                <option value="Ring">Ring</option>
-            </select>
-        </div>
-        <div class="endInfo">
-            <div id="choices">
-                <div id="styleChoices"> These are your choices: </div>
-            </div>
-
-            <div id="details">
-                <div id="resultsChoices"> These are your results: </div>
-                <div id="detailsContent"></div>
-            </div>
-
-            <div id="formTitleContainer">
-                <div class="contactContent">
-                    <h3> Contact Us: </h3>
-                    <p>Do you already have a favorite notebook? Tell us about it in an email </p>
-                </div>
-            </div>
-            <!-- formTitleContainer end-->
-            <div id="form2">
-                <form method="post" action="mailto:jdf2114@rit.edu" name="form2" onsubmit="return ValidateForm()">
-                    <label>Name:
-                    <input type="text" size="30" name="name">
-                </label>
-                    <div id="errorName"> Not a valid name. </div>
-                    <br>
-                    <label>E-mail:
-                    <input type="text" size="30" name="email">
-                </label>
-                    <br>
-                    <div id="errorEmail"> Not a valid email address.
-                    </div>
-                    <br>
-                    <input type="submit" value="Send">
-                    <input type="reset" value="Reset" name="reset" onclick="clearReset()">
-                </form>
-            </div>
-        </div>
-        <!-- form2 div end -->
-
-        <!-- maincontent end -->
-
-        <!-- displays options for selections that been made -->
-        <form class="selectmenu" name="select">
-        </form>
-
-        <!-- displays results -->
-        <div id="results">
-        </div>
-
-        <div id="results2" name="results2">
-        </div>
-
-        <div id="results3" name="results3">
         </div>
     </div>
 </body>

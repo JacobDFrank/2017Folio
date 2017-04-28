@@ -53,7 +53,7 @@ body {
     width: 65%;
 }
 
-.endInfo {
+#endInfo {
     display: flex;
     flex-direction: column;
     padding-left: 15.5vw;
@@ -70,7 +70,7 @@ body {
 }
 
 #styleChoices, #resultsChoices, #form2, #formTitleContainer, #errorEmail, #errorName, #results2, #results3 {
-    display: none;
+    /*display: none;*/
 }
 
 select {
