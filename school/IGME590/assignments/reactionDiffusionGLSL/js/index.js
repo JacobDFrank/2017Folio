@@ -15,7 +15,7 @@ let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 let width = canvas.width;
 let height = canvas.height;
-
+ 
 // define drawing area of canvas. bottom corner, width / height
 gl.viewport(0, 0, gl.drawingBufferWidth * 2, gl.drawingBufferHeight * 2);
 // create a buffer object to store vertices

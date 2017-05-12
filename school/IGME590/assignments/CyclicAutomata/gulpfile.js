@@ -5,12 +5,14 @@ var gulp = require('gulp'),
     babel = require('gulp-babel'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
-    buffer = require('vinyl-buffer')
+    buffer = require('vinyl-buffer'),
+    glslify = require('glslify')
 
 gulp.task('default', function() {
 
     var b = browserify({
-        entries: './js/index.js'
+        entries: './js/index.js',
+        transform: ["glslify"]
     })
 
     // bundle all our file into one file
@@ -20,6 +22,7 @@ gulp.task('default', function() {
         .pipe( source('app.js'))
         // convert from chunked stream to buffered stream
         .pipe( buffer())
+        // .pipe(glslify())
         .pipe(babel({
             presets: ['es2015']
         }))
