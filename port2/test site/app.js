@@ -2,9 +2,9 @@
 
 let showT;
 let canvasScaled = false;
-let ungulator = .4;
+let ungulator = 2;
 let wavelength = .3;
-let radius = 150;
+let radius = 100;
 let animate;
 
 const canvas = document.getElementById('jawn');
