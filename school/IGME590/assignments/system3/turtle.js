@@ -1,4 +1,4 @@
-const Vec2 = require('victor') // substitute vector library of your choice
+
     // pass in canvas context, a starting x and a starting y position
 const Turtle = {
     create(canvas, startX, startY) {
