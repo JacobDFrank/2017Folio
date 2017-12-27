@@ -1,8 +1,8 @@
 import React from 'react';
 
 const testImage = '/assets/empty.gif';
-// const scriptURL = '/assets/bubble.js';
-const scriptURL = '/assets/uncompiled.js';
+const scriptURL = '/assets/bubble.js';
+// const scriptURL = '/assets/uncompiled.js'; for testing purposes
 
 class Bubble extends React.Component {
   componentDidMount() {
