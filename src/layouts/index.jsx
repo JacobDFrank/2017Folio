@@ -4,7 +4,6 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import favicon from '../assets/favicon.png';
-import Social from '../assets/social.png';
 
 import './index.scss'
 
