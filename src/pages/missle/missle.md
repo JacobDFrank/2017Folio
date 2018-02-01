@@ -19,7 +19,7 @@ Spent about two weeks or so doing a redesign for an alert system. The project wa
 <br/>
 <br/>
 
-![select screen](./images/missle/selectScreen.png)
+![select screen](https://www.jacobdfrank.com/images/missle/selectScreen.png)
 
 <br/>
 <br/>
@@ -32,7 +32,7 @@ I also decided later on in the project that I should make small. I realized how 
 <br/>
 <br/>
 
-![selecting a type of alert to send](./images/missle/redSelect.png)
+![selecting a type of alert to send](https://www.jacobdfrank.com/images/missle/redSelect.png)
 
 <br/>
 <br/>
@@ -43,7 +43,7 @@ While researching for this project I started with looking up as much as I could 
 <br/>
 
 
-![My user flow](./images/missle/flow-p1v2.png)
+![My user flow](https://www.jacobdfrank.com/images/missle/flow-p1v2.png)
 
 <br/>
 <br/>
@@ -56,8 +56,8 @@ For my sketches I stuck with what I knew but also started learning about the bac
 <br/>
 <br/>
 
-![sketches](./images/missle/SketchesV1-5.JPG)
-![sketches](./images/missle/SketchesV1-1.JPG)
+![sketches](https://www.jacobdfrank.com/images/missle/SketchesV1-5.JPG)
+![sketches](https://www.jacobdfrank.com/images/missle/SketchesV1-1.JPG)
 
 <br/>
 <br/>
@@ -65,7 +65,7 @@ For my sketches I stuck with what I knew but also started learning about the bac
 ####The Rest
 All my screens are in the prototype but here's a couple if you don't wanna click the dang link.
 
-![other comps](./images/missle/map.png)
-![other comps](./images/missle/false.png)
-![other comps](./images/missle/false2.png)
-![other comps](./images/missle/end.png)
+![other comps](https://www.jacobdfrank.com/images/missle/map.png)
+![other comps](https://www.jacobdfrank.com/images/missle/false.png)
+![other comps](https://www.jacobdfrank.com/images/missle/false2.png)
+![other comps](https://www.jacobdfrank.com/images/missle/end.png)
