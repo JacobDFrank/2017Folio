@@ -14,7 +14,7 @@ timePeriod: '2 Weeks'
 Spent about two weeks or so doing a redesign for an alert system. The project was really just an exercise in ui design but I wanted to go a bit harder. The problem was simple based on numerous [__articles__](https://qz.com/1179937/hawaii-missile-alert-blame-terrible-interface-design-for-the-hawaii-debacle/)  showing how the Hawaii missle alert threat was the fault of bad design.
 
 <br/>
-<a class="faux-link" href="./assets/misslePrototype/index.html#/screens/276364618">Use the prototype</a>
+<a class="faux-link" target="_blank" href="https://www.jacobdfrank.com/assets/misslePrototype/index.html#/screens">Use the prototype</a>
 
 <br/>
 <br/>
@@ -63,7 +63,7 @@ For my sketches I stuck with what I knew but also started learning about the bac
 <br/>
 
 ####The Rest
-All my screens are in the prototype <a href="./assets/misslePrototype/index.html#/screens/276364618">prototype</a> but here's a couple if you don't wanna click the dang link.
+All my screens are in the prototype but here's a couple if you don't wanna click the dang link.
 
 ![other comps](./images/missle/map.png)
 ![other comps](./images/missle/false.png)
