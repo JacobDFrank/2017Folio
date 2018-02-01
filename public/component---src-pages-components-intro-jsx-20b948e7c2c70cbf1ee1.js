@@ -1,2 +1,0 @@
-webpackJsonp([0x95dc3967fc91],{70:function(e,t,a){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=a(2),u=l(n),r=function(){return u.default.createElement("section",{className:"projects"},u.default.createElement("h2",null,u.default.createElement("b",null,"Hey hey"),"—",u.default.createElement("b",null,"I'm Jacob Frank, a creative developer, designer, and 3rd year student at RIT")))};t.default=r,e.exports=t.default}});
-//# sourceMappingURL=component---src-pages-components-intro-jsx-20b948e7c2c70cbf1ee1.js.map
