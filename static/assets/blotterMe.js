@@ -219,7 +219,7 @@
   
 var text = new Blotter.Text("Jacob Frank", {
   family: "'IBM Plex Sans', 'Helvetica Neue', 'Arial', 'sans-serif'",
-  size : 56.56,
+  size : 17,
   fill : "#050C14",
   paddingLeft : 0,
   paddingRight: 0,
