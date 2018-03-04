@@ -1,3 +1,7 @@
+canvas {
+	pointer-events: none;
+}
+
 // Vendor
 @import '../../node_modules/normalize-scss/sass/normalize/import-now';
 @import '../../node_modules/sass-rem/rem';
@@ -14,10 +18,9 @@
 @import 'styles/global/breakpoints';
 
 // Components
-// @import 'styles/components/eboard';
-// @import 'styles/components/email';
 // @import 'styles/components/about';
 @import 'styles/components/home';
+@import 'styles/components/blotter';
 // @import 'styles/components/case';
 
 // Utility Classes

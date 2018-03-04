@@ -10,7 +10,7 @@ $color_9: #303F8B;
 $color_10: #7130db;
 $color_11: #888;
 $background_color_1: #7130db;
-$background_SPBlue: #FBCFA9;
+$background_teal: #FBCFA9;
 $background_color_3: #F3BDC3;
 $background_offWhite: #f8f8f8;
 $background_color_5: #DDDDDD;
@@ -81,7 +81,6 @@ h2 {
 	font-weight: normal;
 	span {
 		font-family: $mono;
-		opacity: 0.5;
 		font-size: 18px;
 	}
 	&+p {
@@ -124,7 +123,7 @@ span.code {
 	font-family: $mono;
 	font-size: 0.85em;
 	background-color: $background_color_5;
-	color: $SPBlue;
+	color: $teal;
 }
 pre {
 	line-height: 1.4em;
