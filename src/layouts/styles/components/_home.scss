@@ -23,7 +23,7 @@ html {
   font-size: 20px;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  background-color: #fff;
+  // background-color: #fff;
 }
 .body.home-colors {
   color: $teal;
@@ -38,7 +38,7 @@ html {
       color-stop(65%, transparent),
       color-stop(0, white)
     );
-    background-image: linear-gradient(180deg, transparent 55%, $reddish 0);
+    background-image: linear-gradient(180deg, transparent 55%, $light-grey 0);
     -webkit-transition: background-size 0.25s ease;
     transition: background-size 0.25s ease;
     background-size: 0% 100%;
@@ -53,7 +53,7 @@ html {
         color-stop(65%, transparent),
         color-stop(0, white)
       );
-      background-image: linear-gradient(180deg, transparent 55%, $reddish 0);
+      background-image: linear-gradient(180deg, transparent 55%, $light-grey 0);
       & ~ .meta-data {
         color: $offWhite;
       }
@@ -61,7 +61,7 @@ html {
   }
   .code {
     color: $teal;
-    opacity: 0.5;
+    opacity: 0.75;
     font-weight: 700;
   }
 }

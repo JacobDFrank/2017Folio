@@ -6,10 +6,10 @@ const Intro = function statelessFunctionComponentClass() {
       <h2>
         <b>Hey Hey</b>
           —
-        <b>I&apos;m Jacob Frank, a 3rd year student at RIT and Design Systems Intern at Adobe
+        <b>I&apos;m Jacob Frank, a designer, student, and creative developer
         </b>
       </h2>
-      <code className="meta-data code" style={{fontSize: 0.54 + 'em'}}>Site currently being redesigned</code>
+      <code className="meta-data code" style={{fontSize: 0.54 + 'em'}}>Currently redesigning site and interning on design systems at Adobe</code>
     </section>
   );
 };
