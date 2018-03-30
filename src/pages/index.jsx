@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => (
       </section>
       <Footer />
     </div>
-    <Bubble />
+    {/* <Bubble /> */}
   </div>);
 
 export const pageQuery = graphql`
