@@ -7,7 +7,7 @@ class Footer extends React.Component {
       <footer>
         <div className="footer-container">
   				<div className="courtesy">
-  					<div className="email">Email me</div>
+						<a href="mailto:hi@jacobdfrank.com?Subject=What%27s%20Brackin" target="_top">Email Me</a>
   					<a href="https://www.jacobdfrank.com/media/Jacob_Frank_Resume.pdf">Resume</a>
   					<a href="https://github.com/JacobDFrank">Github</a>
   					<a href="https://www.linkedin.com/in/jacobdfrank">LinkedIn</a>
