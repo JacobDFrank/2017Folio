@@ -1,13 +1,13 @@
 ---
-path: '/dmv'
-title: 'MV-82'
-published: false
+path: /dmv
+title: MV-82
+published: true
 date: '2018-02-28'
-description: 'Redesigning a physical vehicle registration form for the web'
-tags: 'School / Design'
+description: Redesigning a physical vehicle registration form for the web
+tags: School / Design
 volume: '2.5'
-homeImage: 'missleCover'
-timePeriod: '2.5 Weeks'
+homeImage: missleCover
+timePeriod: 2.5 Weeks
 ---
 
 ####About
