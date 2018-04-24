@@ -3,29 +3,8 @@
         "componentChunkName": "component---src-templates-post-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-jsx",
-        "jsonName": "hawkes-media.json",
-        "path": "/Hawkes Media"
-    },
-    {
-        "componentChunkName": "component---src-templates-post-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-jsx",
-        "jsonName": "pills.json",
-        "path": "/Pills"
-    },
-    {
-        "componentChunkName": "component---src-templates-post-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-jsx",
         "jsonName": "b-reel.json",
         "path": "/B-Reel"
-    },
-    {
-        "componentChunkName": "component---src-templates-post-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-jsx",
-        "jsonName": "taw.json",
-        "path": "/TAW"
     },
     {
         "componentChunkName": "component---src-templates-post-js",
@@ -38,8 +17,29 @@
         "componentChunkName": "component---src-templates-post-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-jsx",
+        "jsonName": "hawkes-media.json",
+        "path": "/Hawkes Media"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-jsx",
         "jsonName": "missle.json",
         "path": "/missle"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-jsx",
+        "jsonName": "pills.json",
+        "path": "/Pills"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-jsx",
+        "jsonName": "taw.json",
+        "path": "/TAW"
     },
     {
         "componentChunkName": "component---src-templates-post-js",
