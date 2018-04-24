@@ -1,13 +1,58 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
+      "layout": "index",
+      "jsonName": "dev-404-page.json",
+      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "pluginCreatorId": "Plugin dev-404-page",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
+        "contentDigest": "b022d6ba53a9d3a5a915bdce563a9b11",
+        "description": "Plugin dev-404-page",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin dev-404-page": {
+      "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "Plugin dev-404-page",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "de0c4de4fdc686cfcbc9e551e4ca322e",
+        "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
@@ -22,6 +67,8 @@
       "nodeAPIs": [
         "createPagesStatefully"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
       "packageJson": {
         "name": "component-page-creator",
@@ -43,7 +90,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "af0670928f1bf9082e0ff4fa9ec3f8f1",
+        "contentDigest": "2715d22fd9680c80cb989e64133559ae",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -59,6 +106,8 @@
       "nodeAPIs": [
         "createLayouts"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
       "packageJson": {
         "name": "component-layout-creator",
@@ -80,7 +129,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "7f73bced8ecf060c0482095388b1ed8e",
+        "contentDigest": "0744e782a19c9ee271341038b80b2ef7",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -97,6 +146,8 @@
         "sourceNodes",
         "onCreatePage"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "packageJson": {
         "name": "internal-data-bridge",
@@ -114,40 +165,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "9e726c7cb6eefa9f35650407f67ff04d",
-        "type": "SitePlugin",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "Plugin dev-404-page": {
-      "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
-      "id": "Plugin dev-404-page",
-      "name": "dev-404-page",
-      "version": "1.0.0",
-      "pluginOptions": {
-        "plugins": []
-      },
-      "nodeAPIs": [
-        "createPages"
-      ],
-      "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
-      "packageJson": {
-        "name": "dev-404-page",
-        "description": "Internal plugin to add a 404 page in development with helpful information",
-        "version": "1.0.0",
-        "main": "index.js",
-        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-        "license": "MIT",
-        "dependencies": [],
-        "devDependencies": [],
-        "peerDependencies": [],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "5b2af73da7cb578492b7efde1308f946",
+        "contentDigest": "c90c47e6248b345c2e0a5611e091e01c",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -163,6 +181,8 @@
       "nodeAPIs": [
         "onCreatePage"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
       "packageJson": {
         "name": "prod-404",
@@ -180,7 +200,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "cc303560851f87ff2c2a80b06dd0a328",
+        "contentDigest": "a5df87f840dbbe77b77f19004b5e8d39",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -197,6 +217,8 @@
         "onCreatePage",
         "onCreateLayout"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
       "packageJson": {
         "name": "query-runner",
@@ -214,7 +236,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2fb1b1f57d5ff49d72646dc95462774e",
+        "contentDigest": "96a8a0830669fddb397674c10f9c7321",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -228,6 +250,10 @@
         "plugins": []
       },
       "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
@@ -268,7 +294,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "42e9773da29ebf9d18a0044d6e85c39d",
+        "contentDigest": "3e2fd1d34dcf92b14a2b284334b80308",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -277,21 +303,24 @@
       "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-sass",
       "id": "Plugin gatsby-plugin-sass",
       "name": "gatsby-plugin-sass",
-      "version": "1.0.15",
+      "version": "1.0.26",
       "pluginOptions": {
         "plugins": []
       },
       "nodeAPIs": [
         "modifyWebpackConfig"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-sass",
       "packageJson": {
         "name": "gatsby-plugin-sass",
         "description": "Gatsby plugin to handle scss/sass files",
-        "version": "1.0.15",
+        "version": "1.0.26",
         "main": "index.js",
         "keywords": [
           "gatsby",
+          "gatsby-plugin",
           "sass",
           "scss"
         ],
@@ -306,12 +335,12 @@
             "version": "^6.26.0"
           },
           {
-            "name": "extract-text-webpack-plugin",
-            "version": "^1.0.1"
+            "name": "gatsby-1-config-css-modules",
+            "version": "^1.0.11"
           },
           {
-            "name": "gatsby-1-config-css-modules",
-            "version": "^1.0.8"
+            "name": "gatsby-1-config-extract-plugin",
+            "version": "^1.0.3"
           },
           {
             "name": "node-sass",
@@ -336,14 +365,19 @@
             "version": "^5.0.5"
           }
         ],
-        "peerDependencies": [],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          }
+        ],
         "optionalDependecies": [],
         "bundledDependecies": []
       },
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a1826ab73f9e3d7fd5eb11b0bcea1242",
+        "contentDigest": "d4172823d96ae722b3b652a6a7c922ee",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -352,16 +386,20 @@
       "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-catch-links",
       "id": "Plugin gatsby-plugin-catch-links",
       "name": "gatsby-plugin-catch-links",
-      "version": "1.0.14",
+      "version": "1.0.19",
       "pluginOptions": {
         "plugins": []
       },
       "nodeAPIs": [],
+      "browserAPIs": [
+        "onClientEntry"
+      ],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-catch-links",
       "packageJson": {
         "name": "gatsby-plugin-catch-links",
         "description": "Intercepts local links from markdown and other non-react pages and does a client-side pushState to avoid the browser having to refresh the page.",
-        "version": "1.0.14",
+        "version": "1.0.19",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -388,14 +426,19 @@
             "version": "^5.0.5"
           }
         ],
-        "peerDependencies": [],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          }
+        ],
         "optionalDependecies": [],
         "bundledDependecies": []
       },
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "7a714922ab4289c08d2e88f14667b277",
+        "contentDigest": "cf844496fc8b4e4e89649bafe91e73b8",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -404,20 +447,23 @@
       "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-source-filesystem",
       "id": "Plugin gatsby-source-filesystem",
       "name": "gatsby-source-filesystem",
-      "version": "1.5.10",
+      "version": "1.5.34",
       "pluginOptions": {
         "plugins": [],
         "path": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
         "name": "pages"
       },
       "nodeAPIs": [
-        "sourceNodes"
+        "sourceNodes",
+        "setFieldsOnGraphQLNodeType"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-source-filesystem",
       "packageJson": {
         "name": "gatsby-source-filesystem",
         "description": "Gatsby plugin which parses files within a directory for further parsing by other plugins",
-        "version": "1.5.10",
+        "version": "1.5.34",
         "keywords": [
           "gatsby",
           "gatsby-plugin"
@@ -435,6 +481,10 @@
           {
             "name": "babel-runtime",
             "version": "^6.26.0"
+          },
+          {
+            "name": "better-queue",
+            "version": "^3.8.7"
           },
           {
             "name": "bluebird",
@@ -479,14 +529,19 @@
             "version": "^5.0.5"
           }
         ],
-        "peerDependencies": [],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.9.250"
+          }
+        ],
         "optionalDependecies": [],
         "bundledDependecies": []
       },
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "64e442a3411984a79b78e478bfd9a0ee",
+        "contentDigest": "be04be06fb810166452daf7ab3ad3229",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -495,18 +550,24 @@
       "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-google-analytics",
       "id": "Plugin gatsby-plugin-google-analytics",
       "name": "gatsby-plugin-google-analytics",
-      "version": "1.0.14",
+      "version": "1.0.31",
       "pluginOptions": {
         "plugins": [],
         "trackingId": "UA-96615084-1",
         "anonymize": true
       },
       "nodeAPIs": [],
+      "browserAPIs": [
+        "onRouteUpdate"
+      ],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-google-analytics",
       "packageJson": {
         "name": "gatsby-plugin-google-analytics",
         "description": "Gatsby plugin to add google analytics onto a site",
-        "version": "1.0.14",
+        "version": "1.0.31",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -534,14 +595,19 @@
             "version": "^5.0.5"
           }
         ],
-        "peerDependencies": [],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          }
+        ],
         "optionalDependecies": [],
         "bundledDependecies": []
       },
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "13767c3b4d9a2cb07b5b520a32a6402c",
+        "contentDigest": "7c674e9eea7aa1cf3bde7549fa5a7e6f",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -550,7 +616,7 @@
       "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-transformer-remark",
       "id": "Plugin gatsby-transformer-remark",
       "name": "gatsby-transformer-remark",
-      "version": "1.7.24",
+      "version": "1.7.40",
       "pluginOptions": {
         "plugins": []
       },
@@ -558,11 +624,13 @@
         "onCreateNode",
         "setFieldsOnGraphQLNodeType"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-transformer-remark",
       "packageJson": {
         "name": "gatsby-transformer-remark",
         "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
-        "version": "1.7.24",
+        "version": "1.7.40",
         "keywords": [
           "gatsby",
           "gatsby-plugin",
@@ -584,8 +652,16 @@
             "version": "^3.5.0"
           },
           {
+            "name": "graphql-type-json",
+            "version": "^0.1.4"
+          },
+          {
             "name": "gray-matter",
-            "version": "^2.1.0"
+            "version": "^3.0.0"
+          },
+          {
+            "name": "hast-util-raw",
+            "version": "^2.0.2"
           },
           {
             "name": "hast-util-to-html",
@@ -636,6 +712,10 @@
             "version": "^6.1.5"
           },
           {
+            "name": "unist-util-remove-position",
+            "version": "^1.1.1"
+          },
+          {
             "name": "unist-util-select",
             "version": "^1.5.0"
           },
@@ -665,7 +745,89 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5391028716fc874ce0b51a8d7f8d7dcd",
+        "contentDigest": "6cbfe76b244c2496be603fee1931b8cf",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-netlify-cms": {
+      "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-netlify-cms",
+      "id": "Plugin gatsby-plugin-netlify-cms",
+      "name": "gatsby-plugin-netlify-cms",
+      "version": "2.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "modifyWebpackConfig"
+      ],
+      "browserAPIs": [
+        "onInitialClientRender"
+      ],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-netlify-cms",
+      "packageJson": {
+        "name": "gatsby-plugin-netlify-cms",
+        "description": "A Gatsby plugin which generates the Netlify CMS single page app",
+        "version": "2.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "netlify",
+          "netlify-cms",
+          "cms"
+        ],
+        "author": {
+          "name": "Shawn Erquhart",
+          "email": "shawn@erquh.art"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "html-webpack-include-assets-plugin",
+            "version": "^1.0.2"
+          },
+          {
+            "name": "html-webpack-plugin",
+            "version": "^2.30.1"
+          },
+          {
+            "name": "netlify-identity-widget",
+            "version": "^1.4.11"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.3"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "extract-text-webpack-plugin",
+            "version": "^1.0.1"
+          },
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "netlify-cms",
+            "version": "^1.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "3db7e9c16b7a611154ff2e509a404da7",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -674,13 +836,15 @@
       "resolve": "/Users/jacobfrank/GitHub/JacobDFrank.github.io",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "8b2a991769cd2883014d18cb12823885",
+      "version": "5a8680abaa650f7e94358dca21623f86",
       "pluginOptions": {
         "plugins": []
       },
       "nodeAPIs": [
         "createPages"
       ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
       "pluginFilepath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io",
       "packageJson": {
         "name": "port2",
@@ -695,15 +859,15 @@
         "dependencies": [
           {
             "name": "@ibm/type",
-            "version": "^0.5.3"
+            "version": "^0.5.4"
           },
           {
             "name": "babel-eslint",
-            "version": "^8.1.1"
+            "version": "^8.2.3"
           },
           {
             "name": "eslint",
-            "version": "^4.14.0"
+            "version": "^4.19.1"
           },
           {
             "name": "eslint-config-prettier",
@@ -711,27 +875,31 @@
           },
           {
             "name": "eslint-plugin-flowtype",
-            "version": "^2.40.1"
+            "version": "^2.46.3"
           },
           {
             "name": "gatsby",
-            "version": "^1.9.129"
+            "version": "^1.9.254"
           },
           {
             "name": "gatsby-link",
-            "version": "^1.6.31"
+            "version": "^1.6.41"
           },
           {
             "name": "gatsby-plugin-catch-links",
-            "version": "^1.0.14"
+            "version": "^1.0.19"
           },
           {
             "name": "gatsby-plugin-google-analytics",
-            "version": "^1.0.14"
+            "version": "^1.0.31"
           },
           {
             "name": "gatsby-plugin-google-fonts",
             "version": "0.0.3"
+          },
+          {
+            "name": "gatsby-plugin-netlify-cms",
+            "version": "^2.0.1"
           },
           {
             "name": "gatsby-plugin-react-helmet",
@@ -739,67 +907,71 @@
           },
           {
             "name": "gatsby-plugin-sass",
-            "version": "^1.0.15"
+            "version": "^1.0.26"
           },
           {
             "name": "gatsby-remark-copy-images",
-            "version": "^0.2.0"
+            "version": "^0.2.1"
           },
           {
             "name": "gatsby-remark-copy-linked-files",
-            "version": "^1.5.23"
+            "version": "^1.5.32"
           },
           {
             "name": "gatsby-remark-images",
-            "version": "^1.5.34"
+            "version": "^1.5.62"
           },
           {
             "name": "gatsby-remark-prismjs",
-            "version": "^1.2.11"
+            "version": "^1.2.24"
           },
           {
             "name": "gatsby-remark-responsive-iframe",
-            "version": "^1.4.16"
+            "version": "^1.4.18"
           },
           {
             "name": "gatsby-remark-smartypants",
-            "version": "^1.4.10"
+            "version": "^1.4.12"
           },
           {
             "name": "gatsby-source-filesystem",
-            "version": "^1.5.10"
+            "version": "^1.5.34"
           },
           {
             "name": "gatsby-transformer-remark",
-            "version": "^1.7.24"
+            "version": "^1.7.40"
           },
           {
             "name": "invariant",
-            "version": "^2.2.2"
+            "version": "^2.2.4"
           },
           {
             "name": "load-script",
             "version": "^1.0.0"
           },
           {
+            "name": "netlify-cms",
+            "version": "^1.6.0"
+          },
+          {
             "name": "normalize-scss",
-            "version": "^7.0.0"
+            "version": "^7.0.1"
           },
           {
             "name": "react",
-            "version": "^16.2.0"
+            "version": "^16.3.2"
           },
           {
             "name": "react-mailchimp-subscribe",
-            "version": "^1.0.3"
+            "version": "^1.1.0"
           },
           {
             "name": "react-responsive",
-            "version": "^4.0.3"
+            "version": "^4.1.0"
           },
           {
             "name": "sass-rem",
-            "version": "^2.0.0"
+            "version": "^2.0.1"
           }
         ],
         "devDependencies": [
@@ -809,7 +981,7 @@
           },
           {
             "name": "eslint-plugin-import",
-            "version": "^2.8.0"
+            "version": "^2.11.0"
           },
           {
             "name": "eslint-plugin-jsx-a11y",
@@ -817,11 +989,11 @@
           },
           {
             "name": "eslint-plugin-react",
-            "version": "^7.5.1"
+            "version": "^7.7.0"
           },
           {
             "name": "prettier",
-            "version": "^1.9.1"
+            "version": "^1.12.1"
           },
           {
             "name": "sass-lint",
@@ -835,7 +1007,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "f46702d4848649a3cc631826b259424e",
+        "contentDigest": "e240682dad4de70bba11a8f4035b2c69",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -844,14 +1016,16 @@
       "siteMetadata": {
         "title": "Jacob D Frank Portfolio"
       },
+      "port": 8001,
+      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2017-12-27T05:06:55.027Z",
+      "buildTime": "2018-04-24T19:17:34.300Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2e81e9e0f7541eaac1b0eedb9314a0fd",
+        "contentDigest": "132bcb0eeb869b851206c1c250b888f2",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -861,94 +1035,53 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "18ecead3ce25e5501d4e88fa19759dc3",
+        "contentDigest": "bac1f0f19513eec080c77612ebc013dc",
         "type": "Directory",
+        "description": "Directory \"src/pages\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
       "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "relativePath": "",
       "extension": "",
-      "size": 320,
-      "prettySize": "320 B",
-      "modifiedTime": "2017-12-27T04:53:46.904Z",
-      "accessTime": "2017-12-27T05:06:57.333Z",
-      "changeTime": "2017-12-27T04:53:46.904Z",
-      "birthTime": "2017-12-27T04:53:46.891Z",
+      "size": 384,
+      "prettySize": "384 B",
+      "modifiedTime": "2018-04-24T17:37:52.843Z",
+      "accessTime": "2018-04-24T19:17:38.689Z",
+      "changeTime": "2018-04-24T17:46:01.777Z",
+      "birthTime": "2018-04-24T17:37:52.826Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src",
       "base": "pages",
       "ext": "",
       "name": "pages",
       "relativeDirectory": "..",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
-      "nlink": 10,
+      "nlink": 12,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812930,
+      "ino": 6470941,
       "blocks": 0,
-      "atimeMs": 1514351217332.8684,
-      "mtimeMs": 1514350426904.2302,
-      "ctimeMs": 1514350426904.2302,
-      "birthtimeMs": 1514350426891.367,
-      "atime": "2017-12-27T05:06:57.333Z",
-      "mtime": "2017-12-27T04:53:46.904Z",
-      "ctime": "2017-12-27T04:53:46.904Z",
-      "birthtime": "2017-12-27T04:53:46.891Z"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills absPath of file",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "c97681682c22d1fd7c4b72198de791c7",
-        "type": "Directory",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills",
-      "relativePath": "Got Pills",
-      "extension": "",
-      "size": 96,
-      "prettySize": "96 B",
-      "modifiedTime": "2017-12-27T04:53:46.892Z",
-      "accessTime": "2017-12-27T05:06:57.336Z",
-      "changeTime": "2017-12-27T04:53:46.892Z",
-      "birthTime": "2017-12-27T04:53:46.892Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
-      "base": "Got Pills",
-      "ext": "",
-      "name": "Got Pills",
-      "relativeDirectory": "",
-      "dev": 16777221,
-      "mode": 16877,
-      "nlink": 3,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812932,
-      "blocks": 0,
-      "atimeMs": 1514351217335.7466,
-      "mtimeMs": 1514350426891.8994,
-      "ctimeMs": 1514350426891.8994,
-      "birthtimeMs": 1514350426891.7026,
-      "atime": "2017-12-27T05:06:57.336Z",
-      "mtime": "2017-12-27T04:53:46.892Z",
-      "ctime": "2017-12-27T04:53:46.892Z",
-      "birthtime": "2017-12-27T04:53:46.892Z"
+      "atimeMs": 1524597458689.21,
+      "mtimeMs": 1524591472843.4292,
+      "ctimeMs": 1524591961776.896,
+      "birthtimeMs": 1524591472825.9895,
+      "atime": "2018-04-24T19:17:38.689Z",
+      "mtime": "2018-04-24T17:37:52.843Z",
+      "ctime": "2018-04-24T17:46:01.777Z",
+      "birthtime": "2018-04-24T17:37:52.826Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "3f88e0dd07f8d78147427a3174b606d9",
+        "contentDigest": "c11e3e74405c0f8fe945349834865df4",
         "type": "Directory",
+        "description": "Directory \"src/pages/Hawkes Media Group\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -957,41 +1090,86 @@
       "extension": "",
       "size": 96,
       "prettySize": "96 B",
-      "modifiedTime": "2017-12-27T04:53:46.892Z",
-      "accessTime": "2017-12-27T05:06:57.336Z",
-      "changeTime": "2017-12-27T04:53:46.892Z",
-      "birthTime": "2017-12-27T04:53:46.892Z",
+      "modifiedTime": "2018-04-24T17:37:52.827Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.770Z",
+      "birthTime": "2018-04-24T17:37:52.827Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "base": "Hawkes Media Group",
       "ext": "",
       "name": "Hawkes Media Group",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812934,
+      "ino": 6470952,
       "blocks": 0,
-      "atimeMs": 1514351217335.7917,
-      "mtimeMs": 1514350426892.2124,
-      "ctimeMs": 1514350426892.2124,
-      "birthtimeMs": 1514350426892.0757,
-      "atime": "2017-12-27T05:06:57.336Z",
-      "mtime": "2017-12-27T04:53:46.892Z",
-      "ctime": "2017-12-27T04:53:46.892Z",
-      "birthtime": "2017-12-27T04:53:46.892Z"
+      "atimeMs": 1524597458694.9326,
+      "mtimeMs": 1524591472826.966,
+      "ctimeMs": 1524591961770.1555,
+      "birthtimeMs": 1524591472826.6729,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.827Z",
+      "ctime": "2018-04-24T17:46:01.770Z",
+      "birthtime": "2018-04-24T17:37:52.827Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "38625e301d464ed791f1a7f80a2ca291",
+        "type": "Directory",
+        "description": "Directory \"src/pages/Got Pills\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills",
+      "relativePath": "Got Pills",
+      "extension": "",
+      "size": 96,
+      "prettySize": "96 B",
+      "modifiedTime": "2018-04-24T17:37:52.827Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.771Z",
+      "birthTime": "2018-04-24T17:37:52.826Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
+      "base": "Got Pills",
+      "ext": "",
+      "name": "Got Pills",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470954,
+      "blocks": 0,
+      "atimeMs": 1524597458694.9446,
+      "mtimeMs": 1524591472826.5476,
+      "ctimeMs": 1524591961770.7942,
+      "birthtimeMs": 1524591472826.444,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.827Z",
+      "ctime": "2018-04-24T17:46:01.771Z",
+      "birthtime": "2018-04-24T17:37:52.826Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "0fdb97af8de56fbe3f6fa7930791ae29",
+        "contentDigest": "7fb2d97f8f794be94e61441dd37156a4",
         "type": "Directory",
+        "description": "Directory \"src/pages/Thought at Work\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1000,41 +1178,42 @@
       "extension": "",
       "size": 96,
       "prettySize": "96 B",
-      "modifiedTime": "2017-12-27T04:53:46.892Z",
-      "accessTime": "2017-12-27T05:06:57.336Z",
-      "changeTime": "2017-12-27T04:53:46.892Z",
-      "birthTime": "2017-12-27T04:53:46.892Z",
+      "modifiedTime": "2018-04-24T17:37:52.827Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.777Z",
+      "birthTime": "2018-04-24T17:37:52.827Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "base": "Thought at Work",
       "ext": "",
       "name": "Thought at Work",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812936,
+      "ino": 6470969,
       "blocks": 0,
-      "atimeMs": 1514351217335.7654,
-      "mtimeMs": 1514350426892.4714,
-      "ctimeMs": 1514350426892.4714,
-      "birthtimeMs": 1514350426892.3425,
-      "atime": "2017-12-27T05:06:57.336Z",
-      "mtime": "2017-12-27T04:53:46.892Z",
-      "ctime": "2017-12-27T04:53:46.892Z",
-      "birthtime": "2017-12-27T04:53:46.892Z"
+      "atimeMs": 1524597458694.9846,
+      "mtimeMs": 1524591472827.176,
+      "ctimeMs": 1524591961776.8252,
+      "birthtimeMs": 1524591472827.087,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.827Z",
+      "ctime": "2018-04-24T17:46:01.777Z",
+      "birthtime": "2018-04-24T17:37:52.827Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "8ce557159620cef99fabfa70e226f346",
+        "contentDigest": "573ffa03dec78f0ef970e2225afbafd3",
         "type": "Directory",
+        "description": "Directory \"src/pages/WebGL Summer\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1043,41 +1222,42 @@
       "extension": "",
       "size": 256,
       "prettySize": "256 B",
-      "modifiedTime": "2017-12-27T04:53:46.898Z",
-      "accessTime": "2017-12-27T05:06:57.336Z",
-      "changeTime": "2017-12-27T04:53:46.898Z",
-      "birthTime": "2017-12-27T04:53:46.893Z",
+      "modifiedTime": "2018-04-24T17:37:52.835Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.768Z",
+      "birthTime": "2018-04-24T17:37:52.827Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "base": "WebGL Summer",
       "ext": "",
       "name": "WebGL Summer",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 8,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812938,
+      "ino": 6470942,
       "blocks": 0,
-      "atimeMs": 1514351217335.84,
-      "mtimeMs": 1514350426898.2212,
-      "ctimeMs": 1514350426898.2212,
-      "birthtimeMs": 1514350426892.6055,
-      "atime": "2017-12-27T05:06:57.336Z",
-      "mtime": "2017-12-27T04:53:46.898Z",
-      "ctime": "2017-12-27T04:53:46.898Z",
-      "birthtime": "2017-12-27T04:53:46.893Z"
+      "atimeMs": 1524597458695.0493,
+      "mtimeMs": 1524591472835.3972,
+      "ctimeMs": 1524591961768.2778,
+      "birthtimeMs": 1524591472827.2886,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.835Z",
+      "ctime": "2018-04-24T17:46:01.768Z",
+      "birthtime": "2018-04-24T17:37:52.827Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "b4dd7585f20e0b94c90fbc2828c934c3",
+        "contentDigest": "63d3a5fe2dcb6c2602b5d6fb33eebe89",
         "type": "Directory",
+        "description": "Directory \"src/pages/b-reel\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1086,76 +1266,165 @@
       "extension": "",
       "size": 128,
       "prettySize": "128 B",
-      "modifiedTime": "2017-12-27T04:53:46.901Z",
-      "accessTime": "2017-12-27T05:06:57.336Z",
-      "changeTime": "2017-12-27T04:53:46.901Z",
-      "birthTime": "2017-12-27T04:53:46.899Z",
+      "modifiedTime": "2018-04-24T17:37:52.838Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.769Z",
+      "birthTime": "2018-04-24T17:37:52.836Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "base": "b-reel",
       "ext": "",
       "name": "b-reel",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 4,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812945,
+      "ino": 6470949,
       "blocks": 0,
-      "atimeMs": 1514351217335.8228,
-      "mtimeMs": 1514350426900.6943,
-      "ctimeMs": 1514350426900.6943,
-      "birthtimeMs": 1514350426898.6565,
-      "atime": "2017-12-27T05:06:57.336Z",
-      "mtime": "2017-12-27T04:53:46.901Z",
-      "ctime": "2017-12-27T04:53:46.901Z",
-      "birthtime": "2017-12-27T04:53:46.899Z"
+      "atimeMs": 1524597458694.9553,
+      "mtimeMs": 1524591472837.9036,
+      "ctimeMs": 1524591961769.427,
+      "birthtimeMs": 1524591472835.6426,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.838Z",
+      "ctime": "2018-04-24T17:46:01.769Z",
+      "birthtime": "2018-04-24T17:37:52.836Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "9ce479ebbcad5b0fd9806e1a263ed851",
+        "contentDigest": "3096395ac3f9fba1e0b70e1335d823f4",
         "type": "Directory",
+        "description": "Directory \"src/pages/components\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
       "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
       "relativePath": "components",
       "extension": "",
-      "size": 224,
-      "prettySize": "224 B",
-      "modifiedTime": "2017-12-27T04:53:46.904Z",
-      "accessTime": "2017-12-27T05:06:57.336Z",
-      "changeTime": "2017-12-27T04:53:46.904Z",
-      "birthTime": "2017-12-27T04:53:46.902Z",
+      "size": 256,
+      "prettySize": "256 B",
+      "modifiedTime": "2018-04-24T17:37:52.842Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.775Z",
+      "birthTime": "2018-04-24T17:37:52.838Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "base": "components",
       "ext": "",
       "name": "components",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
-      "nlink": 7,
+      "nlink": 8,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812948,
+      "ino": 6470960,
       "blocks": 0,
-      "atimeMs": 1514351217335.855,
-      "mtimeMs": 1514350426903.6602,
-      "ctimeMs": 1514350426903.6602,
-      "birthtimeMs": 1514350426901.722,
-      "atime": "2017-12-27T05:06:57.336Z",
-      "mtime": "2017-12-27T04:53:46.904Z",
-      "ctime": "2017-12-27T04:53:46.904Z",
-      "birthtime": "2017-12-27T04:53:46.902Z"
+      "atimeMs": 1524597458695.0378,
+      "mtimeMs": 1524591472842.2532,
+      "ctimeMs": 1524591961774.9622,
+      "birthtimeMs": 1524591472838.2373,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.842Z",
+      "ctime": "2018-04-24T17:46:01.775Z",
+      "birthtime": "2018-04-24T17:37:52.838Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "cdcb50215c3aa1be01ced9d8b8d54d5b",
+        "type": "Directory",
+        "description": "Directory \"src/pages/dmv\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv",
+      "relativePath": "dmv",
+      "extension": "",
+      "size": 96,
+      "prettySize": "96 B",
+      "modifiedTime": "2018-04-24T17:37:52.843Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.771Z",
+      "birthTime": "2018-04-24T17:37:52.842Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
+      "base": "dmv",
+      "ext": "",
+      "name": "dmv",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470956,
+      "blocks": 0,
+      "atimeMs": 1524597458695.0273,
+      "mtimeMs": 1524591472842.8284,
+      "ctimeMs": 1524591961771.4182,
+      "birthtimeMs": 1524591472842.4277,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.843Z",
+      "ctime": "2018-04-24T17:46:01.771Z",
+      "birthtime": "2018-04-24T17:37:52.842Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "8ef6b20b11d1babdff7c9e24b77e3cde",
+        "type": "Directory",
+        "description": "Directory \"src/pages/missle\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle",
+      "relativePath": "missle",
+      "extension": "",
+      "size": 96,
+      "prettySize": "96 B",
+      "modifiedTime": "2018-04-24T17:37:52.844Z",
+      "accessTime": "2018-04-24T19:17:38.695Z",
+      "changeTime": "2018-04-24T17:46:01.772Z",
+      "birthTime": "2018-04-24T17:37:52.843Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
+      "base": "missle",
+      "ext": "",
+      "name": "missle",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470958,
+      "blocks": 0,
+      "atimeMs": 1524597458694.9976,
+      "mtimeMs": 1524591472844.4246,
+      "ctimeMs": 1524591961772.074,
+      "birthtimeMs": 1524591472843.4219,
+      "atime": "2018-04-24T19:17:38.695Z",
+      "mtime": "2018-04-24T17:37:52.844Z",
+      "ctime": "2018-04-24T17:46:01.772Z",
+      "birthtime": "2018-04-24T17:37:52.843Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx absPath of file",
@@ -1165,6 +1434,7 @@
         "contentDigest": "c98d9cbff155e223a048f2b070f1efd2",
         "mediaType": "text/jsx",
         "type": "File",
+        "description": "File \"src/pages/404.jsx\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1173,123 +1443,125 @@
       "extension": "jsx",
       "size": 221,
       "prettySize": "221 B",
-      "modifiedTime": "2017-12-27T04:53:46.892Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.892Z",
-      "birthTime": "2017-12-27T04:53:46.891Z",
+      "modifiedTime": "2018-04-24T17:37:52.826Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.776Z",
+      "birthTime": "2018-04-24T17:37:52.826Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "base": "404.jsx",
       "ext": ".jsx",
       "name": "404",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812931,
+      "ino": 6470967,
       "blocks": 8,
-      "atimeMs": 1514350530232.7395,
-      "mtimeMs": 1514350426891.5278,
-      "ctimeMs": 1514350426891.5278,
-      "birthtimeMs": 1514350426891.4727,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.892Z",
-      "ctime": "2017-12-27T04:53:46.892Z",
-      "birthtime": "2017-12-27T04:53:46.891Z"
+      "atimeMs": 1524597386266.834,
+      "mtimeMs": 1524591472826.153,
+      "ctimeMs": 1524591961775.5105,
+      "birthtimeMs": 1524591472826.0806,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.826Z",
+      "ctime": "2018-04-24T17:46:01.776Z",
+      "birthtime": "2018-04-24T17:37:52.826Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/index.jsx absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/index.jsx absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "5ffaec1a082a4f9337c9cbd04cfa9f49",
+        "contentDigest": "cdd5ff3d4e54bec63bdfdc09b16f598a",
         "mediaType": "text/jsx",
         "type": "File",
+        "description": "File \"src/pages/index.jsx\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
       "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/index.jsx",
       "relativePath": "index.jsx",
       "extension": "jsx",
-      "size": 1612,
-      "prettySize": "1.61 kB",
-      "modifiedTime": "2017-12-27T04:53:46.904Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.904Z",
-      "birthTime": "2017-12-27T04:53:46.904Z",
+      "size": 1676,
+      "prettySize": "1.68 kB",
+      "modifiedTime": "2018-04-24T17:37:52.843Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.776Z",
+      "birthTime": "2018-04-24T17:37:52.843Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages",
       "base": "index.jsx",
       "ext": ".jsx",
       "name": "index",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812954,
+      "ino": 6470968,
       "blocks": 8,
-      "atimeMs": 1514350530232.8428,
-      "mtimeMs": 1514350426904.3276,
-      "ctimeMs": 1514350426904.3276,
-      "birthtimeMs": 1514350426904.203,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.904Z",
-      "ctime": "2017-12-27T04:53:46.904Z",
-      "birthtime": "2017-12-27T04:53:46.904Z"
+      "atimeMs": 1524597386267.2563,
+      "mtimeMs": 1524591472843.3152,
+      "ctimeMs": 1524591961775.9956,
+      "birthtimeMs": 1524591472843.241,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.843Z",
+      "ctime": "2018-04-24T17:46:01.776Z",
+      "birthtime": "2018-04-24T17:37:52.843Z"
     },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file",
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file",
       "children": [
-        "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark"
+        "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file >>> MarkdownRemark"
       ],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "2a867a8215adb58d1ce520a6d73df71f",
+        "contentDigest": "b55f044291647ab36e3686fed835acb6",
         "mediaType": "text/markdown",
         "type": "File",
+        "description": "File \"src/pages/Hawkes Media Group/index.md\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md",
-      "relativePath": "Thought at Work/index.md",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md",
+      "relativePath": "Hawkes Media Group/index.md",
       "extension": "md",
-      "size": 3391,
-      "prettySize": "3.39 kB",
-      "modifiedTime": "2017-12-27T04:53:46.893Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.893Z",
-      "birthTime": "2017-12-27T04:53:46.892Z",
+      "size": 2979,
+      "prettySize": "2.98 kB",
+      "modifiedTime": "2018-04-24T17:37:52.827Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.770Z",
+      "birthTime": "2018-04-24T17:37:52.827Z",
       "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group",
       "base": "index.md",
       "ext": ".md",
       "name": "index",
-      "relativeDirectory": "Thought at Work",
-      "dev": 16777221,
+      "relativeDirectory": "Hawkes Media Group",
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812937,
+      "ino": 6470953,
       "blocks": 8,
-      "atimeMs": 1514350530232.775,
-      "mtimeMs": 1514350426892.5186,
-      "ctimeMs": 1514350426892.5186,
-      "birthtimeMs": 1514350426892.4644,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.893Z",
-      "ctime": "2017-12-27T04:53:46.893Z",
-      "birthtime": "2017-12-27T04:53:46.892Z"
+      "atimeMs": 1524597386128.6323,
+      "mtimeMs": 1524591472827.0034,
+      "ctimeMs": 1524591961770.0806,
+      "birthtimeMs": 1524591472826.9595,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.827Z",
+      "ctime": "2018-04-24T17:46:01.770Z",
+      "birthtime": "2018-04-24T17:37:52.827Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file",
@@ -1301,6 +1573,7 @@
         "contentDigest": "84a5dfe4d9302026b26afb1fc73ba7cd",
         "mediaType": "text/markdown",
         "type": "File",
+        "description": "File \"src/pages/Got Pills/index.md\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1309,79 +1582,33 @@
       "extension": "md",
       "size": 2313,
       "prettySize": "2.31 kB",
-      "modifiedTime": "2017-12-27T04:53:46.892Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.892Z",
-      "birthTime": "2017-12-27T04:53:46.892Z",
+      "modifiedTime": "2018-04-24T17:37:52.827Z",
+      "accessTime": "2018-04-24T19:16:26.128Z",
+      "changeTime": "2018-04-24T17:46:01.771Z",
+      "birthTime": "2018-04-24T17:37:52.827Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills",
       "base": "index.md",
       "ext": ".md",
       "name": "index",
       "relativeDirectory": "Got Pills",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812933,
+      "ino": 6470955,
       "blocks": 8,
-      "atimeMs": 1514350530232.7593,
-      "mtimeMs": 1514350426891.9749,
-      "ctimeMs": 1514350426891.9749,
-      "birthtimeMs": 1514350426891.8914,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.892Z",
-      "ctime": "2017-12-27T04:53:46.892Z",
-      "birthtime": "2017-12-27T04:53:46.892Z"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file",
-      "children": [
-        "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file >>> MarkdownRemark"
-      ],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "4abaf290736e34581a5faf7c88bca17b",
-        "mediaType": "text/markdown",
-        "type": "File",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md",
-      "relativePath": "Hawkes Media Group/index.md",
-      "extension": "md",
-      "size": 2978,
-      "prettySize": "2.98 kB",
-      "modifiedTime": "2017-12-27T04:53:46.892Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.892Z",
-      "birthTime": "2017-12-27T04:53:46.892Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group",
-      "base": "index.md",
-      "ext": ".md",
-      "name": "index",
-      "relativeDirectory": "Hawkes Media Group",
-      "dev": 16777221,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812935,
-      "blocks": 8,
-      "atimeMs": 1514350530232.7673,
-      "mtimeMs": 1514350426892.2527,
-      "ctimeMs": 1514350426892.2527,
-      "birthtimeMs": 1514350426892.2056,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.892Z",
-      "ctime": "2017-12-27T04:53:46.892Z",
-      "birthtime": "2017-12-27T04:53:46.892Z"
+      "atimeMs": 1524597386128.4336,
+      "mtimeMs": 1524591472826.584,
+      "ctimeMs": 1524591961770.724,
+      "birthtimeMs": 1524591472826.5422,
+      "atime": "2018-04-24T19:16:26.128Z",
+      "mtime": "2018-04-24T17:37:52.827Z",
+      "ctime": "2018-04-24T17:46:01.771Z",
+      "birthtime": "2018-04-24T17:37:52.827Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file",
@@ -1393,6 +1620,7 @@
         "contentDigest": "2a5d5d3d32ff23b1608ae555054029e0",
         "mediaType": "text/markdown",
         "type": "File",
+        "description": "File \"src/pages/b-reel/index.md\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1401,33 +1629,444 @@
       "extension": "md",
       "size": 1988,
       "prettySize": "1.99 kB",
-      "modifiedTime": "2017-12-27T04:53:46.899Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.899Z",
-      "birthTime": "2017-12-27T04:53:46.899Z",
+      "modifiedTime": "2018-04-24T17:37:52.836Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.769Z",
+      "birthTime": "2018-04-24T17:37:52.836Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel",
       "base": "index.md",
       "ext": ".md",
       "name": "index",
       "relativeDirectory": "b-reel",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812946,
+      "ino": 6470951,
       "blocks": 8,
-      "atimeMs": 1514350530232.8093,
-      "mtimeMs": 1514350426899.0352,
-      "ctimeMs": 1514350426899.0352,
-      "birthtimeMs": 1514350426898.9282,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.899Z",
-      "ctime": "2017-12-27T04:53:46.899Z",
-      "birthtime": "2017-12-27T04:53:46.899Z"
+      "atimeMs": 1524597386128.997,
+      "mtimeMs": 1524591472835.8174,
+      "ctimeMs": 1524591961769.3538,
+      "birthtimeMs": 1524591472835.7341,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.836Z",
+      "ctime": "2018-04-24T17:46:01.769Z",
+      "birthtime": "2018-04-24T17:37:52.836Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file",
+      "children": [
+        "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "2a867a8215adb58d1ce520a6d73df71f",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "description": "File \"src/pages/Thought at Work/index.md\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md",
+      "relativePath": "Thought at Work/index.md",
+      "extension": "md",
+      "size": 3391,
+      "prettySize": "3.39 kB",
+      "modifiedTime": "2018-04-24T17:37:52.827Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.777Z",
+      "birthTime": "2018-04-24T17:37:52.827Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "relativeDirectory": "Thought at Work",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470970,
+      "blocks": 8,
+      "atimeMs": 1524597386128.5479,
+      "mtimeMs": 1524591472827.2104,
+      "ctimeMs": 1524591961776.749,
+      "birthtimeMs": 1524591472827.1704,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.827Z",
+      "ctime": "2018-04-24T17:46:01.777Z",
+      "birthtime": "2018-04-24T17:37:52.827Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file",
+      "children": [
+        "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "a21d948a92b2b608957748cf2753fdc2",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "description": "File \"src/pages/missle/missle.md\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md",
+      "relativePath": "missle/missle.md",
+      "extension": "md",
+      "size": 2772,
+      "prettySize": "2.77 kB",
+      "modifiedTime": "2018-04-24T17:37:52.844Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.772Z",
+      "birthTime": "2018-04-24T17:37:52.844Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle",
+      "base": "missle.md",
+      "ext": ".md",
+      "name": "missle",
+      "relativeDirectory": "missle",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470959,
+      "blocks": 8,
+      "atimeMs": 1524597386129.471,
+      "mtimeMs": 1524591472844.4924,
+      "ctimeMs": 1524591961772.0037,
+      "birthtimeMs": 1524591472844.4143,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.844Z",
+      "ctime": "2018-04-24T17:46:01.772Z",
+      "birthtime": "2018-04-24T17:37:52.844Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file",
+      "children": [
+        "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "3b4a1ba0368f4e5821011718d42eaf9e",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "description": "File \"src/pages/dmv/dmv.md\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md",
+      "relativePath": "dmv/dmv.md",
+      "extension": "md",
+      "size": 2688,
+      "prettySize": "2.69 kB",
+      "modifiedTime": "2018-04-24T17:37:52.843Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.771Z",
+      "birthTime": "2018-04-24T17:37:52.843Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv",
+      "base": "dmv.md",
+      "ext": ".md",
+      "name": "dmv",
+      "relativeDirectory": "dmv",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470957,
+      "blocks": 8,
+      "atimeMs": 1524597386129.4082,
+      "mtimeMs": 1524591472842.8777,
+      "ctimeMs": 1524591961771.3484,
+      "birthtimeMs": 1524591472842.8198,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.843Z",
+      "ctime": "2018-04-24T17:46:01.771Z",
+      "birthtime": "2018-04-24T17:37:52.843Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "9e38cd15394ff4f208091f3a6e3200e6",
+        "mediaType": "text/jsx",
+        "type": "File",
+        "description": "File \"src/pages/components/AboutMe.jsx\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx",
+      "relativePath": "components/AboutMe.jsx",
+      "extension": "jsx",
+      "size": 1710,
+      "prettySize": "1.71 kB",
+      "modifiedTime": "2018-04-24T17:37:52.838Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.774Z",
+      "birthTime": "2018-04-24T17:37:52.838Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
+      "base": "AboutMe.jsx",
+      "ext": ".jsx",
+      "name": "AboutMe",
+      "relativeDirectory": "components",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470964,
+      "blocks": 8,
+      "atimeMs": 1524597386267.3403,
+      "mtimeMs": 1524591472838.3896,
+      "ctimeMs": 1524591961773.887,
+      "birthtimeMs": 1524591472838.3433,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.838Z",
+      "ctime": "2018-04-24T17:46:01.774Z",
+      "birthtime": "2018-04-24T17:37:52.838Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Blott.jsx absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Blott.jsx absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "95215c297d4523e81888d2d57f359aa9",
+        "mediaType": "text/jsx",
+        "type": "File",
+        "description": "File \"src/pages/components/Blott.jsx\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Blott.jsx",
+      "relativePath": "components/Blott.jsx",
+      "extension": "jsx",
+      "size": 636,
+      "prettySize": "636 B",
+      "modifiedTime": "2018-04-24T17:37:52.840Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.773Z",
+      "birthTime": "2018-04-24T17:37:52.840Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
+      "base": "Blott.jsx",
+      "ext": ".jsx",
+      "name": "Blott",
+      "relativeDirectory": "components",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470962,
+      "blocks": 8,
+      "atimeMs": 1524597386267.3496,
+      "mtimeMs": 1524591472839.8435,
+      "ctimeMs": 1524591961773.0798,
+      "birthtimeMs": 1524591472839.7642,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.840Z",
+      "ctime": "2018-04-24T17:46:01.773Z",
+      "birthtime": "2018-04-24T17:37:52.840Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "3e5dee8e918cba6510c43760fcdb6ce8",
+        "mediaType": "text/jsx",
+        "type": "File",
+        "description": "File \"src/pages/components/Bubble.jsx\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx",
+      "relativePath": "components/Bubble.jsx",
+      "extension": "jsx",
+      "size": 1142,
+      "prettySize": "1.14 kB",
+      "modifiedTime": "2018-04-24T17:37:52.840Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.774Z",
+      "birthTime": "2018-04-24T17:37:52.840Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
+      "base": "Bubble.jsx",
+      "ext": ".jsx",
+      "name": "Bubble",
+      "relativeDirectory": "components",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470965,
+      "blocks": 8,
+      "atimeMs": 1524597386267.3745,
+      "mtimeMs": 1524591472840.371,
+      "ctimeMs": 1524591961774.34,
+      "birthtimeMs": 1524591472840.3086,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.840Z",
+      "ctime": "2018-04-24T17:46:01.774Z",
+      "birthtime": "2018-04-24T17:37:52.840Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "fe3e42b7aa2ac4ca3fc798ad79c435ae",
+        "mediaType": "text/jsx",
+        "type": "File",
+        "description": "File \"src/pages/components/Header.jsx\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx",
+      "relativePath": "components/Header.jsx",
+      "extension": "jsx",
+      "size": 261,
+      "prettySize": "261 B",
+      "modifiedTime": "2018-04-24T17:37:52.841Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.773Z",
+      "birthTime": "2018-04-24T17:37:52.841Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
+      "base": "Header.jsx",
+      "ext": ".jsx",
+      "name": "Header",
+      "relativeDirectory": "components",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470961,
+      "blocks": 8,
+      "atimeMs": 1524597386267.4243,
+      "mtimeMs": 1524591472841.3618,
+      "ctimeMs": 1524591961772.6582,
+      "birthtimeMs": 1524591472841.295,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.841Z",
+      "ctime": "2018-04-24T17:46:01.773Z",
+      "birthtime": "2018-04-24T17:37:52.841Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "263384442d179ddbd26553be0567abfb",
+        "mediaType": "text/jsx",
+        "type": "File",
+        "description": "File \"src/pages/components/Footer.jsx\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx",
+      "relativePath": "components/Footer.jsx",
+      "extension": "jsx",
+      "size": 634,
+      "prettySize": "634 B",
+      "modifiedTime": "2018-04-24T17:37:52.841Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.773Z",
+      "birthTime": "2018-04-24T17:37:52.841Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
+      "base": "Footer.jsx",
+      "ext": ".jsx",
+      "name": "Footer",
+      "relativeDirectory": "components",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470963,
+      "blocks": 8,
+      "atimeMs": 1524597386267.3958,
+      "mtimeMs": 1524591472840.89,
+      "ctimeMs": 1524591961773.4773,
+      "birthtimeMs": 1524591472840.8267,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.841Z",
+      "ctime": "2018-04-24T17:46:01.773Z",
+      "birthtime": "2018-04-24T17:37:52.841Z"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "a1196bb94b693b81d4a7cbf6415f3ab1",
+        "mediaType": "text/jsx",
+        "type": "File",
+        "description": "File \"src/pages/components/Intro.jsx\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx",
+      "relativePath": "components/Intro.jsx",
+      "extension": "jsx",
+      "size": 454,
+      "prettySize": "454 B",
+      "modifiedTime": "2018-04-24T17:37:52.842Z",
+      "accessTime": "2018-04-24T19:16:26.267Z",
+      "changeTime": "2018-04-24T17:46:01.775Z",
+      "birthTime": "2018-04-24T17:37:52.842Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
+      "base": "Intro.jsx",
+      "ext": ".jsx",
+      "name": "Intro",
+      "relativeDirectory": "components",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470966,
+      "blocks": 8,
+      "atimeMs": 1524597386267.439,
+      "mtimeMs": 1524591472842.308,
+      "ctimeMs": 1524591961774.8738,
+      "birthtimeMs": 1524591472842.2427,
+      "atime": "2018-04-24T19:16:26.267Z",
+      "mtime": "2018-04-24T17:37:52.842Z",
+      "ctime": "2018-04-24T17:46:01.775Z",
+      "birthtime": "2018-04-24T17:37:52.842Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file",
@@ -1439,6 +2078,7 @@
         "contentDigest": "13cf1a6eaf1f5ab1e9c7fc2dd6c6772c",
         "mediaType": "text/markdown",
         "type": "File",
+        "description": "File \"src/pages/WebGL Summer/index.md\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1447,253 +2087,33 @@
       "extension": "md",
       "size": 2882,
       "prettySize": "2.88 kB",
-      "modifiedTime": "2017-12-27T04:53:46.895Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.895Z",
-      "birthTime": "2017-12-27T04:53:46.895Z",
+      "modifiedTime": "2018-04-24T17:37:52.831Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.768Z",
+      "birthTime": "2018-04-24T17:37:52.831Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer",
       "base": "index.md",
       "ext": ".md",
       "name": "index",
       "relativeDirectory": "WebGL Summer",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812942,
+      "ino": 6470947,
       "blocks": 8,
-      "atimeMs": 1514350530232.7937,
-      "mtimeMs": 1514350426894.937,
-      "ctimeMs": 1514350426894.937,
-      "birthtimeMs": 1514350426894.8633,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.895Z",
-      "ctime": "2017-12-27T04:53:46.895Z",
-      "birthtime": "2017-12-27T04:53:46.895Z"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx absPath of file",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "90423c1e96a7acc499f372c98823c28c",
-        "mediaType": "text/jsx",
-        "type": "File",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx",
-      "relativePath": "components/Bubble.jsx",
-      "extension": "jsx",
-      "size": 1181,
-      "prettySize": "1.18 kB",
-      "modifiedTime": "2017-12-27T05:05:39.770Z",
-      "accessTime": "2017-12-27T05:06:52.332Z",
-      "changeTime": "2017-12-27T05:05:39.770Z",
-      "birthTime": "2017-12-27T04:53:46.902Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
-      "base": "Bubble.jsx",
-      "ext": ".jsx",
-      "name": "Bubble",
-      "relativeDirectory": "components",
-      "dev": 16777221,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812950,
-      "blocks": 8,
-      "atimeMs": 1514351212332.3853,
-      "mtimeMs": 1514351139769.8247,
-      "ctimeMs": 1514351139769.8247,
-      "birthtimeMs": 1514350426902.399,
-      "atime": "2017-12-27T05:06:52.332Z",
-      "mtime": "2017-12-27T05:05:39.770Z",
-      "ctime": "2017-12-27T05:05:39.770Z",
-      "birthtime": "2017-12-27T04:53:46.902Z"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx absPath of file",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "9e38cd15394ff4f208091f3a6e3200e6",
-        "mediaType": "text/jsx",
-        "type": "File",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx",
-      "relativePath": "components/AboutMe.jsx",
-      "extension": "jsx",
-      "size": 1710,
-      "prettySize": "1.71 kB",
-      "modifiedTime": "2017-12-27T04:53:46.902Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.902Z",
-      "birthTime": "2017-12-27T04:53:46.902Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
-      "base": "AboutMe.jsx",
-      "ext": ".jsx",
-      "name": "AboutMe",
-      "relativeDirectory": "components",
-      "dev": 16777221,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812949,
-      "blocks": 8,
-      "atimeMs": 1514350530232.822,
-      "mtimeMs": 1514350426902.138,
-      "ctimeMs": 1514350426902.138,
-      "birthtimeMs": 1514350426902.023,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.902Z",
-      "ctime": "2017-12-27T04:53:46.902Z",
-      "birthtime": "2017-12-27T04:53:46.902Z"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx absPath of file",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "515355e1721355ac2ff4e7e68201957d",
-        "mediaType": "text/jsx",
-        "type": "File",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx",
-      "relativePath": "components/Footer.jsx",
-      "extension": "jsx",
-      "size": 658,
-      "prettySize": "658 B",
-      "modifiedTime": "2017-12-27T04:53:46.903Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.903Z",
-      "birthTime": "2017-12-27T04:53:46.903Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
-      "base": "Footer.jsx",
-      "ext": ".jsx",
-      "name": "Footer",
-      "relativeDirectory": "components",
-      "dev": 16777221,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812951,
-      "blocks": 8,
-      "atimeMs": 1514350530232.8303,
-      "mtimeMs": 1514350426903.0203,
-      "ctimeMs": 1514350426903.0203,
-      "birthtimeMs": 1514350426902.8962,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.903Z",
-      "ctime": "2017-12-27T04:53:46.903Z",
-      "birthtime": "2017-12-27T04:53:46.903Z"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx absPath of file",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "b1a2bd2a26736a2f4d82ed8a90916d13",
-        "mediaType": "text/jsx",
-        "type": "File",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx",
-      "relativePath": "components/Header.jsx",
-      "extension": "jsx",
-      "size": 279,
-      "prettySize": "279 B",
-      "modifiedTime": "2017-12-27T04:53:46.903Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.903Z",
-      "birthTime": "2017-12-27T04:53:46.903Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
-      "base": "Header.jsx",
-      "ext": ".jsx",
-      "name": "Header",
-      "relativeDirectory": "components",
-      "dev": 16777221,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812952,
-      "blocks": 8,
-      "atimeMs": 1514350530232.8347,
-      "mtimeMs": 1514350426903.3806,
-      "ctimeMs": 1514350426903.3806,
-      "birthtimeMs": 1514350426903.2817,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.903Z",
-      "ctime": "2017-12-27T04:53:46.903Z",
-      "birthtime": "2017-12-27T04:53:46.903Z"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx absPath of file",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "4bf381f3a2fd82f20a45c4335e15cc29",
-        "mediaType": "text/jsx",
-        "type": "File",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx",
-      "relativePath": "components/Intro.jsx",
-      "extension": "jsx",
-      "size": 357,
-      "prettySize": "357 B",
-      "modifiedTime": "2017-12-27T04:53:46.904Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.904Z",
-      "birthTime": "2017-12-27T04:53:46.904Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components",
-      "base": "Intro.jsx",
-      "ext": ".jsx",
-      "name": "Intro",
-      "relativeDirectory": "components",
-      "dev": 16777221,
-      "mode": 33188,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812953,
-      "blocks": 8,
-      "atimeMs": 1514350530232.8389,
-      "mtimeMs": 1514350426903.736,
-      "ctimeMs": 1514350426903.736,
-      "birthtimeMs": 1514350426903.646,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.904Z",
-      "ctime": "2017-12-27T04:53:46.904Z",
-      "birthtime": "2017-12-27T04:53:46.904Z"
+      "atimeMs": 1524597386128.8005,
+      "mtimeMs": 1524591472831.0012,
+      "ctimeMs": 1524591961767.725,
+      "birthtimeMs": 1524591472830.955,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.831Z",
+      "ctime": "2018-04-24T17:46:01.768Z",
+      "birthtime": "2018-04-24T17:37:52.831Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/blackHole.jpg absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/blackHole.jpg absPath of file",
@@ -1703,6 +2123,7 @@
         "contentDigest": "87dae645ef698526a95105daa4023e23",
         "mediaType": "image/jpeg",
         "type": "File",
+        "description": "File \"src/pages/WebGL Summer/blackHole.jpg\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1711,33 +2132,33 @@
       "extension": "jpg",
       "size": 94471,
       "prettySize": "94.5 kB",
-      "modifiedTime": "2017-12-27T04:53:46.893Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.893Z",
-      "birthTime": "2017-12-27T04:53:46.893Z",
+      "modifiedTime": "2018-04-24T17:37:52.828Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.767Z",
+      "birthTime": "2018-04-24T17:37:52.828Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer",
       "base": "blackHole.jpg",
       "ext": ".jpg",
       "name": "blackHole",
       "relativeDirectory": "WebGL Summer",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33261,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812939,
+      "ino": 6470946,
       "blocks": 192,
-      "atimeMs": 1514350530232.7825,
-      "mtimeMs": 1514350426893.0652,
-      "ctimeMs": 1514350426893.0652,
-      "birthtimeMs": 1514350426892.9902,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.893Z",
-      "ctime": "2017-12-27T04:53:46.893Z",
-      "birthtime": "2017-12-27T04:53:46.893Z"
+      "atimeMs": 1524597386128.7402,
+      "mtimeMs": 1524591472827.9683,
+      "ctimeMs": 1524591961767.232,
+      "birthtimeMs": 1524591472827.881,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.828Z",
+      "ctime": "2018-04-24T17:46:01.767Z",
+      "birthtime": "2018-04-24T17:37:52.828Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/face.jpg absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/face.jpg absPath of file",
@@ -1747,6 +2168,7 @@
         "contentDigest": "9a477ac1331fb8b506a7ab2170d21b8b",
         "mediaType": "image/jpeg",
         "type": "File",
+        "description": "File \"src/pages/WebGL Summer/face.jpg\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1755,33 +2177,33 @@
       "extension": "jpg",
       "size": 93925,
       "prettySize": "93.9 kB",
-      "modifiedTime": "2017-12-27T04:53:46.895Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.895Z",
-      "birthTime": "2017-12-27T04:53:46.895Z",
+      "modifiedTime": "2018-04-24T17:37:52.831Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.766Z",
+      "birthTime": "2018-04-24T17:37:52.831Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer",
       "base": "face.jpg",
       "ext": ".jpg",
       "name": "face",
       "relativeDirectory": "WebGL Summer",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33261,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812941,
+      "ino": 6470944,
       "blocks": 184,
-      "atimeMs": 1514350530232.7898,
-      "mtimeMs": 1514350426894.6143,
-      "ctimeMs": 1514350426894.6143,
-      "birthtimeMs": 1514350426894.5115,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.895Z",
-      "ctime": "2017-12-27T04:53:46.895Z",
-      "birthtime": "2017-12-27T04:53:46.895Z"
+      "atimeMs": 1524597386128.7957,
+      "mtimeMs": 1524591472830.8245,
+      "ctimeMs": 1524591961766.0247,
+      "birthtimeMs": 1524591472830.7566,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.831Z",
+      "ctime": "2018-04-24T17:46:01.766Z",
+      "birthtime": "2018-04-24T17:37:52.831Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/cones.png absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/cones.png absPath of file",
@@ -1791,6 +2213,7 @@
         "contentDigest": "d852243fcbc4c485078dbb1c08cb8f74",
         "mediaType": "image/png",
         "type": "File",
+        "description": "File \"src/pages/WebGL Summer/cones.png\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1799,33 +2222,33 @@
       "extension": "png",
       "size": 292413,
       "prettySize": "292 kB",
-      "modifiedTime": "2017-12-27T04:53:46.894Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.894Z",
-      "birthTime": "2017-12-27T04:53:46.894Z",
+      "modifiedTime": "2018-04-24T17:37:52.830Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.768Z",
+      "birthTime": "2018-04-24T17:37:52.830Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer",
       "base": "cones.png",
       "ext": ".png",
       "name": "cones",
       "relativeDirectory": "WebGL Summer",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33261,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812940,
+      "ino": 6470948,
       "blocks": 576,
-      "atimeMs": 1514350530232.786,
-      "mtimeMs": 1514350426893.9893,
-      "ctimeMs": 1514350426893.9893,
-      "birthtimeMs": 1514350426893.8367,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.894Z",
-      "ctime": "2017-12-27T04:53:46.894Z",
-      "birthtime": "2017-12-27T04:53:46.894Z"
+      "atimeMs": 1524597386128.7627,
+      "mtimeMs": 1524591472830.072,
+      "ctimeMs": 1524591961768.2034,
+      "birthtimeMs": 1524591472829.9543,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.830Z",
+      "ctime": "2018-04-24T17:46:01.768Z",
+      "birthtime": "2018-04-24T17:37:52.830Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/particleCreator.jpg absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/particleCreator.jpg absPath of file",
@@ -1835,6 +2258,7 @@
         "contentDigest": "ad9962704163d8774cf8acd4bc5fe246",
         "mediaType": "image/jpeg",
         "type": "File",
+        "description": "File \"src/pages/WebGL Summer/particleCreator.jpg\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -1843,58 +2267,59 @@
       "extension": "jpg",
       "size": 367910,
       "prettySize": "368 kB",
-      "modifiedTime": "2017-12-27T04:53:46.897Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.897Z",
-      "birthTime": "2017-12-27T04:53:46.896Z",
+      "modifiedTime": "2018-04-24T17:37:52.834Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.766Z",
+      "birthTime": "2018-04-24T17:37:52.833Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer",
       "base": "particleCreator.jpg",
       "ext": ".jpg",
       "name": "particleCreator",
       "relativeDirectory": "WebGL Summer",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812943,
+      "ino": 6470943,
       "blocks": 720,
-      "atimeMs": 1514350530232.7976,
-      "mtimeMs": 1514350426896.589,
-      "ctimeMs": 1514350426896.589,
-      "birthtimeMs": 1514350426896.4487,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.897Z",
-      "ctime": "2017-12-27T04:53:46.897Z",
-      "birthtime": "2017-12-27T04:53:46.896Z"
+      "atimeMs": 1524597386128.843,
+      "mtimeMs": 1524591472833.66,
+      "ctimeMs": 1524591961765.5889,
+      "birthtimeMs": 1524591472833.4885,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.834Z",
+      "ctime": "2018-04-24T17:46:01.766Z",
+      "birthtime": "2018-04-24T17:37:52.833Z"
     },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark",
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file >>> MarkdownRemark",
       "children": [],
-      "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file",
+      "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file",
       "internal": {
-        "content": "---\npath: '/TAW'\ntitle: 'Thought at Work'\npublished: true\ndate: '2017-10-09'\ndescription: 'Managed and worked on a team to design & develop a conference website'\ntags: 'Design / Dev/ Manager'\nvolume: '-2'\nhomeImage: 'tawCover'\ntimePeriod: 'Annually, Completed Each Fall'\n---\n\n\n####The Project\nCreation of a design conference website. Tasked with forming a team and building a design conference website from ground up. The Thought at Work Design Conference 2017 website is a project completed with dozens of late nights spent on it.\n\n\n<br/>\n\n<a class=\"faux-link\" href=\"http://thoughtatwork.cias.rit.edu/\">Visit the Site</a>\n\n<br/>\n<br/>\n\n![homepage of TAW site](./images/taw/home.png)\n\n<br/>\n<br/>\n\n####The Tasks Undertaken\nProject manager, lead developer and member of the design team for the Thought at Work 2017 Design Conference website. Building on what I learned as the lead developer on Thought at Work 2016, I formed a team with the best designers and developers at RIT. Our team was made up of 12 students; 7 designers, 5 developers. My responsibilities consist of, but are not limited to: Managing the team; Leading design/development meetings; Working on design deliverables; And writing code for development.\n\n<br/>\n<br/>\n\n![contact](./images/taw/contact.png)\n\n<br/>\n<br/>\n\n####Some Comps for the 2017 site are below\n\n<br/>\n<br/>\n\n![speakers comp](./images/taw/speakers-comp.jpg)\n\n<br/>\n<br/>\n\n![register comp](./images/taw/register-comp.jpg)\n\n<br/>\n<br/>\n\n####Thought at Work 2016\nCompleted the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.\n\n<br/>\n<br/>\n\n![2016 Home Image](./images/taw/HomeImage.png)\n\n<br/>\n<br/>\n\n####About\nI’ve been involved with the ‘Thought At Work’ design conference for nearly two years in several roles, including work on the core conference team, contacting speakers, helping create installations, and most recently, building the website.\n\n<br/>\n\nIn mid-July we received the first homepage mock, followed by additional pages in the coming weeks. We used a combination of Bootstrap, our own custom CSS, PHP, JavaScript for some interactions, and JQuery for a handful of animations. I developed most of the site at first. As other people came on board, I took on a additional managerial role for the entire website and became the lead for the project.\n\n<br/>\n<br/>\n\n![history](./images/taw/history.png)\n\n<br/>\n<br/>\n\n####Responsivity\nAt first we were only given desktop mocks for the site. Two months later we got a mobile mock of the homepage. Without a tablet mock I translated the desktop site to tablet and mobile without compromising the original style and flow of the site content. From a visual perspective the site lost some of its more interesting aspects. But it retained much of the way the content was laid out and that’s what mattered most.\n\n<br/>\n<br/>\n\n\n![mobileScreens](./images/taw/mobileScreens.png)\n\n<br/>\n<br/>\n\n\n![Ipad_screen](./images/taw/Ipad_screen.png)\n\n<br/>\n<br/>\n\n####Performance\nWe encountered another challenge very close to the start of the conference. We were given headshots to create a volunteer/team section on the ‘about’ page. We had to display dozens of people with their name and major without losing much performance and load time.\n\n<br/>\n<br/>\n\n![2016 team page](./images/taw/team.png)\n",
-        "contentDigest": "55caea1881ebfdd33eed6797d223d340",
+        "content": "---\npath: '/Hawkes Media'\ntitle: 'Hawkes Media'\npublished: false\ndate: '2017-12-11'\ndescription: 'Designed and developed a new site to showcase a media\ncompany’s work and clients.'\ntags: 'Front-End / Design'\nvolume: '1'\nhomeImage: 'hawkesCover'\ntimePeriod: '2 Weeks In January 2017'\n---\n\n\n####Goal\nTasked with redesigning a website that hadn’t been updated in more than a decade, filled with flash animations and gratuitous geocities gifs.\n\n\n<br/>\n\n<a class=\"faux-link\" href=\"http://www.hawkesmediagroup.com/\">Visit the Site</a>\n\n<br/>\n<br/>\n\n![fullsize screenshot of site](./images/hawkes/fullsize.png)\n\n\n<br/>\n<br/>\n\n\n####Understanding the Brand\nHawkes Media Group is a full-service digital media production company based near Boston, Massachusetts. Their need for a new website was urgent. One of their staff tried to create a new website 6 months earlier, but was too busy to complete it.\n\n<br/>\n<br/>\n\n![contact page](./images/hawkes/contact.png)\n\n<br/>\n<br/>\n\n\n####Assessing the Problem\nCompared to their old, busy-looking site, the client wanted to showcase their work in a much simpler, direct and focused way. The first thing I did was gain an understanding of what a digital media company needs on a site and who they wanted to attract to the site.\n\n<br/>\n<br/>\n\n![sketches](./images/hawkes/sketch1.jpg)\n\n<br/>\n<br/>\n\n![mindmap](./images/hawkes/Hawkes_Mindmap.png)\n\n<br/>\n<br/>\n\n####Designing the Site\nI created sketches on paper of a simple interface with a consistent layout. Then I created wireframes for each page. I also used a mind map and information architecture I’d created to guide me along the way.\n\n<br/>\n<br/>\n\n\n![wireframes](./images/hawkes/clients__wires.png)\n\n<br/>\n<br/>\n\nOnce the wireframes were finished I made a low-fidelity prototype and showed it to the client for feedback. This was followed by higher fidelity wireframes. Taking all these steps made for fewer changes as we moved ahead because the feedback helped me remove what the client didn’t like. The triangles and diagonal styling I used on the header and footer to give the site more character were stripped away and the Merriweather font was changed to a more plain and modern looking Open Sans typeface.\n\n<br/>\n<br/>\n\n![their work page](./images/hawkes/hmg-work.png)\n\n<br/>\n<br/>\n\n####Coding\nDuring the development of the site I found a way to give the client access to a CMS so that they could collaborate and make minor changes using Webflow. The project was developed using custom code that I would paste into the Webflow editor along with editor itself for a couple smaller things. CSS Flexbox was used for most of the site and it saved a lot of time with layout. JQuery was also used on some items like the mobile navigation.\n\n<br/>\n<br/>\n\n\n####Check it Out\nThe current website can be seen <a class=\"faux-link\" href=\"http://www.hawkesmediagroup.com/\">here</a>\n<br/>\n<br/>\n<br/>\nThe old site's homepage is below\n\n<br/>\n\n![their work page](./images/hawkes/oldScreenCap.jpg)\n",
         "type": "MarkdownRemark",
+        "contentDigest": "ee5e5cda4ccf9b4b9d692cbf25930486",
         "owner": "gatsby-transformer-remark"
       },
       "frontmatter": {
-        "title": "Thought at Work",
-        "path": "/TAW",
-        "published": true,
-        "date": "2017-10-09",
-        "description": "Managed and worked on a team to design & develop a conference website",
-        "tags": "Design / Dev/ Manager",
-        "volume": "-2",
-        "homeImage": "tawCover",
-        "timePeriod": "Annually, Completed Each Fall",
-        "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file",
-        "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file"
+        "title": "Hawkes Media",
+        "path": "/Hawkes Media",
+        "published": false,
+        "date": "2017-12-11",
+        "description": "Designed and developed a new site to showcase a media company’s work and clients.",
+        "tags": "Front-End / Design",
+        "volume": "1",
+        "homeImage": "hawkesCover",
+        "timePeriod": "2 Weeks In January 2017",
+        "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file",
+        "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file"
       },
-      "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md"
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file >>> MarkdownRemark": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file >>> MarkdownRemark",
@@ -1902,8 +2327,8 @@
       "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file",
       "internal": {
         "content": "---\npath: '/Pills'\ntitle: 'Pills'\npublished: true\ndate: '2017-10-30'\ndescription: 'Designed a set of posters for a local health advertisement'\ntags: 'Personal / Design'\nvolume: '4'\nhomeImage: 'gotpillsCover'\ntimePeriod: '3 Weeks, August 2017'\n---\n\n####Goal\nI was given the brief of creating a set of posters for a pill drive that would be on campus. Included with it was the required copy and a black & white requirement. What I'm most proud of with this project is what I learned because the work can always be better but you take away is the most important.\n\n<br/>\n<br/>\n\n![final for the project](./images/pills/final.png)\n\n<br/>\n<br/>\n\n\n####Rough Iteration\nIn the beginning, I tried to take in what it really meant to have the pill. What it meant to throw it away, what it meant to use it. I went through every avenue looking for a possible problem that I could address to people with my poster. The tagline for this poster could either be a literal one or a visual one.\n\n<br/>\n<br/>\n\n![sketches for project](./images/pills/GroupSketches.png)\n\n<br/>\n<br/>\n\n\n####1st Set of posters... None of which I was happy about\nAfter sketching I went straight to making what I saw in my head, of which, I regret. I ended up creating a set of posters that I wasn't very happy and it left me feeling confused. Where did I go wrong? Why does this all look like, well, like shit? So I took a step back and looked at more inspiration. What did people like Massimo Vignelli figure out so easily and understand that I couldn't scratch the surface of? I ended up iterating and just making crap, lots of crap.\n\n<br/>\n<br/>\n\n![1st draft for project](./images/pills/1stRound.png)\n\n<br/>\n<br/>\n\n\n![set of iterations](./images/pills/horiz.png)\n\n<br/>\n<br/>\n\n\n####Learn by studying the best\nMy final set of posters were by far better than my first, second, third, etc, and yet they still aren't special. I'd like to be able to hang one up my work on my wall one day, right next to the poster of a lion on the moon I got off a t-shirt website. There's a lot of things I wish I'd done better on this project but that doesn't  matter as much compared to what I've taken away from it. I learned to understand the intricacies of graphic designers, not much replicate their skill but understand it and that's one step in the right direction.\n",
-        "contentDigest": "c22561d10cd23fdcb26d25503f645789",
         "type": "MarkdownRemark",
+        "contentDigest": "ede6f194b0e692df7226d6a52909e5ba",
         "owner": "gatsby-transformer-remark"
       },
       "frontmatter": {
@@ -1919,32 +2344,8 @@
         "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file",
         "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file"
       },
+      "excerpt": "",
       "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file >>> MarkdownRemark": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file >>> MarkdownRemark",
-      "children": [],
-      "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file",
-      "internal": {
-        "content": "---\npath: '/Hawkes Media'\ntitle: 'Hawkes Media'\npublished: true\ndate: '2017-12-11'\ndescription: 'Designed and developed a new site to showcase a media\ncompany’s work and clients.'\ntags: 'Front-End / Design'\nvolume: '1'\nhomeImage: 'hawkesCover'\ntimePeriod: '2 Weeks In January 2017'\n---\n\n\n####Goal\nTasked with redesigning a website that hadn’t been updated in more than a decade, filled with flash animations and gratuitous geocities gifs.\n\n\n<br/>\n\n<a class=\"faux-link\" href=\"http://www.hawkesmediagroup.com/\">Visit the Site</a>\n\n<br/>\n<br/>\n\n![fullsize screenshot of site](./images/hawkes/fullsize.png)\n\n\n<br/>\n<br/>\n\n\n####Understanding the Brand\nHawkes Media Group is a full-service digital media production company based near Boston, Massachusetts. Their need for a new website was urgent. One of their staff tried to create a new website 6 months earlier, but was too busy to complete it.\n\n<br/>\n<br/>\n\n![contact page](./images/hawkes/contact.png)\n\n<br/>\n<br/>\n\n\n####Assessing the Problem\nCompared to their old, busy-looking site, the client wanted to showcase their work in a much simpler, direct and focused way. The first thing I did was gain an understanding of what a digital media company needs on a site and who they wanted to attract to the site.\n\n<br/>\n<br/>\n\n![sketches](./images/hawkes/sketch1.jpg)\n\n<br/>\n<br/>\n\n![mindmap](./images/hawkes/Hawkes_Mindmap.png)\n\n<br/>\n<br/>\n\n####Designing the Site\nI created sketches on paper of a simple interface with a consistent layout. Then I created wireframes for each page. I also used a mind map and information architecture I’d created to guide me along the way.\n\n<br/>\n<br/>\n\n\n![wireframes](./images/hawkes/clients__wires.png)\n\n<br/>\n<br/>\n\nOnce the wireframes were finished I made a low-fidelity prototype and showed it to the client for feedback. This was followed by higher fidelity wireframes. Taking all these steps made for fewer changes as we moved ahead because the feedback helped me remove what the client didn’t like. The triangles and diagonal styling I used on the header and footer to give the site more character were stripped away and the Merriweather font was changed to a more plain and modern looking Open Sans typeface.\n\n<br/>\n<br/>\n\n![their work page](./images/hawkes/hmg-work.png)\n\n<br/>\n<br/>\n\n####Coding\nDuring the development of the site I found a way to give the client access to a CMS so that they could collaborate and make minor changes using Webflow. The project was developed using custom code that I would paste into the Webflow editor along with editor itself for a couple smaller things. CSS Flexbox was used for most of the site and it saved a lot of time with layout. JQuery was also used on some items like the mobile navigation.\n\n<br/>\n<br/>\n\n\n####Check it Out\nThe current website can be seen <a class=\"faux-link\" href=\"http://www.hawkesmediagroup.com/\">here</a>\n<br/>\n<br/>\n<br/>\nThe old site's homepage is below\n\n<br/>\n\n![their work page](./images/hawkes/oldScreenCap.jpg)\n",
-        "contentDigest": "b90498d29f474dac80c9a121aea87602",
-        "type": "MarkdownRemark",
-        "owner": "gatsby-transformer-remark"
-      },
-      "frontmatter": {
-        "title": "Hawkes Media",
-        "path": "/Hawkes Media",
-        "published": true,
-        "date": "2017-12-11",
-        "description": "Designed and developed a new site to showcase a media company’s work and clients.",
-        "tags": "Front-End / Design",
-        "volume": "1",
-        "homeImage": "hawkesCover",
-        "timePeriod": "2 Weeks In January 2017",
-        "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file",
-        "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file"
-      },
-      "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file >>> MarkdownRemark": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file >>> MarkdownRemark",
@@ -1952,8 +2353,8 @@
       "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file",
       "internal": {
         "content": "---\npath: '/B-Reel'\ntitle: 'B-Reel NYC Internship'\npublished: true\ndate: '2017-09-09'\ndescription: 'Spent summer 2017 at B-Reel NYC, Designing, Coding, and Learning'\ntags: 'Internship / Creative Tech'\nvolume: '2.5'\nhomeImage: 'breelCover'\ntimePeriod: 'Summer 2017'\n---\n\n####About\nI spent the past summer in a paid internship with B-Reel in New York City. I primarily worked with the Development Team, helping to develop and design the implementation of components for clients such as AMEX and Quantcast. This was a great opportunity and incredible learning experience.\n\n<br/>\n<a class=\"faux-link\" href=\"https://www.b-reel.com\">Visit their Site</a>\n\n<br/>\n<br/>\n\n\n*My work at B-Reel is covered by an NDA, so I can't share visuals, code, designs or any other details publicly. Drop me an email if you'd like to know more and I'll get back to you asap.*\n\n<br/>\n<br/>\n\n![b-reel, people on a couch](./images/breel/breelCouch.png)\n\n<br/>\n<br/>\n\n####What I learned\nB-Reel taught me what the design and development lifecycle was like at an agency, how to finish projects and work alongside a professional design team instead. This process showed me how to effectively communicate as a designer and developer.\n\nI was also able to learn the JavaScript framework React on my own. Through experimentation and iteration, I learned a lot about the framework, as well as my own methods for learning software.\n\n<br/>\n<br/>\n\n![breelLogo](./images/breel/breelLogo.png)\n\n<br/>\n<br/>\n\nB-reel was a perfect learning environment for me. I was able to turn to professionals who could help me resolve difficult work. Instead of having to browse a Stack Overflow on my own, I was able to become more efficient and knowledgeable.\n\n<br/>\n<br/>\n\n\n![womenbreel](./images/breel/womenbreel.png)\n\n<br/>\n<br/>\n\n\nWhen the internship ended, I felt like I was leaving a family. However, I'm not sure I’ll miss implementing a custom-styled, accessible loading indicator that looks consistent across browsers - for a while.\n",
-        "contentDigest": "9d673144134a80c70f76605576088aad",
         "type": "MarkdownRemark",
+        "contentDigest": "219079b8ea39ea81abb52430c5b499aa",
         "owner": "gatsby-transformer-remark"
       },
       "frontmatter": {
@@ -1969,7 +2370,131 @@
         "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file",
         "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file"
       },
+      "excerpt": "",
       "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file",
+      "internal": {
+        "content": "---\npath: '/TAW'\ntitle: 'Thought at Work'\npublished: true\ndate: '2017-10-09'\ndescription: 'Managed and worked on a team to design & develop a conference website'\ntags: 'Design / Dev/ Manager'\nvolume: '-2'\nhomeImage: 'tawCover'\ntimePeriod: 'Annually, Completed Each Fall'\n---\n\n\n####The Project\nCreation of a design conference website. Tasked with forming a team and building a design conference website from ground up. The Thought at Work Design Conference 2017 website is a project completed with dozens of late nights spent on it.\n\n\n<br/>\n\n<a class=\"faux-link\" href=\"http://thoughtatwork.cias.rit.edu/\">Visit the Site</a>\n\n<br/>\n<br/>\n\n![homepage of TAW site](./images/taw/home.png)\n\n<br/>\n<br/>\n\n####The Tasks Undertaken\nProject manager, lead developer and member of the design team for the Thought at Work 2017 Design Conference website. Building on what I learned as the lead developer on Thought at Work 2016, I formed a team with the best designers and developers at RIT. Our team was made up of 12 students; 7 designers, 5 developers. My responsibilities consist of, but are not limited to: Managing the team; Leading design/development meetings; Working on design deliverables; And writing code for development.\n\n<br/>\n<br/>\n\n![contact](./images/taw/contact.png)\n\n<br/>\n<br/>\n\n####Some Comps for the 2017 site are below\n\n<br/>\n<br/>\n\n![speakers comp](./images/taw/speakers-comp.jpg)\n\n<br/>\n<br/>\n\n![register comp](./images/taw/register-comp.jpg)\n\n<br/>\n<br/>\n\n####Thought at Work 2016\nCompleted the development of a design conference website. Initially a member of the development team and transitioning to leading the development and executing on the website.\n\n<br/>\n<br/>\n\n![2016 Home Image](./images/taw/HomeImage.png)\n\n<br/>\n<br/>\n\n####About\nI’ve been involved with the ‘Thought At Work’ design conference for nearly two years in several roles, including work on the core conference team, contacting speakers, helping create installations, and most recently, building the website.\n\n<br/>\n\nIn mid-July we received the first homepage mock, followed by additional pages in the coming weeks. We used a combination of Bootstrap, our own custom CSS, PHP, JavaScript for some interactions, and JQuery for a handful of animations. I developed most of the site at first. As other people came on board, I took on a additional managerial role for the entire website and became the lead for the project.\n\n<br/>\n<br/>\n\n![history](./images/taw/history.png)\n\n<br/>\n<br/>\n\n####Responsivity\nAt first we were only given desktop mocks for the site. Two months later we got a mobile mock of the homepage. Without a tablet mock I translated the desktop site to tablet and mobile without compromising the original style and flow of the site content. From a visual perspective the site lost some of its more interesting aspects. But it retained much of the way the content was laid out and that’s what mattered most.\n\n<br/>\n<br/>\n\n\n![mobileScreens](./images/taw/mobileScreens.png)\n\n<br/>\n<br/>\n\n\n![Ipad_screen](./images/taw/Ipad_screen.png)\n\n<br/>\n<br/>\n\n####Performance\nWe encountered another challenge very close to the start of the conference. We were given headshots to create a volunteer/team section on the ‘about’ page. We had to display dozens of people with their name and major without losing much performance and load time.\n\n<br/>\n<br/>\n\n![2016 team page](./images/taw/team.png)\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "a09410f4048570e72fbd7065d9e90bbf",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Thought at Work",
+        "path": "/TAW",
+        "published": true,
+        "date": "2017-10-09",
+        "description": "Managed and worked on a team to design & develop a conference website",
+        "tags": "Design / Dev/ Manager",
+        "volume": "-2",
+        "homeImage": "tawCover",
+        "timePeriod": "Annually, Completed Each Fall",
+        "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file",
+        "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file"
+      },
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file",
+      "internal": {
+        "content": "---\npath: '/dmv'\ntitle: 'MV-82'\npublished: false\ndate: '2018-02-28'\ndescription: 'Redesigning a physical vehicle registration form for the web'\ntags: 'School / Design'\nvolume: '2.5'\nhomeImage: 'missleCover'\ntimePeriod: '2.5 Weeks'\n---\n\n####About\nSpent about two weeks or so doing a redesign for an alert system. The project was really just an exercise in ui design but I wanted to go a bit harder. The problem was simple based on numerous [__articles__](https://qz.com/1179937/hawaii-missile-alert-blame-terrible-interface-design-for-the-hawaii-debacle/)  showing how the Hawaii missle alert threat was the fault of bad design.\n\n\n<br/>\n\n<a target=\"_blank\" href=\"https://www.jacobdfrank.com/images/missle/selectScreen.png\">\n\n![select screen](https://www.jacobdfrank.com/images/missle/selectScreen.png)\n\n</a>\n\n\n<br/>\n<br/>\n\n####What I learned\nThis project was a lot of fun and my main goal for it was to craft a solid visual style since I've never done that before.\n\nI also decided later on in the project that I should make small. I realized how much and to what scale I wanted this project to be so instead of getting myself anxious I decided to scale down and be okay with it.\n\n<br/>\n<br/>\n\n![selecting a type of alert to send](https://www.jacobdfrank.com/images/missle/redSelect.png)\n\n<br/>\n<br/>\n\nWhile researching for this project I started with looking up as much as I could learn about the reaction to it. I found about 10 different articles discussing design in relation to the incident. The big thing I learned from all of these was designing with friction for the user in mind.\n\n<br/>\n<br/>\n\n\n![My user flow](https://www.jacobdfrank.com/images/missle/flow-p1v2.png)\n\n<br/>\n<br/>\n\n####Sketches\nFor my sketches I stuck with what I knew but also started learning about the backend of the system I was redesigining. It turns out this whole project was really just a design for a software that interacted with a government API called IPAWS.\n\n<a class=\"faux-link\" href=\"https://www.fema.gov/media-library-data/1463674830481-16ed0020684ba8cd263ba88f54a48c95/TemplateEmergencyCommPlans_IPAWS-508_05192016.pdf\">Learn about IPAWS here</a>\n\n<br/>\n<br/>\n\n![sketches](https://www.jacobdfrank.com/images/missle/SketchesV1-5.JPG)\n![sketches](https://www.jacobdfrank.com/images/missle/SketchesV1-1.JPG)\n\n<br/>\n<br/>\n\n####The Rest\nAll my screens are in the prototype but here's a couple if you don't wanna click the dang link.\n\n![other comps](https://www.jacobdfrank.com/images/missle/map.png)\n![other comps](https://www.jacobdfrank.com/images/missle/false.png)\n![other comps](https://www.jacobdfrank.com/images/missle/false2.png)\n![other comps](https://www.jacobdfrank.com/images/missle/end.png)",
+        "type": "MarkdownRemark",
+        "contentDigest": "b6fd57de871bc26ffc6896ee94b9f8b6",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "MV-82",
+        "path": "/dmv",
+        "published": false,
+        "date": "2018-02-28",
+        "description": "Redesigning a physical vehicle registration form for the web",
+        "tags": "School / Design",
+        "volume": "2.5",
+        "homeImage": "missleCover",
+        "timePeriod": "2.5 Weeks",
+        "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file",
+        "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file"
+      },
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file",
+      "internal": {
+        "content": "---\npath: '/missle'\ntitle: 'Emergency Alert System'\npublished: true\ndate: '2018-02-01'\ndescription: 'Created a prototype for an alert system following the Hawaii false alarm'\ntags: 'School / Design'\nvolume: '2.8'\nhomeImage: 'missleCover'\ntimePeriod: '2 Weeks'\n---\n\n####About\nSpent about two weeks or so doing a redesign for an alert system. The project was really just an exercise in ui design but I wanted to go a bit harder. The problem was simple based on numerous [__articles__](https://qz.com/1179937/hawaii-missile-alert-blame-terrible-interface-design-for-the-hawaii-debacle/)  showing how the Hawaii missle alert threat was the fault of bad design.\n\n<br/>\n<a class=\"faux-link\" target=\"_blank\" href=\"https://www.jacobdfrank.com/assets/misslePrototype/index.html#/screens\">Use the prototype</a>\n\n<br/>\n<br/>\n\n![select screen](https://www.jacobdfrank.com/images/missle/selectScreen.png)\n\n<br/>\n<br/>\n\n####What I learned\nThis project was a lot of fun and my main goal for it was to craft a solid visual style since I've never done that before.\n\nI also decided later on in the project that I should make small. I realized how much and to what scale I wanted this project to be so instead of getting myself anxious I decided to scale down and be okay with it.\n\n<br/>\n<br/>\n\n![selecting a type of alert to send](https://www.jacobdfrank.com/images/missle/redSelect.png)\n\n<br/>\n<br/>\n\nWhile researching for this project I started with looking up as much as I could learn about the reaction to it. I found about 10 different articles discussing design in relation to the incident. The big thing I learned from all of these was designing with friction for the user in mind.\n\n<br/>\n<br/>\n\n\n![My user flow](https://www.jacobdfrank.com/images/missle/flow-p1v2.png)\n\n<br/>\n<br/>\n\n####Sketches\nFor my sketches I stuck with what I knew but also started learning about the backend of the system I was redesigining. It turns out this whole project was really just a design for a software that interacted with a government API called IPAWS.\n\n<a class=\"faux-link\" href=\"https://www.fema.gov/media-library-data/1463674830481-16ed0020684ba8cd263ba88f54a48c95/TemplateEmergencyCommPlans_IPAWS-508_05192016.pdf\">Learn about IPAWS here</a>\n\n<br/>\n<br/>\n\n![sketches](https://www.jacobdfrank.com/images/missle/SketchesV1-5.JPG)\n![sketches](https://www.jacobdfrank.com/images/missle/SketchesV1-1.JPG)\n\n<br/>\n<br/>\n\n####The Rest\nAll my screens are in the prototype but here's a couple if you don't wanna click the dang link.\n\n![other comps](https://www.jacobdfrank.com/images/missle/map.png)\n![other comps](https://www.jacobdfrank.com/images/missle/false.png)\n![other comps](https://www.jacobdfrank.com/images/missle/false2.png)\n![other comps](https://www.jacobdfrank.com/images/missle/end.png)",
+        "type": "MarkdownRemark",
+        "contentDigest": "ed8f184a40bea64f5c3e86bae36d3660",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Emergency Alert System",
+        "path": "/missle",
+        "published": true,
+        "date": "2018-02-01",
+        "description": "Created a prototype for an alert system following the Hawaii false alarm",
+        "tags": "School / Design",
+        "volume": "2.8",
+        "homeImage": "missleCover",
+        "timePeriod": "2 Weeks",
+        "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file",
+        "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file"
+      },
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md"
+    },
+    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/spread.jpg absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/spread.jpg absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "3f5f1d406257506ae70c4e705707238d",
+        "mediaType": "image/jpeg",
+        "type": "File",
+        "description": "File \"src/pages/WebGL Summer/spread.jpg\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "pages",
+      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/spread.jpg",
+      "relativePath": "WebGL Summer/spread.jpg",
+      "extension": "jpg",
+      "size": 430783,
+      "prettySize": "431 kB",
+      "modifiedTime": "2018-04-24T17:37:52.836Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.767Z",
+      "birthTime": "2018-04-24T17:37:52.835Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer",
+      "base": "spread.jpg",
+      "ext": ".jpg",
+      "name": "spread",
+      "relativeDirectory": "WebGL Summer",
+      "dev": 16777220,
+      "mode": 33261,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 6470945,
+      "blocks": 848,
+      "atimeMs": 1524597386128.8474,
+      "mtimeMs": 1524591472835.538,
+      "ctimeMs": 1524591961766.6301,
+      "birthtimeMs": 1524591472835.3884,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.836Z",
+      "ctime": "2018-04-24T17:46:01.767Z",
+      "birthtime": "2018-04-24T17:37:52.835Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file >>> MarkdownRemark": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file >>> MarkdownRemark",
@@ -1977,8 +2502,8 @@
       "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file",
       "internal": {
         "content": "---\npath: '/WebGL'\ntitle: 'WebGL Summer'\npublished: true\ndate: '2017-12-10'\ndescription: 'Learned WebGL by stumbling and getting up again and again and again'\ntags: 'WebGL / Personal'\nvolume: '3'\nhomeImage: 'cells'\ntimePeriod: 'Summer 2016'\n---\n\n\nLearn new skills. Currently, much of my time has been spent with Three.js. But, I’ve also experimented with the web audio API and p5.js. Some stills & demos are below.\n\n<br/>\n<br/>\n\n<iframe class=\"codepen\" height='656' scrolling='no' title='Spread' src='//codepen.io/JacobDFrank/embed/apJZzb/?height=656&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/JacobDFrank/pen/apJZzb/'>Spread</a> by Jacob D Frank (<a href='https://codepen.io/JacobDFrank'>@JacobDFrank</a>) on <a href='https://codepen.io'>CodePen</a>.\n</iframe>\n\n<br/>\n<br/>\n<br/>\n\n####About\nI began this work as a way to fill my spare time with new challenges. In the end, I may have spent several weeks working on this little experiment, creating 40+ pieces of content. It was inspired by creatives like Beeple as well as friends like Luka Schulz who confronted a similar challenge. <br/><br/>Please look at some of my work I’ve created. Some are bonafide failures, most are not. After all, you learn the most from failure, right?\n\n<br/>\n<br/>\n\n<iframe class=\"codepen\" height='656' scrolling='no' title='GLSL Cyclic Automata' src='//codepen.io/JacobDFrank/embed/GWVrOx/?height=656&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/JacobDFrank/pen/GWVrOx/'>GLSL Cyclic Automata</a> by Jacob D Frank (<a href='https://codepen.io/JacobDFrank'>@JacobDFrank</a>) on <a href='https://codepen.io'>CodePen</a>.\n</iframe>\n\n<br/>\n<br/>\n<br/>\n\nRecently I've been learning basic GLSL on my own, the best part is taking a break halfway through and playing around with the shaders.\n\n<br/>\n<br/>\n\n\n<img alt=\"particles spread\" src=\"./images/WebGL/spread.jpg\"/>\n\n<br/>\n<br/>\n<br/>\n\n![cones](./images/WebGL/cones.png)\n\n<br/>\n<br/>\n<br/>\n\n<iframe class=\"codepen\" height='656' scrolling='no' title='fragmentShader-One' src='//codepen.io/JacobDFrank/embed/oBZYXV/?height=656&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/JacobDFrank/pen/oBZYXV/'>fragmentShader-One</a> by Jacob D Frank (<a href='https://codepen.io/JacobDFrank'>@JacobDFrank</a>) on <a href='https://codepen.io'>CodePen</a>.\n</iframe>\n\n<br/>\n<br/>\n<br/>\n\n![particles spread](./images/WebGL/face.jpg)\n\n<br/>\n<br/>\n<br/>\n\n![particle creator](./images/WebGL/particleCreator.jpg)\n\n<br/>\n<br/>\n<br/>\n\n![blackHole](./images/WebGL/blackHole.jpg)\n",
-        "contentDigest": "4e15fd9c1b0ed6cab36608456cdd3980",
         "type": "MarkdownRemark",
+        "contentDigest": "ef5d8fbe2cda02c386180303e960a609",
         "owner": "gatsby-transformer-remark"
       },
       "frontmatter": {
@@ -1994,51 +2519,8 @@
         "_PARENT": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file",
         "parent": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file"
       },
+      "excerpt": "",
       "fileAbsolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md"
-    },
-    "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/spread.jpg absPath of file": {
-      "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/spread.jpg absPath of file",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "3f5f1d406257506ae70c4e705707238d",
-        "mediaType": "image/jpeg",
-        "type": "File",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "pages",
-      "absolutePath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/spread.jpg",
-      "relativePath": "WebGL Summer/spread.jpg",
-      "extension": "jpg",
-      "size": 430783,
-      "prettySize": "431 kB",
-      "modifiedTime": "2017-12-27T04:53:46.898Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.898Z",
-      "birthTime": "2017-12-27T04:53:46.898Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer",
-      "base": "spread.jpg",
-      "ext": ".jpg",
-      "name": "spread",
-      "relativeDirectory": "WebGL Summer",
-      "dev": 16777221,
-      "mode": 33261,
-      "nlink": 1,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4194304,
-      "ino": 8595812944,
-      "blocks": 848,
-      "atimeMs": 1514350530232.8015,
-      "mtimeMs": 1514350426898.4827,
-      "ctimeMs": 1514350426898.4827,
-      "birthtimeMs": 1514350426898.2078,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.898Z",
-      "ctime": "2017-12-27T04:53:46.898Z",
-      "birthtime": "2017-12-27T04:53:46.898Z"
     },
     "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/womenbreel.png absPath of file": {
       "id": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/womenbreel.png absPath of file",
@@ -2048,6 +2530,7 @@
         "contentDigest": "3ed487ad577046c390e422d5a8696622",
         "mediaType": "image/png",
         "type": "File",
+        "description": "File \"src/pages/b-reel/womenbreel.png\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "pages",
@@ -2056,52 +2539,52 @@
       "extension": "png",
       "size": 576641,
       "prettySize": "577 kB",
-      "modifiedTime": "2017-12-27T04:53:46.901Z",
-      "accessTime": "2017-12-27T04:55:30.233Z",
-      "changeTime": "2017-12-27T04:53:46.901Z",
-      "birthTime": "2017-12-27T04:53:46.901Z",
+      "modifiedTime": "2018-04-24T17:37:52.838Z",
+      "accessTime": "2018-04-24T19:16:26.129Z",
+      "changeTime": "2018-04-24T17:46:01.769Z",
+      "birthTime": "2018-04-24T17:37:52.838Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel",
       "base": "womenbreel.png",
       "ext": ".png",
       "name": "womenbreel",
       "relativeDirectory": "b-reel",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 33188,
       "nlink": 1,
       "uid": 501,
       "gid": 20,
       "rdev": 0,
       "blksize": 4194304,
-      "ino": 8595812947,
+      "ino": 6470950,
       "blocks": 1128,
-      "atimeMs": 1514350530232.814,
-      "mtimeMs": 1514350426901.2441,
-      "ctimeMs": 1514350426901.2441,
-      "birthtimeMs": 1514350426900.679,
-      "atime": "2017-12-27T04:55:30.233Z",
-      "mtime": "2017-12-27T04:53:46.901Z",
-      "ctime": "2017-12-27T04:53:46.901Z",
-      "birthtime": "2017-12-27T04:53:46.901Z"
+      "atimeMs": 1524597386129.0076,
+      "mtimeMs": 1524591472838.105,
+      "ctimeMs": 1524591961768.926,
+      "birthtimeMs": 1524591472837.8806,
+      "atime": "2018-04-24T19:16:26.129Z",
+      "mtime": "2018-04-24T17:37:52.838Z",
+      "ctime": "2018-04-24T17:46:01.769Z",
+      "birthtime": "2018-04-24T17:37:52.838Z"
     },
-    "SitePage /TAW": {
+    "SitePage /Hawkes Media": {
       "layout": "index",
-      "jsonName": "taw.json",
-      "internalComponentName": "ComponentTaw",
-      "path": "/TAW",
+      "jsonName": "hawkes-media.json",
+      "internalComponentName": "ComponentHawkesMedia",
+      "path": "/Hawkes Media",
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
       "componentChunkName": "component---src-templates-post-js",
       "context": {},
-      "updatedAt": 1514351217608,
       "pluginCreator___NODE": "Plugin default-site-plugin",
       "pluginCreatorId": "Plugin default-site-plugin",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
-      "id": "SitePage /TAW",
+      "id": "SitePage /Hawkes Media",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "aa9f432ccd62e9d7c6eca9faca2ccbcc",
+        "contentDigest": "e23deb03a30f2cd11976ffa3ae5194e6",
+        "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
     },
@@ -2113,7 +2596,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
       "componentChunkName": "component---src-templates-post-js",
       "context": {},
-      "updatedAt": 1514351217610,
       "pluginCreator___NODE": "Plugin default-site-plugin",
       "pluginCreatorId": "Plugin default-site-plugin",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
@@ -2122,28 +2604,8 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a34b06c92be218e4336b60cd6353ad91",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /Hawkes Media": {
-      "layout": "index",
-      "jsonName": "hawkes-media.json",
-      "internalComponentName": "ComponentHawkesMedia",
-      "path": "/Hawkes Media",
-      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
-      "componentChunkName": "component---src-templates-post-js",
-      "context": {},
-      "updatedAt": 1514351217610,
-      "pluginCreator___NODE": "Plugin default-site-plugin",
-      "pluginCreatorId": "Plugin default-site-plugin",
-      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
-      "id": "SitePage /Hawkes Media",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "914e702b736d70d79e8e074ec02ba46a",
+        "contentDigest": "2f4a4d0dca79d60728a95d8e64c1b1c0",
+        "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
     },
@@ -2155,7 +2617,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
       "componentChunkName": "component---src-templates-post-js",
       "context": {},
-      "updatedAt": 1514351217610,
       "pluginCreator___NODE": "Plugin default-site-plugin",
       "pluginCreatorId": "Plugin default-site-plugin",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
@@ -2164,7 +2625,71 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "8b9bffbd35cd5ee4cb85c2427569cec1",
+        "contentDigest": "05eb8041bb5d4f185409c07983d4881a",
+        "description": "Your site's \"gatsby-node.js\"",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /TAW": {
+      "layout": "index",
+      "jsonName": "taw.json",
+      "internalComponentName": "ComponentTaw",
+      "path": "/TAW",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
+      "componentChunkName": "component---src-templates-post-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
+      "id": "SitePage /TAW",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "ac9b5b1c7fd91a0142b8262a1b546138",
+        "description": "Your site's \"gatsby-node.js\"",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /dmv": {
+      "layout": "index",
+      "jsonName": "dmv.json",
+      "internalComponentName": "ComponentDmv",
+      "path": "/dmv",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
+      "componentChunkName": "component---src-templates-post-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
+      "id": "SitePage /dmv",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "66fb7ed6ed31c2c5a5caf1d3085dbf51",
+        "description": "Your site's \"gatsby-node.js\"",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /missle": {
+      "layout": "index",
+      "jsonName": "missle.json",
+      "internalComponentName": "ComponentMissle",
+      "path": "/missle",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
+      "componentChunkName": "component---src-templates-post-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
+      "id": "SitePage /missle",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a8dc1482898c9bc4fa868265550bea60",
+        "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
     },
@@ -2176,7 +2701,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
       "componentChunkName": "component---src-templates-post-js",
       "context": {},
-      "updatedAt": 1514351217611,
       "pluginCreator___NODE": "Plugin default-site-plugin",
       "pluginCreatorId": "Plugin default-site-plugin",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js",
@@ -2185,7 +2709,8 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "1e8c22670a6925aa8bc38b73a5859b0b",
+        "contentDigest": "e83fe06ac953b295ae370e5d5ea926cb",
+        "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
     },
@@ -2197,7 +2722,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx",
       "componentChunkName": "component---src-pages-404-jsx",
       "context": {},
-      "updatedAt": 1514351217621,
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx",
@@ -2206,49 +2730,8 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "23d9659b53d62ffd144b1fc158652d8f",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /": {
-      "layout": "index",
-      "jsonName": "index.json",
-      "internalComponentName": "ComponentIndex",
-      "path": "/",
-      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/index.jsx",
-      "componentChunkName": "component---src-pages-index-jsx",
-      "context": {},
-      "updatedAt": 1514351217621,
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/index.jsx",
-      "id": "SitePage /",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "fe309316fbaa285dd184699237d47301",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /404.html": {
-      "layout": "index",
-      "jsonName": "404-html.json",
-      "internalComponentName": "Component404Html",
-      "path": "/404.html",
-      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx",
-      "componentChunkName": "component---src-pages-404-jsx",
-      "context": {},
-      "updatedAt": 1514351217623,
-      "pluginCreator___NODE": "Plugin prod-404",
-      "pluginCreatorId": "Plugin prod-404",
-      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx",
-      "id": "SitePage /404.html",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "24cb3a3c86eb9126017ad78af00a0a6b",
+        "contentDigest": "72ec5147138ce6267b89343ed30afccf",
+        "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
     },
@@ -2260,7 +2743,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx",
       "componentChunkName": "component---src-pages-components-about-me-jsx",
       "context": {},
-      "updatedAt": 1514351217628,
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx",
@@ -2269,7 +2751,29 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "db06a1fffd30dced4b48bfbb509643ef",
+        "contentDigest": "ff3623b8adf7cdcc75f6ba3d0fc292ce",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/Blott/": {
+      "layout": "index",
+      "jsonName": "components-blott.json",
+      "internalComponentName": "ComponentComponentsBlott",
+      "path": "/components/Blott/",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Blott.jsx",
+      "componentChunkName": "component---src-pages-components-blott-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Blott.jsx",
+      "id": "SitePage /components/Blott/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b1ca2447550e64e9b8c538c7ad7a8790",
+        "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
     },
@@ -2281,7 +2785,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx",
       "componentChunkName": "component---src-pages-components-bubble-jsx",
       "context": {},
-      "updatedAt": 1514351217629,
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Bubble.jsx",
@@ -2290,7 +2793,8 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "28a095de3edadef92ba6f0185eb46d02",
+        "contentDigest": "29f0e99d51af8d44a993cd2894ca8707",
+        "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
     },
@@ -2302,7 +2806,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx",
       "componentChunkName": "component---src-pages-components-footer-jsx",
       "context": {},
-      "updatedAt": 1514351217629,
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Footer.jsx",
@@ -2311,28 +2814,8 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "3bc0fe84e64acab41b929e5d26a2f392",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /components/Intro/": {
-      "layout": "index",
-      "jsonName": "components-intro.json",
-      "internalComponentName": "ComponentComponentsIntro",
-      "path": "/components/Intro/",
-      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx",
-      "componentChunkName": "component---src-pages-components-intro-jsx",
-      "context": {},
-      "updatedAt": 1514351217631,
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx",
-      "id": "SitePage /components/Intro/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "6389540bc1b66be75e4db2ee16ee20d5",
+        "contentDigest": "2bf07289bf0311a9288f3693c43cc8ea",
+        "description": "Plugin component-page-creator",
         "owner": "internal-data-bridge"
       }
     },
@@ -2344,7 +2827,6 @@
       "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx",
       "componentChunkName": "component---src-pages-components-header-jsx",
       "context": {},
-      "updatedAt": 1514351217632,
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
       "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Header.jsx",
@@ -2353,19 +2835,83 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "8502ac1a181fd41524a5bcd55dcd10ef",
+        "contentDigest": "6f9394ef32f7c54a45b1b21093147ddc",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/Intro/": {
+      "layout": "index",
+      "jsonName": "components-intro.json",
+      "internalComponentName": "ComponentComponentsIntro",
+      "path": "/components/Intro/",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx",
+      "componentChunkName": "component---src-pages-components-intro-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/Intro.jsx",
+      "id": "SitePage /components/Intro/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "517af50e95a2006238d1b75b25977bed",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "layout": "index",
+      "jsonName": "index.json",
+      "internalComponentName": "ComponentIndex",
+      "path": "/",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/index.jsx",
+      "componentChunkName": "component---src-pages-index-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/index.jsx",
+      "id": "SitePage /",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "5ccdcd686bc7de10d2992ce41e0c5139",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /404.html": {
+      "layout": "index",
+      "jsonName": "404-html.json",
+      "internalComponentName": "Component404Html",
+      "path": "/404.html",
+      "component": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx",
+      "componentChunkName": "component---src-pages-404-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin prod-404",
+      "pluginCreatorId": "Plugin prod-404",
+      "componentPath": "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx",
+      "id": "SitePage /404.html",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a4fe43f2e11bba602628f19f224958d1",
+        "description": "Plugin prod-404",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "fd8ed5da5244b0facfed6be5cc34f3cd"
+    "PLUGINS_HASH": "d7c6c088c5a78b82fa09abf051f5e7c2"
   },
   "componentDataDependencies": {
     "nodes": {
-      "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark": [
-        "/TAW"
+      "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file >>> MarkdownRemark": [
+        "/B-Reel"
       ],
       "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Got Pills/index.md absPath of file >>> MarkdownRemark": [
         "/Pills"
@@ -2373,14 +2919,23 @@
       "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Hawkes Media Group/index.md absPath of file >>> MarkdownRemark": [
         "/Hawkes Media"
       ],
-      "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/b-reel/index.md absPath of file >>> MarkdownRemark": [
-        "/B-Reel"
+      "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/Thought at Work/index.md absPath of file >>> MarkdownRemark": [
+        "/TAW"
+      ],
+      "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/dmv/dmv.md absPath of file >>> MarkdownRemark": [
+        "/dmv"
       ],
       "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/WebGL Summer/index.md absPath of file >>> MarkdownRemark": [
         "/WebGL"
+      ],
+      "/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/missle/missle.md absPath of file >>> MarkdownRemark": [
+        "/missle"
       ]
     },
     "connections": {
+      "SitePage": [
+        "/dev-404-page/"
+      ],
       "MarkdownRemark": [
         "/"
       ]

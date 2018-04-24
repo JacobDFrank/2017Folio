@@ -19,6 +19,7 @@ module.exports = {
         anonymize: true
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    'gatsby-plugin-netlify-cms',
   ]
 }

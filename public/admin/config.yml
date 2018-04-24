@@ -1,0 +1,21 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+
+collections:
+  - name: post
+    label: Posts
+    folder: src/posts
+    create: true
+    fields:
+      - { name: path, label: URL Path, widget: string }
+      - { name: title, label: Title }
+      - { name: published, label: Published, widget: boolean, default: false }
+      - { name: date, label: Create At, widget: date }
+      - { name: description, label: Description, widget: text }
+      - { name: tags, label: Tags, widget: text }
+      - { name: volume, label: Animation Volume, widget: number, default: 1, valueType: int, min: 0.3, max: 1.5 }
+      - { name: homeImage, label: Home Image, widget: text, default: hawkesCover }
+      - { name: timePeriod, label: Project Time Period, widget: text }
+      - { name: body, label: Post, widget: markdown }
