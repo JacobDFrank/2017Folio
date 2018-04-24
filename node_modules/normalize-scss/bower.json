@@ -19,7 +19,6 @@
   "homepage": "https://github.com/JohnAlbin/normalize-scss",
   "ignore": [
     "**/.*",
-    "CHANGELOG.md",
     "CONTRIBUTING.md",
     "lib",
     "node_modules",
