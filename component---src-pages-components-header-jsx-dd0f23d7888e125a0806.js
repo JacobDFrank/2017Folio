@@ -1,2 +1,0 @@
-webpackJsonp([0xc0541ef03b3d],{39:function(e,t,a){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=a(1),u=l(n),d=a(31),f=l(d),c=function(){return u.default.createElement("header",null,u.default.createElement(f.default,{to:"/",className:"faux-link"}," ",u.default.createElement("span",{id:"channeled-text"})))};t.default=c,e.exports=t.default}});
-//# sourceMappingURL=component---src-pages-components-header-jsx-dd0f23d7888e125a0806.js.map
