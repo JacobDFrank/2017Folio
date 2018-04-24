@@ -1,5 +1,7 @@
 backend:
-  name: test-repo
+  name: github
+  repo: JacobDFrank/folio
+  
 
 media_folder: static/assets
 
