@@ -1,7 +1,7 @@
 ---
 path: /missle
 title: Emergency Alert System
-published: false
+published: true
 date: '2018-02-01'
 description: Created a prototype for an alert system following the Hawaii false alarm
 tags: School / Design
