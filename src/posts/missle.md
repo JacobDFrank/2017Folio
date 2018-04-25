@@ -1,13 +1,13 @@
 ---
-path: '/missle'
-title: 'Emergency Alert System'
-published: true
+path: /missle
+title: Emergency Alert System
+published: false
 date: '2018-02-01'
-description: 'Created a prototype for an alert system following the Hawaii false alarm'
-tags: 'School / Design'
+description: Created a prototype for an alert system following the Hawaii false alarm
+tags: School / Design
 volume: '2.8'
-homeImage: 'missleCover'
-timePeriod: '2 Weeks'
+homeImage: missleCover
+timePeriod: 2 Weeks
 ---
 
 ####About
