@@ -1018,14 +1018,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "pathPrefix": "",
-      "polyfill": true,
       "buildTime": "2018-04-25T00:55:13.451Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a56a433f44c14a2852517e117bb6f962",
+        "contentDigest": "97afa5915747e348bb9fb08b06f5a814",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -11407,7 +11405,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "b4b7114917a85f4eacb039246e170e34",
+        "contentDigest": "47e93b4117dc70464eeb07ff0fbcaef4",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -11449,7 +11447,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "b59a315dd974e2edf0fa47c0682d5dec",
+        "contentDigest": "9be63cb0fced2e4bb4de72a6a5ecea3c",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -11470,7 +11468,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "e5fd876e6ef4df5f3faacb19a1cabf2b",
+        "contentDigest": "7a951eed3bcf6f452fea02a75c1bed83",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -11491,7 +11489,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "bd3072deac10b454c519350910d4cf28",
+        "contentDigest": "ae4a9872e6acf8d5999717c0bc900b1c",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -11512,7 +11510,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "64ee4c35bd980f32e0a11c3575237697",
+        "contentDigest": "fb4f880015e1416f979cadca9b8684c3",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -11533,7 +11531,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "24ea063f6a11f55b11c7794765daa888",
+        "contentDigest": "3a64b44a0fce3189ae2d16a530f0a502",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
