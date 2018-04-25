@@ -4,9 +4,6 @@ var plugins = [{
     },{
       plugin: require('/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-browser'),
       options: {"plugins":[],"trackingId":"UA-96615084-1","anonymize":true},
-    },{
-      plugin: require('/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-netlify-cms/gatsby-browser'),
-      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks
 // basically like:

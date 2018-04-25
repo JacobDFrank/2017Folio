@@ -7,7 +7,6 @@ exports.layouts = {
 }
 
 exports.components = {
-  "component---src-templates-post-js": preferDefault(require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js")),
   "component---cache-dev-404-page-js": preferDefault(require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/dev-404-page.js")),
   "component---src-pages-404-jsx": preferDefault(require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx")),
   "component---src-pages-components-about-me-jsx": preferDefault(require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx")),
@@ -21,13 +20,6 @@ exports.components = {
 
 exports.json = {
   "layout-index.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/layout-index.json"),
-  "b-reel.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/b-reel.json"),
-  "dmv.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/dmv.json"),
-  "hawkes-media.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/hawkes-media.json"),
-  "pills.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/pills.json"),
-  "missle.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/missle.json"),
-  "taw.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/taw.json"),
-  "web-gl.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/web-gl.json"),
   "dev-404-page.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/dev-404-page.json"),
   "404.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/404.json"),
   "components-about-me.json": require("/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/components-about-me.json"),

@@ -2,7 +2,6 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
-  "component---src-templates-post-js": require("gatsby-module-loader?name=component---src-templates-post-js!/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/templates/post.js"),
   "component---cache-dev-404-page-js": require("gatsby-module-loader?name=component---cache-dev-404-page-js!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/dev-404-page.js"),
   "component---src-pages-404-jsx": require("gatsby-module-loader?name=component---src-pages-404-jsx!/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/404.jsx"),
   "component---src-pages-components-about-me-jsx": require("gatsby-module-loader?name=component---src-pages-components-about-me-jsx!/Users/jacobfrank/GitHub/JacobDFrank.github.io/src/pages/components/AboutMe.jsx"),
@@ -16,13 +15,6 @@ exports.components = {
 
 exports.json = {
   "layout-index.json": require("gatsby-module-loader?name=path---!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/layout-index.json"),
-  "b-reel.json": require("gatsby-module-loader?name=path---b-reel!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/b-reel.json"),
-  "dmv.json": require("gatsby-module-loader?name=path---dmv!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/dmv.json"),
-  "hawkes-media.json": require("gatsby-module-loader?name=path---hawkes-media!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/hawkes-media.json"),
-  "pills.json": require("gatsby-module-loader?name=path---pills!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/pills.json"),
-  "missle.json": require("gatsby-module-loader?name=path---missle!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/missle.json"),
-  "taw.json": require("gatsby-module-loader?name=path---taw!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/taw.json"),
-  "web-gl.json": require("gatsby-module-loader?name=path---web-gl!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/web-gl.json"),
   "dev-404-page.json": require("gatsby-module-loader?name=path---dev-404-page!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/dev-404-page.json"),
   "404.json": require("gatsby-module-loader?name=path---404!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/404.json"),
   "components-about-me.json": require("gatsby-module-loader?name=path---components-about-me!/Users/jacobfrank/GitHub/JacobDFrank.github.io/.cache/json/components-about-me.json"),

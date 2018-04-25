@@ -1,41 +1,29 @@
 const path = require('path');
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-  const {createPage} = boundActionCreators;
-
-  const postTemplate = path.resolve('src/templates/post.js');
-
-  return graphql(`{
-    allMarkdownRemark {
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+  return new Promise((resolve, reject)) => {
+    graphql(`
+    {
+    allContentfulCaseStudy {
       edges {
         node {
-          html
-          id
-          frontmatter {
-            path
-            title
-            date
-            description
-            tags
-            volume
-            homeImage
-            timePeriod
-          }
+          slug
         }
       }
     }
-  }`)
-  .then(res => {
-    if(res.errors) {
-      return Promise.reject(res.errors);
-    }
-
-    res.data.allMarkdownRemark.edges.forEach( ({node}) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: postTemplate,
-      })
-    })
-
-  })
-}
+  }
+  `).then(result => {
+        result.data.allContentfulCaseStudy.edges.forEach(({ node }) => {
+          createPage({
+            path: node.slug,
+            component: path.resolve("./src/posts/PostPage.js"),
+            context: {
+              slug: node.slug
+            }
+          });
+        });
+        resolve();
+      });
+  }
+};
