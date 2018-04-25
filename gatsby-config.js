@@ -11,7 +11,22 @@ module.exports = {
         path: `${__dirname}/src/posts`,
         name: 'pages'
       }
-    }, {
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: 'img'
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: 'img'
+      }
+    },
+     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-96615084-1",

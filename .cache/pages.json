@@ -24,15 +24,15 @@
         "componentChunkName": "component---src-templates-post-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-jsx",
-        "jsonName": "missle.json",
-        "path": "/missle"
+        "jsonName": "pills.json",
+        "path": "/Pills"
     },
     {
         "componentChunkName": "component---src-templates-post-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-jsx",
-        "jsonName": "pills.json",
-        "path": "/Pills"
+        "jsonName": "missle.json",
+        "path": "/missle"
     },
     {
         "componentChunkName": "component---src-templates-post-js",
