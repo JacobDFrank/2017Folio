@@ -3,22 +3,15 @@
         "componentChunkName": "component---src-templates-post-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-jsx",
-        "jsonName": "b-reel.json",
-        "path": "/B-Reel"
-    },
-    {
-        "componentChunkName": "component---src-templates-post-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-jsx",
-        "jsonName": "dmv.json",
-        "path": "/dmv"
-    },
-    {
-        "componentChunkName": "component---src-templates-post-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-jsx",
         "jsonName": "hawkes-media.json",
         "path": "/Hawkes Media"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-jsx",
+        "jsonName": "b-reel.json",
+        "path": "/B-Reel"
     },
     {
         "componentChunkName": "component---src-templates-post-js",

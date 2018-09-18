@@ -16,7 +16,7 @@ I was given the brief of creating a set of posters for a pill drive that would b
 <br/>
 <br/>
 
-![final for the project](./images/pills/final.png)
+![final for the project](https://www.jacobdfrank.com/images/pills/final.png)
 
 <br/>
 <br/>
@@ -28,7 +28,7 @@ In the beginning, I tried to take in what it really meant to have the pill. What
 <br/>
 <br/>
 
-![sketches for project](./images/pills/GroupSketches.png)
+![sketches for project](https://www.jacobdfrank.com/images/pills/GroupSketches.png)
 
 <br/>
 <br/>
@@ -40,13 +40,13 @@ After sketching I went straight to making what I saw in my head, of which, I reg
 <br/>
 <br/>
 
-![1st draft for project](./images/pills/1stRound.png)
+![1st draft for project](https://www.jacobdfrank.com/images/pills/1stRound.png)
 
 <br/>
 <br/>
 
 
-![set of iterations](./images/pills/horiz.png)
+![set of iterations](https://www.jacobdfrank.com/images/pills/horiz.png)
 
 <br/>
 <br/>

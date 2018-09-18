@@ -1,8 +1,8 @@
 var plugins = [{
-      plugin: require('/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/jacobfrank/GitHub/folio/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/jacobfrank/GitHub/JacobDFrank.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      plugin: require('/Users/jacobfrank/GitHub/folio/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"UA-96615084-1","anonymize":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
