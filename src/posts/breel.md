@@ -25,7 +25,7 @@ I spent the past summer in a paid internship with B-Reel in New York City. I pri
 <br/>
 <br/>
 
-![b-reel, people on a couch](./images/breel/breelCouch.png)
+![b-reel, people on a couch](https://www.jacobdfrank.com/images/breel/breelCouch.png)
 
 <br/>
 <br/>
@@ -38,7 +38,7 @@ I was also able to learn the JavaScript framework React on my own. Through exper
 <br/>
 <br/>
 
-![breelLogo](./images/breel/breelLogo.png)
+![breelLogo](https://www.jacobdfrank.com/images/breel/breelLogo.png)
 
 <br/>
 <br/>
@@ -49,7 +49,7 @@ B-reel was a perfect learning environment for me. I was able to turn to professi
 <br/>
 
 
-![womenbreel](./images/breel/womenbreel.png)
+![womenbreel](https://www.jacobdfrank.com/images/breel/womenbreel.png)
 
 <br/>
 <br/>

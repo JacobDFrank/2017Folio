@@ -2,7 +2,7 @@
 path: '/Hawkes Media'
 title: 'Hawkes Media'
 published: false
-date: '2017-12-11'
+date: '2016-12-11'
 description: 'Designed and developed a new site to showcase a media
 company’s work and clients.'
 tags: 'Front-End / Design'
@@ -23,7 +23,7 @@ Tasked with redesigning a website that hadn’t been updated in more than a deca
 <br/>
 <br/>
 
-![fullsize screenshot of site](./images/hawkes/fullsize.png)
+![fullsize screenshot of site](https://www.jacobdfrank.com/images/hawkes/fullsize.png)
 
 
 <br/>
@@ -36,7 +36,7 @@ Hawkes Media Group is a full-service digital media production company based near
 <br/>
 <br/>
 
-![contact page](./images/hawkes/contact.png)
+![contact page](https://www.jacobdfrank.com/images/hawkes/contact.png)
 
 <br/>
 <br/>
@@ -48,12 +48,12 @@ Compared to their old, busy-looking site, the client wanted to showcase their wo
 <br/>
 <br/>
 
-![sketches](./images/hawkes/sketch1.jpg)
+![sketches](https://www.jacobdfrank.com/images/hawkes/sketch1.jpg)
 
 <br/>
 <br/>
 
-![mindmap](./images/hawkes/Hawkes_Mindmap.png)
+![mindmap](https://www.jacobdfrank.com/images/hawkes/Hawkes_Mindmap.png)
 
 <br/>
 <br/>
@@ -65,7 +65,7 @@ I created sketches on paper of a simple interface with a consistent layout. Then
 <br/>
 
 
-![wireframes](./images/hawkes/clients__wires.png)
+![wireframes](https://www.jacobdfrank.com/images/hawkes/clients__wires.png)
 
 <br/>
 <br/>
@@ -75,7 +75,7 @@ Once the wireframes were finished I made a low-fidelity prototype and showed it 
 <br/>
 <br/>
 
-![their work page](./images/hawkes/hmg-work.png)
+![their work page](https://www.jacobdfrank.com/images/hawkes/hmg-work.png)
 
 <br/>
 <br/>
@@ -96,4 +96,4 @@ The old site's homepage is below
 
 <br/>
 
-![their work page](./images/hawkes/oldScreenCap.jpg)
+![their work page](https://www.jacobdfrank.com/images/hawkes/oldScreenCap.jpg)

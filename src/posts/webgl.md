@@ -42,13 +42,13 @@ Recently I've been learning basic GLSL on my own, the best part is taking a brea
 <br/>
 
 
-<img alt="particles spread" src="./images/WebGL/spread.jpg"/>
+<img alt="particles spread" src="https://www.jacobdfrank.com/images/WebGL/spread.jpg"/>
 
 <br/>
 <br/>
 <br/>
 
-![cones](./images/WebGL/cones.png)
+![cones](https://www.jacobdfrank.com/images/WebGL/cones.png)
 
 <br/>
 <br/>
@@ -61,16 +61,16 @@ Recently I've been learning basic GLSL on my own, the best part is taking a brea
 <br/>
 <br/>
 
-![particles spread](./images/WebGL/face.jpg)
+![particles spread](https://www.jacobdfrank.com/images/WebGL/face.jpg)
 
 <br/>
 <br/>
 <br/>
 
-![particle creator](./images/WebGL/particleCreator.jpg)
+![particle creator](https://www.jacobdfrank.com/images/WebGL/particleCreator.jpg)
 
 <br/>
 <br/>
 <br/>
 
-![blackHole](./images/WebGL/blackHole.jpg)
+![blackHole](https://www.jacobdfrank.com/images/WebGL/blackHole.jpg)

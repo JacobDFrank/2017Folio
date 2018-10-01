@@ -2,14 +2,21 @@
 path: '/TAW'
 title: 'Thought at Work'
 published: true
-date: '2017-10-09'
-description: 'Managed and worked on a team to design & develop a conference website'
-tags: 'Design / Dev/ Manager'
+date: '2018-09-02'
+description: 'Lead organizational design, branding, product and development for a design conference'
+tags: 'Design / Dev / Manager'
 volume: '-2'
 homeImage: 'tawCover'
 timePeriod: 'Annually, Completed Each Fall'
 ---
 
+###Note
+**Currently out of date, update soon to come**
+<br/>
+Check out <a class="faux-link" href="http://www.thoughtatwork.org">thoughtatwork.org</a> for more details
+
+<br/>
+<br/>
 
 ####The Project
 Creation of a design conference website. Tasked with forming a team and building a design conference website from ground up. The Thought at Work Design Conference 2017 website is a project completed with dozens of late nights spent on it.
@@ -22,7 +29,7 @@ Creation of a design conference website. Tasked with forming a team and building
 <br/>
 <br/>
 
-![homepage of TAW site](./images/taw/home.png)
+![homepage of TAW site](https://www.jacobdfrank.com/images/taw/home.png)
 
 <br/>
 <br/>
@@ -33,7 +40,7 @@ Project manager, lead developer and member of the design team for the Thought at
 <br/>
 <br/>
 
-![contact](./images/taw/contact.png)
+![contact](https://www.jacobdfrank.com/images/taw/contact.png)
 
 <br/>
 <br/>
@@ -43,12 +50,12 @@ Project manager, lead developer and member of the design team for the Thought at
 <br/>
 <br/>
 
-![speakers comp](./images/taw/speakers-comp.jpg)
+![speakers comp](https://www.jacobdfrank.com/images/taw/speakers-comp.jpg)
 
 <br/>
 <br/>
 
-![register comp](./images/taw/register-comp.jpg)
+![register comp](https://www.jacobdfrank.com/images/taw/register-comp.jpg)
 
 <br/>
 <br/>
@@ -59,7 +66,7 @@ Completed the development of a design conference website. Initially a member of 
 <br/>
 <br/>
 
-![2016 Home Image](./images/taw/HomeImage.png)
+![2016 Home Image](https://www.jacobdfrank.com/images/taw/HomeImage.png)
 
 <br/>
 <br/>
@@ -74,7 +81,7 @@ In mid-July we received the first homepage mock, followed by additional pages in
 <br/>
 <br/>
 
-![history](./images/taw/history.png)
+![history](https://www.jacobdfrank.com/images/taw/history.png)
 
 <br/>
 <br/>
@@ -86,13 +93,13 @@ At first we were only given desktop mocks for the site. Two months later we got 
 <br/>
 
 
-![mobileScreens](./images/taw/mobileScreens.png)
+![mobileScreens](https://www.jacobdfrank.com/images/taw/mobileScreens.png)
 
 <br/>
 <br/>
 
 
-![Ipad_screen](./images/taw/Ipad_screen.png)
+![Ipad_screen](https://www.jacobdfrank.com/images/taw/Ipad_screen.png)
 
 <br/>
 <br/>
@@ -103,4 +110,4 @@ We encountered another challenge very close to the start of the conference. We w
 <br/>
 <br/>
 
-![2016 team page](./images/taw/team.png)
+![2016 team page](https://www.jacobdfrank.com/images/taw/team.png)

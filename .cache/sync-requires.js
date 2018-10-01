@@ -21,12 +21,13 @@ exports.components = {
 
 exports.json = {
   "layout-index.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/layout-index.json"),
+  "missle.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/missle.json"),
+  "pills.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/pills.json"),
   "hawkes-media.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/hawkes-media.json"),
   "b-reel.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/b-reel.json"),
-  "pills.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/pills.json"),
-  "missle.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/missle.json"),
   "taw.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/taw.json"),
   "web-gl.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/web-gl.json"),
+  "adobe.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/adobe.json"),
   "dev-404-page.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/dev-404-page.json"),
   "404.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/404.json"),
   "components-about-me.json": require("/Users/jacobfrank/GitHub/folio/.cache/json/components-about-me.json"),

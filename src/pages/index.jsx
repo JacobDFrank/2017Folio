@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Header from './components/Header';
 import Bubble from './components/Bubble';
-import Blott from './components/Blott';
 // import AboutMe from './components/AboutMe'
 
 const IndexPage = ({ data }) => (
@@ -13,7 +12,6 @@ const IndexPage = ({ data }) => (
     <div id="app" className="wrapper">
       <Header />
       <Intro />
-      <Blott />
       <section className="projects grid">
         {
           data.allMarkdownRemark.edges.map(post => (
@@ -34,7 +32,7 @@ const IndexPage = ({ data }) => (
 export const pageQuery = graphql`
   query IndexQuery { allMarkdownRemark(
     limit: 10,
-    sort: { fields:[ frontmatter___date], order: ASC }
+    sort: { fields:[ frontmatter___date], order: DESC }
     filter:{ frontmatter: { published: { eq: true } } }
   ) {
       edges {

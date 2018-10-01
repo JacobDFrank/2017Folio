@@ -1,11 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
 import favicon from '../assets/favicon.png';
 
-import './index.scss'
+import './index.scss';
 
 const description = "Designer, Developer, Student";
 const socialImage = "https://jacobdfrank.com/media/social.png";
@@ -47,10 +46,10 @@ const TemplateWrapper = ({children}) => (<div>
   <div>
     {children()}
   </div>
-</div>)
+</div>);
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func
-}
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;

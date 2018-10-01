@@ -16,12 +16,13 @@ exports.components = {
 
 exports.json = {
   "layout-index.json": require("gatsby-module-loader?name=path---!/Users/jacobfrank/GitHub/folio/.cache/json/layout-index.json"),
+  "missle.json": require("gatsby-module-loader?name=path---missle!/Users/jacobfrank/GitHub/folio/.cache/json/missle.json"),
+  "pills.json": require("gatsby-module-loader?name=path---pills!/Users/jacobfrank/GitHub/folio/.cache/json/pills.json"),
   "hawkes-media.json": require("gatsby-module-loader?name=path---hawkes-media!/Users/jacobfrank/GitHub/folio/.cache/json/hawkes-media.json"),
   "b-reel.json": require("gatsby-module-loader?name=path---b-reel!/Users/jacobfrank/GitHub/folio/.cache/json/b-reel.json"),
-  "pills.json": require("gatsby-module-loader?name=path---pills!/Users/jacobfrank/GitHub/folio/.cache/json/pills.json"),
-  "missle.json": require("gatsby-module-loader?name=path---missle!/Users/jacobfrank/GitHub/folio/.cache/json/missle.json"),
   "taw.json": require("gatsby-module-loader?name=path---taw!/Users/jacobfrank/GitHub/folio/.cache/json/taw.json"),
   "web-gl.json": require("gatsby-module-loader?name=path---web-gl!/Users/jacobfrank/GitHub/folio/.cache/json/web-gl.json"),
+  "adobe.json": require("gatsby-module-loader?name=path---adobe!/Users/jacobfrank/GitHub/folio/.cache/json/adobe.json"),
   "dev-404-page.json": require("gatsby-module-loader?name=path---dev-404-page!/Users/jacobfrank/GitHub/folio/.cache/json/dev-404-page.json"),
   "404.json": require("gatsby-module-loader?name=path---404!/Users/jacobfrank/GitHub/folio/.cache/json/404.json"),
   "components-about-me.json": require("gatsby-module-loader?name=path---components-about-me!/Users/jacobfrank/GitHub/folio/.cache/json/components-about-me.json"),

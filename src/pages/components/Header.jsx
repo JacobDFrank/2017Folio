@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 const Header = function statelessFunctionComponentClass() {
   return (<header>
-    <Link to="/" className="faux-link"> <span id="channeled-text"></span></Link>
+    <Link to="/" className="faux-link"> <span id="channeled-text">Jacob Frank</span></Link>
   </header>);
 };
 

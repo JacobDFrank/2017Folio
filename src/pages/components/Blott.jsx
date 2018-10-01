@@ -3,9 +3,9 @@ import React from 'react';
 const scriptURL = '/assets/blotterMe.js';
 
 class Blott extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     const load = require('load-script');
 
@@ -18,14 +18,14 @@ class Blott extends React.Component {
         // note that in IE8 and below loading error wouldn't be reported
       }
     });
-    }
+  }
 
-    render() {
-      return (
-          <div>
-              
-          </div>
-      );
+  render() {
+    return (
+      <div>
+
+      </div>
+    );
   }
 }
 
