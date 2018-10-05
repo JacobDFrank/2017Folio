@@ -228,7 +228,7 @@
 
       function finalBottomName() {
         document.getElementById('bottom__Link--Change').innerHTML = "You seem cool, we should talk...";
-        document.getElementById('bottom__Link--Change').href = "mailto:hello@jacobdfrank.com?subject=Jacob, let’s talk";
+        document.getElementById('bottom__Link--Change').href = "mailto:frankjacob42@gmail.com?subject=Jacob, let’s talk";
       }
       // HANDLE SCREEN EVENTS
       function onWindowResize() {
