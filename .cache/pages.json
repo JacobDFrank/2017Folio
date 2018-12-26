@@ -15,8 +15,43 @@
         "path": "/404/"
     },
     {
+        "componentChunkName": "component---src-templates-post-js",
+        "jsonName": "adobe-63b",
+        "path": "/Adobe"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "jsonName": "b-reel-78b",
+        "path": "/B-Reel"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "jsonName": "hawkes-media-9a7",
+        "path": "/Hawkes Media"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "jsonName": "pills-259",
+        "path": "/Pills"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "jsonName": "taw-14a",
+        "path": "/TAW"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "jsonName": "web-gl-f75",
+        "path": "/WebGL"
+    },
+    {
         "componentChunkName": "component---cache-dev-404-page-js",
         "jsonName": "dev-404-page-5f9",
         "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-js",
+        "jsonName": "missle-dfb",
+        "path": "/missle"
     }
 ]
