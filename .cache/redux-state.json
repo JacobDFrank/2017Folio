@@ -15,8 +15,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "6f790b67dee5bc7f85ee1a51ba9c0be0",
         "description": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+=======
+        "contentDigest": "3de4122ea3da988029e5d2159d6fb66c",
+        "description": "Plugin dev-404-page",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -1199,6 +1204,7 @@
         "path": "/Users/jacobfrank/GitHub/folio/src/pages",
         "pathCheck": false
       },
+<<<<<<< HEAD
       "nodeAPIs": [
         "createPagesStatefully"
       ],
@@ -1296,16 +1302,26 @@
       "siteMetadata": {
         "title": "Jacob D Frank Portfolio"
       },
+=======
+>>>>>>> parent of 230702f5... updated resume
       "port": "8000",
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
+<<<<<<< HEAD
       "buildTime": "2018-12-26T07:05:03.810Z",
+=======
+      "buildTime": "2018-10-17T12:49:10.521Z",
+>>>>>>> parent of 230702f5... updated resume
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "47318f36377d62ab786b96555bbe446f",
+=======
+        "contentDigest": "0125da76267b0664ec8be89c028f7458",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1315,7 +1331,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "b25fd24be8b952864d3d647f6d54432b",
+=======
+        "contentDigest": "91e8d0369b35f2498f67e67bc6cb71b0",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"src/posts\"",
         "owner": "gatsby-source-filesystem"
@@ -1327,8 +1347,13 @@
       "size": 320,
       "prettySize": "320 B",
       "modifiedTime": "2018-10-01T18:43:45.621Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.259Z",
       "changeTime": "2018-12-26T06:42:51.719Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.505Z",
+      "changeTime": "2018-10-01T18:43:45.621Z",
+>>>>>>> parent of 230702f5... updated resume
       "birthTime": "2018-04-24T20:33:32.112Z",
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/folio/src",
@@ -1336,7 +1361,7 @@
       "ext": "",
       "name": "posts",
       "relativeDirectory": "..",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 10,
       "uid": 501,
@@ -1345,11 +1370,19 @@
       "blksize": 4096,
       "ino": 21372320,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906258.5728,
+=======
+      "atimeMs": 1539780553505.0977,
+>>>>>>> parent of 230702f5... updated resume
       "mtimeMs": 1538419425620.937,
       "ctimeMs": 1545806571718.9924,
       "birthtimeMs": 1524602012111.707,
+<<<<<<< HEAD
       "atime": "2018-12-26T07:05:06.259Z",
+=======
+      "atime": "2018-10-17T12:49:13.505Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-10-01T18:43:45.621Z",
       "ctime": "2018-12-26T06:42:51.719Z",
       "birthtime": "2018-04-24T20:33:32.112Z"
@@ -1740,10 +1773,17 @@
       "children": [],
       "parent": "4ee02209-1736-5034-bba7-eb59e9a447cd",
       "internal": {
+<<<<<<< HEAD
         "content": "\n\n####Goal\nTasked with redesigning a website that hadn’t been updated in more than a decade, filled with flash animations and gratuitous geocities gifs.\n\n\n<br/>\n\n<a class=\"faux-link\" href=\"http://www.hawkesmediagroup.com/\">Visit the Site</a>\n\n<br/>\n<br/>\n\n![fullsize screenshot of site](https://www.jacobdfrank.com/images/hawkes/fullsize.png)\n\n\n<br/>\n<br/>\n\n\n####Understanding the Brand\nHawkes Media Group is a full-service digital media production company based near Boston, Massachusetts. Their need for a new website was urgent. One of their staff tried to create a new website 6 months earlier, but was too busy to complete it.\n\n<br/>\n<br/>\n\n![contact page](https://www.jacobdfrank.com/images/hawkes/contact.png)\n\n<br/>\n<br/>\n\n\n####Assessing the Problem\nCompared to their old, busy-looking site, the client wanted to showcase their work in a much simpler, direct and focused way. The first thing I did was gain an understanding of what a digital media company needs on a site and who they wanted to attract to the site.\n\n<br/>\n<br/>\n\n![sketches](https://www.jacobdfrank.com/images/hawkes/sketch1.jpg)\n\n<br/>\n<br/>\n\n![mindmap](https://www.jacobdfrank.com/images/hawkes/Hawkes_Mindmap.png)\n\n<br/>\n<br/>\n\n####Designing the Site\nI created sketches on paper of a simple interface with a consistent layout. Then I created wireframes for each page. I also used a mind map and information architecture I’d created to guide me along the way.\n\n<br/>\n<br/>\n\n\n![wireframes](https://www.jacobdfrank.com/images/hawkes/clients__wires.png)\n\n<br/>\n<br/>\n\nOnce the wireframes were finished I made a low-fidelity prototype and showed it to the client for feedback. This was followed by higher fidelity wireframes. Taking all these steps made for fewer changes as we moved ahead because the feedback helped me remove what the client didn’t like. The triangles and diagonal styling I used on the header and footer to give the site more character were stripped away and the Merriweather font was changed to a more plain and modern looking Open Sans typeface.\n\n<br/>\n<br/>\n\n![their work page](https://www.jacobdfrank.com/images/hawkes/hmg-work.png)\n\n<br/>\n<br/>\n\n####Coding\nDuring the development of the site I found a way to give the client access to a CMS so that they could collaborate and make minor changes using Webflow. The project was developed using custom code that I would paste into the Webflow editor along with editor itself for a couple smaller things. CSS Flexbox was used for most of the site and it saved a lot of time with layout. JQuery was also used on some items like the mobile navigation.\n\n<br/>\n<br/>\n\n\n####Check it Out\nThe current website can be seen <a class=\"faux-link\" href=\"http://www.hawkesmediagroup.com/\">here</a>\n<br/>\n<br/>\n<br/>\nThe old site's homepage is below\n\n<br/>\n\n![their work page](https://www.jacobdfrank.com/images/hawkes/oldScreenCap.jpg)\n",
         "type": "MarkdownRemark",
         "contentDigest": "7d0b907ccf129ebd48b6e95cef1ab6aa",
         "owner": "gatsby-transformer-remark"
+=======
+        "contentDigest": "7058fd74786015f6be366baed70bb83e",
+        "type": "Directory",
+        "description": "Directory \"static/assets\"",
+        "owner": "gatsby-source-filesystem"
+>>>>>>> parent of 230702f5... updated resume
       },
       "frontmatter": {
         "title": "Hawkes Media",
@@ -1882,7 +1922,11 @@
       "size": 256,
       "prettySize": "256 B",
       "modifiedTime": "2018-04-24T17:37:53.113Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.293Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.517Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.905Z",
       "birthTime": "2018-04-24T17:37:52.895Z",
       "root": "/",
@@ -1891,7 +1935,7 @@
       "ext": "",
       "name": "assets",
       "relativeDirectory": "..",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 8,
       "uid": 501,
@@ -1900,11 +1944,19 @@
       "blksize": 4096,
       "ino": 21371349,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906292.9075,
       "mtimeMs": 1524591473113.1077,
       "ctimeMs": 1537297240904.983,
       "birthtimeMs": 1524591472894.7717,
       "atime": "2018-12-26T07:05:06.293Z",
+=======
+      "atimeMs": 1539780553517.1714,
+      "mtimeMs": 1524591473113.1077,
+      "ctimeMs": 1537297240904.983,
+      "birthtimeMs": 1524591472894.7717,
+      "atime": "2018-10-17T12:49:13.517Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.113Z",
       "ctime": "2018-09-18T19:00:40.905Z",
       "birthtime": "2018-04-24T17:37:52.895Z"
@@ -1914,7 +1966,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "f97a16890ebd4484f5c54c85a9b733cc",
+=======
+        "contentDigest": "7961eb664d406d1d203b600ae8a70833",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype\"",
         "owner": "gatsby-source-filesystem"
@@ -1926,7 +1982,11 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2018-04-24T17:37:53.113Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.295Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.518Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.903Z",
       "birthTime": "2018-04-24T17:37:52.900Z",
       "root": "/",
@@ -1935,7 +1995,7 @@
       "ext": "",
       "name": "misslePrototype",
       "relativeDirectory": "",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 4,
       "uid": 501,
@@ -1944,11 +2004,19 @@
       "blksize": 4096,
       "ino": 21371351,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906294.9565,
       "mtimeMs": 1524591473112.9224,
       "ctimeMs": 1537297240903.013,
       "birthtimeMs": 1524591472899.72,
       "atime": "2018-12-26T07:05:06.295Z",
+=======
+      "atimeMs": 1539780553518.3518,
+      "mtimeMs": 1524591473112.9224,
+      "ctimeMs": 1537297240903.013,
+      "birthtimeMs": 1524591472899.72,
+      "atime": "2018-10-17T12:49:13.518Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.113Z",
       "ctime": "2018-09-18T19:00:40.903Z",
       "birthtime": "2018-04-24T17:37:52.900Z"
@@ -1958,7 +2026,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "97b33507dda68290b1b8bac32225e22b",
+=======
+        "contentDigest": "a14fabd8deb3bf378ef26523e454f511",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets\"",
         "owner": "gatsby-source-filesystem"
@@ -1970,7 +2042,11 @@
       "size": 2016,
       "prettySize": "2.02 kB",
       "modifiedTime": "2018-04-24T17:37:53.112Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.296Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.519Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.903Z",
       "birthTime": "2018-04-24T17:37:52.900Z",
       "root": "/",
@@ -1979,7 +2055,7 @@
       "ext": "",
       "name": "assets",
       "relativeDirectory": "misslePrototype",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 63,
       "uid": 501,
@@ -1988,11 +2064,19 @@
       "blksize": 4096,
       "ino": 21371353,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906296.1997,
       "mtimeMs": 1524591473112.1135,
       "ctimeMs": 1537297240902.8958,
       "birthtimeMs": 1524591472899.7988,
       "atime": "2018-12-26T07:05:06.296Z",
+=======
+      "atimeMs": 1539780553519.2961,
+      "mtimeMs": 1524591473112.1135,
+      "ctimeMs": 1537297240902.8958,
+      "birthtimeMs": 1524591472899.7988,
+      "atime": "2018-10-17T12:49:13.519Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.112Z",
       "ctime": "2018-09-18T19:00:40.903Z",
       "birthtime": "2018-04-24T17:37:52.900Z"
@@ -2002,7 +2086,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "9090fb3f4130dd49cd62f90c80cfc280",
+=======
+        "contentDigest": "559a211227e79277f256182d77cb8023",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/apps\"",
         "owner": "gatsby-source-filesystem"
@@ -2014,7 +2102,11 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2018-04-24T17:37:53.019Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.300Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.898Z",
       "birthTime": "2018-04-24T17:37:52.969Z",
       "root": "/",
@@ -2023,7 +2115,7 @@
       "ext": "",
       "name": "apps",
       "relativeDirectory": "misslePrototype/assets",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 4,
       "uid": 501,
@@ -2032,11 +2124,19 @@
       "blksize": 4096,
       "ino": 21371416,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906299.93,
       "mtimeMs": 1524591473018.6458,
       "ctimeMs": 1537297240898.265,
       "birthtimeMs": 1524591472968.5015,
       "atime": "2018-12-26T07:05:06.300Z",
+=======
+      "atimeMs": 1539780553522.9702,
+      "mtimeMs": 1524591473018.6458,
+      "ctimeMs": 1537297240898.265,
+      "birthtimeMs": 1524591472968.5015,
+      "atime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.019Z",
       "ctime": "2018-09-18T19:00:40.898Z",
       "birthtime": "2018-04-24T17:37:52.969Z"
@@ -2046,7 +2146,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "bb2bf13d766c27be68f3975dc5f7fb06",
+=======
+        "contentDigest": "8f866f2980792513c1336dc5f3f6e259",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/fonts\"",
         "owner": "gatsby-source-filesystem"
@@ -2058,7 +2162,11 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-04-24T17:37:53.070Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.300Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.831Z",
       "birthTime": "2018-04-24T17:37:53.070Z",
       "root": "/",
@@ -2067,7 +2175,7 @@
       "ext": "",
       "name": "fonts",
       "relativeDirectory": "misslePrototype/assets",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
@@ -2076,11 +2184,19 @@
       "blksize": 4096,
       "ino": 21371406,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906299.9048,
       "mtimeMs": 1524591473070.3953,
       "ctimeMs": 1537297240831.3154,
       "birthtimeMs": 1524591473070.1968,
       "atime": "2018-12-26T07:05:06.300Z",
+=======
+      "atimeMs": 1539780553523.0078,
+      "mtimeMs": 1524591473070.3953,
+      "ctimeMs": 1537297240831.3154,
+      "birthtimeMs": 1524591473070.1968,
+      "atime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.070Z",
       "ctime": "2018-09-18T19:00:40.831Z",
       "birthtime": "2018-04-24T17:37:53.070Z"
@@ -2090,7 +2206,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "15cb663e2f018fa59f7eeb8fa79f5af0",
+=======
+        "contentDigest": "1416ec0de76249bc4abf84c794b21655",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/html5shim\"",
         "owner": "gatsby-source-filesystem"
@@ -2102,7 +2222,11 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-04-24T17:37:53.074Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.300Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.815Z",
       "birthTime": "2018-04-24T17:37:53.073Z",
       "root": "/",
@@ -2111,7 +2235,7 @@
       "ext": "",
       "name": "html5shim",
       "relativeDirectory": "misslePrototype/assets",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
@@ -2120,11 +2244,19 @@
       "blksize": 4096,
       "ino": 21371377,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906299.892,
       "mtimeMs": 1524591473073.673,
       "ctimeMs": 1537297240814.9866,
       "birthtimeMs": 1524591473073.1604,
       "atime": "2018-12-26T07:05:06.300Z",
+=======
+      "atimeMs": 1539780553523.011,
+      "mtimeMs": 1524591473073.673,
+      "ctimeMs": 1537297240814.9866,
+      "birthtimeMs": 1524591473073.1604,
+      "atime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.074Z",
       "ctime": "2018-09-18T19:00:40.815Z",
       "birthtime": "2018-04-24T17:37:53.073Z"
@@ -2134,7 +2266,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "10226490ebfb54a2562b055294f91f79",
+=======
+        "contentDigest": "7b79b6b5d98ecb7499f63f13ec555777",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom\"",
         "owner": "gatsby-source-filesystem"
@@ -2146,7 +2282,11 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-04-24T17:37:53.074Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.300Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.817Z",
       "birthTime": "2018-04-24T17:37:53.074Z",
       "root": "/",
@@ -2155,7 +2295,7 @@
       "ext": ".custom",
       "name": "jquery-ui-1.9.2",
       "relativeDirectory": "misslePrototype/assets",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
@@ -2164,11 +2304,19 @@
       "blksize": 4096,
       "ino": 21371379,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906299.9175,
       "mtimeMs": 1524591473073.88,
       "ctimeMs": 1537297240816.73,
       "birthtimeMs": 1524591473073.7957,
       "atime": "2018-12-26T07:05:06.300Z",
+=======
+      "atimeMs": 1539780553523.0425,
+      "mtimeMs": 1524591473073.88,
+      "ctimeMs": 1537297240816.73,
+      "birthtimeMs": 1524591473073.7957,
+      "atime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.074Z",
       "ctime": "2018-09-18T19:00:40.817Z",
       "birthtime": "2018-04-24T17:37:53.074Z"
@@ -2178,7 +2326,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "1d87c3c62fb124e6017ef030cb43ff2c",
+=======
+        "contentDigest": "da65c1ca53857af984ae947d9603fe7e",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/json2\"",
         "owner": "gatsby-source-filesystem"
@@ -2190,7 +2342,11 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-04-24T17:37:53.076Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.300Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.825Z",
       "birthTime": "2018-04-24T17:37:53.075Z",
       "root": "/",
@@ -2199,7 +2355,7 @@
       "ext": "",
       "name": "json2",
       "relativeDirectory": "misslePrototype/assets",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
@@ -2208,11 +2364,19 @@
       "blksize": 4096,
       "ino": 21371395,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906299.9602,
       "mtimeMs": 1524591473075.8518,
       "ctimeMs": 1537297240824.7957,
       "birthtimeMs": 1524591473075.1392,
       "atime": "2018-12-26T07:05:06.300Z",
+=======
+      "atimeMs": 1539780553523.0486,
+      "mtimeMs": 1524591473075.8518,
+      "ctimeMs": 1537297240824.7957,
+      "birthtimeMs": 1524591473075.1392,
+      "atime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.076Z",
       "ctime": "2018-09-18T19:00:40.825Z",
       "birthtime": "2018-04-24T17:37:53.075Z"
@@ -2222,7 +2386,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "d5e73f79583233c2033f7d02b62d10ee",
+=======
+        "contentDigest": "e0b69e92bdb222dbf729bf364c378555",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/react\"",
         "owner": "gatsby-source-filesystem"
@@ -2234,7 +2402,11 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2018-04-24T17:37:53.077Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.300Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.900Z",
       "birthTime": "2018-04-24T17:37:53.076Z",
       "root": "/",
@@ -2243,7 +2415,7 @@
       "ext": "",
       "name": "react",
       "relativeDirectory": "misslePrototype/assets",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 4,
       "uid": 501,
@@ -2252,109 +2424,37 @@
       "blksize": 4096,
       "ino": 21371555,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906299.9478,
       "mtimeMs": 1524591473076.7195,
       "ctimeMs": 1537297240900.245,
       "birthtimeMs": 1524591473075.997,
       "atime": "2018-12-26T07:05:06.300Z",
+=======
+      "atimeMs": 1539780553523.12,
+      "mtimeMs": 1524591473076.7195,
+      "ctimeMs": 1537297240900.245,
+      "birthtimeMs": 1524591473075.997,
+      "atime": "2018-10-17T12:49:13.523Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.077Z",
       "ctime": "2018-09-18T19:00:40.900Z",
       "birthtime": "2018-04-24T17:37:53.076Z"
     },
+<<<<<<< HEAD
     "3bc30c22-0d7a-58e4-a8db-213d3b977985": {
       "id": "3bc30c22-0d7a-58e4-a8db-213d3b977985",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
         "contentDigest": "4ba36b4dd5f57d68875891f70d6df387",
-        "type": "Directory",
-        "description": "Directory \"static/assets/misslePrototype/assets/fonts/open_sans\"",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "img",
-      "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/fonts/open_sans",
-      "relativePath": "misslePrototype/assets/fonts/open_sans",
-      "extension": "",
-      "size": 192,
-      "prettySize": "192 B",
-      "modifiedTime": "2018-04-24T17:37:53.073Z",
-      "accessTime": "2018-12-26T07:05:06.301Z",
-      "changeTime": "2018-09-18T19:00:40.831Z",
-      "birthTime": "2018-04-24T17:37:53.070Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/fonts",
-      "base": "open_sans",
-      "ext": "",
-      "name": "open_sans",
-      "relativeDirectory": "misslePrototype/assets/fonts",
-      "dev": 16777221,
-      "mode": 16877,
-      "nlink": 6,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4096,
-      "ino": 21371407,
-      "blocks": 0,
-      "atimeMs": 1545807906301.3735,
-      "mtimeMs": 1524591473072.8958,
-      "ctimeMs": 1537297240831.2598,
-      "birthtimeMs": 1524591473070.3894,
-      "atime": "2018-12-26T07:05:06.301Z",
-      "mtime": "2018-04-24T17:37:53.073Z",
-      "ctime": "2018-09-18T19:00:40.831Z",
-      "birthtime": "2018-04-24T17:37:53.070Z"
-    },
-    "562382c3-3237-578f-9349-932cca7e0d89": {
-      "id": "562382c3-3237-578f-9349-932cca7e0d89",
+=======
+    "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/common absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/common absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "b777ee2f7d25ed0575e4faf3924049b1",
-        "type": "Directory",
-        "description": "Directory \"static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom/css\"",
-        "owner": "gatsby-source-filesystem"
-      },
-      "sourceInstanceName": "img",
-      "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom/css",
-      "relativePath": "misslePrototype/assets/jquery-ui-1.9.2.custom/css",
-      "extension": "",
-      "size": 96,
-      "prettySize": "96 B",
-      "modifiedTime": "2018-04-24T17:37:53.074Z",
-      "accessTime": "2018-12-26T07:05:06.301Z",
-      "changeTime": "2018-09-18T19:00:40.817Z",
-      "birthTime": "2018-04-24T17:37:53.074Z",
-      "root": "/",
-      "dir": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom",
-      "base": "css",
-      "ext": "",
-      "name": "css",
-      "relativeDirectory": "misslePrototype/assets/jquery-ui-1.9.2.custom",
-      "dev": 16777221,
-      "mode": 16877,
-      "nlink": 3,
-      "uid": 501,
-      "gid": 20,
-      "rdev": 0,
-      "blksize": 4096,
-      "ino": 21371380,
-      "blocks": 0,
-      "atimeMs": 1545807906301.386,
-      "mtimeMs": 1524591473074.047,
-      "ctimeMs": 1537297240816.5952,
-      "birthtimeMs": 1524591473073.87,
-      "atime": "2018-12-26T07:05:06.301Z",
-      "mtime": "2018-04-24T17:37:53.074Z",
-      "ctime": "2018-09-18T19:00:40.817Z",
-      "birthtime": "2018-04-24T17:37:53.074Z"
-    },
-    "17b03cee-12f3-5dc8-aa3e-d27b1aa9929c": {
-      "id": "17b03cee-12f3-5dc8-aa3e-d27b1aa9929c",
-      "children": [],
-      "parent": "___SOURCE___",
-      "internal": {
-        "contentDigest": "6e98ea3311d23cfcd49a5f479d1faf65",
+        "contentDigest": "3495a27ba990f32a7c1ccdbeddf51bd2",
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/apps/common\"",
         "owner": "gatsby-source-filesystem"
@@ -2366,7 +2466,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-04-24T17:37:52.969Z",
-      "accessTime": "2018-12-26T07:05:06.301Z",
+      "accessTime": "2018-10-17T12:49:13.525Z",
       "changeTime": "2018-09-18T19:00:40.855Z",
       "birthTime": "2018-04-24T17:37:52.969Z",
       "root": "/",
@@ -2375,7 +2475,7 @@
       "ext": "",
       "name": "common",
       "relativeDirectory": "misslePrototype/assets/apps",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 3,
       "uid": 501,
@@ -2384,21 +2484,21 @@
       "blksize": 4096,
       "ino": 21371417,
       "blocks": 0,
-      "atimeMs": 1545807906301.416,
+      "atimeMs": 1539780553524.6262,
       "mtimeMs": 1524591472968.6313,
       "ctimeMs": 1537297240855.4707,
       "birthtimeMs": 1524591472968.58,
-      "atime": "2018-12-26T07:05:06.301Z",
+      "atime": "2018-10-17T12:49:13.525Z",
       "mtime": "2018-04-24T17:37:52.969Z",
       "ctime": "2018-09-18T19:00:40.855Z",
       "birthtime": "2018-04-24T17:37:52.969Z"
     },
-    "8d9ba550-87ef-5cff-88f7-5e0e1819e9df": {
-      "id": "8d9ba550-87ef-5cff-88f7-5e0e1819e9df",
+    "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/share absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/share absPath of file",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "d594b6f4288cd1b2608db59a434ac427",
+        "contentDigest": "a46514d4f7a9ebfe4d0a7e6168ce0ae6",
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/apps/share\"",
         "owner": "gatsby-source-filesystem"
@@ -2410,7 +2510,7 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2018-04-24T17:37:53.025Z",
-      "accessTime": "2018-12-26T07:05:06.301Z",
+      "accessTime": "2018-10-17T12:49:13.525Z",
       "changeTime": "2018-09-18T19:00:40.898Z",
       "birthTime": "2018-04-24T17:37:53.019Z",
       "root": "/",
@@ -2419,7 +2519,7 @@
       "ext": "",
       "name": "share",
       "relativeDirectory": "misslePrototype/assets/apps",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 4,
       "uid": 501,
@@ -2428,11 +2528,265 @@
       "blksize": 4096,
       "ino": 21371464,
       "blocks": 0,
+      "atimeMs": 1539780553524.6692,
+      "mtimeMs": 1524591473024.8406,
+      "ctimeMs": 1537297240898.211,
+      "birthtimeMs": 1524591473018.6301,
+      "atime": "2018-10-17T12:49:13.525Z",
+      "mtime": "2018-04-24T17:37:53.025Z",
+      "ctime": "2018-09-18T19:00:40.898Z",
+      "birthtime": "2018-04-24T17:37:53.019Z"
+    },
+    "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/fonts/open_sans absPath of file": {
+      "id": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/fonts/open_sans absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "61a779348a5ed96b17ea46afa55437a0",
+>>>>>>> parent of 230702f5... updated resume
+        "type": "Directory",
+        "description": "Directory \"static/assets/misslePrototype/assets/fonts/open_sans\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "img",
+      "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/fonts/open_sans",
+      "relativePath": "misslePrototype/assets/fonts/open_sans",
+      "extension": "",
+      "size": 192,
+      "prettySize": "192 B",
+      "modifiedTime": "2018-04-24T17:37:53.073Z",
+<<<<<<< HEAD
+      "accessTime": "2018-12-26T07:05:06.301Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.525Z",
+>>>>>>> parent of 230702f5... updated resume
+      "changeTime": "2018-09-18T19:00:40.831Z",
+      "birthTime": "2018-04-24T17:37:53.070Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/fonts",
+      "base": "open_sans",
+      "ext": "",
+      "name": "open_sans",
+      "relativeDirectory": "misslePrototype/assets/fonts",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 6,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 21371407,
+      "blocks": 0,
+<<<<<<< HEAD
+      "atimeMs": 1545807906301.3735,
+      "mtimeMs": 1524591473072.8958,
+      "ctimeMs": 1537297240831.2598,
+      "birthtimeMs": 1524591473070.3894,
+      "atime": "2018-12-26T07:05:06.301Z",
+=======
+      "atimeMs": 1539780553524.6584,
+      "mtimeMs": 1524591473072.8958,
+      "ctimeMs": 1537297240831.2598,
+      "birthtimeMs": 1524591473070.3894,
+      "atime": "2018-10-17T12:49:13.525Z",
+>>>>>>> parent of 230702f5... updated resume
+      "mtime": "2018-04-24T17:37:53.073Z",
+      "ctime": "2018-09-18T19:00:40.831Z",
+      "birthtime": "2018-04-24T17:37:53.070Z"
+    },
+    "562382c3-3237-578f-9349-932cca7e0d89": {
+      "id": "562382c3-3237-578f-9349-932cca7e0d89",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+<<<<<<< HEAD
+        "contentDigest": "b777ee2f7d25ed0575e4faf3924049b1",
+=======
+        "contentDigest": "32339a46462f033340e9fdaf1cd6a097",
+>>>>>>> parent of 230702f5... updated resume
+        "type": "Directory",
+        "description": "Directory \"static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom/css\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "img",
+      "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom/css",
+      "relativePath": "misslePrototype/assets/jquery-ui-1.9.2.custom/css",
+      "extension": "",
+      "size": 96,
+      "prettySize": "96 B",
+      "modifiedTime": "2018-04-24T17:37:53.074Z",
+<<<<<<< HEAD
+      "accessTime": "2018-12-26T07:05:06.301Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.525Z",
+>>>>>>> parent of 230702f5... updated resume
+      "changeTime": "2018-09-18T19:00:40.817Z",
+      "birthTime": "2018-04-24T17:37:53.074Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom",
+      "base": "css",
+      "ext": "",
+      "name": "css",
+      "relativeDirectory": "misslePrototype/assets/jquery-ui-1.9.2.custom",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 21371380,
+      "blocks": 0,
+<<<<<<< HEAD
+      "atimeMs": 1545807906301.386,
+      "mtimeMs": 1524591473074.047,
+      "ctimeMs": 1537297240816.5952,
+      "birthtimeMs": 1524591473073.87,
+      "atime": "2018-12-26T07:05:06.301Z",
+=======
+      "atimeMs": 1539780553524.6853,
+      "mtimeMs": 1524591473074.047,
+      "ctimeMs": 1537297240816.5952,
+      "birthtimeMs": 1524591473073.87,
+      "atime": "2018-10-17T12:49:13.525Z",
+>>>>>>> parent of 230702f5... updated resume
+      "mtime": "2018-04-24T17:37:53.074Z",
+      "ctime": "2018-09-18T19:00:40.817Z",
+      "birthtime": "2018-04-24T17:37:53.074Z"
+    },
+    "17b03cee-12f3-5dc8-aa3e-d27b1aa9929c": {
+      "id": "17b03cee-12f3-5dc8-aa3e-d27b1aa9929c",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+<<<<<<< HEAD
+        "contentDigest": "6e98ea3311d23cfcd49a5f479d1faf65",
+=======
+        "contentDigest": "bd81158d20acec610569b1ef6238de53",
+>>>>>>> parent of 230702f5... updated resume
+        "type": "Directory",
+        "description": "Directory \"static/assets/misslePrototype/assets/apps/common\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "img",
+      "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/common",
+      "relativePath": "misslePrototype/assets/apps/common",
+      "extension": "",
+<<<<<<< HEAD
+      "size": 96,
+      "prettySize": "96 B",
+      "modifiedTime": "2018-04-24T17:37:52.969Z",
+      "accessTime": "2018-12-26T07:05:06.301Z",
+=======
+      "size": 1504,
+      "prettySize": "1.5 kB",
+      "modifiedTime": "2018-04-24T17:37:53.018Z",
+      "accessTime": "2018-10-17T12:49:13.527Z",
+>>>>>>> parent of 230702f5... updated resume
+      "changeTime": "2018-09-18T19:00:40.855Z",
+      "birthTime": "2018-04-24T17:37:52.969Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps",
+      "base": "common",
+      "ext": "",
+<<<<<<< HEAD
+      "name": "common",
+      "relativeDirectory": "misslePrototype/assets/apps",
+      "dev": 16777221,
+=======
+      "name": "img",
+      "relativeDirectory": "misslePrototype/assets/apps/common",
+      "dev": 16777220,
+>>>>>>> parent of 230702f5... updated resume
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 21371417,
+      "blocks": 0,
+<<<<<<< HEAD
+      "atimeMs": 1545807906301.416,
+      "mtimeMs": 1524591472968.6313,
+      "ctimeMs": 1537297240855.4707,
+      "birthtimeMs": 1524591472968.58,
+      "atime": "2018-12-26T07:05:06.301Z",
+      "mtime": "2018-04-24T17:37:52.969Z",
+=======
+      "atimeMs": 1539780553527.226,
+      "mtimeMs": 1524591473018.4714,
+      "ctimeMs": 1537297240855.3213,
+      "birthtimeMs": 1524591472968.627,
+      "atime": "2018-10-17T12:49:13.527Z",
+      "mtime": "2018-04-24T17:37:53.018Z",
+>>>>>>> parent of 230702f5... updated resume
+      "ctime": "2018-09-18T19:00:40.855Z",
+      "birthtime": "2018-04-24T17:37:52.969Z"
+    },
+    "8d9ba550-87ef-5cff-88f7-5e0e1819e9df": {
+      "id": "8d9ba550-87ef-5cff-88f7-5e0e1819e9df",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+<<<<<<< HEAD
+        "contentDigest": "d594b6f4288cd1b2608db59a434ac427",
+=======
+        "contentDigest": "b88f81430c7b4863de89bbd0fe58459b",
+>>>>>>> parent of 230702f5... updated resume
+        "type": "Directory",
+        "description": "Directory \"static/assets/misslePrototype/assets/apps/share\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "img",
+      "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/share",
+      "relativePath": "misslePrototype/assets/apps/share",
+      "extension": "",
+      "size": 128,
+      "prettySize": "128 B",
+      "modifiedTime": "2018-04-24T17:37:53.025Z",
+<<<<<<< HEAD
+      "accessTime": "2018-12-26T07:05:06.301Z",
+      "changeTime": "2018-09-18T19:00:40.898Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.527Z",
+      "changeTime": "2018-09-18T19:00:40.859Z",
+>>>>>>> parent of 230702f5... updated resume
+      "birthTime": "2018-04-24T17:37:53.019Z",
+      "root": "/",
+      "dir": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps",
+      "base": "share",
+      "ext": "",
+<<<<<<< HEAD
+      "name": "share",
+      "relativeDirectory": "misslePrototype/assets/apps",
+      "dev": 16777221,
+=======
+      "name": "css",
+      "relativeDirectory": "misslePrototype/assets/apps/share",
+      "dev": 16777220,
+>>>>>>> parent of 230702f5... updated resume
+      "mode": 16877,
+      "nlink": 4,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 21371464,
+      "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906301.403,
       "mtimeMs": 1524591473024.8406,
       "ctimeMs": 1537297240898.211,
       "birthtimeMs": 1524591473018.6301,
       "atime": "2018-12-26T07:05:06.301Z",
+=======
+      "atimeMs": 1539780553527.2449,
+      "mtimeMs": 1524591473024.6257,
+      "ctimeMs": 1537297240858.5295,
+      "birthtimeMs": 1524591473018.682,
+      "atime": "2018-10-17T12:49:13.527Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.025Z",
       "ctime": "2018-09-18T19:00:40.898Z",
       "birthtime": "2018-04-24T17:37:53.019Z"
@@ -2442,7 +2796,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "1680fef4034b240d203170c0c19d1254",
+=======
+        "contentDigest": "d39442c5495a7177173940a6f84248e9",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom/css/no-theme\"",
         "owner": "gatsby-source-filesystem"
@@ -2451,6 +2809,7 @@
       "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/jquery-ui-1.9.2.custom/css/no-theme",
       "relativePath": "misslePrototype/assets/jquery-ui-1.9.2.custom/css/no-theme",
       "extension": "",
+<<<<<<< HEAD
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2018-04-24T17:37:53.075Z",
@@ -2543,6 +2902,12 @@
       "prettySize": "2.18 kB",
       "modifiedTime": "2018-04-24T17:37:53.064Z",
       "accessTime": "2018-12-26T07:05:06.304Z",
+=======
+      "size": 2176,
+      "prettySize": "2.18 kB",
+      "modifiedTime": "2018-04-24T17:37:53.064Z",
+      "accessTime": "2018-10-17T12:49:13.527Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.898Z",
       "birthTime": "2018-04-24T17:37:53.025Z",
       "root": "/",
@@ -2551,7 +2916,7 @@
       "ext": "",
       "name": "img",
       "relativeDirectory": "misslePrototype/assets/apps/share",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 68,
       "uid": 501,
@@ -2560,11 +2925,19 @@
       "blksize": 4096,
       "ino": 21371470,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906303.8577,
       "mtimeMs": 1524591473063.9436,
       "ctimeMs": 1537297240898.1538,
       "birthtimeMs": 1524591473024.8335,
       "atime": "2018-12-26T07:05:06.304Z",
+=======
+      "atimeMs": 1539780553527.256,
+      "mtimeMs": 1524591473063.9436,
+      "ctimeMs": 1537297240898.1538,
+      "birthtimeMs": 1524591473024.8335,
+      "atime": "2018-10-17T12:49:13.527Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.064Z",
       "ctime": "2018-09-18T19:00:40.898Z",
       "birthtime": "2018-04-24T17:37:53.025Z"
@@ -2574,7 +2947,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "ad5f4889f443d4311dadbec913e96ecf",
+=======
+        "contentDigest": "225a76d9e7ab7add8616356da2046a51",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/apps/common/img\"",
         "owner": "gatsby-source-filesystem"
@@ -2583,19 +2960,34 @@
       "absolutePath": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/common/img",
       "relativePath": "misslePrototype/assets/apps/common/img",
       "extension": "",
+<<<<<<< HEAD
       "size": 1504,
       "prettySize": "1.5 kB",
       "modifiedTime": "2018-04-24T17:37:53.018Z",
       "accessTime": "2018-12-26T07:05:06.304Z",
       "changeTime": "2018-09-18T19:00:40.855Z",
       "birthTime": "2018-04-24T17:37:52.969Z",
+=======
+      "size": 96,
+      "prettySize": "96 B",
+      "modifiedTime": "2018-04-24T17:37:53.075Z",
+      "accessTime": "2018-10-17T12:49:13.527Z",
+      "changeTime": "2018-09-18T19:00:40.817Z",
+      "birthTime": "2018-04-24T17:37:53.074Z",
+>>>>>>> parent of 230702f5... updated resume
       "root": "/",
       "dir": "/Users/jacobfrank/GitHub/folio/static/assets/misslePrototype/assets/apps/common",
       "base": "img",
       "ext": "",
+<<<<<<< HEAD
       "name": "img",
       "relativeDirectory": "misslePrototype/assets/apps/common",
       "dev": 16777221,
+=======
+      "name": "no-theme",
+      "relativeDirectory": "misslePrototype/assets/jquery-ui-1.9.2.custom/css",
+      "dev": 16777220,
+>>>>>>> parent of 230702f5... updated resume
       "mode": 16877,
       "nlink": 47,
       "uid": 501,
@@ -2604,6 +2996,7 @@
       "blksize": 4096,
       "ino": 21371418,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906303.964,
       "mtimeMs": 1524591473018.4714,
       "ctimeMs": 1537297240855.3213,
@@ -2612,13 +3005,27 @@
       "mtime": "2018-04-24T17:37:53.018Z",
       "ctime": "2018-09-18T19:00:40.855Z",
       "birthtime": "2018-04-24T17:37:52.969Z"
+=======
+      "atimeMs": 1539780553527.268,
+      "mtimeMs": 1524591473074.8813,
+      "ctimeMs": 1537297240816.5051,
+      "birthtimeMs": 1524591473074.0422,
+      "atime": "2018-10-17T12:49:13.527Z",
+      "mtime": "2018-04-24T17:37:53.075Z",
+      "ctime": "2018-09-18T19:00:40.817Z",
+      "birthtime": "2018-04-24T17:37:53.074Z"
+>>>>>>> parent of 230702f5... updated resume
     },
     "5f3a4c01-089d-59e5-a58f-ea4a829a132d": {
       "id": "5f3a4c01-089d-59e5-a58f-ea4a829a132d",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "242d54ecb750a3c841420d3690003ece",
+=======
+        "contentDigest": "2ad54bc9c9639f249261fa9645981a47",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/apps/share/img/sprites\"",
         "owner": "gatsby-source-filesystem"
@@ -2630,7 +3037,11 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2018-04-24T17:37:53.058Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.309Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.533Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.890Z",
       "birthTime": "2018-04-24T17:37:53.055Z",
       "root": "/",
@@ -2639,7 +3050,7 @@
       "ext": "",
       "name": "sprites",
       "relativeDirectory": "misslePrototype/assets/apps/share/img",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 4,
       "uid": 501,
@@ -2648,11 +3059,19 @@
       "blksize": 4096,
       "ino": 21371520,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906309.269,
       "mtimeMs": 1524591473058.2256,
       "ctimeMs": 1537297240890.2593,
       "birthtimeMs": 1524591473055.4626,
       "atime": "2018-12-26T07:05:06.309Z",
+=======
+      "atimeMs": 1539780553533.3062,
+      "mtimeMs": 1524591473058.2256,
+      "ctimeMs": 1537297240890.2593,
+      "birthtimeMs": 1524591473055.4626,
+      "atime": "2018-10-17T12:49:13.533Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.058Z",
       "ctime": "2018-09-18T19:00:40.890Z",
       "birthtime": "2018-04-24T17:37:53.055Z"
@@ -2662,7 +3081,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "ae2763b707c7d222b128efe2fcf1d81a",
+=======
+        "contentDigest": "8eb2dbcf4d628a930bb3e52e11a26bdf",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/apps/share/img/sprites/modal\"",
         "owner": "gatsby-source-filesystem"
@@ -2674,7 +3097,11 @@
       "size": 192,
       "prettySize": "192 B",
       "modifiedTime": "2018-04-24T17:37:53.058Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.310Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.534Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.890Z",
       "birthTime": "2018-04-24T17:37:53.056Z",
       "root": "/",
@@ -2683,7 +3110,7 @@
       "ext": "",
       "name": "modal",
       "relativeDirectory": "misslePrototype/assets/apps/share/img/sprites",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 6,
       "uid": 501,
@@ -2692,11 +3119,19 @@
       "blksize": 4096,
       "ino": 21371532,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906310.133,
       "mtimeMs": 1524591473057.9722,
       "ctimeMs": 1537297240890.1782,
       "birthtimeMs": 1524591473055.5085,
       "atime": "2018-12-26T07:05:06.310Z",
+=======
+      "atimeMs": 1539780553534.0947,
+      "mtimeMs": 1524591473057.9722,
+      "ctimeMs": 1537297240890.1782,
+      "birthtimeMs": 1524591473055.5085,
+      "atime": "2018-10-17T12:49:13.534Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.058Z",
       "ctime": "2018-09-18T19:00:40.890Z",
       "birthtime": "2018-04-24T17:37:53.056Z"
@@ -2706,7 +3141,11 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
+<<<<<<< HEAD
         "contentDigest": "d376a7c36132af945b377d7962c6d5ab",
+=======
+        "contentDigest": "c0c695492531a5a565f7007a9fd1c36e",
+>>>>>>> parent of 230702f5... updated resume
         "type": "Directory",
         "description": "Directory \"static/assets/misslePrototype/assets/apps/share/img/sprites/toolbar\"",
         "owner": "gatsby-source-filesystem"
@@ -2718,7 +3157,11 @@
       "size": 384,
       "prettySize": "384 B",
       "modifiedTime": "2018-04-24T17:37:53.063Z",
+<<<<<<< HEAD
       "accessTime": "2018-12-26T07:05:06.310Z",
+=======
+      "accessTime": "2018-10-17T12:49:13.534Z",
+>>>>>>> parent of 230702f5... updated resume
       "changeTime": "2018-09-18T19:00:40.888Z",
       "birthTime": "2018-04-24T17:37:53.058Z",
       "root": "/",
@@ -2727,7 +3170,7 @@
       "ext": "",
       "name": "toolbar",
       "relativeDirectory": "misslePrototype/assets/apps/share/img/sprites",
-      "dev": 16777221,
+      "dev": 16777220,
       "mode": 16877,
       "nlink": 12,
       "uid": 501,
@@ -2736,11 +3179,19 @@
       "blksize": 4096,
       "ino": 21371521,
       "blocks": 0,
+<<<<<<< HEAD
       "atimeMs": 1545807906310.1826,
       "mtimeMs": 1524591473062.7927,
       "ctimeMs": 1537297240887.8103,
       "birthtimeMs": 1524591473058.22,
       "atime": "2018-12-26T07:05:06.310Z",
+=======
+      "atimeMs": 1539780553534.0764,
+      "mtimeMs": 1524591473062.7927,
+      "ctimeMs": 1537297240887.8103,
+      "birthtimeMs": 1524591473058.22,
+      "atime": "2018-10-17T12:49:13.534Z",
+>>>>>>> parent of 230702f5... updated resume
       "mtime": "2018-04-24T17:37:53.063Z",
       "ctime": "2018-09-18T19:00:40.888Z",
       "birthtime": "2018-04-24T17:37:53.058Z"
@@ -11670,8 +12121,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "20a0ebb113a39b309dcc9d803603ca7f",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+=======
+        "contentDigest": "b0910a2abf3fa996271d4e01953e30d1",
+        "description": "Your site's \"gatsby-node.js\"",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11690,8 +12146,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "326dd19b346ad258e5d584a7aa4789e5",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+=======
+        "contentDigest": "e9ffc02fccd195d2c460439b337daced",
+        "description": "Your site's \"gatsby-node.js\"",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11710,8 +12171,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "f8b59b834f38c828a0b26952c035927e",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+=======
+        "contentDigest": "dec35913014b8924129bdea55fba782d",
+        "description": "Your site's \"gatsby-node.js\"",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11730,8 +12196,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "c23a407481554aa40bdc0d96ced7c7a6",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+=======
+        "contentDigest": "6656e7fbde9050044f8fddfe68bb4e18",
+        "description": "Your site's \"gatsby-node.js\"",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11750,8 +12221,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "988ac6090d3360ee6ff8366bac1ece34",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+=======
+        "contentDigest": "1366716d1832061688bbbebfe8f2aeac",
+        "description": "Your site's \"gatsby-node.js\"",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11770,8 +12246,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "0861b2226e564212a0b52bbbc2867e58",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+=======
+        "contentDigest": "d4c34c7086116b6273c5f4971f8c78ec",
+        "description": "Your site's \"gatsby-node.js\"",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11790,8 +12271,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "a38baf7d427761e4e48d86daaa539dcd",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+=======
+        "contentDigest": "42c661572a472903031c98817cda219f",
+        "description": "Your site's \"gatsby-node.js\"",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11810,8 +12296,139 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "626f1d514d5505ea2bae17e3163997e3",
         "description": "acf424dc-47ac-52b7-8a1e-886cdd60eeb4",
+=======
+        "contentDigest": "cc5c292e31d5dc7ec7479d26813b61a9",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/AboutMe/": {
+      "layout": "index",
+      "jsonName": "components-about-me.json",
+      "internalComponentName": "ComponentComponentsAboutMe",
+      "path": "/components/AboutMe/",
+      "component": "/Users/jacobfrank/GitHub/folio/src/pages/components/AboutMe.jsx",
+      "componentChunkName": "component---src-pages-components-about-me-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/folio/src/pages/components/AboutMe.jsx",
+      "id": "SitePage /components/AboutMe/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "e7a1c7d85399c5e181f7ba7a35b90f68",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/Blott/": {
+      "layout": "index",
+      "jsonName": "components-blott.json",
+      "internalComponentName": "ComponentComponentsBlott",
+      "path": "/components/Blott/",
+      "component": "/Users/jacobfrank/GitHub/folio/src/pages/components/Blott.jsx",
+      "componentChunkName": "component---src-pages-components-blott-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/folio/src/pages/components/Blott.jsx",
+      "id": "SitePage /components/Blott/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "772fe9354ff286cec7fdfcab946cdda1",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/Bubble/": {
+      "layout": "index",
+      "jsonName": "components-bubble.json",
+      "internalComponentName": "ComponentComponentsBubble",
+      "path": "/components/Bubble/",
+      "component": "/Users/jacobfrank/GitHub/folio/src/pages/components/Bubble.jsx",
+      "componentChunkName": "component---src-pages-components-bubble-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/folio/src/pages/components/Bubble.jsx",
+      "id": "SitePage /components/Bubble/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a720bb822d6b4c98d12e17ec047e2f3d",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/Footer/": {
+      "layout": "index",
+      "jsonName": "components-footer.json",
+      "internalComponentName": "ComponentComponentsFooter",
+      "path": "/components/Footer/",
+      "component": "/Users/jacobfrank/GitHub/folio/src/pages/components/Footer.jsx",
+      "componentChunkName": "component---src-pages-components-footer-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/folio/src/pages/components/Footer.jsx",
+      "id": "SitePage /components/Footer/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "63bb5c9ea78dc423efac43e44bd93b21",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/Header/": {
+      "layout": "index",
+      "jsonName": "components-header.json",
+      "internalComponentName": "ComponentComponentsHeader",
+      "path": "/components/Header/",
+      "component": "/Users/jacobfrank/GitHub/folio/src/pages/components/Header.jsx",
+      "componentChunkName": "component---src-pages-components-header-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/folio/src/pages/components/Header.jsx",
+      "id": "SitePage /components/Header/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "4a271857d758f93a3b36e14d30353ff8",
+        "description": "Plugin component-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/Intro/": {
+      "layout": "index",
+      "jsonName": "components-intro.json",
+      "internalComponentName": "ComponentComponentsIntro",
+      "path": "/components/Intro/",
+      "component": "/Users/jacobfrank/GitHub/folio/src/pages/components/Intro.jsx",
+      "componentChunkName": "component---src-pages-components-intro-jsx",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/jacobfrank/GitHub/folio/src/pages/components/Intro.jsx",
+      "id": "SitePage /components/Intro/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "6a04573f474070bb49731b7c2719bde1",
+        "description": "Plugin component-page-creator",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11830,8 +12447,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "84ef5d07cd3709a9355c2c17289b318e",
         "description": "acf424dc-47ac-52b7-8a1e-886cdd60eeb4",
+=======
+        "contentDigest": "606ebf3ec95559a1f835a0e15ec963c7",
+        "description": "Plugin component-page-creator",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     },
@@ -11850,8 +12472,13 @@
       "children": [],
       "internal": {
         "type": "SitePage",
+<<<<<<< HEAD
         "contentDigest": "f43b01fd5217e98542f39e3dd17fdcb2",
         "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+=======
+        "contentDigest": "d8908a3cc8b0bd457a1bf221a66eb1a3",
+        "description": "Plugin prod-404",
+>>>>>>> parent of 230702f5... updated resume
         "owner": "internal-data-bridge"
       }
     }
