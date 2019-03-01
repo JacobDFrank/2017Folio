@@ -1,138 +1,125 @@
+import React, { createElement } from "react"
 import pageFinderFactory from "./find-page"
 import emitter from "./emitter"
-import prefetchHelper from "./prefetch"
+import stripPrefix from "./strip-prefix"
+let findPage
 
-const preferDefault = m => (m && m.default) || m
-
-let devGetPageData
-let inInitialRender = true
-let hasFetched = Object.create(null)
 let syncRequires = {}
 let asyncRequires = {}
-let jsonDataPaths = {}
+let pathScriptsCache = {}
+let resourceStrCache = {}
+let resourceCache = {}
+let pages = []
+// Note we're not actively using the path data atm. There
+// could be future optimizations however around trying to ensure
+// we load all resources for likely-to-be-visited paths.
+let pathArray = []
+let pathCount = {}
+let pathPrefix = ``
+let resourcesArray = []
+let resourcesCount = {}
+const preferDefault = m => (m && m.default) || m
+let prefetcher
+let inInitialRender = true
 let fetchHistory = []
-let fetchingPageResourceMapPromise = null
-let fetchedPageResourceMap = false
-let hasPageResourceMap = false
-let apiRunner
 const failedPaths = {}
+const failedResources = {}
 const MAX_HISTORY = 5
 
-const jsonPromiseStore = {}
-
-if (process.env.NODE_ENV !== `production`) {
-  devGetPageData = require(`./socketIo`).getPageData
-}
-
-/**
- * Fetch resource map (pages data and paths to json files with results of
- *  queries)
- */
-const fetchPageResourceMap = () => {
-  if (!fetchingPageResourceMapPromise) {
-    fetchingPageResourceMapPromise = new Promise(resolve => {
-      asyncRequires
-        .data()
-        .then(({ pages, dataPaths }) => {
-          // TODO — expose proper way to access this data from plugins.
-          // Need to come up with an API for plugins to access
-          // site info.
-          window.___dataPaths = dataPaths
-          queue.addPagesArray(pages)
-          queue.addDataPaths(dataPaths)
-          hasPageResourceMap = true
-          resolve((fetchedPageResourceMap = true))
-        })
-        .catch(e => {
-          console.warn(
-            `Failed to fetch pages manifest. Gatsby will reload on next navigation.`
-          )
-          // failed to grab pages metadata
-          // for now let's just resolve this - on navigation this will cause missing resources
-          // and will trigger page reload and then it will retry
-          // this can happen with service worker updates when webpack manifest points to old
-          // chunk that no longer exists on server
-          resolve((fetchedPageResourceMap = true))
-        })
-    })
-  }
-  return fetchingPageResourceMapPromise
-}
-
-const createJsonURL = jsonName => `${__PATH_PREFIX__}/static/d/${jsonName}.json`
-const createComponentUrls = componentChunkName =>
-  window.___chunkMapping[componentChunkName].map(
-    chunk => __PATH_PREFIX__ + chunk
-  )
-
-const fetchResource = resourceName => {
-  // Find resource
-  let resourceFunction
-  if (resourceName.slice(0, 12) === `component---`) {
-    resourceFunction = asyncRequires.components[resourceName]
-  } else {
-    if (resourceName in jsonPromiseStore) {
-      resourceFunction = () => jsonPromiseStore[resourceName]
-    } else {
-      resourceFunction = () => {
-        const fetchPromise = new Promise((resolve, reject) => {
-          const url = createJsonURL(jsonDataPaths[resourceName])
-          const req = new XMLHttpRequest()
-          req.open(`GET`, url, true)
-          req.withCredentials = true
-          req.onreadystatechange = () => {
-            if (req.readyState == 4) {
-              if (req.status === 200) {
-                resolve(JSON.parse(req.responseText))
-              } else {
-                delete jsonPromiseStore[resourceName]
-                reject()
-              }
-            }
-          }
-          req.send(null)
-        })
-        jsonPromiseStore[resourceName] = fetchPromise
-        return fetchPromise
-      }
-    }
-  }
-
-  // Download the resource
-  hasFetched[resourceName] = true
-  return new Promise(resolve => {
-    const fetchPromise = resourceFunction()
-    let failed = false
-    return fetchPromise
-      .catch(() => {
-        failed = true
+// Prefetcher logic
+if (process.env.NODE_ENV === `production`) {
+  prefetcher = require(`./prefetcher`)({
+    getNextQueuedResources: () => resourcesArray.slice(-1)[0],
+    createResourceDownload: resourceName => {
+      fetchResource(resourceName, () => {
+        resourcesArray = resourcesArray.filter(r => r !== resourceName)
+        prefetcher.onResourcedFinished(resourceName)
       })
-      .then(component => {
-        fetchHistory.push({
-          resource: resourceName,
-          succeeded: !failed,
-        })
-
-        fetchHistory = fetchHistory.slice(-MAX_HISTORY)
-
-        resolve(component)
-      })
+    },
+  })
+  emitter.on(`onPreLoadPageResources`, e => {
+    prefetcher.onPreLoadPageResources(e)
+  })
+  emitter.on(`onPostLoadPageResources`, e => {
+    prefetcher.onPostLoadPageResources(e)
   })
 }
 
-const prefetchResource = resourceName => {
-  if (resourceName.slice(0, 12) === `component---`) {
-    return Promise.all(
-      createComponentUrls(resourceName).map(url => prefetchHelper(url))
-    )
+const sortResourcesByCount = (a, b) => {
+  if (resourcesCount[a] > resourcesCount[b]) {
+    return 1
+  } else if (resourcesCount[a] < resourcesCount[b]) {
+    return -1
   } else {
-    const url = createJsonURL(jsonDataPaths[resourceName])
-    return prefetchHelper(url)
+    return 0
   }
 }
 
-const getResourceModule = resourceName =>
-  fetchResource(resourceName).then(preferDefault)
+const sortPagesByCount = (a, b) => {
+  if (pathCount[a] > pathCount[b]) {
+    return 1
+  } else if (pathCount[a] < pathCount[b]) {
+    return -1
+  } else {
+    return 0
+  }
+}
+
+const fetchResource = (resourceName, cb = () => {}) => {
+  if (resourceStrCache[resourceName]) {
+    process.nextTick(() => {
+      cb(null, resourceStrCache[resourceName])
+    })
+  } else {
+    // Find resource
+    let resourceFunction
+    if (resourceName.slice(0, 12) === `component---`) {
+      resourceFunction = asyncRequires.components[resourceName]
+    } else if (resourceName.slice(0, 9) === `layout---`) {
+      resourceFunction = asyncRequires.layouts[resourceName]
+    } else {
+      resourceFunction = asyncRequires.json[resourceName]
+    }
+
+    // Download the resource
+    resourceFunction((err, executeChunk) => {
+      resourceStrCache[resourceName] = executeChunk
+      fetchHistory.push({
+        resource: resourceName,
+        succeeded: !err,
+      })
+
+      if (!failedResources[resourceName]) {
+        failedResources[resourceName] = err
+      }
+
+      fetchHistory = fetchHistory.slice(-MAX_HISTORY)
+      cb(err, executeChunk)
+    })
+  }
+}
+
+const getResourceModule = (resourceName, cb) => {
+  if (resourceCache[resourceName]) {
+    process.nextTick(() => {
+      cb(null, resourceCache[resourceName])
+    })
+  } else if (failedResources[resourceName]) {
+    process.nextTick(() => {
+      cb(failedResources[resourceName])
+    })
+  } else {
+    fetchResource(resourceName, (err, executeChunk) => {
+      if (err) {
+        cb(err)
+      } else {
+        const module = preferDefault(executeChunk())
+        resourceCache[resourceName] = module
+        cb(err, module)
+      }
+    })
+  }
+}
 
 const appearsOnLine = () => {
   const isOnLine = navigator.onLine
@@ -146,6 +133,8 @@ const appearsOnLine = () => {
 }
 
 const handleResourceLoadError = (path, message) => {
+  console.log(message)
+
   if (!failedPaths[path]) {
     failedPaths[path] = message
   }
@@ -158,38 +147,25 @@ const handleResourceLoadError = (path, message) => {
   }
 }
 
-const onPrefetchPathname = pathname => {
-  if (!prefetchTriggered[pathname]) {
-    apiRunner(`onPrefetchPathname`, { pathname })
-    prefetchTriggered[pathname] = true
-  }
-}
-
-const onPostPrefetchPathname = pathname => {
-  if (!prefetchCompleted[pathname]) {
-    apiRunner(`onPostPrefetchPathname`, { pathname })
-    prefetchCompleted[pathname] = true
-  }
-}
-
-const shouldFallbackTo404Resources = path =>
-  (hasPageResourceMap || inInitialRender) && path !== `/404.html`
-
-// Note we're not actively using the path data atm. There
-// could be future optimizations however around trying to ensure
-// we load all resources for likely-to-be-visited paths.
-// let pathArray = []
-// let pathCount = {}
-
-let findPage
-let pathScriptsCache = {}
-let prefetchTriggered = {}
-let prefetchCompleted = {}
-let disableCorePrefetching = false
-
+let mountOrder = 1
 const queue = {
+  empty: () => {
+    pathArray = []
+    pathCount = {}
+    resourcesCount = {}
+    resourcesArray = []
+    pages = []
+    pathPrefix = ``
+  },
   addPagesArray: newPages => {
-    findPage = pageFinderFactory(newPages, __PATH_PREFIX__)
+    pages = newPages
+    if (
+      typeof __PREFIX_PATHS__ !== `undefined` &&
+      typeof __PATH_PREFIX__ !== `undefined`
+    ) {
+      if (__PREFIX_PATHS__ === true) pathPrefix = __PATH_PREFIX__
+    }
+    findPage = pageFinderFactory(newPages, pathPrefix)
   },
   addDevRequires: devRequires => {
     syncRequires = devRequires
@@ -197,145 +173,151 @@ const queue = {
   addProdRequires: prodRequires => {
     asyncRequires = prodRequires
   },
-  addDataPaths: dataPaths => {
-    jsonDataPaths = dataPaths
-  },
-  // Hovering on a link is a very strong indication the user is going to
-  // click on it soon so let's start prefetching resources for this
-  // pathname.
-  hovering: path => {
-    queue.getResourcesForPathname(path)
-  },
-  enqueue: path => {
-    if (!apiRunner)
-      console.error(`Run setApiRunnerForLoader() before enqueing paths`)
-
-    // Skip prefetching if we know user is on slow or constrained connection
-    if (`connection` in navigator) {
-      if ((navigator.connection.effectiveType || ``).includes(`2g`)) {
-        return false
-      }
-      if (navigator.connection.saveData) {
-        return false
-      }
-    }
-
-    // Tell plugins with custom prefetching logic that they should start
-    // prefetching this path.
-    onPrefetchPathname(path)
-
-    // If a plugin has disabled core prefetching, stop now.
-    if (disableCorePrefetching.some(a => a)) {
+  dequeue: () => pathArray.pop(),
+  enqueue: rawPath => {
+    // Check page exists.
+    const path = stripPrefix(rawPath, pathPrefix)
+    if (!pages.some(p => p.path === path)) {
       return false
     }
 
-    // Check if the page exists.
-    let page = findPage(path)
+    const mountOrderBoost = 1 / mountOrder
+    mountOrder += 1
+    // console.log(
+    // `enqueue "${path}", mountOrder: "${mountOrder}, mountOrderBoost: ${mountOrderBoost}`
+    // )
 
-    // In production, we lazy load page metadata. If that
-    // hasn't been fetched yet, start fetching it now.
-    if (
-      process.env.NODE_ENV === `production` &&
-      !page &&
-      !fetchedPageResourceMap
-    ) {
-      // If page wasn't found check and we didn't fetch resources map for
-      // all pages, wait for fetch to complete and try find page again
-      return fetchPageResourceMap().then(() => queue.enqueue(path))
+    // Add to path counts.
+    if (!pathCount[path]) {
+      pathCount[path] = 1
+    } else {
+      pathCount[path] += 1
     }
 
-    if (!page) {
-      return false
+    // Add path to queue.
+    if (!queue.has(path)) {
+      pathArray.unshift(path)
     }
 
-    if (
-      process.env.NODE_ENV !== `production` &&
-      process.env.NODE_ENV !== `test`
-    ) {
-      devGetPageData(page.path)
+    // Sort pages by pathCount
+    pathArray.sort(sortPagesByCount)
+
+    // Add resources to queue.
+    const page = findPage(path)
+    if (page.jsonName) {
+      if (!resourcesCount[page.jsonName]) {
+        resourcesCount[page.jsonName] = 1 + mountOrderBoost
+      } else {
+        resourcesCount[page.jsonName] += 1 + mountOrderBoost
+      }
+
+      // Before adding, checking that the JSON resource isn't either
+      // already queued or been downloading.
+      if (
+        resourcesArray.indexOf(page.jsonName) === -1 &&
+        !resourceStrCache[page.jsonName]
+      ) {
+        resourcesArray.unshift(page.jsonName)
+      }
+    }
+    if (page.componentChunkName) {
+      if (!resourcesCount[page.componentChunkName]) {
+        resourcesCount[page.componentChunkName] = 1 + mountOrderBoost
+      } else {
+        resourcesCount[page.componentChunkName] += 1 + mountOrderBoost
+      }
+
+      // Before adding, checking that the component resource isn't either
+      // already queued or been downloading.
+      if (
+        resourcesArray.indexOf(page.componentChunkName) === -1 &&
+        !resourceStrCache[page.jsonName]
+      ) {
+        resourcesArray.unshift(page.componentChunkName)
+      }
     }
 
-    // Prefetch resources.
+    // Sort resources by resourcesCount.
+    resourcesArray.sort(sortResourcesByCount)
     if (process.env.NODE_ENV === `production`) {
-      Promise.all([
-        prefetchResource(page.jsonName),
-        prefetchResource(page.componentChunkName),
-      ]).then(() => {
-        // Tell plugins the path has been successfully prefetched
-        onPostPrefetchPathname(path)
-      })
+      prefetcher.onNewResourcesAdded()
     }
 
     return true
   },
-
+  getResources: () => {
+    return {
+      resourcesArray,
+      resourcesCount,
+    }
+  },
+  getPages: () => {
+    return {
+      pathArray,
+      pathCount,
+    }
+  },
   getPage: pathname => findPage(pathname),
-
-  getResourceURLsForPathname: path => {
-    const page = findPage(path)
-    if (page) {
-      return [
-        ...createComponentUrls(page.componentChunkName),
-        createJsonURL(jsonDataPaths[page.jsonName]),
-      ]
-    } else {
-      return null
+  has: path => pathArray.some(p => p === path),
+  getResourcesForPathname: (path, cb = () => {}) => {
+    if (
+      inInitialRender &&
+      navigator &&
+      navigator.serviceWorker &&
+      navigator.serviceWorker.controller &&
+      navigator.serviceWorker.controller.state === `activated`
+    ) {
+      // If we're loading from a service worker (it's already activated on
+      // this initial render) and we can't find a page, there's a good chance
+      // we're on a new page that this (now old) service worker doesn't know
+      // about so we'll unregister it and reload.
+      if (!findPage(path)) {
+        navigator.serviceWorker
+          .getRegistrations()
+          .then(function(registrations) {
+            // We would probably need this to
+            // prevent unnecessary reloading of the page
+            // while unregistering of ServiceWorker is not happening
+            if (registrations.length) {
+              for (let registration of registrations) {
+                registration.unregister()
+              }
+              window.location.reload()
+            }
+          })
+      }
     }
-  },
-
-  getResourcesForPathnameSync: path => {
-    const page = findPage(path)
-    if (page) {
-      return pathScriptsCache[page.path]
-    } else if (shouldFallbackTo404Resources(path)) {
-      return queue.getResourcesForPathnameSync(`/404.html`)
-    } else {
-      return null
-    }
-  },
-
-  // Get resources (code/data) for a path. Fetches metdata first
-  // if necessary and then the code/data bundles. Used for prefetching
-  // and getting resources for page changes.
-  getResourcesForPathname: path =>
-    new Promise((resolve, reject) => {
+    inInitialRender = false
+    // In development we know the code is loaded already
+    // so we just return with it immediately.
+    if (process.env.NODE_ENV !== `production`) {
+      const page = findPage(path)
+      if (!page) return cb()
+      const pageResources = {
+        component: syncRequires.components[page.componentChunkName],
+        json: syncRequires.json[page.jsonName],
+        layout: syncRequires.layouts[page.layout],
+        page,
+      }
+      cb(pageResources)
+      return pageResources
       // Production code path
+    } else {
       if (failedPaths[path]) {
         handleResourceLoadError(
           path,
           `Previously detected load failure for "${path}"`
         )
-        reject()
-        return
+
+        return cb()
       }
+
       const page = findPage(path)
 
-      // In production, we lazy load page metadata. If that
-      // hasn't been fetched yet, start fetching it now.
-      if (
-        !page &&
-        !fetchedPageResourceMap &&
-        process.env.NODE_ENV === `production`
-      ) {
-        // If page wasn't found check and we didn't fetch resources map for
-        // all pages, wait for fetch to complete and try to get resources again
-        fetchPageResourceMap().then(() =>
-          resolve(queue.getResourcesForPathname(path))
-        )
-        return
-      }
-
       if (!page) {
-        if (shouldFallbackTo404Resources(path)) {
-          console.log(`A page wasn't found for "${path}"`)
+        handleResourceLoadError(path, `A page wasn't found for "${path}"`)
 
-          // Preload the custom 404 page
-          resolve(queue.getResourcesForPathname(`/404.html`))
-          return
-        }
-
-        resolve()
-        return
+        return cb()
       }
 
       // Use the path from the page so the pathScriptsCache uses
@@ -344,90 +326,78 @@ const queue = {
 
       // Check if it's in the cache already.
       if (pathScriptsCache[path]) {
-        emitter.emit(`onPostLoadPageResources`, {
-          page,
-          pageResources: pathScriptsCache[path],
+        process.nextTick(() => {
+          cb(pathScriptsCache[path])
+          emitter.emit(`onPostLoadPageResources`, {
+            page,
+            pageResources: pathScriptsCache[path],
+          })
         })
-        resolve(pathScriptsCache[path])
-        return
+        return pathScriptsCache[path]
       }
 
+      emitter.emit(`onPreLoadPageResources`, { path })
       // Nope, we need to load resource(s)
-      emitter.emit(`onPreLoadPageResources`, {
-        path,
+      let component
+      let json
+      let layout
+      // Load the component/json/layout and parallel and call this
+      // function when they're done loading. When both are loaded,
+      // we move on.
+      const done = () => {
+        if (component && json && (!page.layoutComponentChunkName || layout)) {
+          pathScriptsCache[path] = { component, json, layout, page }
+          const pageResources = { component, json, layout, page }
+          cb(pageResources)
+          emitter.emit(`onPostLoadPageResources`, {
+            page,
+            pageResources,
+          })
+        }
+      }
+      getResourceModule(page.componentChunkName, (err, c) => {
+        if (err) {
+          handleResourceLoadError(
+            page.path,
+            `Loading the component for ${page.path} failed`
+          )
+        }
+        component = c
+        done()
+      })
+      getResourceModule(page.jsonName, (err, j) => {
+        if (err) {
+          handleResourceLoadError(
+            page.path,
+            `Loading the JSON for ${page.path} failed`
+          )
+        }
+        json = j
+        done()
       })
 
-      // In development we know the code is loaded already
-      // so we just return with it immediately.
-      if (process.env.NODE_ENV !== `production`) {
-        const pageResources = {
-          component: syncRequires.components[page.componentChunkName],
-          page,
-        }
-
-        // Add to the cache.
-        pathScriptsCache[path] = pageResources
-        devGetPageData(page.path).then(pageData => {
-          emitter.emit(`onPostLoadPageResources`, {
-            page,
-            pageResources,
-          })
-          // Tell plugins the path has been successfully prefetched
-          onPostPrefetchPathname(path)
-
-          resolve(pageResources)
-        })
-      } else {
-        Promise.all([
-          getResourceModule(page.componentChunkName),
-          getResourceModule(page.jsonName),
-        ]).then(([component, json]) => {
-          if (!(component && json)) {
-            resolve(null)
-            return
+      page.layoutComponentChunkName &&
+        getResourceModule(page.layout, (err, l) => {
+          if (err) {
+            handleResourceLoadError(
+              page.path,
+              `Loading the Layout for ${page.path} failed`
+            )
           }
-
-          const pageResources = {
-            component,
-            json,
-            page,
-          }
-          pageResources.page.jsonURL = createJsonURL(
-            jsonDataPaths[page.jsonName]
-          )
-          pathScriptsCache[path] = pageResources
-          resolve(pageResources)
-
-          emitter.emit(`onPostLoadPageResources`, {
-            page,
-            pageResources,
-          })
-
-          // Tell plugins the path has been successfully prefetched
-          onPostPrefetchPathname(path)
+          layout = l
+          done()
         })
-      }
-    }),
-}
 
-export const postInitialRenderWork = () => {
-  inInitialRender = false
-  if (process.env.NODE_ENV === `production`) {
-    // We got all resources needed for first mount,
-    // we can fetch resoures for all pages.
-    fetchPageResourceMap()
-  }
-}
-
-export const setApiRunnerForLoader = runner => {
-  apiRunner = runner
-  disableCorePrefetching = apiRunner(`disableCorePrefetching`)
+      return undefined
+    }
+  },
+  peek: path => pathArray.slice(-1)[0],
+  length: () => pathArray.length,
+  indexOf: path => pathArray.length - pathArray.indexOf(path) - 1,
 }
 
 export const publicLoader = {
   getResourcesForPathname: queue.getResourcesForPathname,
-  getResourceURLsForPathname: queue.getResourceURLsForPathname,
-  getResourcesForPathnameSync: queue.getResourcesForPathnameSync,
 }
 
 export default queue

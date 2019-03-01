@@ -66,7 +66,6 @@ class Shortcode extends React.Component {
       onOpenMediaLibrary,
       onRemoveInsertedMedia,
     } = this.props;
-    if (field.get('widget') === 'hidden') return null;
     const value = shortcodeData.get(field.get('name'));
     const key = `field-${ field.get('name') }`;
     const Control = getEditorControl();

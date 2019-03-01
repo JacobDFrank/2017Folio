@@ -52,7 +52,9 @@ export function connectionFromArray<T>(
     edges,
     pageInfo: {
       hasNextPage:
-        typeof limit === `number` ? limit + startSlice < data.length : false,
+        typeof limit === `number`
+          ? limit + startSlice - 1 < data.length
+          : false,
     },
   }
 }

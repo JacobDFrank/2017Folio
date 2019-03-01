@@ -19,7 +19,7 @@ module.exports = {
         name: 'img'
       }
     },
-    {
+     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-96615084-1",
@@ -30,4 +30,4 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-netlify-cms',
   ]
-};
+}

@@ -2,7 +2,8 @@
 @import "./WorkflowCard.css";
 
 .nc-workflow {
-  padding: var(--pageMargin) 0;
+  padding: var(--pageMargin);
+  padding-bottom: 0;
   height: 100vh;
 }
 

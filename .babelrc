@@ -2,7 +2,6 @@
   "presets": [
     "env",
     "react",
-    "stage-2",
-    "babel-preset-gatsby"
+    "stage-2"
   ]
 }

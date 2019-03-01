@@ -11,9 +11,7 @@ const Entries = ({
   page,
   onPaginate,
   isFetching,
-  viewStyle,
-  cursor,
-  handleCursorActions,
+  viewStyle
 }) => {
   const loadingMessages = [
     'Loading Entries',
@@ -27,9 +25,9 @@ const Entries = ({
         collections={collections}
         entries={entries}
         publicFolder={publicFolder}
+        page={page}
+        onPaginate={onPaginate}
         viewStyle={viewStyle}
-        cursor={cursor}
-        handleCursorActions={handleCursorActions}
       />
     );
   }
@@ -48,8 +46,6 @@ Entries.propTypes = {
   page: PropTypes.number,
   isFetching: PropTypes.bool,
   viewStyle: PropTypes.string,
-  cursor: PropTypes.any.isRequired,
-  handleCursorActions: PropTypes.func.isRequired,
 };
 
 export default Entries;

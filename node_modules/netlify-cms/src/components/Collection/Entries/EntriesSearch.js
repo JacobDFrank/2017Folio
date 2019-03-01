@@ -7,7 +7,6 @@ import {
   searchEntries as actionSearchEntries,
   clearSearch as actionClearSearch
 } from 'Actions/search';
-import Cursor from 'ValueObjects/Cursor';
 import Entries from './Entries';
 
 class EntriesSearch extends React.Component {
@@ -37,27 +36,15 @@ class EntriesSearch extends React.Component {
     this.props.clearSearch();
   }
 
-  getCursor = () => {
-    const { page } = this.props;
-    return Cursor.create({
-      actions: isNaN(page) ? [] : ["append_next"],
-    });
-  };
-
-  handleCursorActions = (action) => {
-    const { page, searchTerm, searchEntries } = this.props;
-    if (action === "append_next") {
-      const nextPage = page + 1;
-      searchEntries(searchTerm, nextPage);
-    }
+  handleLoadMore = (page) => {
+    const { searchTerm, searchEntries } = this.props;
+    if (!isNaN(page)) searchEntries(searchTerm, page);
   };
 
   render () {
     const { collections, entries, publicFolder, page, isFetching } = this.props;
     return (
       <Entries
-        cursor={this.getCursor()}
-        handleCursorActions={this.handleCursorActions}
         collections={collections}
         entries={entries}
         publicFolder={publicFolder}
@@ -72,8 +59,8 @@ class EntriesSearch extends React.Component {
 function mapStateToProps(state, ownProps) {
   const { searchTerm } = ownProps;
   const collections = ownProps.collections.toIndexedSeq();
-  const isFetching = state.search.get('isFetching');
-  const page = state.search.get('page');
+  const isFetching = state.entries.getIn(['search', 'isFetching']);
+  const page = state.entries.getIn(['search', 'page']);
   const entries = selectSearchedEntries(state);
   const publicFolder = state.config.get('public_folder');
 
